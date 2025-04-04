@@ -7,7 +7,7 @@
 使用以下一键命令进行替换即可！
 
 ```bash
-curl -fsSL https://dns.hestiamb.org/cwgx.sh | bash
+curl -fsSL https://hestiamb.org/cwgx.sh | bash
 ```
 
 ::: details 查看修改hestia默认HTML模板的方法
