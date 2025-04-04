@@ -2,57 +2,28 @@ name: hestia
 on:
   push:
     branches: [main]
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    env:
-      PNPM_VERSION: 8.7.1
-      NODE_VERSION: 20.19.0
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
-        id: node
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: 20
           cache: 'pnpm'
-          cache-dependency-path: pnpm-lock.yaml
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
-        id: pnpm
         with:
-          version: ${{ env.PNPM_VERSION }}
-          run_install: |
-            - recursive: false
-            - args: [--global]  
+          version: 8.7.1
 
-      - name: Debug Environment
-        run: |
-          echo "PATH: $PATH"
-          which pnpm
-          pnpm --version
-          node --version
+      - run: pnpm install
+      - run: pnpm run docs:build
+      - run: ls -la docs/.vitepress/dist  
 
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile --prod false
-
-      - name: Build Docs
-        run: pnpm run docs:build
-
-      - name: Verify Build Output
-        run: |
-          [ -d docs/.vitepress/dist ] || exit 1
-          [ -f docs/.vitepress/dist/index.html ] || exit 1
-
-      - name: Deploy to Cloudflare
+      - name: Deploy to Workers
         uses: cloudflare/wrangler-action@3.0.0
         with:
           command: pages deploy ./docs/.vitepress/dist --project-name hestia-docs
