@@ -1,32 +1,24 @@
-<h1 align="center"><a href="https://hestiamb.org">Hestia 服务器控制面板</a></h1>
+<div align="center">
+
+# [Hestia 服务器控制面板](https://hestiamb.org)
 
 ![HestiaCP](https://hestiamb.org/520.png)
 
-<h2 align="center">适用于现代网络的轻量级且功能强大的服务器控制面板</h2>
+## 适用于现代网络的轻量级且功能强大的服务器控制面板
 
-<p align="center"><strong>最新稳定版本:</strong>1.9.3 | <a href="docs/changelog.md">查看更新日志</a></p>
+**最新稳定版本:** 1.9.3 | [查看更新日志](docs/changelog.md)
 
-<p align="center">
-	<a href="https://hestiamb.org">中文官网</a> |
-	<a href="https://hestiacp.com">英文官网</a> |
-	<a href="https://forum.hestiacp.com">英文论坛</a>
-	<br/><br/>
-	<a href="https://drone.hestiacp.com/hestiacp/hestiacp">
-		<img src="https://drone.hestiacp.com/api/badges/hestiacp/hestiacp/status.svg?ref=refs/heads/main" alt="Drone Status"/>
-	</a>
-<<<<<<< HEAD
-	<a href="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml">
-		<img src="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg" alt="Lint Status"/>
-=======
-	<a href="https://bgithub.xyz/hestiacp/hestiacp/actions/workflows/lint.yml">
-		<img src="https://bgithub.xyz/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg" alt="Lint Status"/>
->>>>>>> 748e8e8c06c0a8b17f2eced7fd68d40f71c023ad
-	</a>
-	<a href="https://gurubase.io/g/hestia">
-		<img src="https://img.shields.io/badge/Gurubase-Ask%20Hestia%20Guru-006BFF" alt="Gurubase"/>
-	</a>
-</p>
+[中文官网](https://hestiamb.org) | 
+[英文官网](https://hestiacp.com) | 
+[英文论坛](https://forum.hestiacp.com)
 
+<br/>
+
+[![Drone Status](https://drone.hestiacp.com/api/badges/hestiacp/hestiacp/status.svg?ref=refs/heads/main)](https://drone.hestiacp.com/hestiacp/hestiacp)
+[![Lint Status](https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg)](https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml)
+[![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20Hestia%20Guru-006BFF)](https://gurubase.io/g/hestia)
+
+</div>
 ## **欢迎！**
 
 Hestia 控制面板旨在为管理员提供一个易于使用的网页和命令行界面，使他们能够迅速部署和管理网站域名、邮件账户、DNS 区域和数据库，所有操作均通过一个中心仪表板进行，无需手动部署和配置各个组件或服务。
