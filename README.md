@@ -1,6 +1,6 @@
-<h1 align="center"><a href="https://www.hestiacp.com/">Hestia 服务器控制面板</a></h1>
+<h1 align="center"><a href="https://hestiamb.org">Hestia 服务器控制面板</a></h1>
 
-![HestiaCP Web Interface screenshot](https://hestiamb.org/520.png)
+![HestiaCP](https://hestiamb.org/520.png)
 
 <h2 align="center">适用于现代网络的轻量级且功能强大的服务器控制面板</h2>
 
@@ -14,8 +14,11 @@
 	<a href="https://drone.hestiacp.com/hestiacp/hestiacp">
 		<img src="https://drone.hestiacp.com/api/badges/hestiacp/hestiacp/status.svg?ref=refs/heads/main" alt="Drone Status"/>
 	</a>
-	<a href="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml">
-		<img src="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg" alt="Lint Status"/>
+	<a href="https://bgithub.xyz/hestiacp/hestiacp/actions/workflows/lint.yml">
+		<img src="https://bgithub.xyz/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg" alt="Lint Status"/>
+	</a>
+	<a href="https://gurubase.io/g/hestia">
+		<img src="https://img.shields.io/badge/Gurubase-Ask%20Hestia%20Guru-006BFF" alt="Gurubase"/>
 	</a>
 </p>
 
@@ -35,7 +38,7 @@ Monero/XMR: 45p5eKWfp3kYcY3cBtKq2TWpp5HGYFAbre2Xd76sRhWGXfahAj5MkxzV2oPF2VqU617p
 ## 功能和服务
 
 - Apache2 和 NGINX 搭配 PHP-FPM
-- 多个 PHP 版本（5.6 - 8.2，默认使用 8.1）
+- 多个 PHP 版本（5.6 - 8.4，默认使用 8.3）
 - 支持集群功能的 DNS 服务器（Bind）
 - POP/IMAP/SMTP 邮件服务，包含防病毒、防垃圾邮件和网页邮件（ClamAV、SpamAssassin、Sieve、Roundcube）
 - MariaDB/MySQL 和/或 PostgreSQL 数据库
@@ -44,8 +47,8 @@ Monero/XMR: 45p5eKWfp3kYcY3cBtKq2TWpp5HGYFAbre2Xd76sRhWGXfahAj5MkxzV2oPF2VqU617p
 
 ## 支持的平台和操作系统
 
-- **Debian:** 12, 11, 或 10
-- **Ubuntu:** 22.04 LTS, 20.04 LTS
+- **Debian:** 12, 11
+- **Ubuntu:** 24.04 LTS,22.04 LTS, 20.04 LTS
 
 **注意：**
 
@@ -65,6 +68,7 @@ Monero/XMR: 45p5eKWfp3kYcY3cBtKq2TWpp5HGYFAbre2Xd76sRhWGXfahAj5MkxzV2oPF2VqU617p
 ```bash
 ssh root@your.server
 ```
+
 ### 步骤 2: 安装配置
 
 下载最新版本的安装脚本：

@@ -36,7 +36,7 @@ export const teamMembers = [
 		],
 	},
 	{
-		avatar:'/images/avatar/32452f6.png',
+		avatar:'/images/avatar/25381635.jpg',
 		name: 'Falzo 🇩🇪',
 		links: [{ icon: 'github', link: 'https://github.com/falzoMAD' }],
 	},

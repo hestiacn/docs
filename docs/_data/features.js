@@ -19,12 +19,12 @@ export const webDomains = [
 		{
 		  text: 'Dokuwiki',
 		  iconType: 'image',
-		  icon: 'Dokuwiki.svg'
+		  icon: 'images/Dokuwiki.svg'
 		},
 		{
 		  text: 'Dolibarr',
 		  iconType: 'image',
-		  icon: 'dolibarr.svg'
+		  icon: 'images/dolibarr.svg'
 		},
 		{
 		  text: 'Drupal',
@@ -34,12 +34,12 @@ export const webDomains = [
 		{
 		  text: 'Flarum',
 		  iconType: 'image',
-		  icon: 'Flarum.svg'
+		  icon: 'images/Flarum.svg'
 		},
 		{
 		  text: 'Grav',
 		  iconType: 'image', 
-		  icon: 'grav.svg'
+		  icon: 'images/grav.svg'
 		},
 		{
 		  text: 'Joomla',
@@ -54,42 +54,42 @@ export const webDomains = [
 		{
 		  text: 'MediaWiki',
 		  iconType: 'image',
-		  icon: 'mediawikiwiki.svg'
+		  icon: 'images/mediawikiwiki.svg'
 		},
 		{
 		  text: 'NamelessMC',
 		  iconType: 'image',
-		  icon: 'NamelessMC.svg'
+		  icon: 'images/NamelessMC.svg'
 		},
 		{
 		  text: 'NextCloud',
 		  iconType: 'image',
-		  icon: 'NextCloud.svg'
+		  icon: 'images/NextCloud.svg'
 		},
 		{
 		  text: 'OpenCart',
 		  iconType: 'image',
-		  icon: 'OpenCart.svg'
+		  icon: 'images/OpenCart.svg'
 		},
 		{
 		  text: 'Prestashop',
 		  iconType: 'image',
-		  icon: 'PrestaShop.svg'
+		  icon: 'images/PrestaShop.svg'
 		},
 		{
 		  text: 'Symfony',
 		  iconType: 'image',
-		  icon: 'Symfony.svg'
+		  icon: 'images/Symfony.svg'
 		},
 		{
 		  text: 'ThirtyBees',
 		  iconType: 'image',
-		  icon: 'ThirtyBees.svg'
+		  icon: 'images/ThirtyBees.svg'
 		},
 		{
 		  text: 'Vvveb',
 		  iconType: 'image',
-		  icon: 'Vvveb.png'
+		  icon: 'images/Vvveb.png'
 		},
 		{
 		  text: 'WordPress',

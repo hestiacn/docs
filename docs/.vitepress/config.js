@@ -32,8 +32,8 @@ export default {
     lightModeSwitchTitle: '切换到白天模式',
 		darkModeSwitchTitle: '切换到夜晚模式',
 		editLink: {
-			pattern: 'https://gitee.com/mirrors_hestiacp/hestiacp/tree/main/docs/:path',
-			text: '在 Gitee 上编辑此页面',
+			pattern: 'https://codeberg.org/hestiacp/docs/src/branch/main/docs/:path',
+			text: '在 Codeberg 上编辑此页面',
 		},
 		footer: {
 			message: '根据 GNU GPLv3 协议发布 | 完整协议文本: <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">查看许可证</a>',
