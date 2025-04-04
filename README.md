@@ -14,8 +14,13 @@
 	<a href="https://drone.hestiacp.com/hestiacp/hestiacp">
 		<img src="https://drone.hestiacp.com/api/badges/hestiacp/hestiacp/status.svg?ref=refs/heads/main" alt="Drone Status"/>
 	</a>
+<<<<<<< HEAD
 	<a href="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml">
 		<img src="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg" alt="Lint Status"/>
+=======
+	<a href="https://bgithub.xyz/hestiacp/hestiacp/actions/workflows/lint.yml">
+		<img src="https://bgithub.xyz/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg" alt="Lint Status"/>
+>>>>>>> 748e8e8c06c0a8b17f2eced7fd68d40f71c023ad
 	</a>
 	<a href="https://gurubase.io/g/hestia">
 		<img src="https://img.shields.io/badge/Gurubase-Ask%20Hestia%20Guru-006BFF" alt="Gurubase"/>
