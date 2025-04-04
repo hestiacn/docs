@@ -8,24 +8,25 @@
 
 **最新稳定版本:** 1.9.3 | [查看更新日志](docs/changelog.md)
 
-[中文官网](https://hestiamb.org) | 
-[英文官网](https://hestiacp.com) | 
+[中文官网](https://hestiamb.org) |
+[英文官网](https://hestiacp.com) |
 [英文论坛](https://forum.hestiacp.com)
 
-<br/>
+<br>
 
 [![Drone Status](https://drone.hestiacp.com/api/badges/hestiacp/hestiacp/status.svg?ref=refs/heads/main)](https://drone.hestiacp.com/hestiacp/hestiacp)
 [![Lint Status](https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg)](https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml)
 [![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20Hestia%20Guru-006BFF)](https://gurubase.io/g/hestia)
 
 </div>
+
 ## **欢迎！**
 
 Hestia 控制面板旨在为管理员提供一个易于使用的网页和命令行界面，使他们能够迅速部署和管理网站域名、邮件账户、DNS 区域和数据库，所有操作均通过一个中心仪表板进行，无需手动部署和配置各个组件或服务。
 
 ## 赞助
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA)<br /><br />
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA)<br><br>
 Bitcoin : bc1q48jt5wg5jaj8g9zy7c3j03cv57j2m2u5anlutu<br>
 Ethereum : 0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51<br>
 Binance: bnb1l4ywvw5ejfmsgjdcx8jn5lxj7zsun8ktfu7rh8<br>
