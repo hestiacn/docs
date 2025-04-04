@@ -14,10 +14,10 @@
 
 | 名称 | 最低配置 | 推荐 |
 | :--: | :--: | :--: |
-| **CPU**              | 1 核 64 位                                     | 4 核 64 位                            |
-| **内存**             | 1 GB (不安装SpamAssassin 和 ClamAV)             | 4 GB                                 |
-| **硬盘**             | 10 GB HDD                                      | 40 GB SSD                            |
-| **操作系统**         | Debian 11 or 12或者Ubuntu 20.04, 22.04 24.04 LTS | Debian 12 或者 Ubuntu LTS |
+| **CPU**| 1 核 64 位| 4 核 64 位|
+| **内存**| 1 GB (不安装SpamAssassin 和 ClamAV)| 4 GB|
+| **硬盘**| 10 GB HDD| 40 GB SSD|
+| **操作系统**| Debian 11 or 12或者Ubuntu 20.04, 22.04 24.04 LTS | Debian 12 或者 Ubuntu LTS |
 
 ::: danger 警告
 `Hestia` 仅运行在 `AMD64` / `x86_64` 和 `ARM64` / `aarch64` 处理器上。 它还需要`64`位操作系统！我们目前不支持基于 `i386` 或 `ARM7` 的处理器。

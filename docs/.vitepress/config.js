@@ -66,7 +66,8 @@ function sidebarDocs() {
 			items: [
 				{ text: '开始', link: '/docs/introduction/getting-started' },
 				{ text: '部署建议', link: '/docs/introduction/best-practices' },
-				{ text: 'hestia面板介绍', link: '/docs/introduction/hestia',},
+				{ text: 'hestia面板介绍', link: '/docs/introduction/hestia' },
+				{ text: '更新默认错误页面', link: '/docs/introduction/defaultpage' },
 			],
 		},
 		{
