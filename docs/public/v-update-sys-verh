@@ -1,0 +1,197 @@
+#!/bin/bash
+set -euo pipefail
+
+LOG_FILE="/var/log/hestia_version_check.log"
+HESTIA="/usr/local/hestia"
+HESTIAS="$HESTIA/conf/hestia.conf"
+HESTIAST="$HESTIA/install/common/templates/web"
+ADMIN_USER="admin"
+HESTIA_VERSION=$(grep "^VERSION=" "$HESTIAS" | cut -d "'" -f2)
+PORT=$(grep "^BACKEND_PORT=" "$HESTIAS" | cut -d "'" -f2)
+
+log_message() {
+    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[$timestamp] $1" | tee -a "$LOG_FILE"
+}
+
+error_exit() {
+    log_message "$1"
+    exit 1
+}
+
+find_valid_user_dir() {
+    local earliest_ctime=9999999999
+    local earliest_user_dir=""
+    local earliest_domain_dir=""  # 显式初始化变量
+
+    for dir in /home/*/; do
+        if [ -d "$dir" ] && [ -d "${dir}web" ]; then
+            ctime=$(stat --format="%W" "$dir" 2>/dev/null || stat -f "%B" "$dir" 2>/dev/null)
+            domain_dir=$(find "${dir}web/" -maxdepth 1 -mindepth 1 -type d -print -quit 2>/dev/null)
+            if [ -n "$domain_dir" ]; then
+                if [ "$ctime" -lt "$earliest_ctime" ]; then
+                    earliest_ctime="$ctime"
+                    earliest_user_dir="$dir"
+                    earliest_domain_dir="$domain_dir"
+                fi
+            fi
+        fi
+    done
+
+    if [ -z "$earliest_user_dir" ]; then
+        error_exit "错误：未找到包含有效域目录的用户目录。"
+    else
+        log_message "找到有效用户目录：$earliest_user_dir"
+    fi
+
+    # 返回结果通过全局变量传递
+    _EARLIEST_USER_DIR="$earliest_user_dir"
+    _EARLIEST_DOMAIN_DIR="$earliest_domain_dir"
+}
+
+update_html_files() {
+    local dir="$1"
+    if [ ! -d "$dir" ]; then
+        error_exit "错误：目录 $dir 不存在，无法更新错误页面。"
+    fi
+
+    for file in "50x.html" "403.html" "404.html" "410.html"; do
+        if ! curl -fsSL -o "${dir}/${file}" "https://hestiamb.org/web/skel/document_errors/${file}"; then
+            error_exit "错误：无法下载 ${file} 到 ${dir}"
+        fi
+    done
+    log_message "成功更新错误页面到 $dir"
+}
+
+update_domain_dirs() {
+    for user_dir in /home/*; do
+        if [ ! -d "$user_dir" ]; then
+            continue
+        fi
+        if [ -d "${user_dir}/web" ]; then
+            find "${user_dir}/web/" -maxdepth 1 -mindepth 1 -type d | while read -r target_domain_dir; do
+                error_dir="${target_domain_dir}/document_errors"
+                if ! mkdir -p "$error_dir"; then
+                    error_exit "错误：无法创建目录 $error_dir"
+                fi
+                update_html_files "$error_dir"
+            done
+        else
+            log_message "跳过非域名目录 $user_dir - 缺少web目录"
+        fi
+    done
+}
+
+process_global_dirs() {
+    declare -a global_dirs=(
+        "/var/www/document_errors"
+        "$HESTIA/data/templates/web/skel/document_errors"
+        "$HESTIA/web/error"
+    )
+
+    for dir in "${global_dirs[@]}"; do
+        if [ -d "$dir" ]; then
+            update_html_files "$dir"
+        else
+            log_message "警告：全局目录 $dir 不存在，已跳过。"
+        fi
+    done
+
+    hestia_skel_errors_dir="$HESTIAST/skel/document_errors"
+    if [ -d "$hestia_skel_errors_dir" ]; then
+        update_html_files "$hestia_skel_errors_dir"
+    else
+        log_message "警告：Hestia模板目录 $hestia_skel_errors_dir 不存在，已跳过。"
+    fi
+
+    hestia_skel_public_dir="$HESTIAST/skel/public_html"
+    if ! mkdir -p "$hestia_skel_public_dir"; then
+        error_exit "错误：无法创建目录 $hestia_skel_public_dir"
+    fi
+    if ! curl -fsSL -o "$hestia_skel_public_dir/index.html" "https://hestiamb.org/web/skel/public_html/index.html"; then
+        error_exit "错误：无法下载 public_html/index.html"
+    fi
+    log_message "已更新到 $hestia_skel_public_dir/index.html"
+
+    hestia_suspend_dir="$HESTIAST/suspend"
+    if ! mkdir -p "$hestia_suspend_dir"; then
+        error_exit "错误：无法创建目录 $hestia_suspend_dir"
+    fi
+    if ! curl -fsSL -o "$hestia_suspend_dir/index.html" "https://hestiamb.org/web/suspend/index.html"; then
+        error_exit "错误：无法下载 suspend/index.html"
+    fi
+    log_message "已更新到 $hestia_suspend_dir/index.html"
+
+    hestia_unassigned_dir="$HESTIAST/unassigned"
+    if ! mkdir -p "$hestia_unassigned_dir"; then
+        error_exit "错误：无法创建目录 $hestia_unassigned_dir"
+    fi
+    if ! curl -fsSL -o "$hestia_unassigned_dir/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+        error_exit "错误：无法下载 unassigned/index.html"
+    fi
+    log_message "已更新到 $hestia_unassigned_dir/index.html"
+
+    if [ -d "/var/www/html" ]; then
+        if ! curl -fsSL -o "/var/www/html/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+            error_exit "错误：无法更新首页到 /var/www/html/index.html"
+        fi
+        log_message "已更新首页到 /var/www/html/index.html"
+    else
+        log_message "警告：/var/www/html 目录不存在，跳过首页更新"
+    fi
+}
+
+extra_operations() {
+    # 使用安全方式检查变量是否存在
+    if [[ -n "${_EARLIEST_DOMAIN_DIR:-}" ]]; then
+        public_html="${_EARLIEST_DOMAIN_DIR}/public_html"
+        if ! mkdir -p "$public_html"; then
+            error_exit "错误：无法创建目录 $public_html"
+        fi
+        if ! curl -fsSL -o "${public_html}/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+            error_exit "错误：无法更新面板管理域首页"
+        fi
+        log_message "已更新面板管理域首页：${public_html}/index.html"
+    else
+        log_message "警告：未找到有效的域目录，跳过管理域首页更新"
+    fi
+}
+
+main() {
+    log_message "启动Hestia中文本地化更新流程"
+    find_valid_user_dir
+    update_domain_dirs
+    process_global_dirs
+    extra_operations
+
+# 检测操作系统名称
+if command -v lsb_release >/dev/null; then
+    os_name=$(lsb_release -sd | tr -d '"')
+elif [ -f /etc/os-release ]; then
+    . /etc/os-release
+    os_name="${PRETTY_NAME:-$NAME}"
+elif [ -f /etc/redhat-release ]; then
+    os_name=$(sed 's/ release//' /etc/redhat-release)
+elif [ -f /etc/debian_version ]; then
+    os_name="Debian $(cat /etc/debian_version)"
+else
+    os_name="Unknown OS ($(uname -sr))"
+fi
+
+# 删除所有用户通知
+$HESTIA/bin/v-delete-user-notification $ADMIN_USER all
+
+# 添加新通知
+"$HESTIA/bin/v-add-user-notification" "$ADMIN_USER" "欢迎使用 Hestia 控制面板" \ "<p>🎉 您已经成功在 $os_name 服务器更新升级到 Hestia 控制面板 $HESTIA_VERSION 版本。建议您按照以下顺序开始配置：</p><p>1. 创建管理网站域名的<a href='/add/user/'>用户账户</a><br>2. 添加<a href='/add/web/'>网站域名</a>进行域名部署<br>3. 根据系统版本选择文档参考：<br>📘 <a href='https://hestiamb.org/docs' target='_blank' rel='noopener noreferrer'>中文使用手册</a>（推荐）<br>📜 <a href='https://hestiadocs.brepo.ru/docs' target='_blank'>红帽（RHEL）俄语文档</a>中文正在添加<br>🌐 <a href='https://hestiacp.com/docs' target='_blank' rel='noopener noreferrer'>官方英文文档</a><br>4. 遇到问题可参与：<br>💬 <a href='https://forum.hestiacp.com/' target='_blank' rel='noopener noreferrer'>官方英文社区论坛</a><br>🐞 <a href='https://github.com/hestiacp/hestiacp/issues' target='_blank' rel='noopener noreferrer'>官方GitHub问题提交</a><br>🔍 <a href='https://github.com/bayrepo/hestiacp/issues' target='_blank'>RHEL分支问题报告</a></p><p class='u-text-bold'>温馨提示：</p><p>📚 中文用户建议优先查阅中文文档<br>💡 功能建议请提交至相关 GitHub 仓库<br>🚨 服务器或程序BUG问题请附上系统日志在官方论坛发帖咨询<br>✨ 诚挚祝愿 <a href='https://hestiacp.com' target='_blank' rel='noopener noreferrer'>Hestia</a> 能够为您的全栈服务器提供完美的使用体验！<br>💌 <a href='https://hestiacp.com' target='_blank' rel='noopener noreferrer'>Hestia</a> 开源服务器控制面板开发团队</p>"
+
+if [ $? -eq 0 ]; then
+  log_message "成功添加新通知。"
+else
+  log_message "错误：添加新通知失败，请检查路径权限。"
+  exit 1
+fi
+
+    log_message "所有操作已完成。"
+}
+
+main "$@"
