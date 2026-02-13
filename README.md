@@ -7,7 +7,7 @@
 ## 适用于现代网络的轻量级且功能强大的服务器控制面板
 
 
-**最新版本:** [![releases](https://img.shields.io/github/v/release/hestiacp/hestiacp.svg)](https://github.com/hestiacp/hestiacp/releases) | [![查看完整更新日志](https://img.shields.io/badge/📖_更新日志-点击查看-important)](docs/changelog.md)
+**最新版本:** [![releases](https://img.shields.io/github/v/release/hestiacp/hestiacp)](https://github.com/hestiacp/hestiacp/releases) | [![查看完整更新日志](https://img.shields.io/badge/📖_更新日志-点击查看-important)](docs/changelog.md)
 
 [中文官网](https://hestiamb.org) |
 [English](https://hestiacp.com) |
