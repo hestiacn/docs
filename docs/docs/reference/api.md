@@ -6,7 +6,7 @@
 
 ## 示例
 
-示例可以在单独的[repo](https://github.com/hestiacp/hestiacp-api-examples)中找到。
+示例可以在单独的[repo](https://cnb.cool/hestiamb/hestiacp-api-examples)中找到。
 
 ## 从用户名/密码身份验证升级到访问/密钥身份验证
 
@@ -41,7 +41,7 @@ $postvars = [
 这是官方团队成员创建的一个示例，
 :::
 
-* [命令行Bash 脚本查看](https://gitee.com/linboxs/hestiamb/raw/master/v-wrapper-hestia-api)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/hestiacp-api-examples/-/git/raw/master/v-wrapper-hestia-api)
 
 这是一个与 Hestia API 交互的实用程序。 它是一个使用curl 执行API 调用的bash 脚本，您只需添加要使用的命令及其参数作为参数即可。
 
@@ -51,21 +51,21 @@ $postvars = [
 
 ```bash
 cd ~
-git clone https://gitee.com/linboxs/hestiamb.git
+git clone https://cnb.cool/hestiamb/hestiacp-api-examples.git
 sudo cp v-wrapper-hestia-api/v-wrapper-hestia-api /usr/local/bin/
 ```
 
 **使用 curl**
 
 ```bash
-sudo curl -s https://gitee.com/linboxs/hestiamb/raw/master/v-wrapper-hestia-api -o /usr/local/bin/v-wrapper-hestia-api
+sudo curl -s https://cnb.cool/hestiamb/hestiacp-api-examples/-/git/raw/master/v-wrapper-hestia-api -o /usr/local/bin/v-wrapper-hestia-api
 sudo chmod 755 /usr/local/bin/v-wrapper-hestia-api
 ```
 
 **使用 wget**
 
 ```bash
-sudo wget https://gitee.com/linboxs/hestiamb/raw/master/v-wrapper-hestia-api -O /usr/local/bin/v-wrapper-hestia-api
+sudo wget https://cnb.cool/hestiamb/hestiacp-api-examples/-/git/raw/master/v-wrapper-hestia-api -O /usr/local/bin/v-wrapper-hestia-api
 sudo chmod 755 /usr/local/bin/v-wrapper-hestia-api
 ```
 

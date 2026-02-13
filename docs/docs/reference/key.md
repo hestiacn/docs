@@ -2,7 +2,7 @@
 
 ## v-list-dnssec-public-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-dnssec-public-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-dnssec-public-key)
 
 ### 概述
 
@@ -80,7 +80,7 @@ example.org. 3600 IN DS ...
 
 ## v-add-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-access-key)
 
 ### 命令简介
 
@@ -144,7 +144,7 @@ v-add-access-key username comment json
 
 ## v-check-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-access-key)
 
 ### 概述
 
@@ -216,7 +216,7 @@ Access key validation failed. Please check your credentials.
 
 ## v-update-sys-defaults
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-defaults)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-defaults)
 
 ### 简介
 
@@ -282,7 +282,7 @@ Hestia 使用多个配置文件来存储系统配置信息。这些配置文件�
 
 ## v-delete-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-access-key)
 
 ### 概述
 

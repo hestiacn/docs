@@ -2,7 +2,7 @@
 
 ## v-restore-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-database)
 
 ### 简介
 
@@ -51,7 +51,7 @@ v-restore-database alice /home/alice/backup.sql my_other_database
 
 ## v-restore-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-dns-domain)
 
 ### 命令概述
 
@@ -99,7 +99,7 @@ v-restore-dns-domain admin /home/admin/dns_backups/backup_20230917.tar.gz mydoma
 
 ## v-restore-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-mail-domain)
 
 ### 概述
 
@@ -153,7 +153,7 @@ v-restore-mail-domain admin /path/to/backup.tar.gz anotherdomain.net
 
 ## v-restore-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-user)
 
 ### 简介
 
@@ -219,7 +219,7 @@ v-restore-user USER BACKUP [WEB] [DNS] [MAIL] [DB] [CRON] [UDIR] [NOTIFY]
 
 ## v-restore-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-web-domain)
 
 `v-restore-web-domain` 是 Hestia 提供的命令行工具之一，用于从备份档案中恢复单个Web域名。本文档将详细介绍该命令的使用方式、参数选项以及示例。
 

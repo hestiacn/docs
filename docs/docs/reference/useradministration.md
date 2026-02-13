@@ -4,7 +4,7 @@
 
 ## v-rebuild-all
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-all)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-all)
 
 ### 介绍
 
@@ -51,7 +51,7 @@ v-rebuild-all jane_smith RESTART
 
 ## v-acknowledge-user-notification
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-acknowledge-user-notification)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-acknowledge-user-notification)
 
 ### 简介
 
@@ -106,7 +106,7 @@ v-acknowledge-user-notification john_doe all
 
 ## v-add-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fs-file)
 
 ### 简介
 
@@ -170,7 +170,7 @@ v-add-fs-file john documents/notes.md
 
 ## v-add-user-composer
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-composer)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-composer)
 
 ### 概述
 
@@ -231,7 +231,7 @@ v-add-user-composer alice [不指定版本号] true
 
 ## v-add-user-notification
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-notification)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-notification)
 
 ### 概述
 
@@ -293,7 +293,7 @@ done < "users.txt"
 
 ## v-add-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-package)
 
 ### 概述
 
@@ -345,7 +345,7 @@ v-add-user-package --disk-quota 10G mypackage
 
 ## v-change-user-config-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-config-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-config-value)
 
 ### 简介
 
@@ -404,7 +404,7 @@ v-change-user-config-value user1 ENABLE_FEATURE_X false
 
 ## v-change-user-contact
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-contact)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-contact)
 
 ### 命令概述
 
@@ -461,7 +461,7 @@ v-change-user-contact user123 user123@domain.com
 
 ## v-change-user-language
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-language)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-language)
 
 ### 命令简介
 
@@ -515,7 +515,7 @@ v-change-user-language john zh-cn
 
 ## v-change-user-name
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-name)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-name)
 
 ### 命令概述
 
@@ -581,7 +581,7 @@ fi
 
 ## v-change-user-ns
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-ns)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-ns)
 
 ### 概述
 
@@ -646,7 +646,7 @@ v-change-user-ns bob ns1.bob.org ns2.bob.org
 
 ## v-change-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-package)
 
 ### 概述
 
@@ -710,7 +710,7 @@ v-change-user-package admin invalidpackage
 
 ## v-change-user-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-password)
 
 ### 命令概述
 
@@ -773,7 +773,7 @@ Password:
 
 ## v-change-user-php-cli
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-php-cli)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-php-cli)
 
 ### 命令概述
 
@@ -812,7 +812,7 @@ v-change-user-php-cli john 7.4
 
 ## v-change-user-rkey
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-rkey)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-rkey)
 
 ### 命令概述
 
@@ -858,7 +858,7 @@ v-change-user-rkey jane_smith 123abc
 
 ## v-change-user-role
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-role)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-role)
 
 ### 命令描述
 
@@ -925,7 +925,7 @@ fi
 
 ## v-change-user-shell
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-shell)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-shell)
 
 `v-change-user-shell` 是 Hestia 系统中提供的一个命令行接口（CLI）命令，用于更改系统用户的默认 shell。Shell 是用户与系统交互的界面，它决定了用户如何执行命令和脚本。本文档将详细介绍 `v-change-user-shell` 命令的使用方法，包括语法、选项、参数和示例。
 
@@ -979,7 +979,7 @@ v-change-user-shell backup rsync
 
 ## v-change-user-sort-order
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-sort-order)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-sort-order)
 
 ### 命令概述
 
@@ -1030,7 +1030,7 @@ v-change-user-sort-order john_doe 100
 
 ## v-change-user-template
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-template)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-template)
 
 `v-change-user-template` 是 Hestia 控制面板提供的 CLI 命令，用于更改用户的默认模板设置。此命令允许管理员或用户根据特定的类型（如 WEB、PROXY、BACKEND、DNS 等）为特定用户指定不同的模板。
 
@@ -1090,7 +1090,7 @@ v-change-user-template alice INVALID wordpress
 
 ## v-change-domain-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-domain-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-domain-owner)
 
 ### 1. 命令概述
 
@@ -1147,7 +1147,7 @@ v-change-domain-owner sub2.example.org alice
 
 ## v-delete-database-temp-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-database-temp-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-database-temp-user)
 
 `v-delete-database-temp-user` 是 Hestia 提供的一个命令行工具，用于撤销临时用户对数据库的访问权限并删除该用户。该命令通常在需要临时访问数据库进行某些操作后使用，以确保数据库的安全性。
 
@@ -1195,7 +1195,7 @@ v-delete-database-temp-user admin temp_user_3 remote_database mysql remote_host.
 
 ## v-delete-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-databases)
 
 ### 简介
 
@@ -1244,7 +1244,7 @@ A: `v-delete-databases` 命令用于删除指定用户的所有数据库。如�
 
 ## v-delete-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domains)
 
 ### 概述
 
@@ -1299,7 +1299,7 @@ v-delete-web-domains admin RESTART
 
 ## v-delete-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user)
 
 ### 简介
 
@@ -1352,7 +1352,7 @@ v-delete-user whistler RESTART
 
 ## v-delete-user-2fa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-2fa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-2fa)
 
 ### 概述
 
@@ -1408,7 +1408,7 @@ v-delete-user-2fa $USERNAME
 
 ## v-delete-user-auth-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-auth-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-auth-log)
 
 ### 简介
 
@@ -1477,7 +1477,7 @@ done
 
 ## v-delete-user-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-backup)
 
 ### 命令描述
 
@@ -1533,7 +1533,7 @@ done
 
 ## v-delete-user-backup-exclusions
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-backup-exclusions)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-backup-exclusions)
 
 ### 命令概述
 
@@ -1593,7 +1593,7 @@ done
 
 ## v-delete-user-ips
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-ips)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-ips)
 
 ### 简介
 
@@ -1647,7 +1647,7 @@ v-delete-user-ips $USERNAME
 
 ## v-delete-user-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-log)
 
 ### 命令概述
 
@@ -1712,7 +1712,7 @@ done
 
 ## v-delete-user-notification
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-notification)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-notification)
 
 ### 简介
 
@@ -1769,7 +1769,7 @@ v-delete-user-notification admin all
 
 ## v-delete-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-package)
 
 ### 描述
 
@@ -1819,7 +1819,7 @@ fi
 
 ## v-delete-user-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-sftp-jail)
 
 ### 概述
 
@@ -1885,7 +1885,7 @@ v-delete-user-sftp-jail nonexistentuser
 
 ## v-delete-user-ssh-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-ssh-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-ssh-key)
 
 ### 简介
 
@@ -1927,7 +1927,7 @@ v-delete-user-ssh-key john_doe johndoe_rsa_key_2023
 
 ## v-delete-user-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-stats)
 
 ### 简介
 
@@ -1982,7 +1982,7 @@ v-delete-user-stats root overall
 
 ## v-update-user-counters
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-counters)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-counters)
 
 ### 简介
 
@@ -2034,7 +2034,7 @@ cat users.txt | xargs -I {} v-update-user-counters {}
 
 ## v-update-user-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-disk)
 
 `v-update-user-disk` 是一个由 Hestia 提供的命令行工具，用于重新计算并更新特定用户的磁盘使用情况。该命令将扫描用户的家目录，并排除如 web、mail 和 conf 等指定目录，以获取准确的磁盘使用情况，并更新到相应的数据库或配置文件中。
 
@@ -2069,7 +2069,7 @@ v-update-user-disk admin
 
 ## v-update-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-package)
 
 ### 概述
 
@@ -2112,7 +2112,7 @@ v-update-user-package default
 
 ## v-update-user-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-quota)
 
 ### 概述
 
@@ -2168,7 +2168,7 @@ v-show-user-quota charlie
 
 ## v-update-user-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-stats)
 
 ### 概述
 
@@ -2219,7 +2219,7 @@ v-update-user-stats admin
 
 ## v-unsuspend-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-user)
 
 ### 概述
 
@@ -2270,7 +2270,7 @@ v-unsuspend-user alice
 
 ## v-unsuspend-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-web-domain)
 
 ### 概述
 
@@ -2313,7 +2313,7 @@ v-unsuspend-web-domain admin example.org RESTART
 
 ## v-unsuspend-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-web-domains)
 
 ### 概述
 
@@ -2364,7 +2364,7 @@ v-unsuspend-web-domains admin yes
 
 ## v-suspend-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-user)
 
 `v-suspend-user` 是 Hestia 提供的 CLI（命令行接口）命令之一，用于暂停或挂起特定用户的账户及其相关对象。这个命令在需要暂时禁止用户访问系统资源或执行某些操作时非常有用。
 
@@ -2424,7 +2424,7 @@ done < "users_to_suspend.txt"
 
 ## v-suspend-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-web-domain)
 
 在Hestia控制面板中，`v-suspend-web-domain` 是一个用于暂停网站操作的命令行工具。当网站被暂停后，所有访问者将被重定向到一个解释暂停原因的网页，而网站的所有目录内容将保持不变。
 
@@ -2476,7 +2476,7 @@ v-suspend-web-domain admin example.com 1
 
 ## v-suspend-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-web-domains)
 
 ### 概述
 
@@ -2524,7 +2524,7 @@ v-suspend-web-domains jane RESTART
 
 ## v-log-action
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-log-action)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-log-action)
 
 `v-log-action` 是 Hestia 提供的一个命令行工具，用于记录用户或系统操作日志。通过该命令，用户可以将特定的操作事件添加到日志中，以便于后续的追踪和分析。
 
@@ -2585,7 +2585,7 @@ v-log-action --verbose user Info web "New website content uploaded."
 
 ## v-log-user-login
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-log-user-login)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-log-user-login)
 
 ### 命令概述
 
@@ -2644,7 +2644,7 @@ v-log-user-login admin 127.0.0.1 success --authlog
 
 ## v-log-user-logout
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-log-user-logout)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-log-user-logout)
 
 ### 概述
 
@@ -2699,7 +2699,7 @@ fi
 
 ## v-list-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user)
 
 ### 介绍
 
@@ -2756,7 +2756,7 @@ v-list-user admin | grep 'HOME='
 
 ## v-list-user-auth-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-auth-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-auth-log)
 
 ### 介绍
 
@@ -2849,7 +2849,7 @@ v-list-user-auth-log admin plain
 
 ## v-list-user-backups
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-backups)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-backups)
 
 ### 概述
 
@@ -2953,7 +2953,7 @@ backup2,incr,5GB,"...","...","...","...","...","...","2023-03-28T12:30:00Z","202
 
 ## v-list-user-ips
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-ips)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-ips)
 
 ### 概述
 
@@ -3052,7 +3052,7 @@ v-list-user-ips USER [FORMAT]
 
 ## v-list-user-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-log)
 
 ### 概述
 
@@ -3131,7 +3131,7 @@ plain格式直接输出原始日志条目，每行一个。不包含任何额外
 
 ## v-list-user-notifications
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-notifications)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-notifications)
 
 `v-list-user-notifications` 是 Hestia 提供的一个命令行工具，用于列出指定用户的所有通知。此命令提供了灵活的通知格式选项，并支持多种输出格式，方便用户根据需要进行定制。
 
@@ -3209,7 +3209,7 @@ v-list-user-notifications admin json
 
 ## v-list-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-package)
 
 `v-list-user-package` 是 Hestia 提供的一个 CLI（命令行接口）命令，用于列出指定用户的软件包信息。该命令允许用户以特定的格式查看其拥有的软件包详情，从而便于管理和维护。
 
@@ -3288,7 +3288,7 @@ Error: Package 'non-existent-package' not found.
 
 ## v-list-user-packages
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-packages)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-packages)
 
 `v-list-user-packages` 是 Hestia 提供的一个命令行接口（CLI）命令，用于列出用户可用的托管包列表。该命令对于用户和管理员来说都非常有用，因为它可以迅速展示所有可用的服务包，以及每个包所包含的配置和特性。
 
@@ -3375,7 +3375,7 @@ v-list-user-packages --format=json
 
 ## v-list-user-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-stats)
 
 ### 概述
 
@@ -3457,7 +3457,7 @@ v-list-user-stats admin json
 
 ## v-list-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-users)
 
 ### 概述
 
@@ -3547,7 +3547,7 @@ v-list-users json
 
 ## v-list-users-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-users-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-users-stats)
 
 ### 概述
 
@@ -3612,7 +3612,7 @@ v-list-users-stats --help
 
 ## v-get-user-salt
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-user-salt)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-user-salt)
 
 `v-get-user-salt` 是 Hestia 提供的 CLI（命令行界面）命令之一，用于检索指定用户的密码盐值。在密码学中，盐值通常用于增加密码哈希的复杂性和唯一性，从而提高系统的安全性。
 
@@ -3676,7 +3676,7 @@ v-get-user-salt admin -f csv
 
 ## v-get-user-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-user-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-user-value)
 
 ### 简介
 
@@ -3739,7 +3739,7 @@ v-get-user-value $USERNAME $KEY
 
 ## v-import-cpanel
 
-* * [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-import-cpanel)
+* * [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-import-cpanel)
 * 基于 sk-import-cpanel-backup-to-vestacp
 致谢：[Maks Usmanov (skamasle)](https://github.com/Skamasle/sk-import-cpanel-backup-to-vestacp/graphs/contributors)和贡献者：
 

@@ -2,7 +2,7 @@
 
 ## v-add-letsencrypt-host
 
-[命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-letsencrypt-host)
+[命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-letsencrypt-host)
 
 `v-add-letsencrypt-host` 是 HestiaCP（一个流行的 web 主机控制面板）中的一个 CLI（命令行接口）命令，用于为指定的主机名（域名）添加 Let's Encrypt SSL 证书。这个命令能够自动化证书的申请、验证和安装过程，使得管理员能够轻松地为他们的网站启用 HTTPS。
 
@@ -51,7 +51,7 @@ v-add-letsencrypt-host example.com --email admin@example.com --auto-renew --forc
 
 ## v-add-letsencrypt-domain
 
-* [命令行Bash 脚本查看](https://gitee.com/mirrors_hestiacp/hestiacp/raw/main/bin/v-add-letsencrypt-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-letsencrypt-domain)
 
 检查 LetsEncrypt 网站
 
@@ -68,7 +68,7 @@ example: v-add-letsencrypt-domain admin wonderland.com '' yes
 
 ## v-add-letsencrypt-host
 
-* [命令行Bash 脚本查看](https://gitee.com/mirrors_hestiacp/hestiacp/raw/main/bin/v-add-letsencrypt-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-letsencrypt-host)
 
 为主机和后端添加letencrypt
 
@@ -78,7 +78,7 @@ example: v-add-letsencrypt-domain admin wonderland.com '' yes
 
 ## v-add-letsencrypt-user
 
-* [命令行Bash 脚本查看](https://gitee.com/mirrors_hestiacp/hestiacp/raw/main/bin/v-add-letsencrypt-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-letsencrypt-user)
 
 注册LetsEncrypt用户帐户
 
@@ -94,7 +94,7 @@ v-add-letsencrypt-user bob
 
 ## v-delete-letsencrypt-domain
 
-* [命令行Bash 脚本查看](https://gitee.com/mirrors_hestiacp/hestiacp/raw/main/bin/v-delete-letsencrypt-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-letsencrypt-domain)
 
 删除域的 LetsEncrypt SSL 证书
 
@@ -110,7 +110,7 @@ v-delete-letsencrypt-domain admin acme.com yes
 
 ## v-change-mail-domain-sslcert
 
-* [命令行Bash 脚本查看](https://gitee.com/mirrors_hestiacp/hestiacp/raw/main/bin/v-change-mail-domain-sslcert)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-domain-sslcert)
 
 更改网站名ssl证书
 
@@ -120,7 +120,7 @@ v-delete-letsencrypt-domain admin acme.com yes
 
 ## v-list-letsencrypt-user
 
-* [命令行Bash 脚本查看](https://gitee.com/mirrors_hestiacp/hestiacp/raw/main/bin/v-list-letsencrypt-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-letsencrypt-user)
 
 查看加密密钥
 

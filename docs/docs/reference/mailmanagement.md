@@ -2,7 +2,7 @@
 
 ## v-add-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account)
 
 `v-add-mail-account` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于在邮件系统中添加新的邮件账户。通过此命令，管理员可以创建新的邮件账户，并为其指定用户名、域名、账户名、密码和配额。
 
@@ -66,7 +66,7 @@ v-add-mail-account john example.com john_mail password 1000M
 
 ## v-add-mail-account-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-alias)
 
 `v-add-mail-account`是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于在邮件系统中为已存在的邮件账户添加别名。该命令接受用户名、域名、账户名和别名作为参数，并将这些别名添加到对应的邮件账户中。
 
@@ -117,7 +117,7 @@ v-add-mail-account USER DOMAIN ACCOUNT ALIAS
 
 ## v-add-mail-account-autoreply
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-autoreply)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-autoreply)
 
 `v-add-mail-account-autoreply` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于为指定的邮件账户设置自动回复消息。该命令接受用户名、域名、账户名和自动回复消息作为参数，并将这些消息保存到对应的邮件账户配置中。
 
@@ -222,7 +222,7 @@ Error: Domain 'wrongdomain' does not exist.
 
 ## v-add-mail-account-forward
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-forward)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-forward)
 
 `v-add-mail-account-forward` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于为指定的邮件账户设置邮件转发功能。该命令接受用户名、域名、账户名和转发邮箱地址作为参数，并更新邮件账户的配置以实现邮件转发。
 
@@ -332,7 +332,7 @@ Error: User 'wronguser' does not exist.
 
 ## v-add-mail-account-fwd-only
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-fwd-only)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-fwd-only)
 
 `v-add-mail-account-fwd-only` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个用于将指定的邮件账户设置为仅转发模式的命令行工具。在设置了仅转发模式后，该账户将不再接收邮件，而是将所有邮件自动转发到预设的转发地址。
 
@@ -396,7 +396,7 @@ v-add-mail-account-fwd-only john example.com john_account
 
 ## v-add-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain)
 
 `v-add-mail-domain` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个用于在邮件系统中添加新的邮件域名的命令行工具。通过执行此命令，您可以配置域名相关的邮件设置，如启用反垃圾邮件、反病毒、DKIM等功能。
 
@@ -468,7 +468,7 @@ v-add-mail-domain john example.com yes no yes 1024
 
 ## v-add-mail-domain-antispam
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-antispam)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-antispam)
 
 `v-add-mail-domain-antispam` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于在特定的邮件域名上启用反垃圾邮件（Antispam）功能。该命令通过修改邮件系统的配置，为指定的邮件域名添加反垃圾邮件保护，从而提高邮件安全性和减少不必要的垃圾邮件。
 
@@ -527,7 +527,7 @@ v-add-mail-domain-antispam john example.com
 
 ## v-add-mail-domain-antivirus
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-antivirus)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-antivirus)
 
 `v-add-mail-domain-antivirus` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于在特定的邮件域名上启用反病毒（Antivirus）扫描功能。该命令通过在邮件系统中添加相应的配置，确保所有通过该域名接收和发送的邮件都会经过反病毒扫描，从而提高邮件安全性，减少病毒传播的风险。
 
@@ -586,7 +586,7 @@ v-add-mail-domain-antivirus john example.com
 
 ## v-add-mail-domain-catchall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-catchall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-catchall)
 
 `v-add-mail-domain-catchall` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于在特定的邮件域名上设置 catch-all 账户。Catch-all 账户将接收所有发送到该域名的邮件，无论邮件地址是否实际存在。这对于确保所有邮件都能被接收，或者将邮件转发到特定邮箱地址非常有用。
 
@@ -646,7 +646,7 @@ v-add-mail-domain-catchall john example.com catchall@example.org
 
 ## v-add-mail-domain-dkim
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-dkim)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-dkim)
 
 `v-add-mail-domain-dkim` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个命令行工具，用于在特定的邮件域名上启用 DKIM（DomainKeys Identified Mail）签名功能。DKIM 是一种电子邮件认证方法，用于验证邮件的发送者和内容是否被篡改。通过启用 DKIM，可以提高邮件的可信度，减少垃圾邮件和伪造邮件的风险。
 
@@ -710,7 +710,7 @@ v-add-mail-domain-dkim john example.com
 
 ## v-add-mail-domain-reject
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-reject)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-reject)
 
 `v-add-mail-domain-reject` 是 Hestia 控制面板（CLI）中的一个脚本命令，命令是一个用于在邮件系统中启用特定邮件域名的垃圾邮件拒收功能的脚本。通过执行此命令，管理员可以为指定的邮件域名配置反垃圾邮件策略，以阻止潜在的垃圾邮件进入用户的收件箱。
 
@@ -767,7 +767,7 @@ v-add-mail-domain-reject john example.com
 
 ## v-add-mail-domain-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-smtp-relay)
 
 `v-add-mail-domain-smtp-relay` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个用于配置邮件域名SMTP中继的脚本命令。通过此命令，您可以为指定的邮件域名设置SMTP中继服务器，以便通过该服务器发送电子邮件。
 
@@ -829,7 +829,7 @@ v-add-mail-domain-smtp-relay john example.com smtp.relay.com john_relay relay_pa
 
 ## v-add-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-ssl)
 
 `v-add-mail-domain-ssl`是 Hestia 控制面板（CLI）中的一个脚本命令，是一个用于为邮件域名配置SSL证书的脚本命令。通过此命令，您可以为指定的邮件域名启用SSL加密，确保邮件传输的安全性。
 
@@ -892,7 +892,7 @@ v-add-mail-domain-ssl john example.com /path/to/ssl_dir true
 
 ## v-add-mail-domain-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-webmail)
 
 `v-add-mail-domain-webmail` 是 Hestia 控制面板（CLI）中的一个脚本命令，命令用于为指定的用户邮件域名配置Webmail客户端。通过此命令，可以确保用户能够通过Webmail客户端访问其邮件。
 
@@ -964,7 +964,7 @@ v-add-mail-domain-webmail bob bobdomain.org roundcube
 
 ## v-add-sys-roundcube
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-roundcube)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-roundcube)
 
 `v-add-sys-roundcube`是 Hestia 控制面板（CLI）中的一个脚本命令，用于在 HestiaCP 邮件系统中安装或更新 Roundcube Webmail 客户端。该脚本会自动下载 Roundcube 的最新版本，并配置好相关的文件和目录，使得 Roundcube 能够与 HestiaCP 集成，并提供 Web 邮件访问功能。
 
@@ -1028,7 +1028,7 @@ sudo v-add-sys-roundcube update
 
 ## v-add-sys-smtp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-smtp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-smtp)
 
 `v-add-sys-smtp` 是 Hestia 控制面板（CLI）中的一个脚本命令，用于为服务器配置 SMTP 账户，以便用于日志记录、通知和内部邮件等。该脚本允许用户指定域名、端口、SMTP 安全性、用户名、密码和电子邮件地址，以配置 SMTP 设置。
 
@@ -1084,7 +1084,7 @@ v-add-sys-smtp example.com 587 STARTTLS test@domain.com securepassword test@exam
 
 ## v-add-sys-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-smtp-relay)
 
 `v-add-sys-smtp-relay` 是 Hestia 控制面板（CLI）中的一个脚本命令，用于在系统级别添加 SMTP 中继支持。通过此脚本，用户可以方便地配置 SMTP 中继服务器的相关信息，以便系统能够通过该中继服务器发送邮件。
 
@@ -1135,7 +1135,7 @@ v-add-sys-smtp-relay srv.smtprelay.tld uname123 pass12345
 
 ## v-add-sys-snappymail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-snappymail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-snappymail)
 
 `v-add-sys-snappymail` 是 Hestia 控制面板（CLI）中的一个脚本命令，是一个用于在系统上安装或更新 SnappyMail webmail 客户端的命令。以下是该命令的详细使用说明和示例。
 
@@ -1194,7 +1194,7 @@ v-add-sys-snappymail -u --install-dir /opt/snappymail --file snappymail-update.t
 
 ### v-add-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user)
 
 `v-add-user` 是 Hestia 控制面板（CLI）中的一个脚本，命令通常用于添加新用户到系统中，并可以指定用户的各种属性，如密码、电子邮件等。以下是该命令的详细使用说明，并结合了实际示例。
 
@@ -1264,7 +1264,7 @@ done
 
 ## v-delete-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account)
 
 `v-delete-mail-account`是 Hestia 控制面板（CLI）中的一个脚本， 是一个用于删除邮件账户的脚本命令。它接受三个参数：用户名（USER）、域名（DOMAIN）和账户名（ACCOUNT），用于指定要删除的邮件账户。
 
@@ -1315,7 +1315,7 @@ v-delete-mail-account admin acme.com alice
 
 ### v-delete-mail-account-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-alias)
 
 `v-delete-mail-account-alias` 是 Hestia 控制面板（CLI）中的一个脚本，是一个用于删除邮件账户别名的脚本命令。它接受四个参数：用户名（USER）、域名（DOMAIN）、账户名（ACCOUNT）和别名（ALIAS），用于指定要删除的邮件账户别名。
 
@@ -1418,7 +1418,7 @@ Error: alias nonexistentalias doesn't exist
 
 ## v-delete-mail-account-autoreply
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-autoreply)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-autoreply)
 
 `v-delete-mail-account-autoreply` 是 Hestia 控制面板（CLI）中的一个脚本，是一个用于删除邮件账户自动回复消息的脚本命令。它接受三个参数：用户名（USER）、域名（DOMAIN）和账户名（ACCOUNT），用于指定要删除自动回复消息的邮件账户。
 
@@ -1470,7 +1470,7 @@ v-delete-mail-account-autoreply admin mydomain.tld bob
 
 ## v-delete-mail-account-forward
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-forward)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-forward)
 
 `v-delete-mail-account-forward` 是 Hestia 控制面板（CLI）中的一个脚本，是一个用于删除邮件账户转发地址的脚本命令。它接受四个参数：用户名（USER）、域名（DOMAIN）、账户名（ACCOUNT）和要删除的转发地址（EMAIL）。
 
@@ -1523,7 +1523,7 @@ v-delete-mail-account-forward admin acme.com tony bob@acme.com
 
 ## v-delete-mail-account-fwd-only
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-fwd-only)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-fwd-only)
 
 `v-delete-mail-account-fwd-only` 脚本用于删除邮件账户的转发仅（forward-only）标志。转发仅标志用于指定账户只接受转发邮件，不接受直接发送到该账户的邮件。本脚本适用于邮件服务器管理，可方便地管理邮件账户的转发设置。
 
@@ -1563,7 +1563,7 @@ v-delete-mail-account-fwd-only admin example.com jack
 
 ## v-delete-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain)
 
 ### 概述
 
@@ -1663,7 +1663,7 @@ echo "Backup created at $backup_dir"
 
 ## v-delete-mail-domain-antispam
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-antispam)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-antispam)
 
 ### 概述
 
@@ -1720,7 +1720,7 @@ v-delete-mail-domain-antispam admin mail-server.net
 
 ## v-delete-mail-domain-antivirus
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-antivirus)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-antivirus)
 
 ### 概述
 
@@ -1777,7 +1777,7 @@ v-delete-mail-domain-antivirus admin mail-server.net
 
 ## v-delete-mail-domain-catchall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-catchall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-catchall)
 
 ### 脚本概述
 
@@ -1833,7 +1833,7 @@ v-delete-mail-domain-catchall john.doe mydomain.net
 
 ## v-delete-mail-domain-dkim
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-dkim)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-dkim)
 
 ### 脚本概述
 
@@ -1891,7 +1891,7 @@ v-delete-mail-domain-dkim john.doe example.com
 
 ## v-delete-mail-domain-reject
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-reject)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-reject)
 
 ### 命令概述
 
@@ -1947,7 +1947,7 @@ v-delete-mail-domain-reject admin mydomain.tld
 
 ## v-delete-mail-domain-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-smtp-relay)
 
 ### 命令概述
 
@@ -2001,7 +2001,7 @@ v-delete-mail-domain-smtp-relay user domain.tld
 
 ## v-delete-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-ssl)
 
 ### 命令概述
 
@@ -2059,7 +2059,7 @@ v-delete-mail-domain-ssl user demo.com
 
 ## v-delete-mail-domain-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-webmail)
 
 ### 命令概述
 
@@ -2121,7 +2121,7 @@ v-delete-mail-domain-webmail user demo.com true
 
 ## v-delete-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domains)
 
 ### 命令概述
 
@@ -2177,7 +2177,7 @@ v-delete-mail-domains john
 
 ## v-check-mail-account-hash
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-mail-account-hash)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-mail-account-hash)
 
 ### 命令概述
 
@@ -2244,7 +2244,7 @@ v-check-mail-account-hash ARGONID2 mypassword HASH_VALUE
 
 ## v-change-sys-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-webmail)
 
 ### 命令概述
 
@@ -2310,7 +2310,7 @@ v-change-sys-webmail newwebmailalias
 
 ## v-change-mail-account-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-account-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-account-password)
 
 ### 命令概述
 
@@ -2379,7 +2379,7 @@ v-change-mail-account-password john example.com john_account newpassword123
 
 ## v-change-mail-account-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-account-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-account-quota)
 
 ### 命令概述
 
@@ -2448,7 +2448,7 @@ v-change-mail-account-quota john example.com john_account 1000M
 
 ## v-change-mail-account-rate-limit
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-account-rate-limit)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-account-rate-limit)
 
 ### 命令概述
 
@@ -2513,7 +2513,7 @@ v-change-mail-account-rate-limit john example.com john_account 100/minute
 
 ## v-change-mail-domain-catchall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-domain-catchall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-domain-catchall)
 
 ### 命令概述
 
@@ -2577,7 +2577,7 @@ v-change-mail-domain-catchall john example.com catchall@example.com
 
 ## v-change-mail-domain-rate-limit
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-domain-rate-limit)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-domain-rate-limit)
 
 ### 命令概述
 
@@ -2643,7 +2643,7 @@ v-change-mail-domain-rate-limit john example.com 100
 
 ## v-delete-sys-smtp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-smtp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-smtp)
 
 ### 命令概述
 
@@ -2697,7 +2697,7 @@ v-delete-sys-smtp
 
 ## v-delete-sys-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-smtp-relay)
 
 ### 命令概述
 
@@ -2753,7 +2753,7 @@ v-delete-sys-smtp-relay
 
 ## v-delete-sys-mail-queue
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-mail-queue)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-mail-queue)
 
 ### 命令概述
 
@@ -2811,7 +2811,7 @@ v-delete-sys-mail-queue
 
 ## v-update-sys-rrd-mail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-mail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-mail)
 
 ### 命令概述
 
@@ -2893,7 +2893,7 @@ v-update-sys-rrd-mail yearly
 
 ## v-update-mail-domain-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-domain-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-domain-disk)
 
 ### 概述
 
@@ -2974,7 +2974,7 @@ done
 
 ## v-update-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-domain-ssl)
 
 ### 概述
 
@@ -3050,7 +3050,7 @@ v-update-mail-domain-ssl admin example.com /path/to/ssl/certs yes
 
 ## v-update-mail-domains-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-domains-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-domains-disk)
 
 ### 概述
 
@@ -3116,7 +3116,7 @@ v-update-mail-domains-disk admin
 
 ## v-update-mail-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-templates)
 
 ### 概述
 
@@ -3189,7 +3189,7 @@ v-update-mail-templates no skip
 
 ## v-unsuspend-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-account)
 
 `v-unsuspend-mail-account` 是Hestia服务器管理面板中的一个CLI命令，用于取消暂停（恢复）指定的邮件账户。当邮件账户被暂停时，用户将无法使用该账户进行邮件发送和接收操作。通过执行此命令，管理员可以重新激活被暂停的邮件账户。
 
@@ -3241,7 +3241,7 @@ v-unsuspend-mail-account jane domain.net jane
 
 ## v-unsuspend-mail-accounts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-accounts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-accounts)
 
 `v-unsuspend-mail-accounts` 是Hestia服务器管理面板中的一个CLI命令，用于取消暂停（恢复）指定域名下的所有邮件账户。当某些邮件账户因某种原因被暂停时，可以使用此命令一次性恢复所有暂停的账户。
 
@@ -3290,7 +3290,7 @@ v-unsuspend-mail-accounts john_doe example.org
 
 ## v-unsuspend-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-domain)
 
 ### 简介
 
@@ -3352,7 +3352,7 @@ v-unsuspend-mail-domain john_doe example.org no
 
 ## v-unsuspend-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-domains)
 
 `v-unsuspend-mail-domains` 是Hestia服务器管理面板中的一个CLI命令，用于取消暂停（恢复）指定用户下的所有邮件域名。当某个用户的多个邮件域名因某种原因被暂停时，可以使用此命令一次性恢复所有暂停的域名。
 
@@ -3404,7 +3404,7 @@ v-unsuspend-mail-domains john_doe
 
 ## v-suspend-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-account)
 
 `v-suspend-mail-account`是Hestia服务器管理面板中的一个CLI命令，用于暂停指定的邮件账户，以防止该账户进行邮件发送和接收操作。这在用户请求暂停账户、账户出现异常或需要进行维护时非常有用。
 
@@ -3464,7 +3464,7 @@ v-suspend-mail-account admin acme.org support
 
 ## v-suspend-mail-accounts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-accounts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-accounts)
 
 `v-suspend-mail-accounts` 是Hestia服务器管理面板中的一个CLI命令，用于暂停指定用户的所有邮件账户。当需要暂停某个用户的邮件服务时，此命令非常有用。
 
@@ -3532,7 +3532,7 @@ v-suspend-mail-accounts admin example.com
 
 ## v-suspend-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-domain)
 
 `v-suspend-mail-domain` 是Hestia服务器管理面板中的一个CLI命令，用于暂停指定用户的邮件域。当需要暂停某个邮件域的邮件服务时，此命令非常有用。
 
@@ -3601,7 +3601,7 @@ v-suspend-mail-domain admin domain.net
 
 ## v-suspend-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-domains)
 
 `v-suspend-mail-domains` 是Hestia服务器管理面板中的一个CLI命令，用于暂停指定用户的所有邮件域。当需要暂停某个用户的所有邮件服务时，此命令非常有用。
 
@@ -3659,7 +3659,7 @@ v-suspend-mail-domains john_doe
 
 ## v-restart-mail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-mail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-mail)
 
 `v-restart-mail` 是Hestia服务器管理面板中的一个CLI命令，用于重启邮件服务。当邮件服务遇到故障或需要进行更新配置时，该命令可以用来安全地重启邮件系统。
 
@@ -3734,7 +3734,7 @@ v-restart-mail no
 
 ## v-rebuild-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-mail-domain)
 
 `v-restart-mail` 是Hestia服务器管理面板中的一个CLI命令，用于重启邮件服务。当邮件服务遇到故障或需要进行更新配置时，该命令可以用来安全地重启邮件系统。
 
@@ -3809,7 +3809,7 @@ v-restart-mail no
 
 ## v-rebuild-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-mail-domains)
 
 `v-rebuild-mail-domains` 命令脚本是 Hestia 控制面板的一个关键组件，专为重建所有邮件域的 EXIM 配置文件而设计。这一功能在邮件服务器维护、配置更新或故障排除等场景中发挥着至关重要的作用。
 
@@ -3855,7 +3855,7 @@ v-restart-mail no
 
 ## v-list-sys-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-webmail)
 
 `v-list-sys-webmail` 是 Hestia 控制面板的 CLI（命令行接口）命令脚本之一，用于列出系统上已配置并可用的 Webmail 客户端。Webmail 客户端允许用户通过 Web 浏览器来访问、阅读、发送和管理电子邮件，无需安装额外的邮件客户端软件。
 
@@ -3920,7 +3920,7 @@ Rainloop
 
 ## v-list-sys-spamd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-spamd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-spamd-config)
 
 `v-list-sys-spamd-config` 是 Hestia 控制面板的一个 CLI（命令行接口）命令脚本，用于列出系统上 SpamAssassin 的配置参数。SpamAssassin 是一个开源的电子邮件过滤器，用于识别和标记垃圾邮件。
 
@@ -3995,7 +3995,7 @@ config_path
 
 ## v-list-sys-mail-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-mail-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-mail-status)
 
 `v-list-sys-mail-status` 是 Hestia 控制面板的一个 CLI（命令行接口）命令脚本，用于列出邮件服务器的状态信息。
 
@@ -4028,7 +4028,7 @@ v-list-sys-mail-status
 
 ## v-list-sys-dovecot-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-dovecot-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-dovecot-config)
 
 `v-list-sys-dovecot-config` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于列出 Dovecot 邮件服务器的配置文件的路径。Dovecot 是一个开源的 IMAP 和 POP3 邮件服务器，广泛用于各种邮件系统中。
 
@@ -4147,7 +4147,7 @@ config_path8,/etc/dovecot/conf.d/auth-passwdfile.conf.ext
 
 ## v-list-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-account)
 
 `v-list-mail-account` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于查询和显示特定邮件账户的详细信息。通过该脚本，管理员可以方便地获取关于邮件账户的别名、转发设置、自动回复状态、配额限制、磁盘使用情况、暂停状态等信息。
 
@@ -4252,7 +4252,7 @@ info,,0,no,no,0,/home/john/mail,no,1679225709,2023-03-19 10:15:09,webmail.exampl
 
 ## v-list-mail-account-autoreply
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-account-autoreply)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-account-autoreply)
 
 `v-list-mail-account-autoreply` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于查询特定邮件账户的自动回复消息。通过该脚本，管理员或用户可以方便地获取关于邮件账户设置的自动回复内容。
 
@@ -4340,7 +4340,7 @@ MSG
 
 ## v-list-mail-accounts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-accounts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-accounts)
 
 `v-list-mail-accounts` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于列出指定域名下的所有邮件账户及其相关信息。通过该脚本，管理员或用户可以方便地查看邮件账户的状态、别名、转发设置、自动回复状态等。
 
@@ -4452,7 +4452,7 @@ jane,"no","yes",no,no,200M,25%,no,11:30,2023-03-15
 
 ## v-list-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain)
 
 `v-list-mail-domain` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于列出指定域名的邮件域相关信息。通过该脚本，管理员或用户可以方便地查看邮件域的状态、配置、账户数量等。
 
@@ -4560,7 +4560,7 @@ example.com	yes	yes	yes	no	10	50%	enabled	100/hour	no	yes	no	12:00	2023-04-01	we
 
 ## v-list-mail-domain-dkim
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain-dkim)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain-dkim)
 
 `v-list-mail-domain-dkim` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于列出指定邮件域的 DKIM（DomainKeys Identified Mail）相关信息。DKIM 是一种电子邮件认证技术，用于验证邮件发送者的身份和邮件的完整性。通过该脚本，管理员或用户可以方便地查看邮件域的 DKIM 密钥信息，以确保邮件的安全性和可信度。
 
@@ -4655,7 +4655,7 @@ PEM,PUB
 
 ## v-list-mail-domain-dkim-dns
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain-dkim-dns)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain-dkim-dns)
 
 `v-list-mail-domain-dkim-dns` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于生成邮件域的 DKIM DNS 记录信息。这个脚本允许管理员或用户以多种格式（JSON、Shell、纯文本、CSV）获取 DKIM TXT 记录的详细内容，以便将这些记录添加到 DNS 提供商的配置中，从而启用邮件的 DKIM 验证。
 
@@ -4753,7 +4753,7 @@ mail._domainkey,3600,IN,TXT,"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AM
 
 ## v-list-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain-ssl)
 
 `v-list-mail-domain-ssl` 是 Hestia 控制面板的一个 CLI（命令行接口）脚本，用于列出和显示邮件域的 SSL 证书及其相关信息。这个脚本可以帮助管理员或用户以不同的格式获取 SSL 证书详情，以便进行进一步的配置、备份或检查。
 
@@ -4883,7 +4883,7 @@ CRT,... (证书内容) ...,KEY,... (私钥内容) ...,CA,... (CA 证书内容)
 
 ## v-list-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domains)
 
 ### 1. 脚本说明
 
@@ -4985,7 +4985,7 @@ anotherexample.com,...,...,...,...,...,...,...,...,...,...,...,...
 
 ## v-get-mail-account-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-mail-account-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-mail-account-value)
 
 ### 脚本概述
 
@@ -5042,7 +5042,7 @@ v-get-mail-account-value alice alice.org alice FORWARD
 
 ## v-get-mail-domain-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-mail-domain-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-mail-domain-value)
 
 ### 脚本概述
 
@@ -5098,7 +5098,7 @@ v-get-mail-domain-value alice alice.org SPF
 
 ## v-list-sys-clamd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-clamd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-clamd-config)
 
 ### 脚本概述
 

@@ -11,7 +11,6 @@ export const projectManagers = [
 		name: 'Jaap Marcus 🇳🇱',
 		links: [
 			{ icon: 'github', link: 'https://github.com/jaapmarcus' },
-			{ icon: 'twitter', link: 'https://twitter.com/jaapmarcus' },
 		],
 	},
 	{

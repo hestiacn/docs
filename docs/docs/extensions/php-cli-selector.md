@@ -1,5 +1,9 @@
 # PHP CLI选择器
 
+::: tip 温馨提示
+### 注意：本文档仅适用于 RHEL（Red Hat Enterprise Linux）系操作系统，请勿用于 Debian 系发行版。
+:::
+
 PHP CLI选择器将系统的 `/usr/bin/php` 链接替换为一个工具，该工具会分析HestiaCP用户的配置文件，并启动为用户安装的PHP版本。
 
 例如：

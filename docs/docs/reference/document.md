@@ -2,7 +2,7 @@
 
 ## v-get-fs-file-type
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-fs-file-type)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-fs-file-type)
 
 `v-get-fs-file-type` 命令用于获取指定文件在文件系统中的类型。这个命令接受两个参数：用户名（USER）和文件路径（FILE）。下面将详细介绍该命令的使用方法、示例以及工作原理。
 
@@ -53,7 +53,7 @@ v-get-fs-file-type john /home/john/images/photo.jpg
 
 ## v-delete-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-fs-file)
 
 `v-delete-fs-file` 命令用于在文件系统中删除指定的文件。该命令接受两个参数：用户名（USER）和文件路径（FILE）。下面将详细介绍该命令的使用方法、示例以及工作原理。
 
@@ -113,7 +113,7 @@ v-delete-fs-file john /tmp/temp_data.csv
 
 ## v-copy-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-copy-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-copy-fs-directory)
 
 `v-copy-fs-directory` 命令用于在文件系统中复制指定的目录。该命令接受三个参数：用户名（USER）、源目录路径（SRC_DIRECTORY）和目标目录路径（DST_DIRECTORY）。下面将详细介绍该命令的使用方法、示例以及工作原理。
 
@@ -178,7 +178,7 @@ v-copy-fs-directory john /tmp/temp_docs /home/john/docs
 
 ## v-copy-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-copy-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-copy-fs-file)
 
 `v-copy-fs-file` 命令用于在文件系统中复制指定的文件。该命令接受三个参数：用户名（USER）、源文件路径（SRC_FILE）和目标文件路径（DST_FILE）。以下是对该命令的详细介绍，包括使用方法、示例以及工作原理。
 
@@ -243,7 +243,7 @@ v-copy-fs-file john /tmp/temp_file.txt /home/john/docs/file.txt
 
 ## v-check-fs-permission
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-fs-permission)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-fs-permission)
 
 `v-check-fs-permission` 命令用于检查指定用户是否有权读取给定的文件系统路径（文件或目录）。此命令接受两个参数：用户名（USER）和文件或目录路径（FILE）。以下是对该命令的详细介绍，包括使用方法、示例以及工作原理。
 
@@ -301,7 +301,7 @@ v-check-fs-permission john /home/john/photos
 
 ## v-change-fs-file-permission
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-fs-file-permission)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-fs-file-permission)
 
 `v-change-fs-file-permission` 命令是一个用于更改文件或目录权限的脚本命令。它接受三个参数：用户名（USER）、源文件路径（FILE）和新的权限设置（PERMISSIONS）。其中，权限设置可以使用八进制数字（如 `755`、`644`）或符号模式（如 `u+x`、`g-w`）来表示。
 
@@ -360,7 +360,7 @@ sudo chmod g-w /path/to/data.txt
 
 ## v-move-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-move-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-move-fs-directory)
 
 `v-move-fs-directory` 是一个用于在文件系统中移动目录的 CLI 命令。该命令属于 Hestia 的一部分，并接受三个参数：用户名（USER）、源目录路径（SRC_DIRECTORY）和目标目录路径（DST_DIRECTORY）。以下是对该命令的详细介绍，包括使用方法、示例以及工作原理。
 
@@ -430,7 +430,7 @@ v-move-fs-directory admin /tmp/temp_data /home/admin/archive/
 
 ## v-move-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-move-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-move-fs-file)
 
 `v-move-fs-file` 是一个用于在文件系统中移动文件的 CLI 命令。此命令属于 Hestia 的一部分，允许用户将文件从源路径移动到目标路径。此外，由于它使用 `mv` 命令，它也可以用于重命名文件。以下是该命令的详细介绍，包括使用方法、示例以及工作原理。
 
@@ -500,7 +500,7 @@ v-move-fs-file admin /tmp/temp_data.csv /home/admin/archive/temp_data.csv
 
 ## v-open-fs-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-open-fs-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-open-fs-config)
 
 `v-open-fs-config` 是一个 CLI 命令，它允许用户查看并读取指定的系统配置文件。该命令是 Hestia 系统管理工具的一部分，旨在提供对关键配置文件的访问权限，同时确保用户具有适当的权限，并且文件位于预期的目录中。
 
@@ -584,7 +584,7 @@ v-open-fs-config /etc/httpd/conf.d/my-vhost.conf
 
 ## v-open-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-open-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-open-fs-file)
 
 `v-open-fs-file` 是一个 Bash 脚本，旨在通过提供的用户名和文件路径，在文件系统中打开或读取文件。此脚本首先验证参数和文件路径的有效性，然后尝试读取文件内容。如果成功，它将输出文件内容；如果失败，它将输出相应的错误消息并退出。
 

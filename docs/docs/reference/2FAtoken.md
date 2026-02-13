@@ -2,7 +2,7 @@
 
 ## v-add-user-2fa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-2fa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-2fa)
 
 ### 简介
 
@@ -84,7 +84,7 @@ XR4NRQLISPQQE2ZTADGSDGLJRWLOWKOTO
 
 ## v-check-user-2fa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-user-2fa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-user-2fa)
 
 ### 简介
 
@@ -145,7 +145,7 @@ v-check-user-2fa admin 493690
 
 ## v-delete-user-2fa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-2fa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-2fa)
 
 ### 简介
 

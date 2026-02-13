@@ -2,7 +2,7 @@
 
 ## v-delete-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-fs-directory)
 
 `v-delete-fs-directory` 是 Hestia 提供的一个命令行接口（CLI）命令，用于在文件系统中删除目录。本文档将详细介绍该命令的用法、选项以及示例。
 
@@ -63,7 +63,7 @@ v-delete-fs-directory admin /nonexistent_directory
 
 ## v-list-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-fs-directory)
 
 `v-list-fs-directory` 是 Hestia 提供的一个命令行工具，用于列出指定目录的文件系统信息。该命令提供了丰富的选项和参数，以满足用户的不同需求。
 
@@ -131,7 +131,7 @@ v-list-fs-directory /home/john/documents
 
 ## v-add-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fs-directory)
 
 ### 简介
 

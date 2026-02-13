@@ -1,10 +1,10 @@
 # How to modify the default HTML template of hestia
 
 ::: danger Attention!
-The `dns.hestiamb.org` domain name is a reference address. It is the reference example address of your file server website
+The `hestiamb.org` domain name is a reference address. It is the reference example address of your file server website
 :::
 ::: details See how to modify the default HTML template of hestia
-Replace the following `dns.hestiamb.org` address and upload it to your file server website after modification.
+Replace the following `hestiamb.org` address and upload it to your file server website after modification.
 
 Download the default HTML template file in the following path to your local computer for modification.
 
@@ -17,7 +17,7 @@ Download the default HTML template file in the following path to your local comp
 After modification, upload the HTML file in the above path to the root directory of your file server website, and use the `curl -fsSL` command for one-click replacement
 
 ```bash
-curl -fsSL https://dns.hestiamb.org/replace.sh | bash
+curl -fsSL https://hestiamb.org/replace.sh | bash
 ```
 
 After modification, please save it as `replace.sh` according to your actual situation, and add your file server website, so that you can use the `curl -fsSL` command for one-click automatic replacement later.
@@ -39,27 +39,27 @@ echo "Error: Domain name /home/admin/web/ not found."
 exit 1
 fi
 
-curl -fsSL -o "${target_domain_dir}/document_errors/50x.html" "https://dns.hestiamb.org/web/skel/document_errors/50x.html"
-curl -fsSL -o "${target_domain_dir}/document_errors/403.html" "https://dns.hestiamb.org/web/skel/document_errors/403.html"
-curl -fsSL -o "${target_domain_dir}/document_errors/404.html" "https://dns.hestiamb.org/web/skel/document_errors/404.html"
-curl -fsSL -o "${target_domain_dir}/document_errors/410.html" "https://dns.hestiamb.org/web/skel/document_errors/410.html"
-curl -fsSL -o "${target_domain_dir}/public_html/index.html" "https://dns.hestiamb.org/web/skel/ubauntu/index.html"
-curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/50x.html" "https://dns.hestiamb.org/web/skel/document_errors/50x.html"
-curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/403.html" "https://dns.hestiamb.org/web/skel/document_errors/403.html"
-curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/404.html" "https://dns.hestiamb.org/web/skel/document_errors/404.html"
-curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/410.html" "https://dns.hestiamb.org/web/skel/document_errors/410.html"
-curl -fsSL -o "/usr/local/hestia/web/error/50x.html" "https://dns.hestiamb.org/web/skel/document_errors/50x.html"
-curl -fsSL -o "/usr/local/hestia/web/error/403.html" "https://dns.hestiamb.org/web/skel/document_errors/403.html"
-curl -fsSL -o "/usr/local/hestia/web/error/404.html" "https://dns.hestiamb.org/web/skel/document_errors/404.html"
-curl -fsSL -o "/usr/local/hestia/web/error/410.html" "https://dns.hestiamb.org/web/skel/document_errors/410.html"
-curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/public_html/index.html" "https://dns.hestiamb.org/web/skel/public_html/index.html"
-curl -fsSL -o "/usr/local/hestia/data/templates/web/suspend/index.html" "https://dns.hestiamb.org/web/suspend/index.html"
-curl -fsSL -o "/usr/local/hestia/data/templates/web/unassigned/index.html" "https://dns.hestiamb.org/web/unassigned/index.html"
-curl -fsSL -o "/var/www/document_errors/50x.html" "https://dns.hestiamb.org/web/skel/document_errors/50x.html"
-curl -fsSL -o "/var/www/document_errors/403.html" "https://dns.hestiamb.org/web/skel/document_errors/403.html"
-curl -fsSL -o "/var/www/document_errors/404.html" "https://dns.hestiamb.org/web/skel/document_errors/404.html"
-curl -fsSL -o "/var/www/document_errors/410.html" "https://dns.hestiamb.org/web/skel/document_errors/410.html"
-curl -fsSL -o "/var/www/html/index.html" "https://dns.hestiamb.org/web/skel/ubauntu/index.html"
+curl -fsSL -o "${target_domain_dir}/document_errors/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -o "${target_domain_dir}/document_errors/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
+curl -fsSL -o "${target_domain_dir}/document_errors/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
+curl -fsSL -o "${target_domain_dir}/document_errors/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+curl -fsSL -o "${target_domain_dir}/public_html/index.html" "https://hestiamb.org/web/skel/ubauntu/index.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/document_errors/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+curl -fsSL -o "/usr/local/hestia/web/error/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -o "/usr/local/hestia/web/error/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
+curl -fsSL -o "/usr/local/hestia/web/error/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
+curl -fsSL -o "/usr/local/hestia/web/error/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/skel/public_html/index.html" "https://hestiamb.org/web/skel/public_html/index.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/suspend/index.html" "https://hestiamb.org/web/suspend/index.html"
+curl -fsSL -o "/usr/local/hestia/data/templates/web/unassigned/index.html" "https://hestiamb.org/web/unassigned/index.html"
+curl -fsSL -o "/var/www/document_errors/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -o "/var/www/document_errors/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
+curl -fsSL -o "/var/www/document_errors/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
+curl -fsSL -o "/var/www/document_errors/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+curl -fsSL -o "/var/www/html/index.html" "https://hestiamb.org/web/skel/ubauntu/index.html"
 
 echo "The files in the relevant directory have been successfully modified"
 ```

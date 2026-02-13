@@ -25,7 +25,7 @@
 
 ### 支持的操作系统
 
-* Debian 11 or 12
+* Debian 11 or 12 or 13
 * Ubuntu 22.04 or 24.04
 
 ::: tip 信息

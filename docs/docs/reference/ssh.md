@@ -2,7 +2,7 @@
 
 ## v-list-sys-shells
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-shells)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-shells)
 
 ### 概述
 
@@ -77,7 +77,7 @@ $ v-list-sys-shells csv
 
 ## v-add-user-ssh-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-ssh-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-ssh-key)
 
 ### 命令概述
 
@@ -141,7 +141,7 @@ v-add-user-ssh-key --help
 
 ## v-list-sys-sshd-port
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-sshd-port)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-sshd-port)
 
 ### 命令简介
 
@@ -210,7 +210,7 @@ CSV 格式的输出与 shell 格式类似，但通常用于与其他程序或工
 
 ## v-list-user-ssh-key
 
-[命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-ssh-key)
+[命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-ssh-key)
 
 ### 命令概述
 

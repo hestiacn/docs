@@ -2,7 +2,7 @@
 
 ## v-run-cli-cmd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-run-cli-cmd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-run-cli-cmd)
 
 ### 概述
 
@@ -71,7 +71,7 @@ v-wrapper-hestia-api composer_user composer install --no-dev
 
 ## v-check-api-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-api-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-api-key)
 
 ### 概述
 
@@ -132,7 +132,7 @@ v-check-api-key secret_key 192.168.1.1
 
 ## v-change-sys-api
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-api)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-api)
 
 ### 概述
 
@@ -195,7 +195,7 @@ v-change-sys-api remove all
 
 ## v-change-remote-dns-domain-exp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-remote-dns-domain-exp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-remote-dns-domain-exp)
 
 ### 概述
 
@@ -246,7 +246,7 @@ v-change-remote-dns-domain-exp john example.com
 
 ## v-change-remote-dns-domain-soa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-remote-dns-domain-soa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-remote-dns-domain-soa)
 
 ### 概述
 
@@ -297,7 +297,7 @@ v-change-remote-dns-domain-soa john example.com
 
 ## v-change-remote-dns-domain-ttl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-remote-dns-domain-ttl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-remote-dns-domain-ttl)
 
 ### 概述
 
@@ -352,7 +352,7 @@ v-change-remote-dns-domain-ttl john example.com
 
 ## v-revoke-api-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-revoke-api-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-revoke-api-key)
 
 ### 概述
 
@@ -405,7 +405,7 @@ v-revoke-api-key abcdef1234567890
 
 ## v-list-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-access-key)
 
 ### 概述
 
@@ -492,7 +492,7 @@ AKIAIOSFODNN7EXAMPLE:wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 ## v-list-access-keys
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-access-keys)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-access-keys)
 
 ### 概述
 
@@ -579,7 +579,7 @@ v-list-access-keys json
 
 ## v-list-api
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-api)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-api)
 
 ### 概述
 
@@ -645,7 +645,7 @@ v-list-api mail-accounts json
 
 ## v-list-apis
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-apis)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-apis)
 
 ### 概述
 
@@ -718,7 +718,7 @@ v-list-apis json
 
 ## v-generate-api-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-generate-api-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-generate-api-key)
 
 ### 概述
 

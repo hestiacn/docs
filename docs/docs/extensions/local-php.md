@@ -1,6 +1,11 @@
 # 本地 PHP
 
+::: tip 温馨提示
+### 注意：本文档仅适用于 RHEL（Red Hat Enterprise Linux）系操作系统，请勿用于 Debian 系发行版。
+:::
+
 HestiaCP RPM Edition 所使用的 PHP 解释器来源于安装该面板的软件仓库。
+W
 HestiaCP RPM Edition 可以选择使用 Remi 仓库中的 PHP，或者所谓的本地 PHP 仓库中的 PHP。
 
 如果需要更全面的功能，请在安装面板时放弃 `uselocalphp yes` 选项，改用 `uselocalphp no` 选项进行安装。

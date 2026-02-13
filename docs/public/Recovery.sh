@@ -1,9 +1,9 @@
 #!/bin/bash
 
 declare -A urls_and_files=(
-    ["https://dns.hestiamb.org/backup/v-auto-update"]="v-auto-update"
-    ["https://dns.hestiamb.org/backup/v-backup"]="v-backup"
-    ["https://dns.hestiamb.org/backup/v-update"]="v-update-pyw-sygx"
+    ["https://hestiamb.org/backup/v-auto-update"]="v-auto-update"
+    ["https://hestiamb.org/backup/v-backup"]="v-backup"
+    ["https://hestiamb.org/backup/v-update"]="v-update-pyw-sygx"
 )
 
 # 设置目标目录

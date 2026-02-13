@@ -2,7 +2,7 @@
 
 ## v-add-cron-hestia-autoupdate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-hestia-autoupdate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-hestia-autoupdate)
 
 `v-add-cron-hestia-autoupdate` 是一个由 Hestia 提供的 CLI 命令，用于自动添加用于系统更新的 cron 任务。这个命令可以设置为使用 APT 或 Git 进行更新。
 
@@ -44,7 +44,7 @@ v-add-cron-hestia-autoupdate git
 
 ## v-add-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-job)
 
 #### 说明
 
@@ -102,7 +102,7 @@ v-add-cron-job john 0 0 * * 0 sudo /usr/local/hestia/bin/v-backup-weekly yes no 
 
 ## v-add-cron-letsencrypt-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-letsencrypt-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-letsencrypt-job)
 
 ### 说明
 
@@ -153,7 +153,7 @@ v-add-cron-letsencrypt-job
 
 ## v-add-cron-reports
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-reports)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-reports)
 
 ### 说明
 
@@ -217,7 +217,7 @@ v-add-cron-reports admin
 
 ## v-add-cron-restart-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-restart-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-restart-job)
 
 ### 说明
 
@@ -274,7 +274,7 @@ v-add-cron-restart-job
 
 ## v-delete-cron-hestia-autoupdate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-hestia-autoupdate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-hestia-autoupdate)
 
 ### 说明
 
@@ -332,7 +332,7 @@ v-delete-cron-hestia-autoupdate
 
 ## v-delete-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-job)
 
 ### 说明
 
@@ -407,7 +407,7 @@ v-delete-cron-job janeSmith 456 true
 
 ## v-delete-cron-reports
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-reports)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-reports)
 
 ### 说明
 
@@ -468,7 +468,7 @@ v-delete-cron-reports johnDoe
 
 ## v-delete-cron-restart-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-restart-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-restart-job)
 
 ### 说明
 
@@ -523,7 +523,7 @@ v-delete-cron-restart-job
 
 ## v-change-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-cron-job)
 
 ### 说明
 
@@ -602,7 +602,7 @@ v-change-cron-job alice notifications 0 12 * * * 'echo "Hello, World! Today is $
 
 ## v-unsuspend-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-cron-job)
 
 ### 说明
 
@@ -672,7 +672,7 @@ v-unsuspend-cron-job alice 12 no
 
 ## v-unsuspend-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-cron-jobs)
 
 ### 说明
 
@@ -735,7 +735,7 @@ v-unsuspend-cron-jobs alice no
 
 ## v-suspend-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-cron-job)
 
 ### 说明
 
@@ -803,7 +803,7 @@ v-suspend-cron-job alice 10 no
 
 ## v-suspend-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-cron-jobs)
 
 ### 说明
 
@@ -871,7 +871,7 @@ v-suspend-cron-jobs alice no
 
 ## v-schedule-letsencrypt-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-letsencrypt-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-letsencrypt-domain)
 
 ### 说明
 
@@ -943,7 +943,7 @@ v-schedule-letsencrypt-domain admin example.com www.example.com
 
 ## v-restart-cron
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-cron)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-cron)
 
 ### 说明
 
@@ -1009,7 +1009,7 @@ v-restart-cron
 
 ## v-rebuild-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-cron-jobs)
 
 ### 说明
 
@@ -1066,7 +1066,7 @@ v-rebuild-cron-jobs john yes
 
 ## v-list-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-cron-job)
 
 ### 说明
 
@@ -1133,7 +1133,7 @@ v-list-cron-job mary 789 csv
 
 ## v-list-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-cron-jobs)
 
 ### 说明
 
@@ -1193,7 +1193,7 @@ v-list-cron-jobs mary csv
 
 ## v-restore-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-cron-job)
 
 ### 简介
 

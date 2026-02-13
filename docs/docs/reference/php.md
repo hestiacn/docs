@@ -2,7 +2,7 @@
 
 ## v-add-web-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-php)
 
 ### 简介
 
@@ -57,7 +57,7 @@ v-add-web-php 7.4
 
 ## v-delete-web-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-php)
 
 ### 简介
 
@@ -119,7 +119,7 @@ v-delete-web-php 8.9
 
 ## v-change-sys-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-php)
 
 ### 简介
 
@@ -172,7 +172,7 @@ php -v
 
 ## v-change-user-php-cli
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-php-cli)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-php-cli)
 
 ### 概述
 
@@ -226,7 +226,7 @@ v-change-user-php-cli mike 7.2
 
 ## v-list-sys-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-php)
 
 ### 概述
 
@@ -313,7 +313,7 @@ v-list-sys-php plain
 
 ## v-list-sys-php-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-php-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-php-config)
 
 ### 概述
 

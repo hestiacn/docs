@@ -2,7 +2,7 @@
 
 ## v-change-sys-release
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-release)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-release)
 
 `v-change-sys-release` 是一个由 HestiaCP 提供的 CLI 命令，用于更改 Hestia Control Panel 的发布分支。通过此命令，用户可以在稳定版本和预发布版本之间切换，如果启用了自动更新，系统将根据相应的发布计划自动更新。
 
@@ -140,7 +140,7 @@ v-restart-service # 假设的命令，用于重启服务
 
 ## v-add-sys-dependencies
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-dependencies)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-dependencies)
 
 `v-add-sys-dependencies` 是 HestiaCP（一个开源的 Web 主机控制面板）提供的一个 CLI（命令行接口）脚本，用于添加或更新系统依赖项。这个脚本通常用于安装或更新 HestiaCP 所需的 PHP 依赖包，例如 PHPMailer。
 
@@ -244,7 +244,7 @@ https://github.com/hestiacp/hestiacp/issues
 
 ## v-add-sys-filemanager
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-filemanager)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-filemanager)
 
 `v-add-sys-filemanager` 是 HestiaCP 提供的一个 CLI 命令，用于在 HestiaCP 系统中添加文件管理器功能。该命令主要用于自动安装和配置文件管理器软件（例如 FileGator），使其能够在 HestiaCP 环境中顺利运行。
 
@@ -316,7 +316,7 @@ ERROR: Environment variables not present, installation aborted.
 
 ## v-change-sys-hestia-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-hestia-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-hestia-ssl)
 
 `v-change-sys-hestia-ssl` 是一个由 HestiaCP 提供的 CLI 命令，用于更新或更改 HestiaCP 系统中的 SSL 证书。此命令用于将指定的 SSL 证书和私钥文件复制到 HestiaCP 的 SSL 目录，并在需要时重启相关的服务以应用新的证书。
 
@@ -376,7 +376,7 @@ v-change-sys-hestia-ssl /path/to/certs no
 
 ## v-list-default-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-default-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-default-php)
 
 `v-list-default-php` 是一个 CLI 命令，用于列出系统上已安装的默认 PHP 版本。它根据 `/etc/php` 目录下 FPM (FastCGI Process Manager) 的配置来确定 PHP 版本。这个命令支持多种输出格式，包括 JSON、纯文本、CSV 和 Shell 格式。
 
@@ -462,7 +462,7 @@ v-list-default-php csv
 
 ## v-list-sys-hestia-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-hestia-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-hestia-ssl)
 
 `v-list-sys-hestia-ssl` 是 Hestia 控制面板提供的一个 CLI 命令，用于列出或导出系统上已安装的 SSL 证书的相关信息。该命令支持多种输出格式，如 JSON、Shell、Plain Text 和 CSV。
 
@@ -572,7 +572,7 @@ CRT,KEY,CA,SUBJECT,ALIASES,NOT_BEFORE,NOT_AFTER,SIGNATURE,PUB_KEY,ISSUER
 
 ## v-update-web-domain-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-disk)
 
 `v-update-web-domain-disk` 是 Hestia 控制面板提供的一个 CLI 命令，用于重新计算并更新特定网站域名的磁盘使用情况。
 
@@ -629,7 +629,7 @@ v-update-web-domain-disk alice wonderland.com
 
 ## v-update-web-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-ssl)
 
 `v-update-web-domain-ssl` 是 Hestia 控制面板提供的一个 CLI 命令，用于更新特定网站域名的 SSL 证书。
 
@@ -697,7 +697,7 @@ v-update-web-domain-ssl USER DOMAIN SSL_DIR [RESTART]
 
 ## v-update-web-domain-stat
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-stat)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-stat)
 
 `v-update-web-domain-stat` 是 Hestia 控制面板提供的 CLI 命令，用于更新特定网站域名的统计信息。该命令通常与 AWStats 工具结合使用，用于生成网站访问统计报告。
 
@@ -757,7 +757,7 @@ v-update-web-domain-stat USER DOMAIN
 
 ## v-update-web-domain-traff
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-traff)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-traff)
 
 `v-update-web-domain-traff` 是 Hestia 控制面板提供的 CLI 命令，用于更新特定网站域名的流量统计信息。该命令通过分析日志文件中的字节数来计算已使用的带宽，并更新数据库中的相应值。
 
@@ -816,7 +816,7 @@ v-update-web-domain-traff USER DOMAIN
 
 ## v-update-web-domains-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domains-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domains-disk)
 
 `v-update-web-domains-disk` 是 Hestia 控制面板提供的 CLI 命令，用于重新计算指定用户下所有网站域名的磁盘使用情况。该命令遍历用户的所有域名，计算每个域名的磁盘空间占用，并更新到数据库中。
 
@@ -871,7 +871,7 @@ v-update-web-domains-disk USER
 
 ## v-update-web-domains-stat
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domains-stat)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domains-stat)
 
 `v-update-web-domains-stat` 是 Hestia 控制面板提供的 CLI 命令，用于更新指定用户下所有未暂停的 Web 域名的统计信息。该命令会遍历用户拥有的所有域名，并根据配置决定是否执行日志分析来更新域名的统计数据。
 
@@ -928,7 +928,7 @@ v-update-web-domains-stat USER
 
 ## v-update-web-domains-traff
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domains-traff)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domains-traff)
 
 `v-update-web-domains-traff` 是 Hestia 控制面板提供的 CLI 命令，用于更新指定用户下所有未暂停的 Web 域名的带宽使用统计信息。该命令会遍历用户拥有的所有域名，并读取每个域名的日志文件来计算已使用的带宽，然后更新到相应的配置中。
 
@@ -990,7 +990,7 @@ v-update-web-domains-traff USER
 
 ## v-update-web-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-templates)
 
 `v-update-web-templates` 是 Hestia 控制面板提供的 CLI 命令，用于更新 Web 域名模板。该命令会复制和更新 Hestia 安装目录和公共模板目录中的 Web 模板到指定的模板目录，并根据需要重启 Web 服务器和代理服务器。
 
@@ -1057,7 +1057,7 @@ v-update-web-templates [RESTART] [SKIP_REBUILD]
 
 ## v-update-white-label-logo
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-white-label-logo)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-white-label-logo)
 
 `v-update-white-label-logo` 是 Hestia 控制面板提供的 CLI 命令，用于更新或恢复白标（White Label）的 Logo 图片和图标。这个命令允许你使用自定义的 Logo 替换 Hestia 控制面板默认的 Logo，或者如果自定义 Logo 不存在，可以选择从远程服务器下载默认的 Logo。
 
@@ -1120,7 +1120,7 @@ v-update-white-label-logo [DOWNLOAD] [RESET]
 
 ## v-update-sys-hestia
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-hestia)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-hestia)
 
 `v-update-sys-hestia` 是 Hestia 控制面板提供的 CLI 命令，用于更新 Hestia 系统软件包及其配置。通过该命令，管理员可以确保 Hestia 及其相关组件（如 Nginx 和 PHP）保持最新状态，并获取最新的安全修复和功能更新。
 
@@ -1185,7 +1185,7 @@ v-update-sys-hestia PACKAGE
 
 ## v-update-sys-hestia-all
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-hestia-all)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-hestia-all)
 
 `v-update-sys-hestia-all` 是 Hestia 控制面板提供的 CLI 命令，用于一键更新所有 Hestia 系统软件包。通过该命令，管理员可以方便地确保 Hestia 及其所有相关组件（如 Nginx 和 PHP）都保持最新状态，从而获取最新的安全修复和功能更新。
 
@@ -1236,7 +1236,7 @@ v-update-sys-hestia-all
 
 ## v-update-sys-hestia-git
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-hestia-git)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-hestia-git)
 
 `v-update-sys-hestia-git` 是一个用于更新 Hestia 系统组件的 CLI 命令，该命令通过 Git 仓库拉取最新的 Hestia 系统代码，并自动执行必要的更新操作。以下是对该命令的详细解释和使用示例。
 
@@ -1302,7 +1302,7 @@ v-update-sys-hestia-git --verbose
 
 ## v-update-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-ip)
 
 ### 概述
 
@@ -1362,7 +1362,7 @@ v-update-sys-ip
 
 ## v-update-host-certificate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-host-certificate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-host-certificate)
 
 ### 介绍
 
@@ -1426,7 +1426,7 @@ v-update-host-certificate -f example.com
 
 ## v-list-sys-languages
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-languages)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-languages)
 
 ### 命令简介
 
@@ -1482,7 +1482,7 @@ v-list-sys-languages > languages.txt
 
 ## v-list-sys-hestia-autoupdate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-hestia-autoupdate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-hestia-autoupdate)
 
 ### 命令简介
 
@@ -1593,7 +1593,7 @@ AUTOUPDATE,Disabled
 
 ## v-list-sys-hestia-updates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-hestia-updates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-hestia-updates)
 
 `v-list-sys-hestia-updates` 是 Hestia 提供的 CLI 命令之一，用于列出系统上已安装的 Hestia 及其相关组件的版本、架构、更新时间等信息。这个命令在管理和维护 Hestia 部署时非常有用，因为它可以快速给出关于已安装软件包的状态。
 

@@ -2,7 +2,7 @@
 
 ## v-list-sys-disk-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-disk-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-disk-status)
 
 ### 脚本概述
 
@@ -110,7 +110,7 @@ Disk identifier: 0x00000000
 
 ## v-get-sys-timezone
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-sys-timezone)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-sys-timezone)
 
 ### 脚本概述
 
@@ -198,7 +198,7 @@ Asia/Shanghai
 
 ## v-get-sys-timezones
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-sys-timezones)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-sys-timezones)
 
 ### 脚本概述
 
@@ -274,7 +274,7 @@ Europe/Berlin
 
 ## v-add-sys-firewall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-firewall)
 
 ### 脚本概述
 
@@ -335,7 +335,7 @@ $ v-add-sys-firewall
 
 ## v-add-sys-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-quota)
 
 ### 脚本概述
 
@@ -411,7 +411,7 @@ $ v-add-sys-quota
 
 ## v-change-sys-hostname
 
-* [命令行Bash 脚本查看](https://dns.hestiamb.org/doc/v-change-sys-hostname)
+* [命令行Bash 脚本查看](https://hestiamb.org/doc/v-change-sys-hostname)
 
 ### 脚本概述
 
@@ -485,7 +485,7 @@ $ v-change-sys-hostname currentserver
 
 ## v-delete-sys-web-terminal
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-web-terminal)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-web-terminal)
 
 ### 脚本概述
 
@@ -557,7 +557,7 @@ $ v-delete-sys-web-terminal
 
 ## v-delete-sys-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-quota)
 
 ### 脚本概述
 
@@ -633,7 +633,7 @@ $ v-delete-sys-quota
 
 ## v-delete-sys-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-sftp-jail)
 
 ### 脚本概述
 
@@ -685,7 +685,7 @@ $ v-delete-sys-sftp-jail
 
 ## v-delete-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-ip)
 
 `v-delete-sys-ip` 命令脚本是用于删除系统中特定 IP 地址的脚本。该函数用于删除系统 IP，但不允许删除在接口上的第一个 IP，也不允许删除 Web 域使用的 IP。这确保了系统的网络配置和 Web 服务的稳定性。以下是该脚本的详细功能说明：
 
@@ -727,7 +727,7 @@ $ v-delete-sys-sftp-jail
 
 ## v-change-sys-service-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-service-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-service-config)
 
 `v-change-sys-service-config` 是 Hestia 控制面板的命令行工具，用于更改系统服务的配置文件。通过此脚本，管理员能够方便地更新指定服务的配置文件，并在需要时重启服务以应用更改。
 
@@ -800,7 +800,7 @@ Error: service some-nonexistent-service doesn't exist
 
 ## v-change-sys-timezone
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-timezone)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-timezone)
 
 `v-change-sys-timezone` 是 Hestia 控制面板的一个命令行工具，用于更改系统时区设置。该脚本会自动检查参数的有效性，更新系统时区，并在必要时修改 PHP 的时区配置。
 
@@ -856,7 +856,7 @@ v-change-sys-timezone Asia/Tokyo
 
 ## v-change-sys-language
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-language)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-language)
 
 `v-change-sys-language` 是 Hestia 控制面板的一个命令行工具，用于更改系统语言设置。该脚本会验证输入的语言代码的有效性，并更新系统配置文件以应用新的语言设置。此外，如果指定了更新用户语言的选项，脚本还会为所有现有用户更新语言设置。
 
@@ -911,7 +911,7 @@ v-change-sys-language fr yes
 
 ## v-change-sys-config-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-config-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-config-value)
 
 `v-change-sys-config-value` 是 Hestia 控制面板的一个命令行工具，用于更改主配置文件中的系统设置值。这个脚本可以更改如 `COMPANY_NAME` 或 `COMPANY_EMAIL` 等关键设置。
 
@@ -971,7 +971,7 @@ v-change-sys-config-value VERSION "1.2.3"
 
 ## v-restart-system
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-system)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-system)
 
 `v-restart-system` 是 Hestia 控制面板的一个命令行工具，用于重启操作系统。该脚本通过检查输入参数和执行一系列验证，安全地触发系统重启。
 
@@ -1027,7 +1027,7 @@ v-restart-system yes 300
 
 ## v-update-sys-queue
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-queue)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-queue)
 
 `v-update-sys-queue` 是 Hestia 控制面板的一个命令行工具，用于更新系统队列。此脚本负责处理队列中的任务，包括服务重启、计划备份、Web 日志解析等需要消耗大量系统资源的操作。通过优化系统行为，它可以确保服务如 Apache 仅在必要时被重启，即使添加了或删除了多个域名。
 
@@ -1087,7 +1087,7 @@ v-update-sys-queue backup
 
 ## v-start-service
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-start-service)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-start-service)
 
 ### 功能描述
 
@@ -1141,7 +1141,7 @@ v-start-service mysql
 
 ## v-stop-firewall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-stop-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-stop-firewall)
 
 ### 功能描述
 
@@ -1197,7 +1197,7 @@ v-stop-firewall
 
 ## v-stop-service
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-stop-service)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-stop-service)
 
 ### 功能描述
 
@@ -1269,7 +1269,7 @@ v-stop-service php-fpm
 
 ## v-restart-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-proxy)
 
 ### 功能描述
 
@@ -1328,7 +1328,7 @@ v-restart-proxy [选项]
 
 ## v-restart-service
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-service)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-service)
 
 ### 功能描述
 
@@ -1387,7 +1387,7 @@ v-restart-service SERVICE [RESTART]
 
 ## v-repair-sys-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-repair-sys-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-repair-sys-config)
 
 ### 功能描述
 
@@ -1456,7 +1456,7 @@ v-repair-sys-config repair
 
 ## v-refresh-sys-theme
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-refresh-sys-theme)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-refresh-sys-theme)
 
 ### 功能描述
 
@@ -1504,7 +1504,7 @@ v-refresh-sys-theme
 
 ## v-rebuild-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-user)
 
 ### 功能描述
 
@@ -1577,7 +1577,7 @@ v-rebuild-user jane_smith restart
 
 ## v-rebuild-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-users)
 
 ### 功能描述
 
@@ -1641,7 +1641,7 @@ v-rebuild-users restart
 
 ## v-list-sys-themes
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-themes)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-themes)
 
 ### 功能描述
 
@@ -1756,7 +1756,7 @@ theme3
 
 ## v-list-sys-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-users)
 
 ### 功能描述
 
@@ -1870,7 +1870,7 @@ user3
 
 ## v-list-sys-network-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-network-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-network-status)
 
 ### 命令概述
 
@@ -1928,7 +1928,7 @@ $ v-list-sys-network-status > network_status.txt
 
 ## v-list-sys-memory-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-memory-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-memory-status)
 
 ### 命令概述
 
@@ -2040,7 +2040,7 @@ Memory Device
 
 ## v-list-sys-info
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-info)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-info)
 
 ### 命令概述
 
@@ -2150,7 +2150,7 @@ myhost,CentOS,7.9.2009,x86_64,hestia-1.2,stable,12345,0.15
 
 ## v-list-sys-interfaces
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-interfaces)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-interfaces)
 
 ### 命令概述
 
@@ -2259,7 +2259,7 @@ wlan0
 
 ## v-list-sys-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-config)
 
 ### 命令概述
 
@@ -2355,7 +2355,7 @@ v-list-sys-config json
 
 ## v-list-sys-cpu-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-cpu-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-cpu-status)
 
 ### 命令概述
 

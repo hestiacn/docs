@@ -30,25 +30,35 @@ export default {
 		{ icon: 'facebook', link: 'https://www.facebook.com/hestiacp' },
 	],
     search: {
-		provider: "local",
-		options: {
-		placeholder: "搜索文档",
-		translations: {
-		button: { buttonText: "搜索文档" },
-		modal: {
-			noResultsText: "无法找到相关结果",
-			displayDetails: "显示详细信息",
-			resetButtonTitle: "清除查询条件",
-			errorScreen: {
-			titleText: "无法获取结果",
-			helpText: "你可能需要检查你的网络连接",},
-			footer: {
-			selectText: "选择",
-			navigateText: "切换",
-			closeText: "关闭",},},
-		  },
-		},
-	  },
+      provider: "local",
+      options: {
+        placeholder: "搜索文档",
+        minMatchCharLength: 1,
+        threshold: 0.3,
+        distance: 10000,
+        keys: ["title", "content", "headers"],
+        tokenize: (text) => {
+          return text.split('').filter(char => char.trim());
+        },
+        translations: {
+          button: { buttonText: "搜索文档" },
+          modal: {
+            noResultsText: "未找到相关内容",
+            displayDetails: "显示详细信息",
+            resetButtonTitle: "清除搜索条件",
+            errorScreen: {
+              titleText: "无法获取结果",
+              helpText: "请检查网络连接",
+            },
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+              closeText: "关闭",
+            },
+          },
+        },
+      },
+    },
     sidebar: { '/docs/': sidebarDocs() },
     outlineTitle: "内容导航",
     lightModeSwitchTitle: '切换到白天模式',
@@ -104,7 +114,8 @@ function sidebarDocs() {
 				{ text: '用户', link: '/docs/user-guide/users' },
 				{ text: '添加网站', link: '/docs/user-guide/web-domains' },
 				{ text: '开启演示模式', link: '/docs/introduction/demo' },
-				{ text: '常见错误', link: '/docs/introduction/ssh' },
+				{ text: '常见错误', link: '/docs/introduction/faq' },
+				{ text: 'Debian 13连接被拒绝', link: '/docs/introduction/debian' },
 				{ text: '常用命令归档', link: '/docs/community/archive' },
 			],
 		},

@@ -2,7 +2,7 @@
 
 ## v-change-sys-db-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-db-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-db-alias)
 
 ### 简介
 
@@ -70,7 +70,7 @@ v-change-sys-db-alias pga newphppgadmin
 
 ## v-add-fastcgi-cache
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fastcgi-cache)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fastcgi-cache)
 
 ### 简介
 
@@ -167,7 +167,7 @@ exit
 
 ## v-delete-fastcgi-cache
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-fastcgi-cache)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-fastcgi-cache)
 
 ### 简介
 
@@ -275,7 +275,7 @@ exit
 
 ## v-change-sys-web-terminal-port
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-web-terminal-port)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-web-terminal-port)
 
 ### 简介
 
@@ -370,7 +370,7 @@ exit
 
 ## v-change-sys-port
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-port)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-port)
 
 ### 概述
 
@@ -439,7 +439,7 @@ v-change-sys-port 8088 2>&1 | tee output.log
 
 ## v-purge-nginx-cache
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-purge-nginx-cache)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-purge-nginx-cache)
 
 ### 概述
 
@@ -497,7 +497,7 @@ v-purge-nginx-cache john example.com yes
 
 ## v-list-sys-nginx-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-nginx-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-nginx-config)
 
 ### 概述
 

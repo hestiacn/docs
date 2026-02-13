@@ -2,7 +2,7 @@
 
 ## v-add-firewall-ban
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-ban)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-ban)
 
 `v-add-firewall-ban` 是一个 Bash 脚本命令，用于向防火墙添加阻塞规则。从提供的脚本内容来看，该命令的主要功能是将指定的 IP 地址添加到防火墙的阻塞列表中，并将其分配到特定的链（chain）中。以下是关于 `v-add-firewall-ban` 命令的详细解释：
 
@@ -64,7 +64,7 @@ v-add-firewall-ban 37.120.129.20 MAIL
 
 ## `v-add-firewall-chain`
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-chain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-chain)
 
 添加防火墙规则
 
@@ -116,7 +116,7 @@ v-add-firewall-chain SSH 2222 TCP
 
 ## `v-add-firewall-ipset`
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-ipset)
 
 `v-add-firewall-ipset`是一个用于向Hestia控制面板的防火墙系统中添加或更新IP集的CLI命令。
 
@@ -162,7 +162,7 @@ v-add-firewall-ipset my_ipset 'http://example.com/ipset-data.txt' v4 yes
 
 ## `v-add-firewall-rule`
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-rule)
 
 `v-add-firewall-rule` 是一个用于向 Hestia 控制面板的防火墙系统添加规则的 CLI 命令。此命令允许管理员通过命令行界面快速、灵活地配置防火墙规则，以增强系统的安全性。
 
@@ -212,7 +212,7 @@ v-add-firewall-rule DROP 185.137.111.77 25
 
 ## `v-delete-sys-firewall`
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-firewall)
 
 `v-delete-sys-firewall` 是一个用于删除或禁用系统防火墙的 CLI 命令。该命令允许管理员通过命令行界面轻松关闭或移除防火墙，以便在特定情况下进行维护、故障排除或其他操作。
 
@@ -259,7 +259,7 @@ v-delete-sys-firewall
 
 ## `v-delete-firewall-rule`
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-rule)
 
 `v-delete-firewall-rule` 是一个用于删除指定防火墙规则的 CLI 命令。通过此命令，管理员可以方便地移除不再需要的防火墙规则，从而灵活调整网络访问策略。
 
@@ -311,7 +311,7 @@ v-delete-firewall-rule SSH_BLOCK
 
 ## `v-delete-firewall-ipset`
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-ipset)
 
 ### 简介
 
@@ -383,7 +383,7 @@ v-delete-firewall-ipset my_ipset
 
 ### `v-delete-firewall-ban`
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-ban)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-ban)
 
 ### 简介
 
@@ -458,7 +458,7 @@ v-delete-firewall-ban 192.168.1.100 ALL
 
 ## `v-delete-firewall-chain` 
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-chain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-chain)
 
 ### 简介
 
@@ -528,7 +528,7 @@ v-delete-firewall-chain ssh
 
 ## `v-change-firewall-rule` 
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-firewall-rule)
 
 ### 简介
 
@@ -608,7 +608,7 @@ v-change-firewall-rule 3 ACCEPT 5.188.123.17 443
 
 ## v-update-firewall
 
-[命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-firewall)
+[命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-firewall)
 
 ### 简介
 
@@ -699,7 +699,7 @@ Please check your firewall configuration and try again.
 
 ## v-update-firewall-ipset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-firewall-ipset)
 
 ### 1. 概述
 
@@ -749,7 +749,7 @@ Please check your firewall configuration and try again.
 
 ### v-unsuspend-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-firewall-rule)
 
 ### 一、概述
 
@@ -809,7 +809,7 @@ v-unsuspend-firewall-rule rule123
 
 ## v-suspend-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-firewall-rule)
 
 ### 一、概述
 
@@ -869,7 +869,7 @@ v-suspend-firewall-rule rule456
 
 ## v-list-firewall-ipset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall-ipset)
 
 `v-list-firewall-ipset` 是一个命令行工具，用于列出防火墙系统中配置的所有 IP 集（IPset）信息。这个工具允许管理员以不同的格式查看 IP 集列表，以便于进行审查、分析和管理。
 
@@ -947,7 +947,7 @@ v-list-firewall-ipset
 
 ## v-list-firewall-ban
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall-ban)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall-ban)
 
 `v-list-firewall-ban` 是一个用于列出防火墙系统中所有被禁止（ban）的 IP 地址或 IP 地址范围的命令行工具。本文档旨在介绍该工具的使用方法、输出格式以及注意事项。
 
@@ -1022,7 +1022,7 @@ v-list-firewall-ban
 
 ## v-list-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall-rule)
 
 `v-list-firewall-rule` 是一个命令行工具，用于查看特定防火墙规则的详细信息。该工具允许管理员以不同的格式检索特定规则的动作、协议、端口、IP 地址等属性，以便于进行审查、分析和管理。
 
@@ -1099,7 +1099,7 @@ v-list-firewall-rule 2 csv
 
 ## v-list-firewall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall)
 
 `v-list-firewall` 是一个用于列出所有防火墙规则的命令行工具。通过执行此命令，管理员可以获取防火墙规则的详细信息，并以不同格式展示这些数据，以便于进一步分析和管理。
 

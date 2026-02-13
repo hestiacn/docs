@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 定义变量
-HOSTS_URL="https://github-hosts.tinsfox.com/hosts"
+# 定义变量 https://github-hosts.tinsfox.com/hosts
+HOSTS_URL="https://hosts.gitcdn.top/hosts.txt"
 BACKUP_FILE="/etc/hosts.bak.$(date +%Y%m%d%H%M%S)"
 TMP_FILE=$(mktemp)
 

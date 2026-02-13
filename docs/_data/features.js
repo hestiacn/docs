@@ -17,7 +17,7 @@ export const webDomains = [
 	{ text: "RHEL 系列发行版为PHP 7.4 (<a href='https://www.php.net/supported-versions.php' target='_blank' rel='noopener noreferrer'>EOL</a>)-8.3默认为 PHP8.2.查看<a href='https://dev.brepo.ru/bayrepo/hestiacp/src/commit/ec2e8ca836571c16b8f1da30837b286af809cc36/install/hst-install-rhel.sh#L45-L48' target='_blank' rel='noopener noreferrer'>RHEL分支</a>" },
 	{ text: "支持一键快速安装以下应用程序, 支持用户自定义配置, 请查看<a href='/docs/contributing/quick-install-app' rel='noopener noreferrer'>快速安装应用程序配置</a>" },
 	{ text: "以下为hestia配置的默认一键快速安装程序！因发行版不同！RHEL 系列可能尚未完整配置！",
-	apps: [
+	apps: [//https://github.com/hestiacp/hestiacp/tree/release/web/src/app/WebApp/Installers
 		{ text: 'Dokuwiki', iconType: 'image', icon: 'images/Dokuwiki.svg' },
 		{ text: 'Dolibarr', iconType: 'image', icon: 'images/dolibarr.svg' },
 		{ text: 'Drupal', iconType: 'fontawesome', icon: 'fab fa-drupal' },

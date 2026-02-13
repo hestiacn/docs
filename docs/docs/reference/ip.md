@@ -2,7 +2,7 @@
 
 ## v-add-sys-api-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-api-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-api-ip)
 
 ### 概述
 
@@ -59,7 +59,7 @@ v-add-sys-api-ip 3.3.3.3
 
 ## v-add-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-ip)
 
 ### 概述
 
@@ -117,7 +117,7 @@ v-add-sys-ip 203.0.113.3 255.255.255.0 "" "" "dedicated" web1.example.com
 
 从允许的 ip 列表中删除 api 地址
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-api-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-api-ip)
 
 ### 简介
 
@@ -169,7 +169,7 @@ v-delete-sys-api-ip 2001:0db8:85a3:0000:0000:8a2e:0370:7334
 
 ## v-change-sys-ip-name
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-name)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-name)
 
 ### 简介
 
@@ -218,7 +218,7 @@ v-list-sys-ip
 
 ## v-change-sys-ip-nat
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-nat)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-nat)
 
 ### 命令描述
 
@@ -270,7 +270,7 @@ v-change-sys-ip-nat 192.168.1.1 8.8.8.8 RESTART
 
 ## v-change-sys-ip-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-owner)
 
 ### 简介
 
@@ -316,7 +316,7 @@ v-change-sys-ip-owner 192.168.1.100 john
 
 ## v-change-sys-ip-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-status)
 
 ### 简介
 
@@ -387,7 +387,7 @@ v-change-sys-ip-status 203.0.113.1 invalid_status
 
 ## v-update-sys-ip-counters
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-ip-counters)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-ip-counters)
 
 ### 概述
 
@@ -445,7 +445,7 @@ v-update-sys-ip-counters 192.168.1.1
 
 ## v-list-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-ip)
 
 ### 命令概述
 
@@ -537,7 +537,7 @@ IP,OWNER,STATUS,NAME,U_SYS_USERS,U_WEB_DOMAINS,INTERFACE,NETMASK,NAT,TIME,DATE
 
 ## v-list-sys-ips
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-ips)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-ips)
 
 Hestia 控制面板提供了一个强大的命令行接口（CLI），用于管理和配置系统。其中，`v-list-sys-ips` 命令用于列出系统上的所有 IP 地址及其相关信息。本文档将详细介绍如何使用该命令，并给出多个示例。
 

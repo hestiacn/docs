@@ -2,7 +2,7 @@
 
 ## v-add-sys-web-terminal
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-web-terminal)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-web-terminal)
 
 ### 简介
 
@@ -59,7 +59,7 @@ cat /path/to/hestia/config/web_terminal.conf
 
 ## v-add-user-wp-cli
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-wp-cli)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-wp-cli)
 
 ### 概述
 
@@ -101,7 +101,7 @@ v-add-user-wp-cli john_doe
 
 ## v-add-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain)
 
 ### 概述
 
@@ -155,7 +155,7 @@ v-add-web-domain admin testdomain.net 10.0.0.10 no
 
 ## v-add-web-domain-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-alias)
 
 ### 命令介绍
 
@@ -211,7 +211,7 @@ v-add-web-domain-alias admin acme.com www.acme.com yes
 
 ## v-add-web-domain-allow-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-allow-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-allow-users)
 
 ### 命令简介
 
@@ -268,7 +268,7 @@ v-add-web-domain-allow-users developers dev.company.com
 
 ## v-add-web-domain-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-backend)
 
 ### 命令概述
 
@@ -325,7 +325,7 @@ v-add-web-domain-backend admin thirddomain.com specific
 
 ## v-add-web-domain-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ftp)
 
 ### 简介
 
@@ -374,7 +374,7 @@ v-add-web-domain-ftp alice mywebsite.net alice_ftp SecretPassword123 /home/alice
 
 ## v-add-web-domain-httpauth
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-httpauth)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-httpauth)
 
 ### 简介
 
@@ -423,7 +423,7 @@ v-add-web-domain-httpauth admin acme.com user02 password02 no
 
 ## v-add-web-domain-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-proxy)
 
 ### 简介
 
@@ -493,7 +493,7 @@ v-add-web-domain-proxy user domain.tld proxy.example.com yes
 
 ## v-add-web-domain-redirect
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-redirect)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-redirect)
 
 ### 简介
 
@@ -561,7 +561,7 @@ v-add-web-domain-redirect user domain.tld new-domain.com yes
 
 ## v-add-web-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl)
 
 ### 介绍
 
@@ -622,7 +622,7 @@ v-add-web-domain-ssl admin example.com /tmp/ssl_certs/ /var/www/ssl/ RESTART
 
 ## v-add-web-domain-ssl-force
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl-force)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl-force)
 
 ### 概述
 
@@ -679,7 +679,7 @@ v-add-web-domain-ssl-force admin example.com yes quiet
 
 ## v-add-web-domain-ssl-hsts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl-hsts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl-hsts)
 
 ### 概述
 
@@ -726,7 +726,7 @@ v-add-web-domain-ssl-hsts example.com
 
 ## v-add-web-domain-ssl-preset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl-preset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl-preset)
 
 ### 概述
 
@@ -768,7 +768,7 @@ v-add-web-domain-ssl-preset username example.org
 
 ## v-add-web-domain-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-stats)
 
 Hestia面板管理系统为用户提供了丰富的CLI（命令行接口）命令，以简化服务器和网站的管理任务。其中，`v-add-web-domain-stats` 命令用于为特定域名启用日志分析系统，从而生成域名的统计信息。
 
@@ -820,7 +820,7 @@ v-add-web-domain-stats premiumuser customdomain.net customstats
 
 ## v-add-web-domain-stats-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-stats-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-stats-user)
 
 ### 命令介绍
 
@@ -879,7 +879,7 @@ v-add-web-domain-stats-user admin example.com watchdog your_password RESTART
 
 ## v-change-web-domain-httpauth
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-httpauth)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-httpauth)
 
 ### 概述
 
@@ -932,7 +932,7 @@ v-change-web-domain-httpauth admin example.com jane secretpassword123 restart
 
 ## v-change-web-domain-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-ip)
 
 ### 命令概述
 
@@ -991,7 +991,7 @@ v-change-web-domain-ip user example.com 192.168.1.102 no
 
 ## v-change-web-domain-name
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-name)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-name)
 
 ### 介绍
 
@@ -1049,7 +1049,7 @@ v-change-web-domain-name bob example.com newexample.com yes
 
 ## v-change-web-domain-proxy-tpl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-proxy-tpl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-proxy-tpl)
 
 hestia面板管理系统是一款功能强大的服务器管理工具，它默认集成了多个CLI（命令行界面）命令，用于自动化和简化服务器的管理任务。其中，`v-change-web-domain-proxy-tpl`命令允许用户更改Web域名的代理模板，提供了灵活的配置选项和强大的功能。
 
@@ -1107,7 +1107,7 @@ v-change-web-domain-proxy-tpl alice aliceshop.org mobile_template no
 
 ## v-change-web-domain-sslcert
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-sslcert)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-sslcert)
 
 ### 介绍
 
@@ -1160,7 +1160,7 @@ v-change-web-domain-sslcert admin example.com /path/to/new/ssl/certs/ 1
 
 ## v-change-web-domain-sslhome
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-sslhome)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-sslhome)
 
 hestia面板管理系统为管理员提供了强大的命令行接口（CLI），使得许多管理任务可以通过脚本或命令行直接执行。`v-change-web-domain-sslhome` 是其中一个命令，用于更改Web域名的SSL主目录。
 
@@ -1216,7 +1216,7 @@ v-change-web-domain-sslhome admin anotherdomain.net single restart
 
 ## v-change-web-domain-docroot
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-docroot)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-docroot)
 
 hestia面板管理系统是一个功能强大的Web服务器控制面板，它提供了丰富的功能和管理选项，使得Web服务器的配置和管理变得简单直观。在hestia面板中，除了图形化界面外，还集成了一系列CLI（命令行接口）命令，允许用户通过命令行的方式执行各种管理操作。其中，`v-change-web-domain-docroot`命令用于更改已存在Web域名的文档根目录。
 
@@ -1271,7 +1271,7 @@ v-change-web-domain-docroot admin example.com default /home/user/new_website
 
 ## v-change-web-domain-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-stats)
 
 ### 概述
 
@@ -1328,7 +1328,7 @@ v-change-web-domain-stats test test.com webalizer
 
 ## v-change-web-domain-tpl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-tpl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-tpl)
 
 ### 简介
 
@@ -1375,7 +1375,7 @@ v-change-web-domain-tpl admin example.com wordpress RESTART
 
 ## v-change-user-theme
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-theme)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-theme)
 
 ### 介绍
 
@@ -1425,7 +1425,7 @@ v-change-user-theme peter vestia
 
 ## v-change-web-domain-backend-tpl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-backend-tpl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-backend-tpl)
 
 ### 简介
 
@@ -1475,7 +1475,7 @@ v-change-web-domain-backend-tpl admin example.com PHP-7_4 RESTART
 
 ## v-delete-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain)
 
 hestia面板管理系统是一个功能强大的服务器控制面板，它为用户提供了直观易用的图形界面来管理服务器资源。然而，对于高级用户或需要自动化任务的用户来说，hestia还提供了丰富的命令行接口（CLI）命令，这些命令可以通过shell脚本或自动化工具来执行。
 
@@ -1521,7 +1521,7 @@ v-delete-web-domain admin wonderland.com RESTART
 
 ## v-delete-web-domain-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-alias)
 
 ### 介绍
 
@@ -1574,7 +1574,7 @@ v-delete-web-domain-alias admin example.com "www.example.com,mobile.example.com"
 
 ## v-delete-web-domain-allow-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-allow-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-allow-users)
 
 ### 简介
 
@@ -1626,7 +1626,7 @@ done < "users_to_delete.txt"
 
 ## v-delete-web-domain-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-backend)
 
 ### 简介
 
@@ -1682,7 +1682,7 @@ v-delete-web-domain-backend admin example.com restart
 
 ## v-delete-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-domain)
 
 Hestia面板管理系统是一个功能强大的服务器控制面板，它为用户提供了直观易用的Web界面来管理服务器资源。除此之外，Hestia还集成了一系列命令行接口（CLI）命令，允许用户通过终端执行各种管理任务。其中，`v-delete-domain`命令用于删除Web、DNS和邮件域名。
 
@@ -1730,7 +1730,7 @@ v-delete-domain admin example.com no
 
 ## v-delete-web-domain-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-ftp)
 
 ### 概述
 
@@ -1786,7 +1786,7 @@ v-delete-web-domain-ftp "$USER" "$DOMAIN" "$FTP_USER"
 
 ## v-delete-web-domain-httpauth
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-httpauth)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-httpauth)
 
 ### 命令概述
 
@@ -1833,7 +1833,7 @@ v-delete-web-domain-httpauth admin example.com bob no
 
 ## v-delete-web-domain-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-proxy)
 
 ### 简介
 
@@ -1881,7 +1881,7 @@ v-delete-web-domain-proxy bob example.org RESTART
 
 ## v-restart-web
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-web)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-web)
 
 ### 简介
 
@@ -1933,7 +1933,7 @@ apache2ctl configtest && v-restart-web
 
 ## v-restart-web-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-web-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-web-backend)
 
 hestia面板管理系统是一套功能强大的服务器管理工具，其中包含了多种CLI（命令行界面）命令，以方便用户通过终端直接对服务器进行管理。`v-restart-web-backend`命令是其中之一，主要用于重启web后端服务。
 
@@ -1979,7 +1979,7 @@ v-restart-web-backend --force
 
 ## v-rebuild-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-web-domain)
 
 ### 简介
 
@@ -2030,7 +2030,7 @@ v-rebuild-web-domain exampleuser example.com restart
 
 ## v-rebuild-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-web-domains)
 
 ### 概述
 
@@ -2079,7 +2079,7 @@ v-rebuild-web-domains exampleuser RESTART
 
 ## v-list-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain)
 
 ### 概述
 
@@ -2154,7 +2154,7 @@ v-list-web-domain admin example.com json
 
 ## v-list-web-domain-accesslog
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain-accesslog)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain-accesslog)
 
 ### 简介
 
@@ -2217,7 +2217,7 @@ v-list-web-domain-accesslog admin example.com csv
 
 ## v-list-web-domain-errorlog
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain-errorlog)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain-errorlog)
 
 ### 简介
 
@@ -2284,7 +2284,7 @@ v-list-web-domain-errorlog admin acme.com 50 csv
 
 ## v-list-web-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain-ssl)
 
 ### 介绍
 
@@ -2359,7 +2359,7 @@ v-list-web-domain-ssl admin example.com json
 
 ## v-list-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domains)
 
 ### 简介
 
@@ -2422,7 +2422,7 @@ v-list-web-domains bob json
 
 ## v-list-web-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-stats)
 
 ### 介绍
 
@@ -2501,7 +2501,7 @@ total_requests,average_response_time,most_requested_page,...
 
 ## v-list-web-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-templates)
 
 ### 概述
 
@@ -2591,7 +2591,7 @@ template3
 
 ## v-list-web-templates-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-templates-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-templates-backend)
 
 ### 概述
 
@@ -2664,7 +2664,7 @@ template3
 
 ## v-list-web-templates-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-templates-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-templates-proxy)
 
 ### 1. 命令介绍
 
@@ -2748,7 +2748,7 @@ v-list-web-templates-proxy plain
 
 ## v-add-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-domain)
 
 ### 概述
 
@@ -2807,7 +2807,7 @@ v-add-domain admin example.com yes
 
 ## v-unsuspend-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-domain)
 
 ### 命令描述
 
@@ -2866,7 +2866,7 @@ done
 
 ## v-suspend-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-domain)
 
 ### 1. 概述
 

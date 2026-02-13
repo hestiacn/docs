@@ -1,4 +1,6 @@
-## v-change-remote-dns-domain-exp 命令文档
+# v-change-remote-dns-domain-exp 命令文档
+
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-remote-dns-domain-exp)
 
 ## 概述
 

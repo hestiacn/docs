@@ -2,7 +2,7 @@
 
 ## v-change-web-domain-dirlist
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-dirlist)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-dirlist)
 
 ### 概述
 

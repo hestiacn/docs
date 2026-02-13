@@ -2,7 +2,7 @@
 
 ## v-check-user-hash
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-user-hash)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-user-hash)
 
 ### 简介
 
@@ -56,7 +56,7 @@ v-check-user-hash guest XYZ7890QWERTYUIOP
 
 ## v-generate-password-hash
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-generate-password-hash)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-generate-password-hash)
 
 ### 简介
 

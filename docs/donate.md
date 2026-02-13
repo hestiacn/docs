@@ -5,7 +5,7 @@ title: 赞助Hestia
 
 <div class="donation-header">
   <h2>支持 Hestia 项目</h2><br>
-  <p class="subtitle">您的慷慨赞助将助力我们持续维护服务器<br><br>开发新功能并提升服务质量</p>
+  <p class="subtitle">您的支持将直接用于Hestia的服务器维护、功能开发和服务优化，助力打造更稳定可靠的控制面板。</p>
 </div>
 <div class="table-container">
   <table>

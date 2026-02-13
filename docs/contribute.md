@@ -5,7 +5,7 @@
 * Beta测试：
 
 - 从 `beta` 分支下载并安装构建版本。如果您在 beta 构建版本中遇到任何问题，请在 [GitHub](https://www.github.com/hestiacp/hestiacp/issues) 上提交问题报告。
-- 使用命令 `v-update-sys-hestia-git hestiacp beta install` 可以从我们的 GitHub 仓库安装最新的 beta 构建版本。
+- 使用命令 `v-update-sys-hestia-git hestiacp beta install` 可以从我们的 `GitHub` 仓库安装最新的 `beta` 构建版本。
 
 * 代码审查和错误修复：
 
@@ -17,15 +17,15 @@
 
 * 翻译：
 
-- 如果您是非英语母语者，并希望提高 Hestia 控制面板网页界面中使用的翻译质量，请前往 [Hestia Translate](https://translate.hestiacp.com/projects/hestiacp/) 审查翻译数据库。更多信息请阅读我们论坛上的 [如何贡献翻译](https://forum.hestiacp.com/t/how-to-contribute-with-translations/1664)。您也可以在 [GitHub](https://www.github.com/hestiacp/hestiacp/issues) 上提交问题报告，指出当前翻译的问题以便进行更正。
+- 如果您是非英语母语者，并希望提高 `Hestia` 控制面板网页界面中使用的翻译质量，请前往 [Hestia Translate](https://translate.hestiacp.com/projects/hestiacp/) 审查翻译数据库。更多信息请阅读我们论坛上的 [如何贡献翻译](https://forum.hestiacp.com/t/how-to-contribute-with-translations/1664)。您也可以在 [GitHub](https://www.github.com/hestiacp/hestiacp/issues) 上提交问题报告，指出当前翻译的问题以便进行更正。
 
 * 赞助：
 
-- 如果您不是开发者，但您仍然希望为Hestia ControlPanel和我们的开发者提供支持，您可以向Hestia Control Panel项目赞助以促进其进一步开发（或者，如果您只是想给我们的开发者买顿午餐，我们也会非常感激）。我们目前接受通过[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA)进行的赞助。
+- 如果您不是开发者，但您仍然希望为`Hestia ControlPanel`和我们的开发者提供支持，您可以向`Hestia Control Panel`项目赞助以促进其进一步开发（或者，如果您只是想给我们的开发者买顿午餐，我们也会非常感激）。我们目前接受通过[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA)进行的赞助。
 
 ## 开发指南
 
-有关如何为Hestia Control Panel做出贡献的更多信息，可以在[开发](https://github.com/hestiacp/hestiacp/blob/main/docs/docs/contributing/development.md)文档中找到。
+有关如何为`Hestia Control Panel`做出贡献的更多信息，可以在[开发](https://github.com/hestiacp/hestiacp/blob/main/docs/docs/contributing/development.md)文档中找到。
 
 ### 代码格式化和注释
 
@@ -47,7 +47,7 @@
 
 ### 创建新分支并提交拉取请求
 
-第一步是在您的GitHub账户下创建`hestiacp/hestiacp`仓库的一个分支（fork），以便您可以提交拉取请求和补丁。一旦您创建了分支，将仓库克隆到您的计算机上，并确保您已经签出了`main`分支。**始终**为您的工作创建一个新的主题分支。
+第一步是在您的`GitHub`账户下创建`hestiacp/hestiacp`仓库的一个分支（fork），以便您可以提交拉取请求和补丁。一旦您创建了分支，将仓库克隆到您的计算机上，并确保您已经签出了`main`分支。**始终**为您的工作创建一个新的主题分支。
 
 ### 分支命名约定
 
@@ -79,4 +79,4 @@
 我们**非常感激**所有的贡献，无论大小；您的反馈和意见直接塑造了Hestia控制面板的未来，没有您的支持，我们无法做到这一点。
 感谢您抽出宝贵的时间，我们期待看到您的拉取请求，
 
-* Hestia控制面板开发团队
+* `Hestia` 控制面板开发团队

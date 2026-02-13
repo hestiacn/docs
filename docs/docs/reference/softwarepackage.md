@@ -3,7 +3,7 @@
 
 ## v-copy-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-copy-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-copy-user-package)
 
 ### 脚本概述
 
@@ -54,7 +54,7 @@ v-copy-user-package non_existent_package new_package
 
 ## v-rename-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rename-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rename-user-package)
 
 ### 脚本概述
 

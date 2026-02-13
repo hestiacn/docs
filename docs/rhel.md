@@ -17,7 +17,7 @@ title: 面板安装
 <template #subtitle>
     当前 Hestia 版本仅支持基于 RHEL 的红帽系列服务器(如 AlmaLinux、Rocky Linux等).<br>
     该适配版本由<a href='https://github.com/bayrepo/hestiacp-rpm' target='_blank' rel='noopener noreferrer'>俄罗斯开发者</a>维护，相关文档请<a href='https://hestiadocs.brepo.ru' target='_blank' rel='noopener noreferrer'>点击此处</a>查看(目前已完美支持 RHEL ).<br>
-    若需安装 Debian/Ubuntu 系列系统，请<a href='/install' target='_blank' rel='noopener noreferrer'>点击这里</a>进行安装配置。
+    若需在 Debian/Ubuntu 系安装 Hestia，请<a href='/install' target='_blank' rel='noopener noreferrer'>点击这里</a>进行安装配置。
 </template>
   </PageHeader>
   <PageHeader>

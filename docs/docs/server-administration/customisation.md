@@ -39,7 +39,7 @@ background: radial-gradient(circle, rgba(231, 102, 197, 1), rgba(174, 43, 177, 1
 * 公网IP访问默认页面位于以下列表中。 您可以使用本站配置好的中文页面
 * [重新制作的页面](https://hestiamb.org/web/unassigned/index.html)
 * 复制页面上的命令在服务器中运行将自动对其进行编辑替换
-* 替换后的默认样式如你所见，如需访问错误页面[403](https://dns.hestiamb.org/web/skel/document_errors/403.html)|[404](https://dns.hestiamb.org/web/skel/document_errors/404.html)|[410](https://dns.hestiamb.org/web/skel/document_errors/410.html)|[50x](https://dns.hestiamb.org/web/skel/document_errors/50x.html)请参考
+* 替换后的默认样式如你所见，如需访问错误页面[403](https://hestiamb.org/web/skel/document_errors/403.html)|[404](https://hestiamb.org/web/skel/document_errors/404.html)|[410](https://hestiamb.org/web/skel/document_errors/410.html)|[50x](https://hestiamb.org/web/skel/document_errors/50x.html)请参考
 ::: warning 注意！
 该脚本会自动替换以下列出的所有文件！包含自定义默认域生成的配置文件
 :::

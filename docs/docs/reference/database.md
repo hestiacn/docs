@@ -2,7 +2,7 @@
 
 ## v-dump-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-dump-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-dump-database)
 
 ### 概述
 
@@ -65,7 +65,7 @@ v-dump-database USER DATABASE [FILE] [COMPRESSION]
 
 ## v-change-database-host-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-host-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-host-password)
 
 `v-change-database-host-password` 是由 hestia 提供的 CLI 命令，用于更改远程数据库主机上的数据库用户密码。此命令特别针对 MySQL 数据库进行了实现，并预留了 PostgreSQL 的实现接口（当前标记为“TBD”）。
 
@@ -118,7 +118,7 @@ v-change-database-host-password pgsql 192.168.1.101 postgres NewPassword123
 
 ## v-change-database-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-owner)
 
 ### 概述
 
@@ -190,7 +190,7 @@ Error: user fakeuser doesn't exist
 
 ## v-change-database-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-password)
 
 `v-change-database-password` 是 Hestia 提供的 CLI 命令，用于更改指定数据库的用户密码。本命令在 Hestia 控制面板环境中执行，用于维护和管理数据库的安全。
 
@@ -241,7 +241,7 @@ v-change-database-password jane anotherdb anotherpass456
 
 ## v-change-database-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-user)
 
 `v-change-database-user` 是 Hestia 提供的 CLI 命令，用于更改指定数据库的用户名。如果提供了新密码，该命令还会同时更新该用户的密码。本命令在 Hestia 控制面板环境中执行，用于维护和管理数据库用户的安全和配置。
 
@@ -297,7 +297,7 @@ v-change-database-user admin postgresdb new jane_new newpass123
 
 ## v-update-database-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-database-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-database-disk)
 
 `v-update-database-disk` 是 Hestia 提供的 CLI 命令，用于重新计算并更新特定数据库的磁盘使用情况。这对于监控数据库磁盘空间的使用情况、确保准确性以及优化资源分配非常有用。
 
@@ -340,7 +340,7 @@ v-update-database-disk admin wp_db
 
 ## v-update-databases-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-databases-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-databases-disk)
 
 `v-update-databases-disk` 是 Hestia 提供的 CLI 命令，用于重新计算并更新指定用户下所有数据库的磁盘使用情况。这有助于确保数据库磁盘使用情况的准确性，并帮助管理员更好地管理存储资源。
 
@@ -379,7 +379,7 @@ v-update-databases-disk admin
 
 ## v-unsuspend-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-database)
 
 ### 简介
 
@@ -441,7 +441,7 @@ v-unsuspend-database customer123 customerdb
 
 ## v-unsuspend-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-database-host)
 
 ### 简介
 
@@ -499,7 +499,7 @@ v-unsuspend-database-host pgsql dbserver.example.com
 
 ## v-unsuspend-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-databases)
 
 ### 简介
 
@@ -549,7 +549,7 @@ v-unsuspend-databases john
 
 ## v-suspend-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-database)
 
 ### 简介
 
@@ -604,7 +604,7 @@ v-suspend-database admin admin_wordpress_db
 
 ## v-suspend-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-database-host)
 
 ### 简介
 
@@ -655,7 +655,7 @@ v-suspend-database-host mysql localhost
 
 ## v-suspend-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-databases)
 
 ### 简介
 
@@ -706,7 +706,7 @@ v-suspend-databases admin
 
 ## v-rebuild-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-database)
 
 ### 简介
 
@@ -765,7 +765,7 @@ v-rebuild-database admin mydb
 
 ## v-rebuild-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-databases)
 
 ### 简介
 
@@ -824,7 +824,7 @@ v-rebuild-database admin mydb
 
 ## v-list-sys-mysql-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-mysql-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-mysql-config)
 
 ### 简介
 
@@ -910,7 +910,7 @@ max_user_connections,max_connections,wait_timeout,interactive_timeout,max_allowe
 
 ## v-list-sys-db-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-db-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-db-status)
 
 ### 简介
 
@@ -990,7 +990,7 @@ DB_SYSTEM="mysql,pgsql"
 
 ## v-list-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-database)
 
 ### 简介
 
@@ -1083,7 +1083,7 @@ output.csv` 文件将包含以 CSV 格式列出的所有数据库信息。
 
 ## v-list-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-database-host)
 
 ### 概述
 
@@ -1170,7 +1170,7 @@ v-list-database-host sqlite /path/to/database.db plain
 
 ## v-list-database-hosts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-database-hosts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-database-hosts)
 
 ### 概述
 
@@ -1250,7 +1250,7 @@ v-list-database-hosts json | jq '.[] | select(.TYPE=="mysql") | .HOST'
 
 ## v-list-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-databases)
 
 ### 概述
 
@@ -1333,7 +1333,7 @@ v-list-databases jane json
 
 ## v-add-database-temp-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-database-temp-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-database-temp-user)
 
 在 HestiaCP（一个开源的Web托管控制面板）中，`v-add-database-temp-user` 命令用于为特定数据库添加临时用户。此命令在需要为开发人员、测试人员或其他临时用户提供数据库访问权限时非常有用。
 
@@ -1378,7 +1378,7 @@ v-add-database-temp-user dev_db dev_temp_user DevPassword --expire-in 24h
 
 ## v-delete-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-database-host)
 
 ### 概述
 
@@ -1433,7 +1433,7 @@ Removed remote database host (Host: localhost, Type: pgsql).
 
 ## v-add-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-database)
 
 ### 简介
 
@@ -1492,7 +1492,7 @@ v-add-database admin blog_db alice mypassword
 
 ## v-add-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-database-host)
 
 ### 命令简介
 
@@ -1551,7 +1551,7 @@ v-add-database-host mysql another_host.example.com db_user another_password 200 
 
 ## v-list-sys-pgsql-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-pgsql-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-pgsql-config)
 
 ### 简介
 

@@ -1,7 +1,7 @@
 <?php
 /**
- * PHP 8.4 + HTML5 + Bootstrap 探针系统
- * 版本: 2.2 (PHP 8.4)
+ * PHP 8.5 + HTML5 + Bootstrap 探针系统
+ * 版本: 2.2.1 (PHP 8.5兼容版)
  */
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -493,7 +493,7 @@ function get_cpu_model() {
 
 // 新增 format_uptime() 函数
 function format_uptime($seconds) {
-    if ($seconds === false) {
+    if ($seconds === false || $seconds === null) {
         return '当前网站目录权限不足 - 无法读取硬件信息';
     }
     
@@ -877,7 +877,7 @@ function find_available_extensions(): array {
         }
     }
     // 通过pecl获取已安装扩展（需要pecl命令）
-    if (function_exists('shell_exec') && `which pecl`) {
+    if (function_exists('shell_exec') && shell_exec('which pecl')) {
         $pecl_list = shell_exec('pecl list');
         preg_match_all('/^([a-z]+)\s+/mi', $pecl_list, $matches);
         $found = array_merge($found, $matches[1]);
@@ -1034,7 +1034,7 @@ function get_function_metadata($functionName) {
             if ($param->hasType()) {
                 $type = $param->getType();
                 
-                if ($type instanceof ReflectionUnionType) {
+                if (PHP_VERSION_ID >= 80000 && $type instanceof ReflectionUnionType) {
                     $types = [];
                     foreach ($type->getTypes() as $t) {
                         $types[] = $t->getName();
@@ -1059,7 +1059,7 @@ function get_function_metadata($functionName) {
         // 返回值类型
         $returnType = $refFunc->getReturnType();
         if ($returnType) {
-            if ($returnType instanceof ReflectionUnionType) {
+            if (PHP_VERSION_ID >= 80000 && $returnType instanceof ReflectionUnionType) {
                 $types = [];
                 foreach ($returnType->getTypes() as $t) {
                     $types[] = $t->getName();
@@ -1210,7 +1210,7 @@ function get_php_extensions() {
 			            if ($returnTypeReflection) {
 			                if ($returnTypeReflection instanceof ReflectionNamedType) {
 			                    $returnType = $returnTypeReflection->getName();
-			                } elseif ($returnTypeReflection instanceof ReflectionUnionType) {
+			                } elseif (PHP_VERSION_ID >= 80000 && $returnTypeReflection instanceof ReflectionUnionType) {
 			                    $types = [];
 			                    foreach ($returnTypeReflection->getTypes() as $type) {
 			                        $types[] = $type->getName();
@@ -1264,7 +1264,7 @@ function get_php_extensions() {
         }
     }
     // 2. 通过pecl获取（需要pecl命令）
-    if (function_exists('shell_exec') && `which pecl`) {
+    if (function_exists('shell_exec') && shell_exec('which pecl')) {
         $pecl_list = shell_exec('pecl list');
         preg_match_all('/^([a-z]+)\s+/mi', $pecl_list, $matches);
         $available_extensions = array_merge($available_extensions, $matches[1]);
@@ -1603,7 +1603,10 @@ function test_database_connections() {
 			                PDO::ATTR_TIMEOUT => 5
 			            ];
 			            
-			            $pdo = new PDO($dsn, $user, $pass, $options);
+			            $pdo = new PDO($dsn, $user, $pass);
+						foreach ($options as $key => $value) {
+						    $pdo->setAttribute($key, $value);
+						}
 			            $version = $pdo->getAttribute(PDO::ATTR_SERVER_VERSION);
 			        } else {
 			            if (!extension_loaded('mysqli')) {

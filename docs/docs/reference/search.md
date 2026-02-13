@@ -3,7 +3,7 @@
 ## v-search-command
 
 * 此命令行最初由[Federico Krum](https://github.com/FastDigitalOceanDroplets/VestaCP/blob/master/files/v-search-command)为 VestaCP 开发
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-command)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-command)
 
 ### 简介
 
@@ -51,7 +51,7 @@ v-search-command db
 
 ## v-search-domain-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-domain-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-domain-owner)
 
 ### 概述
 
@@ -108,7 +108,7 @@ v-search-domain-owner example.com dns
 
 ## v-search-fs-object
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-fs-object)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-fs-object)
 
 ### 简介
 
@@ -167,7 +167,7 @@ v-search-fs-object admin backup* /mnt/backups/
 
 ## v-search-object
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-object)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-object)
 
 ### 概述
 
@@ -220,7 +220,7 @@ v-search-object object1 object2 object3 xml
 
 ## v-search-user-object
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-user-object)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-user-object)
 
 ### 介绍
 

@@ -15,9 +15,9 @@ title: 面板安装
   </PageHeader>
   <PageHeader>
 <template #subtitle>
-    Hestia 官方版本仅支持 Debian 系列服务器。<br>
+    Hestia 官方版本仅支持 Debian 系列服务器。
     现有俄罗斯开发者提供了<br>适配红帽系统（RHEL/CentOS/AlmaLinux/Rocky Linux）的安装方案。<br>
-    如您需要使用红帽系统，请点击<a href='/rhel' target='_blank' rel='noopener noreferrer'>此处</a>配置专属组件。
+    如您使用的是红帽系列，请点击<a href='/rhel' target='_blank' rel='noopener noreferrer'>此处</a>配置专属安装 Hestia 组件。
 </template>
   </PageHeader>
   <PageHeader>

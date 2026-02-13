@@ -27,7 +27,7 @@ RRD（Round Robin Database）作为一种高效的时间序列数据库，在Hes
 
 ## v-update-sys-rrd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd)
 
 `v-update-sys-rrd` 是 Hestia 控制面板的一个 CLI 命令脚本，用于更新系统 RRD（Round Robin Database）文件。RRD 是一种时间序列数据存储系统，特别适合存储系统性能、网络流量等随时间变化的数据。该脚本通过更新不同时间周期（如每日、每周、每月和每年）的 RRD 文件，帮助管理员监控和分析系统性能数据。
 
@@ -76,7 +76,7 @@ v-update-sys-rrd
 
 ## v-update-sys-rrd-apache2
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-apache2)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-apache2)
 
 `v-update-sys-rrd` 脚本是 Hestia 控制面板中一个重要的工具，用于更新和管理系统性能数据的 RRD 文件。通过正确配置和使用此脚本，管理员可以轻松地监控和分析系统的性能数据，以便更好地了解系统的运行状况并进行相应的优化。在使用此脚本时，请遵循最佳实践，并根据需要进行适当的调整和监控。
 
@@ -134,7 +134,7 @@ v-update-sys-rrd-apache2 weekly
 
 ## v-update-sys-rrd-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-ftp)
 
 `v-update-sys-rrd-ftp` 是 Hestia 控制面板的一个 CLI 命令脚本，用于更新 FTP 服务的 RRD（Round Robin Database）文件。这个脚本能够收集 FTP 服务的性能数据，并将其存储在 RRD 文件中，以便于后续的监控和分析。
 
@@ -192,7 +192,7 @@ v-update-sys-rrd-ftp weekly
 
 ## v-update-sys-rrd-httpd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-httpd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-httpd)
 
 本文档将详细解释Hestia控制面板中的CLI命令脚本`v-update-sys-rrd-httpd`的功能、用法和示例。
 
@@ -251,7 +251,7 @@ v-update-sys-rrd-httpd yearly
 
 ## v-update-sys-rrd-la
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-la)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-la)
 
 本文档将详细解释Hestia控制面板中的CLI命令脚本`v-update-sys-rrd-la`的功能、用法和示例。该脚本主要用于更新系统负载平均数的RRD数据库，并提供相关的监控和日志记录功能。
 
@@ -304,7 +304,7 @@ v-update-sys-rrd-la mysql
 
 ## v-update-sys-rrd-mail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-mail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-mail)
 
 ### 功能描述
 
@@ -375,7 +375,7 @@ v-update-sys-rrd-la mysql
 
 ## v-update-sys-rrd-mem
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-mem)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-mem)
 
 ### 功能描述
 
@@ -448,7 +448,7 @@ v-update-sys-rrd-la mysql
 
 ## v-update-sys-rrd-mysql
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-mysql)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-mysql)
 
 ### 功能描述
 
@@ -514,7 +514,7 @@ v-update-sys-rrd-la mysql
 
 ## v-update-sys-rrd-net
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-net)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-net)
 
 ### 功能描述
 
@@ -581,7 +581,7 @@ v-update-sys-rrd-la mysql
 
 ## v-update-sys-rrd-nginx
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-nginx)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-nginx)
 
 ### 功能描述
 
@@ -650,7 +650,7 @@ v-update-sys-rrd-la mysql
 
 ## v-update-sys-rrd-pgsql
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-pgsql)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-pgsql)
 
 ### 功能描述
 
@@ -723,7 +723,7 @@ v-update-sys-rrd-la mysql
 
 ## v-update-sys-rrd-ssh
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-ssh)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-ssh)
 
 ### 功能描述
 
@@ -789,7 +789,7 @@ v-update-sys-rrd-la mysql
 
 ## v-list-sys-rrd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-rrd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-rrd)
 
 #### 一、概述
 
@@ -861,7 +861,7 @@ v-list-sys-rrd csv
 
 ## v-export-rrd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-export-rrd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-export-rrd)
 
 将 rrd 图表导出为 json
 
@@ -875,7 +875,7 @@ v-export-rrd chart format
 
 ## v-update-sys-rrd-nginx
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-nginx)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-nginx)
 
 ### 概述
 
@@ -949,7 +949,7 @@ v-update-sys-rrd-nginx yearly
 
 ## v-update-sys-rrd-ssh
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-ssh)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-ssh)
 
 ### 命令概述
 

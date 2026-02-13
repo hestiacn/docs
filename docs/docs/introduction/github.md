@@ -5,7 +5,8 @@
 ## 操作步骤
 
 * 访问网站查看最新IP
-* https://github-hosts.tinsfox.com
+<!--https://github-hosts.tinsfox.com-->
+* https://hosts.gitcdn.top/hosts.txt
 * 将最新github的IP追加到您服务器的/etc/hosts文件末尾
 
 ### 如果您担心出错.也可以使用以下命令一键自动替换

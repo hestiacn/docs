@@ -17,7 +17,7 @@ SFTP的主要优点包括：
 
 ## v-restart-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-ftp)
 
 ### 说明
 
@@ -79,7 +79,7 @@ v-restart-ftp no
 
 ## v-add-sys-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-sftp-jail)
 
 ### 概述
 
@@ -125,7 +125,7 @@ v-add-sys-sftp-jail no
 
 ## v-add-user-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-sftp-jail)
 
 ### 概述
 
@@ -171,7 +171,7 @@ v-add-user-sftp-jail admin no
 
 ## v-add-user-sftp-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-sftp-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-sftp-key)
 
 ### 命令概述
 
@@ -243,7 +243,7 @@ done
 
 ## v-delete-backup-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-backup-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-backup-host)
 
 ### 概述
 
@@ -295,7 +295,7 @@ v-delete-backup-host sftp backup.example.com
 
 ## v-change-web-domain-ftp-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-ftp-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-ftp-password)
 
 ### 简介
 
@@ -357,7 +357,7 @@ Error: Not enough arguments provided. Please provide USER, DOMAIN, FTP_USER, and
 
 ## v-change-web-domain-ftp-path
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-ftp-path)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-ftp-path)
 
 ### 简介
 
@@ -411,7 +411,7 @@ v-change-web-domain-ftp-path admin example.com ftpuser /new/ftp/path/
 
 ## v-update-sys-rrd-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-ftp)
 
 ### 概述
 
@@ -473,7 +473,7 @@ v-update-sys-rrd-ftp -h
 
 ## v-list-sys-vsftpd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-vsftpd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-vsftpd-config)
 
 ### 命令概述
 
@@ -545,7 +545,7 @@ config_path
 
 ## v-list-sys-web-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-web-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-web-status)
 
 ### 概述
 
@@ -612,7 +612,7 @@ APACHE WEB SYSTEM STATUS
 
 ## v-list-sys-proftpd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-proftpd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-proftpd-config)
 
 `v-list-sys-proftpd-config` 是 Hestia 提供的一个 CLI（命令行界面）命令，用于获取系统上的 ProFTPD（Professional FTP Daemon）配置文件参数的列表。ProFTPD 是一种常用的 FTP 服务器软件，广泛应用于各种 Linux 系统中。
 

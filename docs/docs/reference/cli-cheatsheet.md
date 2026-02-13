@@ -13,7 +13,7 @@
 
 ### v-update-sys-rrd-httpd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-httpd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-httpd)
 
 更新httpd rrd
 
@@ -23,7 +23,7 @@
 
 ### v-update-sys-rrd-la
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-la)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-la)
 
 更新平均负载rrd
 
@@ -33,7 +33,7 @@
 
 ### v-update-sys-rrd-apache2
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-apache2)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-apache2)
 
 更新apache 2 rrd
 
@@ -43,7 +43,7 @@
 
 ### v-update-sys-rrd-mail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-mail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-mail)
 
 更新邮件rrd
 
@@ -53,7 +53,7 @@
 
 ### v-update-sys-rrd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd)
 
 更新系统rrd图表
 
@@ -63,7 +63,7 @@
 
 ### v-list-sys-rrd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-rrd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-rrd)
 
 查看系统rrd图表
 
@@ -73,7 +73,7 @@
 
 ### v-update-sys-rrd-pgsql
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-pgsql)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-pgsql)
 
 更新 PostgreSQL rrd
 
@@ -83,7 +83,7 @@
 
 ### v-update-sys-rrd-mem
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-mem)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-mem)
 
 更新内存rrd
 
@@ -93,7 +93,7 @@
 
 ### v-update-sys-rrd-mysql
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-mysql)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-mysql)
 
 更新MySQL rrd
 
@@ -103,7 +103,7 @@
 
 ### v-update-sys-rrd-net
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-net)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-net)
 
 更新网络rrd
 
@@ -113,7 +113,7 @@
 
 ### v-export-rrd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-export-rrd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-export-rrd)
 
 将 rrd 图表导出为 json
 
@@ -126,7 +126,7 @@ v-export-rrd chart format
 ```
 ### v-update-sys-rrd-ssh
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-ssh)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-ssh)
 
 更新 ssh rrd
 
@@ -136,7 +136,7 @@ v-export-rrd chart format
 
 ### v-update-sys-rrd-nginx
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-nginx)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-nginx)
 
 更新 nginx rrd
 
@@ -146,7 +146,7 @@ v-export-rrd chart format
 
 ### v-update-sys-rrd-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-rrd-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-rrd-ftp)
 
 更新 ftp RRD
 
@@ -158,7 +158,7 @@ v-export-rrd chart format
 
 ### v-add-firewall-ban
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-ban)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-ban)
 
 添加防火墙拦截规则
 
@@ -174,7 +174,7 @@ v-add-firewall-ban 37.120.129.20 MAIL
 
 ### v-add-firewall-chain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-chain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-chain)
 
 添加防火墙规则
 
@@ -190,7 +190,7 @@ v-add-firewall-chain CRM 5678 TCP
 
 ### v-add-firewall-ipset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-ipset)
 
 添加防火墙ipset
 
@@ -206,7 +206,7 @@ v-add-firewall-ipset country-nl "https://raw.githubusercontent.com/ipverse/rir-i
 
 ### v-add-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-firewall-rule)
 
 添加防火墙规则
 
@@ -226,13 +226,13 @@ v-add-firewall-rule DROP 185.137.111.77 25
 
 **选项**: –
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-firewall)
 
 此功能禁用防火墙支持
 
 ### v-delete-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-rule)
 
 删除防火墙规则
 
@@ -248,7 +248,7 @@ v-delete-firewall-rule SSH_BLOCK
 
 ### v-delete-firewall-ipset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-ipset)
 
 删除防火墙ipset
 
@@ -264,7 +264,7 @@ v-delete-firewall-ipset country-nl
 
 ### v-delete-firewall-ban
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-ban)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-ban)
 
 删除防火墙拦截规则
 
@@ -280,7 +280,7 @@ v-delete-firewall-ban 198.11.130.250 MAIL
 
 ### v-delete-firewall-chain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-firewall-chain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-firewall-chain)
 
 删除系统防火墙添加的新规则
 
@@ -296,7 +296,7 @@ v-delete-firewall-chain WEB
 
 ### v-change-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-firewall-rule)
 
 更改防火墙规则
 
@@ -312,7 +312,7 @@ v-change-firewall-rule 3 ACCEPT 5.188.123.17 443
 
 ### v-update-firewall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-firewall)
 
 更新系统防火墙规则
 
@@ -322,7 +322,7 @@ v-change-firewall-rule 3 ACCEPT 5.188.123.17 443
 
 ### v-update-firewall-ipset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-firewall-ipset)
 
 更新防火墙ipset
 
@@ -332,7 +332,7 @@ v-change-firewall-rule 3 ACCEPT 5.188.123.17 443
 
 ### v-unsuspend-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-firewall-rule)
 
 取消暂停防火墙规则
 
@@ -348,7 +348,7 @@ v-unsuspend-firewall-rule 7
 
 ### v-suspend-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-firewall-rule)
 
 暂停防火墙规则
 
@@ -364,7 +364,7 @@ v-suspend-firewall-rule 7
 
 ### v-list-firewall-ipset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall-ipset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall-ipset)
 
 查看防火墙 ipset
 
@@ -380,7 +380,7 @@ v-list-firewall-ipset json
 
 ### v-list-firewall-ban
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall-ban)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall-ban)
 
 查看防火墙阻止列表
 
@@ -396,7 +396,7 @@ v-list-firewall-ban json
 
 ### v-list-firewall-rule
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall-rule)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall-rule)
 
 查看防火墙规则
 
@@ -412,7 +412,7 @@ v-list-firewall-rule 2
 
 ### v-list-firewall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-firewall)
 
 查看 iptables 规则
 
@@ -430,7 +430,7 @@ v-list-firewall json
 
 ### v-add-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account)
 
 添加邮件网站帐户
 
@@ -446,7 +446,7 @@ v-add-mail-account user example.com john P4$$vvOrD
 
 ### v-add-mail-account-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-alias)
 
 添加邮件帐户别名
 
@@ -462,7 +462,7 @@ v-add-mail-account-alias admin acme.com alice alicia
 
 ### v-add-mail-account-autoreply
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-autoreply)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-autoreply)
 
 添加邮件帐户自动回复消息
 
@@ -478,7 +478,7 @@ v-add-mail-account-autoreply admin example.com user Hello from e-mail!
 
 ### v-add-mail-account-forward
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-forward)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-forward)
 
 添加邮件帐户转发地址
 
@@ -494,7 +494,7 @@ v-add-mail-account-forward admin acme.com alice bob
 
 ### v-add-mail-account-fwd-only
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-account-fwd-only)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-account-fwd-only)
 
 添加邮件帐户仅转发标题
 
@@ -510,7 +510,7 @@ v-add-mail-account-fwd-only admin example.com user
 
 ### v-add-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain)
 
 添加邮件网站名
 
@@ -526,7 +526,7 @@ v-add-mail-domain admin mydomain.tld
 
 ### v-add-mail-domain-antispam
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-antispam)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-antispam)
 
 添加邮件网站反垃圾邮件支持
 
@@ -542,7 +542,7 @@ v-add-mail-domain-antispam admin mydomain.tld
 
 ### v-add-mail-domain-antivirus
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-antivirus)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-antivirus)
 
 添加邮件网站防病毒支持
 
@@ -558,7 +558,7 @@ v-add-mail-domain-antivirus admin mydomain.tld
 
 ### v-add-mail-domain-catchall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-catchall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-catchall)
 
 添加邮件网站管理帐户
 
@@ -574,7 +574,7 @@ v-add-mail-domain-catchall admin example.com master@example.com
 
 ### v-add-mail-domain-dkim
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-dkim)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-dkim)
 
 添加邮件网站 dkim 支持
 
@@ -590,7 +590,7 @@ v-add-mail-domain-dkim admin acme.com
 
 ### v-add-mail-domain-reject
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-reject)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-reject)
 
 添加邮件网站拒绝垃圾邮件支持
 
@@ -606,7 +606,7 @@ v-add-mail-domain-reject admin mydomain.tld
 
 ### v-add-mail-domain-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-smtp-relay)
 
 添加邮件网站smtp中继支持
 
@@ -622,7 +622,7 @@ v-add-mail-domain-smtp-relay user domain.tld srv.smtprelay.tld uname123 pass1234
 
 ### v-add-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-ssl)
 
 为网站添加邮件 SSL证书
 
@@ -634,7 +634,7 @@ mail.domain.tld.crt 及其密钥 mail.domain.tld.key 是必需的。 中间证�
 
 ### v-add-mail-domain-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-mail-domain-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-mail-domain-webmail)
 
 添加对网站的网络邮件支持
 
@@ -652,7 +652,7 @@ example: v-add-mail-domain-webmail user domain.com roundcube
 
 ### v-add-sys-roundcube
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-roundcube)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-roundcube)
 
 安装 Roundcube 网络邮件客户端
 
@@ -662,7 +662,7 @@ example: v-add-mail-domain-webmail user domain.com roundcube
 
 ### v-add-sys-smtp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-smtp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-smtp)
 
 添加 SMTP 帐户用于日志记录、通知和内部邮件
 
@@ -678,7 +678,7 @@ v-add-sys-smtp example.com 587 STARTTLS test@domain.com securepassword test@exam
 
 ### v-add-sys-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-smtp-relay)
 
 添加邮件系统的 smtp 中继支持
 
@@ -694,7 +694,7 @@ v-add-sys-smtp-relay srv.smtprelay.tld uname123 pass12345
 
 ### v-add-sys-snappymail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-snappymail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-snappymail)
 
 安装 SnappyMail 网络邮件客户端
 
@@ -704,7 +704,7 @@ v-add-sys-smtp-relay srv.smtprelay.tld uname123 pass12345
 
 ### v-add-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user)
 
 添加邮件系统用户
 
@@ -720,7 +720,7 @@ v-add-user user P4$$w@rD bgates@aol.com
 
 ### v-delete-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account)
 
 删除邮件帐户
 
@@ -736,7 +736,7 @@ v-delete-mail-account admin acme.com alice
 
 ### v-delete-mail-account-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-alias)
 
 删除邮件帐户（昵称）
 
@@ -752,7 +752,7 @@ v-delete-mail-account-alias admin example.com alice alicia
 
 ### v-delete-mail-account-autoreply
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-autoreply)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-autoreply)
 
 删除邮件帐户自动回复消息配置
 
@@ -768,7 +768,7 @@ v-delete-mail-account-autoreply admin mydomain.tld bob
 
 ### v-delete-mail-account-forward
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-forward)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-forward)
 
 删除邮件帐户转发
 
@@ -784,7 +784,7 @@ v-delete-mail-account-forward admin acme.com tony bob@acme.com
 
 ### v-delete-mail-account-fwd-only
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-account-fwd-only)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-account-fwd-only)
 
 删除邮件帐户只转标题
 
@@ -800,7 +800,7 @@ v-delete-mail-account-fwd-only admin example.com jack
 
 ### v-delete-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain)
 
 删除邮件域
 
@@ -816,7 +816,7 @@ v-delete-mail-domain admin mydomain.tld
 
 ### v-delete-mail-domain-antispam
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-antispam)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-antispam)
 
 删除邮件域反垃圾邮件支持
 
@@ -832,7 +832,7 @@ v-delete-mail-domain-antispam admin mydomain.tld
 
 ### v-delete-mail-domain-antivirus
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-antivirus)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-antivirus)
 
 删除邮件域防病毒支持
 
@@ -848,7 +848,7 @@ v-delete-mail-domain-antivirus admin mydomain.tld
 
 ### v-delete-mail-domain-catchall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-catchall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-catchall)
 
 删除邮件域catchall的电子邮件
 
@@ -864,7 +864,7 @@ v-delete-mail-domain-catchall admin mydomain.tld
 
 ### v-delete-mail-domain-dkim
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-dkim)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-dkim)
 
 删除邮件域 dkim 支持
 
@@ -880,7 +880,7 @@ v-delete-mail-domain-dkim admin mydomain.tld
 
 ### v-delete-mail-domain-reject
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-reject)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-reject)
 
 删除邮件域拒绝垃圾邮件的支持配置
 
@@ -896,7 +896,7 @@ v-delete-mail-domain-reject admin mydomain.tld
 
 ### v-delete-mail-domain-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-smtp-relay)
 
 删除邮件域 smtp 中继支持
 
@@ -912,7 +912,7 @@ v-delete-mail-domain-smtp-relay user domain.tld
 
 ### v-delete-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-ssl)
 
 删除邮件域 ssl 支持
 
@@ -928,7 +928,7 @@ v-delete-mail-domain-ssl user demo.com
 
 ### v-delete-mail-domain-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domain-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domain-webmail)
 
 删除对域的网络邮件支持
 
@@ -944,7 +944,7 @@ v-delete-mail-domain-webmail user demo.com
 
 ### v-delete-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-mail-domains)
 
 删除邮件域
 
@@ -960,7 +960,7 @@ v-delete-mail-domains admin
 
 ### v-check-mail-account-hash
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-mail-account-hash)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-mail-account-hash)
 
 检查用户密码
 
@@ -976,7 +976,7 @@ v-check-mail-account-hash ARGONID2 PASS HASH
 
 ### v-change-sys-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-webmail)
 
 更改网络邮件别名 url
 
@@ -992,7 +992,7 @@ v-change-sys-webmail YourtrickyURLhere
 
 ### v-change-mail-account-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-account-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-account-password)
 
 更改邮件帐户密码
 
@@ -1008,7 +1008,7 @@ v-change-mail-account-password admin mydomain.tld user p4$$vvOrD
 
 ### v-change-mail-account-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-account-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-account-quota)
 
 更改邮件帐户配额
 
@@ -1024,7 +1024,7 @@ v-change-mail-account-quota admin mydomain.tld user01 unlimited
 
 ### v-change-mail-account-rate-limit
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-account-rate-limit)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-account-rate-limit)
 
 更改邮件帐户速率限制
 
@@ -1040,7 +1040,7 @@ v-change-mail-account-rate-limit admin mydomain.tld user01 100
 
 ### v-change-mail-domain-catchall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-domain-catchall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-domain-catchall)
 
 更改邮件网站电子邮件
 
@@ -1056,7 +1056,7 @@ v-change-mail-domain-catchall user01 mydomain.tld master@mydomain.tld
 
 ### v-change-mail-domain-rate-limit
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-domain-rate-limit)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-domain-rate-limit)
 
 更改邮件网站速率限制
 
@@ -1072,7 +1072,7 @@ v-change-mail-domain-rate-limit admin mydomain.tld 100
 
 ### v-delete-sys-smtp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-smtp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-smtp)
 
 删除用于记录、通知和内部邮件的 SMTP 帐户
 
@@ -1082,7 +1082,7 @@ v-change-mail-domain-rate-limit admin mydomain.tld 100
 
 ### v-delete-sys-smtp-relay
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-smtp-relay)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-smtp-relay)
 
 禁用系统范围的 SMTP 中继支持
 
@@ -1093,7 +1093,7 @@ v-delete-sys-smtp-relay
 ```
 ### v-delete-sys-mail-queue
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-mail-queue)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-mail-queue)
 
 删除 exim 邮件队列
 
@@ -1103,7 +1103,7 @@ v-delete-sys-smtp-relay
 
 ### v-update-letsencrypt-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-letsencrypt-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-letsencrypt-ssl)
 
 更新letsencrypt ssl证书
 
@@ -1113,7 +1113,7 @@ v-delete-sys-smtp-relay
 
 ### v-update-mail-domain-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-domain-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-domain-disk)
 
 更新邮件域磁盘使用情况
 
@@ -1129,7 +1129,7 @@ v-update-mail-domain-disk admin example.com
 
 ### v-update-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-domain-ssl)
 
 更新域的 ssl 证书
 
@@ -1145,7 +1145,7 @@ v-update-mail-domain-ssl admin domain.com /home/admin/tmp
 
 ### v-update-mail-domains-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-domains-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-domains-disk)
 
 计算所有邮件域的磁盘使用情况
 
@@ -1161,7 +1161,7 @@ v-update-mail-domains-disk admin
 
 ### v-update-mail-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-mail-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-mail-templates)
 
 更新邮件模板
 
@@ -1171,7 +1171,7 @@ v-update-mail-domains-disk admin
 
 ### v-unsuspend-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-account)
 
 取消暂停邮件帐户
 
@@ -1187,7 +1187,7 @@ v-unsuspend-mail-account admin acme.com tester
 
 ### v-unsuspend-mail-accounts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-accounts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-accounts)
 
 取消暂停所有邮件域帐户
 
@@ -1203,7 +1203,7 @@ v-unsuspend-mail-accounts admin acme.com
 
 ### v-unsuspend-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-domain)
 
 取消暂停邮件域
 
@@ -1219,7 +1219,7 @@ v-unsuspend-mail-domain user02 acme.com
 
 ### v-unsuspend-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-mail-domains)
 
 取消暂停邮件域
 
@@ -1235,7 +1235,7 @@ v-unsuspend-mail-domains admin
 
 ### v-suspend-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-account)
 
 暂停邮件帐户
 
@@ -1251,7 +1251,7 @@ v-suspend-mail-account admin acme.com bob
 
 ### v-suspend-mail-accounts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-accounts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-accounts)
 
 暂停所有邮件域帐户
 
@@ -1267,7 +1267,7 @@ v-suspend-mail-accounts admin example.com
 
 ### v-suspend-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-domain)
 
 暂停邮件域
 
@@ -1283,7 +1283,7 @@ v-suspend-mail-domain admin domain.com
 
 ### v-suspend-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-mail-domains)
 
 暂停邮件域
 
@@ -1299,7 +1299,7 @@ v-suspend-mail-domains admin
 
 ### v-restart-mail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-mail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-mail)
 
 重新启动邮件服务
 
@@ -1309,7 +1309,7 @@ v-suspend-mail-domains admin
 
 ### v-rebuild-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-mail-domain)
 
 重建邮件域
 
@@ -1325,7 +1325,7 @@ v-rebuild-mail-domain user domain.tld
 
 ### v-rebuild-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-mail-domains)
 
 重建邮件域
 
@@ -1341,7 +1341,7 @@ v-rebuild-mail-domains admin
 
 ### v-list-sys-webmail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-webmail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-webmail)
 
 查看可用的网络邮件客户端
 
@@ -1351,7 +1351,7 @@ v-rebuild-mail-domains admin
 
 ### v-list-sys-spamd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-spamd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-spamd-config)
 
 查看 spamassassin 配置参数
 
@@ -1361,7 +1361,7 @@ v-rebuild-mail-domains admin
 
 ### v-list-sys-mail-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-mail-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-mail-status)
 
 查看邮件状态
 
@@ -1369,7 +1369,7 @@ v-rebuild-mail-domains admin
 
 ### v-list-sys-dovecot-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-dovecot-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-dovecot-config)
 
 查看 dovecot 配置参数
 
@@ -1379,7 +1379,7 @@ v-rebuild-mail-domains admin
 
 ### v-list-mail-account
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-account)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-account)
 
 查看邮件域帐户
 
@@ -1395,7 +1395,7 @@ v-list-mail-account admin domain.tld tester
 
 ### v-list-mail-account-autoreply
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-account-autoreply)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-account-autoreply)
 
 查看邮件帐户自动回复
 
@@ -1411,7 +1411,7 @@ v-list-mail-account-autoreply admin example.com testing
 
 ### v-list-mail-accounts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-accounts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-accounts)
 
 查看邮件域帐户
 
@@ -1427,7 +1427,7 @@ v-list-mail-accounts admin acme.com
 
 ### v-list-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain)
 
 查看用户邮件域
 
@@ -1443,7 +1443,7 @@ v-list-mail-domain user01 mydomain.com
 
 ### v-list-mail-domain-dkim
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain-dkim)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain-dkim)
 
 查看邮件域 dkim
 
@@ -1459,7 +1459,7 @@ v-list-mail-domain-dkim admin maildomain.tld
 
 ### v-list-mail-domain-dkim-dns
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain-dkim-dns)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain-dkim-dns)
 
 查看邮件域 dkim dns 记录
 
@@ -1475,7 +1475,7 @@ v-list-mail-domain-dkim-dns admin example.com
 
 ### v-list-mail-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domain-ssl)
 
 查看邮件域 ssl 证书
 
@@ -1491,7 +1491,7 @@ v-list-mail-domain-ssl user acme.com json
 
 ### v-list-mail-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-mail-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-mail-domains)
 
 查看邮件域
 
@@ -1507,7 +1507,7 @@ v-list-mail-domains admin
 
 ### v-get-mail-account-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-mail-account-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-mail-account-value)
 
 获取邮件帐户值
 
@@ -1523,7 +1523,7 @@ v-get-mail-account-value admin example.tld tester QUOTA
 
 ### v-get-mail-domain-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-mail-domain-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-mail-domain-value)
 
 获取邮件域名值
 
@@ -1541,7 +1541,7 @@ v-get-mail-domain-value admin example.com DKIM
 
 ### v-list-sys-clamd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-clamd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-clamd-config)
 
 查看clamd配置参数
 
@@ -1551,7 +1551,7 @@ v-get-mail-domain-value admin example.com DKIM
 
 ### v-copy-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-copy-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-copy-user-package)
 
 复制现有包
 
@@ -1567,7 +1567,7 @@ v-copy-user-package default new
 
 ### v-rename-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rename-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rename-user-package)
 
 更改软件包名
 
@@ -1585,7 +1585,7 @@ v-rename-package package package2
 
 ### v-generate-ssl-cert
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-generate-ssl-cert)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-generate-ssl-cert)
 
 生成自签名证书和 CSR 请求
 
@@ -1603,7 +1603,7 @@ v-generate-ssl-cert example.com mail@yahoo.com USA California Monterey ACME.COM 
 
 ### v-change-web-domain-dirlist
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-dirlist)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-dirlist)
 
 启用/禁用目录列表
 
@@ -1621,7 +1621,7 @@ v-change-web-domain-dirlist user demo.com on
 
 ### v-list-sys-disk-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-disk-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-disk-status)
 
 查看磁盘信息
 
@@ -1629,7 +1629,7 @@ v-change-web-domain-dirlist user demo.com on
 
 ### v-get-sys-timezone
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-sys-timezone)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-sys-timezone)
 
 获取系统时区
 
@@ -1639,7 +1639,7 @@ v-change-web-domain-dirlist user demo.com on
 
 ### v-get-sys-timezones
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-sys-timezones)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-sys-timezones)
 
 查看系统时区
 
@@ -1655,7 +1655,7 @@ v-get-sys-timezones json
 
 ### v-add-sys-firewall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-firewall)
 
 添加系统防火墙
 
@@ -1665,7 +1665,7 @@ v-get-sys-timezones json
 
 ### v-add-sys-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-quota)
 
 添加系统配额
 
@@ -1675,7 +1675,7 @@ v-get-sys-timezones json
 
 ### v-change-sys-hostname
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-hostname)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-hostname)
 
 更改主机名
 
@@ -1691,7 +1691,7 @@ v-change-sys-hostname mydomain.tld
 
 ### v-delete-sys-web-terminal
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-web-terminal)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-web-terminal)
 
 删除网络终端
 
@@ -1701,7 +1701,7 @@ v-change-sys-hostname mydomain.tld
 
 ### v-delete-sys-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-quota)
 
 删除系统配额
 
@@ -1711,7 +1711,7 @@ v-change-sys-hostname mydomain.tld
 
 ### v-delete-sys-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-sftp-jail)
 
 删除系统sftp的jailed环境
 
@@ -1721,7 +1721,7 @@ v-change-sys-hostname mydomain.tld
 
 ### v-delete-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-ip)
 
 删除系统IP
 
@@ -1737,7 +1737,7 @@ v-delete-sys-ip 203.0.113.1
 
 ### v-change-sys-service-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-service-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-service-config)
 
 更改服务配置
 
@@ -1753,7 +1753,7 @@ v-change-sys-service-config /home/admin/dovecot.conf dovecot yes
 
 ### v-change-sys-timezone
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-timezone)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-timezone)
 
 更改系统时区
 
@@ -1769,7 +1769,7 @@ v-change-sys-timezone Europe/Berlin
 
 ### v-change-sys-language
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-language)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-language)
 
 更改系统语言
 
@@ -1785,7 +1785,7 @@ v-change-sys-language ru
 
 ### v-change-sys-config-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-config-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-config-value)
 
 更改系统配置值
 
@@ -1801,7 +1801,7 @@ v-change-sys-config-value VERSION 1.0
 
 ### v-restart-system
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-system)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-system)
 
 重新启动操作系统
 
@@ -1817,7 +1817,7 @@ v-restart-system yes
 
 ### v-update-sys-queue
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-queue)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-queue)
 
 更新系统队列
 
@@ -1827,7 +1827,7 @@ v-restart-system yes
 
 ### v-start-service
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-start-service)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-start-service)
 
 启动服务
 
@@ -1843,7 +1843,7 @@ v-start-service mysql
 
 ### v-stop-firewall
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-stop-firewall)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-stop-firewall)
 
 停止系统防火墙
 
@@ -1853,7 +1853,7 @@ v-start-service mysql
 
 ### v-stop-service
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-stop-service)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-stop-service)
 
 停止服务
 
@@ -1869,7 +1869,7 @@ v-stop-service apache2
 
 ### v-restart-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-proxy)
 
 重新启动代理服务器
 
@@ -1885,7 +1885,7 @@ v-restart-proxy [RESTART]
 
 ### v-restart-service
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-service)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-service)
 
 重启服务
 
@@ -1901,7 +1901,7 @@ v-restart-service apache2
 
 ### v-repair-sys-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-repair-sys-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-repair-sys-config)
 
 恢复系统配置
 
@@ -1911,7 +1911,7 @@ v-restart-service apache2
 
 ### v-refresh-sys-theme
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-refresh-sys-theme)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-refresh-sys-theme)
 
 更改活动系统主题
 
@@ -1921,7 +1921,7 @@ v-restart-service apache2
 
 ### v-rebuild-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-user)
 
 重建系统用户
 
@@ -1937,7 +1937,7 @@ v-rebuild-user admin yes
 
 ### v-rebuild-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-users)
 
 重建系统用户
 
@@ -1947,7 +1947,7 @@ v-rebuild-user admin yes
 
 ### v-list-sys-themes
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-themes)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-themes)
 
 查看系统主题
 
@@ -1957,7 +1957,7 @@ v-rebuild-user admin yes
 
 ### v-list-sys-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-users)
 
 查看系统用户
 
@@ -1967,7 +1967,7 @@ v-rebuild-user admin yes
 
 ### v-list-sys-services
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-services)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-services)
 
 查看系统服务
 
@@ -1983,7 +1983,7 @@ v-list-sys-services json
 
 ### v-list-sys-network-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-network-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-network-status)
 
 查看系统网络状态
 
@@ -1991,7 +1991,7 @@ v-list-sys-services json
 
 ### v-list-sys-memory-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-memory-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-memory-status)
 
 查看虚拟内存信息
 
@@ -1999,7 +1999,7 @@ v-list-sys-services json
 
 ### v-list-sys-info
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-info)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-info)
 
 查看系统操作系统
 
@@ -2009,7 +2009,7 @@ v-list-sys-services json
 
 ### v-list-sys-interfaces
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-interfaces)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-interfaces)
 
 查看系统接口
 
@@ -2019,7 +2019,7 @@ v-list-sys-services json
 
 ### v-list-sys-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-config)
 
 查看系统配置
 
@@ -2035,7 +2035,7 @@ v-list-sys-config json
 
 ### v-list-sys-cpu-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-cpu-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-cpu-status)
 
 查看系统CPU信息
 
@@ -2045,7 +2045,7 @@ v-list-sys-config json
 
 ### v-get-fs-file-type
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-fs-file-type)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-fs-file-type)
 
 获取文件类型
 
@@ -2061,7 +2061,7 @@ v-get-fs-file-type admin index.html
 
 ### v-delete-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-fs-file)
 
 删除文件
 
@@ -2077,7 +2077,7 @@ v-delete-fs-file admin readme.txt
 
 ### v-copy-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-copy-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-copy-fs-directory)
 
 复制目录
 
@@ -2093,7 +2093,7 @@ v-copy-fs-directory alice /home/alice/dir1 /home/bob/dir2
 
 ### v-copy-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-copy-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-copy-fs-file)
 
 复制文件
 **选项**: `USER` `SRC_FILE` `DST_FILE`
@@ -2108,7 +2108,7 @@ v-copy-fs-file admin readme.txt readme_new.txt
 
 ### v-check-fs-permission
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-fs-permission)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-fs-permission)
 
 打开文件
 
@@ -2124,7 +2124,7 @@ v-check-fs-permission admin readme.txt
 
 ### v-change-fs-file-permission
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-fs-file-permission)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-fs-file-permission)
 
 更改文件权限
 
@@ -2140,7 +2140,7 @@ v-change-fs-file-permission admin readme.txt 0777
 
 ### v-move-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-move-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-move-fs-directory)
 
 移动文件
 
@@ -2156,7 +2156,7 @@ v-move-fs-directory admin /home/admin/web /home/user02/
 
 ### v-move-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-move-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-move-fs-file)
 
 移动文件
 
@@ -2172,7 +2172,7 @@ v-move-fs-file admin readme.txt new_readme.txt
 
 ### v-open-fs-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-open-fs-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-open-fs-config)
 
 打开配置
 
@@ -2188,7 +2188,7 @@ v-open-fs-config /etc/mysql/my.cnf
 
 ### v-open-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-open-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-open-fs-file)
 
 打开文件
 
@@ -2208,7 +2208,7 @@ v-open-fs-file admin README.md
 
 删除文件管理器功能
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-filemanager)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-filemanager)
 
 **选项**: `[MODE]`
 
@@ -2218,7 +2218,7 @@ v-open-fs-file admin README.md
 
 ### v-add-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fs-directory)
 
 添加目录
 
@@ -2234,7 +2234,7 @@ v-add-fs-directory admin mybar
 
 ### v-delete-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-fs-directory)
 
 删除文件夹目录
 
@@ -2250,7 +2250,7 @@ v-delete-fs-directory admin report1
 
 ### v-list-fs-directory
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-fs-directory)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-fs-directory)
 
 查看目录
 
@@ -2268,7 +2268,7 @@ v-list-fs-directory /home/admin/web
 
 ### v-dump-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-dump-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-dump-database)
 
 将数据库内容转储到 STDIN/文件中
 
@@ -2285,7 +2285,7 @@ example: v-dump-database user user_databse file
 
 ### v-delete-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-database-host)
 
 删除数据库服务器
 
@@ -2301,7 +2301,7 @@ v-delete-database-host pgsql localhost
 
 ### v-add-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-database)
 
 添加数据库
 
@@ -2319,7 +2319,7 @@ v-add-database admin wordpress_db matt qwerty123
 
 ### v-add-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-database-host)
 
 添加新的数A据库服务器
 
@@ -2335,7 +2335,7 @@ v-add-database-host mysql localhost alice p@$$wOrd
 
 ### v-list-sys-pgsql-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-pgsql-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-pgsql-config)
 
 查看 postgresql 配置参数
 
@@ -2345,7 +2345,7 @@ v-add-database-host mysql localhost alice p@$$wOrd
 
 ### v-change-database-host-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-host-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-host-password)
 
 修改数据库服务器密码
 
@@ -2361,7 +2361,7 @@ v-change-database-host-password mysql localhost www_user pA$$w@rD
 
 ### v-change-database-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-owner)
 
 修改数据库所有者
 
@@ -2377,7 +2377,7 @@ v-change-database-owner mydb alice
 
 ### v-change-database-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-password)
 
 修改数据库密码
 
@@ -2393,7 +2393,7 @@ v-change-database-password admin www_db neW_pAssWorD
 
 ### v-change-database-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-database-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-database-user)
 
 修改数据库用户名
 
@@ -2409,7 +2409,7 @@ v-change-database-user admin my_db joe_user
 
 ### v-update-database-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-database-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-database-disk)
 
 更新数据库磁盘使用情况
 
@@ -2425,7 +2425,7 @@ v-update-database-disk admin www_db
 
 ### v-update-databases-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-databases-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-databases-disk)
 
 更新数据库磁盘使用情况
 
@@ -2441,7 +2441,7 @@ v-update-databases-disk admin
 
 ### v-unsuspend-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-database)
 
 取消暂停数据库
 
@@ -2457,7 +2457,7 @@ v-unsuspend-database admin mydb
 
 ### v-unsuspend-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-database-host)
 
 取消暂停数据库服务器
 
@@ -2473,7 +2473,7 @@ v-unsuspend-database-host mysql localhost
 
 ### v-unsuspend-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-databases)
 
 取消暂停数据库
 
@@ -2483,7 +2483,7 @@ v-unsuspend-database-host mysql localhost
 
 ### v-suspend-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-database)
 
 暂停数据库
 
@@ -2499,7 +2499,7 @@ v-suspend-database admin admin_wordpress_db
 
 ### v-suspend-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-database-host)
 
 暂停数据库服务器
 
@@ -2515,7 +2515,7 @@ v-suspend-database-host mysql localhost
 
 ### v-suspend-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-databases)
 
 暂停数据库
 
@@ -2531,7 +2531,7 @@ v-suspend-databases admin
 
 ### v-rebuild-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-database)
 
 重建数据库
 
@@ -2547,7 +2547,7 @@ v-rebuild-database user user_wordpress
 
 ### v-rebuild-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-databases)
 
 重建数据库
 
@@ -2563,7 +2563,7 @@ v-rebuild-databases admin
 
 ### v-list-sys-mysql-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-mysql-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-mysql-config)
 
 查看 mysql 配置参数
 
@@ -2573,7 +2573,7 @@ v-rebuild-databases admin
 
 ### v-list-sys-db-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-db-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-db-status)
 
 查看数据库状态
 
@@ -2583,7 +2583,7 @@ v-rebuild-databases admin
 
 ### v-list-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-database)
 
 查看数据库
 
@@ -2599,7 +2599,7 @@ v-list-database www_db
 
 ### v-list-database-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-database-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-database-host)
 
 查看数据库主机
 
@@ -2615,7 +2615,7 @@ v-list-database-host mysql localhost
 
 ### v-list-database-hosts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-database-hosts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-database-hosts)
 
 查看主机的数据库参数
 
@@ -2631,7 +2631,7 @@ v-list-database-hosts json
 
 ### v-list-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-databases)
 
 查看数据库
 
@@ -2647,7 +2647,7 @@ v-list-databases user json
 
 ### v-add-database-temp-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-database-temp-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-database-temp-user)
 
 添加临时数据库用户
 
@@ -2665,7 +2665,7 @@ v-add-database-temp-user wordress wordpress_db mysql
 
 ### v-search-command
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-command)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-command)
 
 搜索可用命令
 
@@ -2683,7 +2683,7 @@ v-search-command web
 
 ### v-search-domain-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-domain-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-domain-owner)
 
 搜索域名所有者
 
@@ -2699,7 +2699,7 @@ v-search-domain-owner acme.com
 
 ### v-search-fs-object
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-fs-object)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-fs-object)
 
 搜索文件或目录
 
@@ -2715,7 +2715,7 @@ v-search-fs-object admin hello.txt
 
 ### v-search-object
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-object)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-object)
 
 搜索对象
 
@@ -2731,7 +2731,7 @@ v-search-object example.com json
 
 ### v-search-user-object
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-search-user-object)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-search-user-object)
 
 搜索对象
 
@@ -2749,7 +2749,7 @@ v-search-user-object admin example.com json
 
 ### v-restore-database
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-database)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-database)
 
 恢复单个数据库
 
@@ -2765,7 +2765,7 @@ v-restore-database USER BACKUP DATABASE [NOTIFY]
 
 ### v-restore-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-dns-domain)
 
 恢复单个 DNS 域
 
@@ -2781,7 +2781,7 @@ v-restore-dns-domain USER BACKUP DOMAIN [NOTIFY]
 
 ### v-restore-mail-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-mail-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-mail-domain)
 
 恢复单个邮件域
 
@@ -2797,7 +2797,7 @@ v-restore-mail-domain USER BACKUP DOMAIN [NOTIFY]
 
 ### v-restore-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-user)
 
 恢复用户
 
@@ -2813,7 +2813,7 @@ v-restore-user admin 2019-04-22_01-00-00.tar
 
 ### v-restore-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-web-domain)
 
 恢复单个 Web 域
 
@@ -2831,7 +2831,7 @@ v-restore-web-domain USER BACKUP DOMAIN [NOTIFY]
 
 ### v-list-dnssec-public-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-dnssec-public-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-dnssec-public-key)
 
 查看公共 DNSSEC 密钥
 
@@ -2847,7 +2847,7 @@ v-list-dns-public-key admin acme.com
 
 ### v-add-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-access-key)
 
 生成访问密钥
 
@@ -2863,7 +2863,7 @@ v-add-access-key admin v-purge-nginx-cache,v-list-mail-accounts comment json
 
 ### v-check-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-access-key)
 
 检查访问密钥
 
@@ -2882,7 +2882,7 @@ v-check-access-key key_id secret v-purge-nginx-cache 127.0.0.1 json
 
 ### v-update-sys-defaults
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-defaults)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-defaults)
 
 更新默认密钥数据库
 
@@ -2899,7 +2899,7 @@ example: v-update-sys-defaults user
 
 ### v-delete-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-access-key)
 
 删除访问密钥
 
@@ -2917,7 +2917,7 @@ v-delete-access-key mykey
 
 ### v-dump-site
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-dump-site)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-dump-site)
 
 将站点的文件转储到 zip 存档中
 
@@ -2934,7 +2934,7 @@ example: v-dump-site user domain full
 
 ### v-add-fs-archive
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fs-archive)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fs-archive)
 
 存档目录
 
@@ -2950,7 +2950,7 @@ v-add-fs-archive admin archive.tar readme.txt
 
 ### v-add-backup-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-backup-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-backup-host)
 
 添加备份主机
 
@@ -2967,7 +2967,7 @@ v-add-backup-host b2 bucketName keyID applicationKey
 
 ### v-backup-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-backup-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-backup-user)
 
 备份系统用户及其所有对象
 
@@ -2983,7 +2983,7 @@ v-backup-user admin yes
 
 ### v-backup-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-backup-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-backup-users)
 
 备份所有用户
 
@@ -2993,7 +2993,7 @@ v-backup-user admin yes
 
 ### v-extract-fs-archive
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-extract-fs-archive)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-extract-fs-archive)
 
 存档到目录
 
@@ -3009,7 +3009,7 @@ v-extract-fs-archive admin latest.tar.gz /home/admin
 
 ### v-schedule-user-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-user-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-user-backup)
 
 安排用户备份创建
 
@@ -3025,7 +3025,7 @@ v-schedule-user-backup admin
 
 ### v-schedule-user-backup-download
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-user-backup-download)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-user-backup-download)
 
 用户备份创建
 
@@ -3041,7 +3041,7 @@ v-schedule-user-backup-download admin 2019-04-22_01-00-00.tar
 
 ### v-schedule-user-restore
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-user-restore)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-user-restore)
 
 安排用户备份恢复
 
@@ -3057,7 +3057,7 @@ v-schedule-user-restore 2019-04-22_01-00-00.tar
 
 ### v-list-backup-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-backup-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-backup-host)
 
 查看备份主机
 
@@ -3073,7 +3073,7 @@ v-list-backup-host local
 
 ### v-download-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-download-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-download-backup)
 
 下载备份
 
@@ -3091,7 +3091,7 @@ v-download-backup admin admin.2020-11-05_05-10-21.tar
 
 ### v-check-user-hash
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-user-hash)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-user-hash)
 
 检查用户哈希值
 
@@ -3107,7 +3107,7 @@ v-check-user-hash admin CN5JY6SMEyNGnyCuvmK5z4r7gtHAC4mRZ...
 
 ### v-generate-password-hash
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-generate-password-hash)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-generate-password-hash)
 
 生成密码哈希值
 
@@ -3125,7 +3125,7 @@ v-generate-password-hash sha-512 rAnDom_string yourPassWord
 
 ### v-rebuild-all
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-all)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-all)
 
 重建指定用户的所有资产
 
@@ -3135,7 +3135,7 @@ v-generate-password-hash sha-512 rAnDom_string yourPassWord
 
 ### v-acknowledge-user-notification
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-acknowledge-user-notification)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-acknowledge-user-notification)
 
 更新用户通知
 
@@ -3145,7 +3145,7 @@ v-generate-password-hash sha-512 rAnDom_string yourPassWord
 
 ### v-add-fs-file
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fs-file)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fs-file)
 
 添加文件
 
@@ -3161,7 +3161,7 @@ v-add-fs-file admin readme.md
 
 ### v-add-user-composer
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-composer)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-composer)
 
 为用户添加composer（php 依赖管理器）
 
@@ -3177,7 +3177,7 @@ v-add-user-composer user [version]
 
 ### v-add-user-notification
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-notification)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-notification)
 
 添加用户通知
 
@@ -3187,7 +3187,7 @@ v-add-user-composer user [version]
 
 ### v-add-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-package)
 
 添加用户软件包
 
@@ -3197,7 +3197,7 @@ v-add-user-composer user [version]
 
 ### v-change-user-config-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-config-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-config-value)
 
 更改用户配置关键字/值
 
@@ -3213,7 +3213,7 @@ v-change-user-config-value admin ROLE admin
 
 ### v-change-user-contact
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-contact)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-contact)
 
 更改用户联系电子邮件
 
@@ -3229,7 +3229,7 @@ v-change-user-contact admin admin@yahoo.com
 
 ### v-change-user-language
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-language)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-language)
 
 更改用户语言
 
@@ -3245,7 +3245,7 @@ v-change-user-language admin en
 
 ### v-change-user-name
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-name)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-name)
 
 更改用户全名
 
@@ -3261,7 +3261,7 @@ v-change-user-name admin John Smith
 
 ### v-change-user-ns
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-ns)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-ns)
 
 更改用户服务器名
 
@@ -3277,7 +3277,7 @@ v-change-user-ns ns1.domain.tld ns2.domain.tld
 
 ### v-change-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-package)
 
 更改用户包
 
@@ -3293,7 +3293,7 @@ v-change-user-package admin yourpackage
 
 ### v-change-user-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-password)
 
 更改用户密码
 
@@ -3309,11 +3309,11 @@ v-change-user-password admin NewPassword123
 
 ### v-change-user-php-cli
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-php-cli)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-php-cli)
 
 ### v-change-user-rkey
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-rkey)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-rkey)
 
 更改用户随机密钥
 
@@ -3323,7 +3323,7 @@ v-change-user-password admin NewPassword123
 
 ### v-change-user-role
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-role)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-role)
 
 更改/撤销用户管理员权限
 
@@ -3339,7 +3339,7 @@ v-change-user-role user administrator
 
 ### v-change-user-shell
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-shell)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-shell)
 
 更改禁止用户登录
 
@@ -3355,7 +3355,7 @@ v-change-user-shell admin nologin
 
 ### v-change-user-sort-order
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-sort-order)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-sort-order)
 
 更新用户角色
 
@@ -3371,7 +3371,7 @@ v-change-user-sort-order user date
 
 ### v-delete-database-temp-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-database-temp-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-database-temp-user)
 
 删除临时数据库用户
 
@@ -3387,7 +3387,7 @@ v-add-database-temp-user wordress hestia_sso_user mysql
 
 ### v-delete-databases
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-databases)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-databases)
 
 删除用户数据库
 
@@ -3403,7 +3403,7 @@ v-delete-databases admin
 
 ### v-change-user-template
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-template)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-template)
 
 更改用户默认模板
 
@@ -3419,7 +3419,7 @@ v-change-user-template admin WEB wordpress
 
 ### v-change-domain-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-domain-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-domain-owner)
 
 修改用户名所有者权限
 
@@ -3435,7 +3435,7 @@ v-change-domain-owner www.example.com bob
 
 ### v-delete-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domains)
 
 删除用户的网站文件夹
 
@@ -3451,7 +3451,7 @@ v-delete-web-domains admin
 
 ### v-delete-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user)
 
 删除用户
 
@@ -3467,7 +3467,7 @@ v-delete-user whistler
 
 ### v-delete-user-2fa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-2fa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-2fa)
 
 删除现有用户的2fa令牌
 
@@ -3483,7 +3483,7 @@ v-delete-user-2fa admin
 
 ### v-delete-user-auth-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-auth-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-auth-log)
 
 删除用户的身份验证日志文件
 
@@ -3493,7 +3493,7 @@ v-delete-user-2fa admin
 
 ### v-delete-user-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-backup)
 
 删除用户备份
 
@@ -3509,7 +3509,7 @@ v-delete-user-backup admin admin.2012-12-21_00-10-00.tar
 
 ### v-delete-user-backup-exclusions
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-backup-exclusions)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-backup-exclusions)
 
 删除备份排除
 
@@ -3525,7 +3525,7 @@ v-delete-user-backup-exclusions admin
 
 ### v-delete-user-ips
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-ips)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-ips)
 
 删除用户ip
 
@@ -3541,7 +3541,7 @@ v-delete-user-ips admin
 
 ### v-delete-user-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-log)
 
 删除用户的日志文件
 
@@ -3557,7 +3557,7 @@ v-delete-user-log user
 
 ### v-delete-user-notification
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-notification)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-notification)
 
 删除用户通知
 
@@ -3573,7 +3573,7 @@ v-delete-user-notification admin 1
 
 ### v-delete-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-package)
 
 删除用户软件包
 
@@ -3589,7 +3589,7 @@ v-delete-user-package admin palegreen
 
 ### v-delete-user-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-sftp-jail)
 
 删除用户 sftp 的jailed环境
 
@@ -3605,7 +3605,7 @@ v-delete-user-sftp-jail whistler
 
 ### v-delete-user-ssh-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-ssh-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-ssh-key)
 
 删除添加的 ssh 密钥
 
@@ -3621,7 +3621,7 @@ v-delete-user-ssh-key user unique_id
 
 ### v-delete-user-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-user-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-user-stats)
 
 删除用户使用统计
 
@@ -3638,7 +3638,7 @@ example: v-delete-user-stats admin overall
 
 ### v-update-user-counters
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-counters)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-counters)
 
 更新用户使用计数器
 
@@ -3654,7 +3654,7 @@ v-update-user-counters admin
 
 ### v-update-user-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-disk)
 
 更新用户磁盘使用情况
 
@@ -3670,7 +3670,7 @@ v-update-user-disk admin
 
 ### v-update-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-package)
 
 更新用户软件包
 
@@ -3686,7 +3686,7 @@ v-update-user-package default
 
 ### v-update-user-quota
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-quota)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-quota)
 
 更新用户磁盘配额
 
@@ -3702,7 +3702,7 @@ v-update-user-quota alice
 
 ### v-update-user-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-stats)
 
 更新用户统计数据
 
@@ -3718,7 +3718,7 @@ v-update-user-stats admin
 
 ### v-unsuspend-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-user)
 
 取消暂停用户
 
@@ -3734,7 +3734,7 @@ v-unsuspend-user bob
 
 ### v-unsuspend-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-web-domain)
 
 取消暂停域名
 
@@ -3750,7 +3750,7 @@ v-unsuspend-web-domain admin acme.com
 
 ### v-unsuspend-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-web-domains)
 
 取消暂停域名
 
@@ -3766,7 +3766,7 @@ v-unsuspend-web-domains admin
 
 ### v-suspend-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-user)
 
 暂停用户
 
@@ -3782,7 +3782,7 @@ v-suspend-user alice yes
 
 ### v-suspend-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-web-domain)
 
 暂停域名
 
@@ -3798,7 +3798,7 @@ v-suspend-web-domain admin example.com yes
 
 ### v-suspend-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-web-domains)
 
 暂停域名
 
@@ -3814,7 +3814,7 @@ v-suspend-web-domains bob
 
 ### v-suspend-remote-dns-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-remote-dns-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-remote-dns-host)
 
 暂停远程 DNS 服务器
 
@@ -3830,7 +3830,7 @@ v-suspend-remote-dns-host hostname.tld
 
 ### v-log-action
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-log-action)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-log-action)
 
 将操作事件添加到用户或系统日志
 
@@ -3840,7 +3840,7 @@ v-suspend-remote-dns-host hostname.tld
 
 ### v-log-user-login
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-log-user-login)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-log-user-login)
 
 添加用户登录
 
@@ -3848,7 +3848,7 @@ v-suspend-remote-dns-host hostname.tld
 
 ### v-log-user-logout
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-log-user-logout)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-log-user-logout)
 
 记录用户注销事件
 
@@ -3856,7 +3856,7 @@ v-suspend-remote-dns-host hostname.tld
 
 ### v-list-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user)
 
 查看用户参数
 
@@ -3872,7 +3872,7 @@ v-list-user admin
 
 ### v-list-user-auth-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-auth-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-auth-log)
 
 查看管理用户日志
 
@@ -3882,7 +3882,7 @@ v-list-user admin
 
 ### v-list-user-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-backup)
 
 查看用户备份
 
@@ -3898,7 +3898,7 @@ v-list-user-backup admin admin.2019-05-19_03-31-30.tar
 
 ### v-list-user-backup-exclusions
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-backup-exclusions)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-backup-exclusions)
 
 查看备份排除项
 
@@ -3914,7 +3914,7 @@ v-list-user-backup-exclusions admin
 
 ### v-list-user-backups
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-backups)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-backups)
 
 查看用户备份
 
@@ -3930,7 +3930,7 @@ v-list-user-backups admin
 
 ### v-list-user-ips
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-ips)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-ips)
 
 查看用户IP
 
@@ -3946,7 +3946,7 @@ v-list-user-ips admin
 
 ### v-list-user-log
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-log)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-log)
 
 查看用户日志
 
@@ -3956,7 +3956,7 @@ v-list-user-ips admin
 
 ### v-list-user-notifications
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-notifications)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-notifications)
 
 查看用户通知
 
@@ -3972,7 +3972,7 @@ v-list-user-notifications admin
 
 ### v-list-user-ns
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-ns)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-ns)
 
 查看用户的DNS名称服务器
 
@@ -3988,7 +3988,7 @@ v-list-user-ns admin
 
 ### v-list-user-package
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-package)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-package)
 
 查看用户软件包配置参数
 
@@ -3998,7 +3998,7 @@ v-list-user-ns admin
 
 ### v-list-user-packages
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-packages)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-packages)
 
 查看用户软件包
 
@@ -4008,7 +4008,7 @@ v-list-user-ns admin
 
 ### v-list-user-ssh-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-ssh-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-ssh-key)
 
 添加 ssh 密钥
 
@@ -4018,7 +4018,7 @@ v-list-user-ns admin
 
 ### v-list-user-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-stats)
 
 查看用户统计信息
 
@@ -4034,7 +4034,7 @@ v-list-user-stats admin
 
 ### v-list-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-users)
 
 查看用户
 
@@ -4044,7 +4044,7 @@ v-list-user-stats admin
 
 ### v-list-users-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-users-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-users-stats)
 
 查看总体用户统计数据
 
@@ -4054,7 +4054,7 @@ v-list-user-stats admin
 
 ### v-get-user-salt
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-user-salt)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-user-salt)
 
 获取用户的salt
 
@@ -4070,7 +4070,7 @@ v-get-user-salt admin
 
 ### v-get-user-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-user-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-user-value)
 
 获取用户价值
 
@@ -4086,7 +4086,7 @@ v-get-user-value admin FNAME
 
 ### v-import-cpanel
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-import-cpanel)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-import-cpanel)
 
 将 Cpanel 备份导入到新用户
 
@@ -4105,7 +4105,7 @@ v-import-cpanel /backup/backup.tar.gz yes
 
 ### v-add-sys-web-terminal
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-web-terminal)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-web-terminal)
 
 添加系统Web终端
 
@@ -4115,7 +4115,7 @@ v-import-cpanel /backup/backup.tar.gz yes
 
 ### v-add-user-wp-cli
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-wp-cli)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-wp-cli)
 
 为用户添加 wp-cli
 
@@ -4131,7 +4131,7 @@ v-add-user-wp-cli user
 
 ### v-add-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain)
 
 添加网络网站
 
@@ -4148,7 +4148,7 @@ v-add-web-domain admin wonderland.com 192.18.22.43 yes www.wonderland.com
 
 ### v-add-web-domain-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-alias)
 
 添加 Web 网站别名
 
@@ -4165,7 +4165,7 @@ v-add-web-domain-alias admin acme.com www.acme.com yes
 
 ### v-add-web-domain-allow-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-allow-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-allow-users)
 
 允许其他用户创建子网站
 
@@ -4182,7 +4182,7 @@ v-add-web-domain-allow-users admin admin.com
 
 ### v-add-web-domain-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-backend)
 
 添加 Web 网站后端
 
@@ -4198,7 +4198,7 @@ v-add-web-domain-backend admin example.com default yes
 
 ### v-add-web-domain-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ftp)
 
 添加 Web 网站的 ftp 帐户。
 
@@ -4214,7 +4214,7 @@ v-add-web-domain-ftp alice wonderland.com alice_ftp p4$$vvOrD
 
 ### v-add-web-domain-httpauth
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-httpauth)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-httpauth)
 
 为 Web 网站添加密码保护
 
@@ -4230,7 +4230,7 @@ v-add-web-domain-httpauth admin acme.com user02 super_pass
 
 ### v-add-web-domain-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-proxy)
 
 添加Web网站代理支持
 
@@ -4246,7 +4246,7 @@ v-add-web-domain-proxy admin example.com
 
 ### v-add-web-domain-redirect
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-redirect)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-redirect)
 
 添加强制重定向到网站
 
@@ -4267,7 +4267,7 @@ example: v-add-web-domain-redirect user domain.tld different-domain.com 302
 
 ### v-add-web-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl)
 
 为网站添加 ssl
 
@@ -4285,7 +4285,7 @@ v-add-web-domain-ssl admin example.com /home/admin/conf/example.com/web
 
 ### v-add-web-domain-ssl-force
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl-force)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl-force)
 
 为网站添加强制 SSL
 
@@ -4301,7 +4301,7 @@ v-add-web-domain-ssl-force admin acme.com
 
 ### v-add-web-domain-ssl-hsts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl-hsts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl-hsts)
 
 将严格传输安全性`hsts`添加到网站
 
@@ -4311,7 +4311,7 @@ v-add-web-domain-ssl-force admin acme.com
 
 ### v-add-web-domain-ssl-preset
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-ssl-preset)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-ssl-preset)
 
 为网站添加强制 SSL
 
@@ -4321,7 +4321,7 @@ v-add-web-domain-ssl-force admin acme.com
 
 ### v-add-web-domain-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-stats)
 
 添加日志分析器以生成网站统计信息
 
@@ -4337,7 +4337,7 @@ v-add-web-domain-stats admin example.com awstats
 
 ### v-add-web-domain-stats-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-domain-stats-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-domain-stats-user)
 
 为网站网站统计添加密码保护
 
@@ -4353,7 +4353,7 @@ v-add-web-domain-stats-user admin example.com watchdog your_password
 
 ### v-change-web-domain-httpauth
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-httpauth)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-httpauth)
 
 更改http 授权用户的密码
 
@@ -4369,7 +4369,7 @@ v-change-web-domain-httpauth admin acme.com alice white_rA$$bIt
 
 ### v-change-web-domain-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-ip)
 
 更改网站域名ip
 
@@ -4385,7 +4385,7 @@ v-change-web-domain-ip admin example.com 167.86.105.230 yes
 
 ### v-change-web-domain-name
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-name)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-name)
 
 更改网络域名
 
@@ -4401,7 +4401,7 @@ v-change-web-domain-name alice wonderland.com lookinglass.com yes
 
 ### v-change-web-domain-proxy-tpl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-proxy-tpl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-proxy-tpl)
 
 更改 Web 域代理模板
 
@@ -4417,7 +4417,7 @@ v-change-web-domain-proxy-tpl admin domain.tld hosting
 
 ### v-change-web-domain-sslcert
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-sslcert)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-sslcert)
 
 更改域名ssl证书
 
@@ -4433,7 +4433,7 @@ v-change-web-domain-sslcert admin example.com /home/admin/tmp
 
 ### v-change-web-domain-sslhome
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-sslhome)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-sslhome)
 
 更改web域名的SSL主目录
 
@@ -4450,7 +4450,7 @@ example: v-change-web-domain-sslhome admin acme.com same
 
 ### v-change-web-domain-docroot
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-docroot)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-docroot)
 
 更改现有 Web 域的文档根
 
@@ -4471,7 +4471,7 @@ v-change-web-domain-docroot admin test.local default
 
 ### v-change-web-domain-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-stats)
 
 更改网站域统计信息
 
@@ -4487,7 +4487,7 @@ v-change-web-domain-stats admin example.com awstats
 
 ### v-change-web-domain-tpl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-tpl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-tpl)
 
 更改 Web 域模板
 
@@ -4503,7 +4503,7 @@ v-change-web-domain-tpl admin acme.com opencart
 
 ### v-change-user-theme
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-user-theme)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-user-theme)
 
 更新用户主题
 
@@ -4520,7 +4520,7 @@ example: v-change-user-theme peter vestia
 
 ### v-change-web-domain-backend-tpl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-backend-tpl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-backend-tpl)
 
 更改Web域后端模板
 
@@ -4536,7 +4536,7 @@ v-change-web-domain-backend-tpl admin acme.com PHP-7_4
 
 ### v-delete-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain)
 
 删除网络域
 
@@ -4552,7 +4552,7 @@ v-delete-web-domain admin wonderland.com
 
 ### v-delete-web-domain-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-alias)
 
 删除 Web 域别名
 
@@ -4568,7 +4568,7 @@ v-delete-web-domain-alias admin example.com www.example.com
 
 ### v-delete-web-domain-allow-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-allow-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-allow-users)
 
 禁止其他用户创建子域
 
@@ -4586,7 +4586,7 @@ v-delete-web-domain-allow-users admin admin.com
 
 ### v-delete-web-domain-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-backend)
 
 删除Web域后端配置
 
@@ -4602,7 +4602,7 @@ v-delete-web-domain-backend admin acme.com
 
 ### v-delete-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-domain)
 
 删除 web/dns/mail 域
 
@@ -4618,7 +4618,7 @@ v-delete-domain admin domain.tld
 
 ### v-delete-web-domain-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-ftp)
 
 删除web网站的ftp帐户
 
@@ -4634,7 +4634,7 @@ v-delete-web-domain-ftp admin wonderland.com bob_ftp
 
 ### v-delete-web-domain-httpauth
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-httpauth)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-httpauth)
 
 删除http验证用户
 
@@ -4650,7 +4650,7 @@ v-delete-web-domain-httpauth admin example.com alice
 
 ### v-delete-web-domain-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-domain-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-domain-proxy)
 
 删除Web域代理配置
 
@@ -4666,7 +4666,7 @@ v-delete-web-domain-proxy alice lookinglass.com
 
 ### v-suspend-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-domain)
 
 暂停 web/dns/mail 域
 
@@ -4682,7 +4682,7 @@ v-suspend-domain admin example.com
 
 ### v-restart-web
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-web)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-web)
 
 重新启动网络服务器
 
@@ -4692,7 +4692,7 @@ v-suspend-domain admin example.com
 
 ### v-restart-web-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-web-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-web-backend)
 
 重启 php 解释器
 
@@ -4702,7 +4702,7 @@ v-suspend-domain admin example.com
 
 ### v-rebuild-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-web-domain)
 
 重建网站域的配置
 
@@ -4718,7 +4718,7 @@ v-rebuild-web-domain user domain.tld
 
 ### v-rebuild-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-web-domains)
 
 重建网域
 
@@ -4728,7 +4728,7 @@ v-rebuild-web-domain user domain.tld
 
 ### v-list-web-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain)
 
 查看 Web 域参数
 
@@ -4744,7 +4744,7 @@ v-list-web-domain admin example.com
 
 ### v-list-web-domain-accesslog
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain-accesslog)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain-accesslog)
 
 查看Web域访问日志
 
@@ -4760,7 +4760,7 @@ v-list-web-domain-accesslog admin example.com
 
 ### v-list-web-domain-errorlog
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain-errorlog)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain-errorlog)
 
 list web domain error log
 
@@ -4776,7 +4776,7 @@ v-list-web-domain-errorlog admin acme.com
 
 ### v-list-web-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domain-ssl)
 
 查看 Web 域 ssl 证书
 
@@ -4792,7 +4792,7 @@ v-list-web-domain-ssl admin wonderland.com
 
 ### v-list-web-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-domains)
 
 查看网络域
 
@@ -4808,7 +4808,7 @@ v-list-web-domains alice
 
 ### v-list-web-stats
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-stats)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-stats)
 
 查看网络统计数据
 
@@ -4818,7 +4818,7 @@ v-list-web-domains alice
 
 ### v-list-web-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-templates)
 
 查看网页模板
 
@@ -4828,7 +4828,7 @@ v-list-web-domains alice
 
 ### v-list-web-templates-backend
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-templates-backend)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-templates-backend)
 
 查看后端模板
 
@@ -4838,7 +4838,7 @@ v-list-web-domains alice
 
 ### v-list-web-templates-proxy
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-web-templates-proxy)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-web-templates-proxy)
 
 查看代理模板
 
@@ -4850,7 +4850,7 @@ v-list-web-domains alice
 
 ### v-add-letsencrypt-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-letsencrypt-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-letsencrypt-domain)
 
 检查 LetsEncrypt 网站
 
@@ -4867,7 +4867,7 @@ example: v-add-letsencrypt-domain admin wonderland.com '' yes
 
 ### v-add-letsencrypt-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-letsencrypt-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-letsencrypt-host)
 
 为主机和后端添加letencrypt
 
@@ -4877,7 +4877,7 @@ example: v-add-letsencrypt-domain admin wonderland.com '' yes
 
 ### v-add-letsencrypt-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-letsencrypt-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-letsencrypt-user)
 
 注册LetsEncrypt用户帐户
 
@@ -4893,7 +4893,7 @@ v-add-letsencrypt-user bob
 
 ### v-delete-letsencrypt-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-letsencrypt-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-letsencrypt-domain)
 
 删除域的 LetsEncrypt SSL 证书
 
@@ -4909,7 +4909,7 @@ v-delete-letsencrypt-domain admin acme.com yes
 
 ### v-change-mail-domain-sslcert
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-mail-domain-sslcert)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-mail-domain-sslcert)
 
 更改网站名ssl证书
 
@@ -4919,7 +4919,7 @@ v-delete-letsencrypt-domain admin acme.com yes
 
 ### v-list-letsencrypt-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-letsencrypt-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-letsencrypt-user)
 
 查看加密密钥
 
@@ -4937,7 +4937,7 @@ v-list-letsencrypt-user admin
 
 ### v-list-sys-shells
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-shells)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-shells)
 
 查看系统 shell
 
@@ -4947,7 +4947,7 @@ v-list-letsencrypt-user admin
 
 ### v-add-user-ssh-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-ssh-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-ssh-key)
 
 添加 ssh 密钥
 
@@ -4963,7 +4963,7 @@ v-add-user-ssh-key user 'valid ssh key'
 
 ### v-list-sys-sshd-port
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-sshd-port)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-sshd-port)
 
 查看 sshd 端口
 
@@ -4975,7 +4975,7 @@ v-add-user-ssh-key user 'valid ssh key'
 
 ### v-add-web-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-web-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-web-php)
 
 添加安装 php 版本
 
@@ -4989,7 +4989,7 @@ v-add-web-php 8.3
 
 ### v-delete-web-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-web-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-web-php)
 
 删除 php fpm 版本
 
@@ -5007,7 +5007,7 @@ v-delete-web-php 7.3
 
 ### v-change-sys-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-php)
 
 更改服务器范围内的默认 php 版本
 
@@ -5074,7 +5074,7 @@ fi
 
 ### v-list-sys-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-php)
 
 查看已安装的可用 PHP 版本
 
@@ -5084,7 +5084,7 @@ fi
 
 ### v-list-sys-php-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-php-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-php-config)
 
 查看 php 配置参数
 
@@ -5096,7 +5096,7 @@ fi
 
 ### v-delete-sys-pma-sso
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-pma-sso)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-pma-sso)
 
 禁用 PHPMYADMIN 上对单点登录的支持
 
@@ -5106,7 +5106,7 @@ fi
 
 ### v-add-sys-pma-sso
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-pma-sso)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-pma-sso)
 
 启用对 phpMyAdmin 的单点登录支持
 
@@ -5118,7 +5118,7 @@ fi
 
 ### v-delete-fastcgi-cache
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-fastcgi-cache)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-fastcgi-cache)
 
 禁用 nginx 的 FastCGI 缓存
 
@@ -5134,7 +5134,7 @@ v-delete-fastcgi-cache user domain.tld
 
 ### v-change-sys-web-terminal-port
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-web-terminal-port)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-web-terminal-port)
 
 更改系统Web终端后端端口
 
@@ -5150,7 +5150,7 @@ v-change-sys-web-terminal-port 5678
 
 ### v-change-sys-port
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-port)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-port)
 
 更改系统后端端口
 
@@ -5166,7 +5166,7 @@ v-change-sys-port 5678
 
 ### v-purge-nginx-cache
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-purge-nginx-cache)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-purge-nginx-cache)
 
 清除 nginx 缓存
 
@@ -5182,7 +5182,7 @@ v-purge-nginx-cache user domain.tld
 
 ### v-list-sys-nginx-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-nginx-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-nginx-config)
 
 查看 nginx 配置参数
 
@@ -5198,7 +5198,7 @@ v-purge-nginx-cache user domain.tld
 
 ### v-change-sys-db-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-db-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-db-alias)
 
 更改 phpmyadmin/phppgadmin 别名 url
 
@@ -5217,7 +5217,7 @@ v-change-sys-db-alias pga phppgadmin
 
 ### v-add-fastcgi-cache
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fastcgi-cache)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fastcgi-cache)
 
 为 nginx 启用 FastCGI 缓存
 
@@ -5235,7 +5235,7 @@ v-add-fastcgi-cache user domain.tld 30m
 
 ### v-add-sys-api-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-api-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-api-ip)
 
 将 IP 地址添加到 API 允许列表
 
@@ -5249,7 +5249,7 @@ v-add-sys-api-ip 1.1.1.1
 
 ### v-add-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-ip)
 
 添加系统IP地址
 
@@ -5271,7 +5271,7 @@ v-add-sys-ip 203.0.113.1 255.255.255.0
 
 从允许的 ip 列表中删除 api 地址
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-sys-api-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-sys-api-ip)
 
 **选项**: `IP`
 
@@ -5283,7 +5283,7 @@ v-delete-sys-api-ip 1.1.1.1
 
 ### v-change-sys-ip-name
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-name)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-name)
 
 更改IP名称
 
@@ -5299,7 +5299,7 @@ v-change-sys-ip-name 203.0.113.1 acme.com
 
 ### v-change-sys-ip-nat
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-nat)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-nat)
 
 更改NAT IP地址
 
@@ -5315,7 +5315,7 @@ v-change-sys-ip-nat 10.0.0.1 203.0.113.1
 
 ### v-change-sys-ip-owner
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-owner)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-owner)
 
 更改IP所有者
 
@@ -5331,7 +5331,7 @@ v-change-sys-ip-owner 203.0.113.1 admin
 
 ### v-change-sys-ip-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-ip-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-ip-status)
 
 改变IP状态
 
@@ -5347,7 +5347,7 @@ v-change-sys-ip-status 203.0.113.1 yourstatus
 
 ### v-update-sys-ip-counters
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-ip-counters)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-ip-counters)
 
 更新 IP 使用计数器
 
@@ -5357,7 +5357,7 @@ v-change-sys-ip-status 203.0.113.1 yourstatus
 
 ### v-list-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-ip)
 
 查看系统IP
 
@@ -5373,7 +5373,7 @@ v-list-sys-ip 203.0.113.1
 
 ### v-list-sys-ips
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-ips)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-ips)
 
 查看系统IP
 
@@ -5385,7 +5385,7 @@ v-list-sys-ip 203.0.113.1
 
 ### v-add-sys-dependencies
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-dependencies)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-dependencies)
 
 **选项**:
 
@@ -5401,7 +5401,7 @@ v-add-sys-dependencies
 
 ### v-add-sys-filemanager
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-filemanager)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-filemanager)
 
 向 Hestia 控制面板添加文件管理器功能
 
@@ -5411,7 +5411,7 @@ v-add-sys-dependencies
 
 ### v-change-sys-hestia-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-hestia-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-hestia-ssl)
 
 更改 Hestia控制面板 ssl 证书
 
@@ -5427,7 +5427,7 @@ v-change-sys-hestia-ssl /home/new/dir/path yes
 
 ### v-change-sys-release
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-release)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-release)
 
 更新 web 模板
 
@@ -5437,7 +5437,7 @@ v-change-sys-hestia-ssl /home/new/dir/path yes
 
 ### v-change-sys-demo-mode
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-demo-mode)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-demo-mode)
 
 启用或禁用演示模式
 
@@ -5447,7 +5447,7 @@ v-change-sys-hestia-ssl /home/new/dir/path yes
 
 ### v-list-default-php
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-default-php)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-default-php)
 
 列出 default.tpl 使用的默认 PHP 版本
 
@@ -5457,7 +5457,7 @@ v-change-sys-hestia-ssl /home/new/dir/path yes
 
 ### v-list-sys-hestia-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-hestia-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-hestia-ssl)
 
 查看 Hestia ssl 证书
 
@@ -5467,7 +5467,7 @@ v-change-sys-hestia-ssl /home/new/dir/path yes
 
 ### v-update-web-domain-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-disk)
 
 更新域的磁盘使用情况
 
@@ -5483,7 +5483,7 @@ v-update-web-domain-disk alice wonderland.com
 
 ### v-update-web-domain-ssl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-ssl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-ssl)
 
 更新域的 ssl 证书
 
@@ -5499,7 +5499,7 @@ v-update-web-domain-ssl admin domain.com /home/admin/tmp
 
 ### v-update-web-domain-stat
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-stat)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-stat)
 
 更新域统计信息
 
@@ -5515,7 +5515,7 @@ v-update-web-domain-stat alice acme.com
 
 ### v-update-web-domain-traff
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domain-traff)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domain-traff)
 
 更新域带宽使用情况
 
@@ -5531,7 +5531,7 @@ v-update-web-domain-traff admin example.com
 
 ### v-update-web-domains-disk
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domains-disk)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domains-disk)
 
 更新域磁盘使用情况
 
@@ -5547,7 +5547,7 @@ v-update-web-domains-disk alice
 
 ### v-update-web-domains-stat
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domains-stat)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domains-stat)
 
 更新域统计信息
 
@@ -5563,7 +5563,7 @@ v-update-web-domains-stat admin
 
 ### v-update-web-domains-traff
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-domains-traff)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-domains-traff)
 
 更新域带宽使用情况
 
@@ -5579,7 +5579,7 @@ v-update-web-domains-traff bob
 
 ### v-update-web-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-web-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-web-templates)
 
 更新网页模板
 
@@ -5589,7 +5589,7 @@ v-update-web-domains-traff bob
 
 ### v-update-white-label-logo
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-white-label-logo)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-white-label-logo)
 
 更新logo标志
 
@@ -5599,7 +5599,7 @@ v-update-web-domains-traff bob
 
 ### v-update-user-backup-exclusions
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-backup-exclusions)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-backup-exclusions)
 
 更新备份排除列表
 
@@ -5615,7 +5615,7 @@ v-update-user-backup-exclusions admin /tmp/backup_exclusions
 
 ### v-update-sys-hestia
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-hestia)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-hestia)
 
 更新 hestia 软件包/配置
 
@@ -5631,7 +5631,7 @@ v-update-sys-hestia hestia-php
 
 ### v-update-sys-hestia-all
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-hestia-all)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-hestia-all)
 
 更新所有 hestia 软件包
 
@@ -5641,7 +5641,7 @@ v-update-sys-hestia hestia-php
 
 ### v-update-sys-hestia-git
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-hestia-git)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-hestia-git)
 
 从 Git 存储库安装更新
 
@@ -5661,7 +5661,7 @@ v-update-sys-hestia-git hestiacp staging/beta install
 
 ### v-update-sys-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-sys-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-sys-ip)
 
 更新系统IP
 
@@ -5678,7 +5678,7 @@ v-update-sys-ip
 
 ### v-update-host-certificate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-host-certificate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-host-certificate)
 
 更新 hestia 的主机证书
 
@@ -5694,7 +5694,7 @@ v-update-host-certificate admin example.com
 
 ### v-list-sys-languages
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-languages)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-languages)
 
 查看系统语言
 
@@ -5710,7 +5710,7 @@ v-list-sys-languages json
 
 ### v-list-sys-hestia-autoupdate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-hestia-autoupdate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-hestia-autoupdate)
 
 查看 Hestia 自动更新设置
 
@@ -5720,7 +5720,7 @@ v-list-sys-languages json
 
 ### v-list-sys-hestia-updates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-hestia-updates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-hestia-updates)
 
 查看系统更新
 
@@ -5747,7 +5747,7 @@ SFTP的主要优点包括：
 
 ### v-add-sys-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-sys-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-sys-sftp-jail)
 
 添加系统sftp上传工具
 
@@ -5763,7 +5763,7 @@ v-add-sys-sftp-jail yes
 
 ### v-add-user-sftp-jail
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-sftp-jail)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-sftp-jail)
 
 添加 sftp 上传用户
 
@@ -5779,7 +5779,7 @@ v-add-user-sftp-jail admin
 
 ### v-add-user-sftp-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-sftp-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-sftp-key)
 
 添加用户 sftp 密钥
 
@@ -5789,7 +5789,7 @@ v-add-user-sftp-jail admin
 
 ### v-delete-backup-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-backup-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-backup-host)
 
 删除备份 ftp 服务器
 
@@ -5805,7 +5805,7 @@ v-delete-backup-host sftp
 
 ### v-change-web-domain-ftp-password
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-ftp-password)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-ftp-password)
 
 修改ftp用户密码。
 
@@ -5821,7 +5821,7 @@ v-change-web-domain-ftp-password admin example.com ftp_usr ftp_qwerty
 
 ### v-change-web-domain-ftp-path
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-web-domain-ftp-path)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-web-domain-ftp-path)
 
 更改 ftp 用户的路径。
 
@@ -5837,7 +5837,7 @@ v-change-web-domain-ftp-path admin example.com /home/admin/example.com
 
 ### v-list-sys-vsftpd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-vsftpd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-vsftpd-config)
 
 查看 vsftpd 配置参数
 
@@ -5847,7 +5847,7 @@ v-change-web-domain-ftp-path admin example.com /home/admin/example.com
 
 ### v-list-sys-web-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-web-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-web-status)
 
 查看网络状态
 
@@ -5857,7 +5857,7 @@ v-change-web-domain-ftp-path admin example.com /home/admin/example.com
 
 ### v-list-sys-proftpd-config
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-proftpd-config)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-proftpd-config)
 
 查看 proftpd 配置参数
 
@@ -5869,7 +5869,7 @@ v-change-web-domain-ftp-path admin example.com /home/admin/example.com
 
 ### v-add-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-dns-domain)
 
 添加 DNS 网站
 
@@ -5885,7 +5885,7 @@ v-add-dns-domain admin example.com ns1.example.com ns2.example.com '' '' '' '' '
 
 ### v-add-dns-on-web-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-dns-on-web-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-dns-on-web-alias)
 
 在 Web 网站别名添加 dns 网站或 dns 记录
 
@@ -5901,7 +5901,7 @@ v-add-dns-on-web-alias admin www.example.com 8.8.8.8
 
 ### v-add-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-dns-record)
 
 添加DNS记录
 
@@ -5917,7 +5917,7 @@ v-add-dns-record admin acme.com www A 162.227.73.112
 
 ### v-add-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-domain)
 
 添加 web/dns/mail 网站
 
@@ -5933,7 +5933,7 @@ v-add-domain admin example.com
 
 ### v-add-remote-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-remote-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-remote-dns-domain)
 
 添加远程 DNS 网站
 
@@ -5949,7 +5949,7 @@ v-add-remote-dns-domain admin mydomain.tld yes
 
 ### v-add-remote-dns-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-remote-dns-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-remote-dns-host)
 
 添加新的远程 DNS 主机
 
@@ -5968,7 +5968,7 @@ v-add-remote-dns-host slave.your_host.com 8083 api_key ''
 
 ### v-add-remote-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-remote-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-remote-dns-record)
 
 添加远程dns网站名记录
 
@@ -5984,7 +5984,7 @@ v-add-remote-dns-record bob acme.com 23
 
 ### v-delete-remote-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-remote-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-remote-dns-record)
 
 删除远程dns域记录
 
@@ -6000,7 +6000,7 @@ v-delete-remote-dns-record user07 acme.com 44
 
 ### v-delete-remote-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-remote-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-remote-dns-domain)
 
 删除远程 DNS 域
 
@@ -6016,7 +6016,7 @@ v-delete-remote-dns-domain admin example.tld
 
 ### v-delete-remote-dns-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-remote-dns-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-remote-dns-domains)
 
 删除远程 DNS 域
 
@@ -6026,7 +6026,7 @@ v-delete-remote-dns-domain admin example.tld
 
 ### v-delete-remote-dns-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-remote-dns-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-remote-dns-host)
 
 删除远程dns主机
 
@@ -6042,7 +6042,7 @@ v-delete-remote-dns-host example.org
 
 ### v-delete-dns-domains-src
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-dns-domains-src)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-dns-domains-src)
 
 根据 SRC 字段删除 dns 域
 
@@ -6058,7 +6058,7 @@ v-delete-dns-domains-src admin '' yes
 
 ### v-delete-dns-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-dns-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-dns-domains)
 
 删除 dns 域
 
@@ -6074,7 +6074,7 @@ v-delete-dns-domains bob
 
 ### v-delete-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-dns-domain)
 
 删除dns域名
 
@@ -6090,7 +6090,7 @@ v-delete-dns-domain alice acme.com
 
 ### v-change-dns-domain-dnssec
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-domain-dnssec)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-domain-dnssec)
 
 修改 dns 网站 dnssec 状态
 
@@ -6104,7 +6104,7 @@ v-change-dns-domain-dnssec admin domain.pp.ua yes
 
 ### v-change-dns-domain-exp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-domain-exp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-domain-exp)
 
 修改 dns 网站到期日期
 
@@ -6120,7 +6120,7 @@ v-change-dns-domain-exp admin domain.pp.ua 2020-11-20
 
 ### v-change-dns-domain-ip
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-domain-ip)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-domain-ip)
 
 更改dns网站名ip地址
 
@@ -6136,7 +6136,7 @@ v-change-dns-domain-ip admin domain.com 123.212.111.222
 
 ### v-change-dns-domain-soa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-domain-soa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-domain-soa)
 
 更改dns网站soa记录
 
@@ -6152,7 +6152,7 @@ v-change-dns-domain-soa admin acme.com d.ns.domain.tld
 
 ### v-change-dns-domain-tpl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-domain-tpl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-domain-tpl)
 
 更改 dns 网站模板
 
@@ -6168,7 +6168,7 @@ v-change-dns-domain-tpl admin example.com child-ns yes
 
 ### v-change-dns-domain-ttl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-domain-ttl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-domain-ttl)
 
 更改 dns 网站 ttl
 
@@ -6184,7 +6184,7 @@ v-change-dns-domain-ttl alice example.com 14400
 
 ### v-change-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-record)
 
 更改dns网站名记录
 
@@ -6200,7 +6200,7 @@ v-change-dns-record admin domain.ua 42 192.18.22.43
 
 ### v-change-dns-record-id
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-dns-record-id)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-dns-record-id)
 
 更改dns网站名记录id
 
@@ -6216,7 +6216,7 @@ v-change-dns-record-id admin acme.com 24 42 yes
 
 ### v-update-dns-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-dns-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-dns-templates)
 
 更新 DNS 模板
 
@@ -6226,7 +6226,7 @@ v-change-dns-record-id admin acme.com 24 42 yes
 
 ### v-unsuspend-remote-dns-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-remote-dns-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-remote-dns-host)
 
 取消挂起远程 DNS 服务器
 
@@ -6242,7 +6242,7 @@ v-unsuspend-remote-dns-host hosname.com
 
 ### v-unsuspend-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-dns-domain)
 
 取消暂停 DNS 域
 
@@ -6258,7 +6258,7 @@ v-unsuspend-dns-domain alice wonderland.com
 
 ### v-unsuspend-dns-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-dns-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-dns-domains)
 
 取消暂停 DNS 域
 
@@ -6274,7 +6274,7 @@ v-unsuspend-dns-domains alice
 
 ### v-unsuspend-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-dns-record)
 
 取消暂停 DNS 域名记录
 
@@ -6290,7 +6290,7 @@ v-unsuspend-dns-record admin example.com 33
 
 ### v-sync-dns-cluster
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-sync-dns-cluster)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-sync-dns-cluster)
 
 同步 DNS 域
 
@@ -6300,7 +6300,7 @@ v-unsuspend-dns-record admin example.com 33
 
 ### v-suspend-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-dns-domain)
 
 暂停 DNS 域
 
@@ -6316,7 +6316,7 @@ v-suspend-dns-domain alice acme.com
 
 ### v-suspend-dns-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-dns-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-dns-domains)
 
 暂停 DNS 域
 
@@ -6332,7 +6332,7 @@ v-suspend-dns-domains admin yes
 
 ### v-suspend-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-dns-record)
 
 暂停DNS域名记录
 
@@ -6348,7 +6348,7 @@ v-suspend-dns-record alice wonderland.com 42 yes
 
 ### v-restart-dns
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-dns)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-dns)
 
 重启dns服务
 
@@ -6358,7 +6358,7 @@ v-suspend-dns-record alice wonderland.com 42 yes
 
 ### v-restart-ftp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-ftp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-ftp)
 
 重新启动 ftp 服务
 
@@ -6368,7 +6368,7 @@ v-suspend-dns-record alice wonderland.com 42 yes
 
 ### v-rebuild-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-dns-domain)
 
 重建dns域名
 
@@ -6384,7 +6384,7 @@ v-rebuild-dns-domain alice wonderland.com
 
 ### v-rebuild-dns-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-dns-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-dns-domains)
 
 重建dns域
 
@@ -6400,7 +6400,7 @@ v-rebuild-dns-domains alice
 
 ### v-list-sys-dns-status
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-sys-dns-status)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-sys-dns-status)
 
 查看 DNS 状态
 
@@ -6409,7 +6409,7 @@ v-rebuild-dns-domains alice
 
 ### v-list-remote-dns-hosts
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-remote-dns-hosts)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-remote-dns-hosts)
 
 查看远程 DNS 主机
 
@@ -6425,7 +6425,7 @@ v-list-remote-dns-hosts json
 
 ### v-list-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-dns-domain)
 
 查看 DNS 域
 
@@ -6441,7 +6441,7 @@ v-list-dns-domain alice wonderland.com
 
 ### v-list-dns-domains
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-dns-domains)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-dns-domains)
 
 查看 DNS 域
 
@@ -6457,7 +6457,7 @@ v-list-dns-domains admin
 
 ### v-list-dns-records
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-dns-records)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-dns-records)
 
 查看 dns 域记录
 
@@ -6473,7 +6473,7 @@ v-list-dns-records admin example.com
 
 ### v-list-dns-template
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-dns-template)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-dns-template)
 
 查看 DNS 模板
 
@@ -6489,7 +6489,7 @@ v-list-dns-template zoho
 
 ### v-list-dns-templates
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-dns-templates)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-dns-templates)
 
 查看 DNS 模板
 
@@ -6505,7 +6505,7 @@ v-list-dns-templates json
 
 ### v-delete-dns-on-web-alias
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-dns-on-web-alias)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-dns-on-web-alias)
 
 删除 dns 域或基于 web 域别名的 dns 记录
 
@@ -6521,7 +6521,7 @@ v-delete-dns-on-web-alias admin example.com www.example.com
 
 ### v-delete-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-dns-record)
 
 删除dns记录
 
@@ -6537,7 +6537,7 @@ v-delete-dns-record bob acme.com 42 yes
 
 ### v-unsuspend-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-domain)
 
 取消暂停 web/dns/mail 域
 
@@ -6553,7 +6553,7 @@ v-unsuspend-domain admin acme.com
 
 ### v-insert-dns-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-insert-dns-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-insert-dns-domain)
 
 插入 DNS 域
 
@@ -6563,7 +6563,7 @@ v-unsuspend-domain admin acme.com
 
 ### v-insert-dns-record
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-insert-dns-record)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-insert-dns-record)
 
 插入DNS记录
 
@@ -6573,7 +6573,7 @@ v-unsuspend-domain admin acme.com
 
 ### v-insert-dns-records
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-insert-dns-records)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-insert-dns-records)
 
 插入 dns 记录
 
@@ -6583,7 +6583,7 @@ v-unsuspend-domain admin acme.com
 
 ### v-get-dns-domain-value
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-get-dns-domain-value)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-get-dns-domain-value)
 
 获取dns域名值
 
@@ -6601,7 +6601,7 @@ v-get-dns-domain-value admin example.com SOA
 
 ### v-add-cron-hestia-autoupdate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-hestia-autoupdate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-hestia-autoupdate)
 
 添加 cron 作业以实现 hestia 自动更新
 
@@ -6612,7 +6612,7 @@ v-get-dns-domain-value admin example.com SOA
 
 ### v-add-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-job)
 
 添加计划任务
 
@@ -6629,7 +6629,7 @@ v-add-cron-job admin * * * * * sudo /usr/local/hestia/bin/v-backup-users
 
 ### v-add-cron-letsencrypt-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-letsencrypt-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-letsencrypt-job)
 
 为 Let's Encrypt 证书添加 cron 作业
 
@@ -6639,7 +6639,7 @@ v-add-cron-job admin * * * * * sudo /usr/local/hestia/bin/v-backup-users
 
 ### v-add-cron-reports
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-reports)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-reports)
 
 添加 cron 报告
 
@@ -6656,7 +6656,7 @@ v-add-cron-reports admin
 
 ### v-add-cron-restart-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-cron-restart-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-cron-restart-job)
 
 添加 cron 报告
 
@@ -6666,7 +6666,7 @@ v-add-cron-reports admin
 
 ### v-delete-cron-hestia-autoupdate
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-hestia-autoupdate)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-hestia-autoupdate)
 
 删除 hestia 自动更新 cron 定时任务
 
@@ -6676,7 +6676,7 @@ v-add-cron-reports admin
 
 ### v-delete-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-job)
 
 删除定时任务
 
@@ -6692,7 +6692,7 @@ v-delete-cron-job admin 9
 
 ### v-delete-cron-reports
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-reports)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-reports)
 
 删除 cron 报告
 
@@ -6708,7 +6708,7 @@ v-delete-cron-reports admin
 
 ### v-delete-cron-restart-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-delete-cron-restart-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-delete-cron-restart-job)
 
 删除重启任务
 
@@ -6718,7 +6718,7 @@ v-delete-cron-reports admin
 
 ### v-change-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-cron-job)
 
 修改 cron 定时任务
 
@@ -6734,7 +6734,7 @@ v-change-cron-job admin 7 * * * * * * /usr/bin/uptime
 
 ### v-unsuspend-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-cron-job)
 
 取消暂停 cron 定时任务
 
@@ -6750,7 +6750,7 @@ v-unsuspend-cron-job admin 7 yes
 
 ### v-unsuspend-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-unsuspend-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-unsuspend-cron-jobs)
 
 取消暂停系统 cron
 
@@ -6766,7 +6766,7 @@ v-unsuspend-cron-jobs admin no
 
 ### v-suspend-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-cron-job)
 
 暂停 cron 定时任务
 
@@ -6782,7 +6782,7 @@ v-suspend-cron-job admin 5 yes
 
 ### v-suspend-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-suspend-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-suspend-cron-jobs)
 
 暂停 sys cron 定时任务
 
@@ -6798,7 +6798,7 @@ v-suspend-cron-jobs admin
 
 ### v-schedule-letsencrypt-domain
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-letsencrypt-domain)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-letsencrypt-domain)
 
 添加 cron 定时任务来安装 LetsEncrypt 证书
 
@@ -6814,7 +6814,7 @@ v-schedule-letsencrypt-domain admin example.com www.example.com
 
 ### v-restart-cron
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restart-cron)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restart-cron)
 
 重新启动 cron 服务
 
@@ -6824,7 +6824,7 @@ v-schedule-letsencrypt-domain admin example.com www.example.com
 
 ### v-rebuild-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-rebuild-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-rebuild-cron-jobs)
 
 重建 cron 定时任务
 
@@ -6840,7 +6840,7 @@ v-rebuild-cron-jobs admin yes
 
 ### v-list-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-cron-job)
 
 查看 cron 定时任务
 
@@ -6856,7 +6856,7 @@ v-list-cron-job admin 7
 
 ### v-list-cron-jobs
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-cron-jobs)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-cron-jobs)
 
 查看用户 cron 定时任务
 
@@ -6872,7 +6872,7 @@ v-list-cron-jobs admin
 
 ### v-restore-cron-job
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-restore-cron-job)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-restore-cron-job)
 
 恢复单个 cron 定时任务
 
@@ -6890,7 +6890,7 @@ v-restore-cron-job USER BACKUP CRON [NOTIFY]
 
 ### v-run-cli-cmd
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-run-cli-cmd)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-run-cli-cmd)
 
 运行 cli 命令
 
@@ -6906,7 +6906,7 @@ v-run-cli-cmd user composer require package
 
 ### v-check-api-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-api-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-api-key)
 
 检查 API 密钥
 
@@ -6922,7 +6922,7 @@ v-check-api-key random_key 127.0.0.1
 
 ### v-change-sys-api
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-sys-api)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-sys-api)
 
 启用/禁用 API 访问
 
@@ -6943,7 +6943,7 @@ v-change-sys-api disable
 
 ### v-change-remote-dns-domain-exp
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-remote-dns-domain-exp)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-remote-dns-domain-exp)
 
 更改远程 DNS 网站到期日期
 
@@ -6953,7 +6953,7 @@ v-change-sys-api disable
 
 ### v-change-remote-dns-domain-soa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-remote-dns-domain-soa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-remote-dns-domain-soa)
 
 更改远程 DNS 网站 SOA
 
@@ -6969,7 +6969,7 @@ v-change-remote-dns-domain-soa admin example.org.uk
 
 ### v-change-remote-dns-domain-ttl
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-change-remote-dns-domain-ttl)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-change-remote-dns-domain-ttl)
 
 更改远程 DNS 网站 TTL
 
@@ -6985,7 +6985,7 @@ v-change-remote-dns-domain-ttl admin domain.tld
 
 ### v-revoke-api-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-revoke-api-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-revoke-api-key)
 
 撤销 API 密钥
 
@@ -7001,7 +7001,7 @@ v-revoke-api-key mykey
 
 ### v-list-access-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-access-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-access-key)
 
 查看所有 API 访问密钥
 
@@ -7015,7 +7015,7 @@ v-list-access-key 1234567890ABCDefghij json
 
 ### v-list-access-keys
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-access-keys)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-access-keys)
 
 查看所有 API 访问密钥
 
@@ -7029,7 +7029,7 @@ v-list-access-keys json
 
 ### v-list-api
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-api)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-api)
 
 查看API
 
@@ -7043,7 +7043,7 @@ v-list-api mail-accounts json
 
 ### v-list-apis
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-apis)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-apis)
 
 查看可用的 API
 
@@ -7057,7 +7057,7 @@ v-list-apis json
 
 ### v-generate-api-key
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-generate-api-key)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-generate-api-key)
 
 生成API密钥
 
@@ -7069,7 +7069,7 @@ v-list-apis json
 
 ### v-add-user-2fa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-user-2fa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-user-2fa)
 
 将 2fa 令牌添加到现有用户
 
@@ -7085,7 +7085,7 @@ v-add-user-2fa admin
 
 ### v-check-user-2fa
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-check-user-2fa)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-check-user-2fa)
 
 检查用户令牌
 
@@ -7105,7 +7105,7 @@ v-check-user-2fa admin 493690
 
 生成debug调试报告。
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-generate-debug-report)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-generate-debug-report)
 
 **选项**:
 

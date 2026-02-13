@@ -3,7 +3,9 @@
 作者
 
 * [imjuniper Bouchard](https://github.com/imjuniper/)  
+
 * [View the project](https://wordpress.org/plugins/hestia-nginx-cache/)
+
 * [Source code](https://github.com/imjuniper/hestia-nginx-cache)
 
 ::: warning 注意

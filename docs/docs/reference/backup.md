@@ -2,7 +2,7 @@
 
 ## v-update-user-backup-exclusions
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-update-user-backup-exclusions)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-update-user-backup-exclusions)
 
 `v-update-user-backup-exclusions` 是 Hestia 控制面板提供的 CLI 命令，用于更新指定用户的备份排除列表。该命令允许管理员通过提供一个文件，其中包含需要排除的文件或目录列表，来定制用户的备份策略。
 
@@ -60,7 +60,7 @@ v-update-user-backup-exclusions USERNAME EXCLUSION_FILE
 
 ## v-dump-site
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-dump-site)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-dump-site)
 
 ### 概述
 
@@ -119,7 +119,7 @@ v-dump-site jane mysite.net
 
 ## v-add-fs-archive
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-fs-archive)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-fs-archive)
 
 ### 概述
 
@@ -186,7 +186,7 @@ v-add-fs-archive bob /backup/bob_archive.tar.gz /home/bob/public_html/
 
 ## v-add-backup-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-add-backup-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-add-backup-host)
 
 ### 概述
 
@@ -245,7 +245,7 @@ v-add-backup-host b2 <b2_account_id> <b2_application_key> <bucket_name>
 
 ## v-backup-user
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-backup-user)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-backup-user)
 
 ### 概述
 
@@ -301,7 +301,7 @@ v-backup-user john yes
 
 ## v-backup-users
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-backup-users)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-backup-users)
 
 ### 概述
 
@@ -345,7 +345,7 @@ v-backup-users
 
 ## v-extract-fs-archive
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-extract-fs-archive)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-extract-fs-archive)
 
 ### 概述
 
@@ -410,7 +410,7 @@ v-extract-fs-archive john /path/to/backup.tgz /home/john_backup/ test=yes
 
 ## v-schedule-user-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-user-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-user-backup)
 
 ### 概述
 
@@ -452,7 +452,7 @@ cat $HESTIA/log/backup.log
 
 ## v-schedule-user-backup-download
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-user-backup-download)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-user-backup-download)
 
 ### 概述
 
@@ -501,7 +501,7 @@ echo "v-schedule-user-backup-download admin 2019-04-22_01-00-00.tar"
 
 ## v-schedule-user-restore
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-schedule-user-restore)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-schedule-user-restore)
 
 ### 概述
 
@@ -570,7 +570,7 @@ echo "v-schedule-user-restore jane_smith 2023-03-16_09-30-00.tar yes no no yes n
 
 ## v-list-backup-host
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-backup-host)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-backup-host)
 
 ### 概述
 
@@ -666,7 +666,7 @@ done
 
 ## v-download-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-download-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-download-backup)
 
 ### 概述
 
@@ -732,7 +732,7 @@ Error: Not enough disk space
 
 ## v-list-user-backup
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-backup)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-backup)
 
 ### 概述
 
@@ -827,7 +827,7 @@ another_backup_2023-04-19.tar.gz,incremental,300,www2.example.com,"ns3.example.c
 
 ## v-list-user-backup-exclusions
 
-* [命令行Bash 脚本查看](https://codeberg.org/hestiacn/docs/raw/branch/main/bin/v-list-user-backup-exclusions)
+* [命令行Bash 脚本查看](https://cnb.cool/hestiamb/docs/-/git/raw/master/docs/public/bin/v-list-user-backup-exclusions)
 
 ### 概述
 
