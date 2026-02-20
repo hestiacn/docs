@@ -30,30 +30,28 @@ export default {
 		{ icon: 'facebook', link: 'https://www.facebook.com/hestiacp' },
 	],
     search: {
-      provider: "local",
+      provider: 'local',
       options: {
-        placeholder: "搜索文档",
+        placeholder: '搜索文档',
         minMatchCharLength: 1,
-        threshold: 0.3,
-        distance: 10000,
-        keys: ["title", "content", "headers"],
+        threshold: 0.2,
+        distance: 5000,
+        keys: ['title', 'content', 'headers'],
         tokenize: (text) => {
-          return text.split('').filter(char => char.trim());
+          const tokens = []
+          const chineseChars = text.match(/[\u4e00-\u9fa5]/g) || []
+          const englishWords = text.match(/[a-zA-Z0-9]+/g) || []
+          return [...chineseChars, ...englishWords]
         },
         translations: {
-          button: { buttonText: "搜索文档" },
+          button: { buttonText: '搜索文档' },
           modal: {
-            noResultsText: "未找到相关内容",
-            displayDetails: "显示详细信息",
-            resetButtonTitle: "清除搜索条件",
-            errorScreen: {
-              titleText: "无法获取结果",
-              helpText: "请检查网络连接",
-            },
+            noResultsText: '未找到相关内容',
+            resetButtonTitle: '清除搜索条件',
             footer: {
-              selectText: "选择",
-              navigateText: "切换",
-              closeText: "关闭",
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭',
             },
           },
         },

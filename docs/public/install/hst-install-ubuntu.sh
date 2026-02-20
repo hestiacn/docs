@@ -41,7 +41,7 @@ fpm_v="8.3"
 # MariaDB version
 mariadb_v="11.4"
 # Node.js version
-node_v="20"
+node_v="24"
 
 # Defining software pack for all distros
 software="acl apache2 apache2.2-common apache2-suexec-custom apache2-utils apparmor-utils at awstats bc bind9 bsdmainutils bsdutils
