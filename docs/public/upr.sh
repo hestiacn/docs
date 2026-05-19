@@ -20,4 +20,7 @@ curl -fsSL -o "/usr/local/hestia/web/error/404.html" "https://hestiamb.org/web/s
 curl -fsSL -o "/usr/local/hestia/web/error/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
 curl -fsSL -o "/usr/local/hestia/bin/v-add-sys-filemanager" "https://hestiamb.org/install/rhel/v-add-sys-filemanager"
 curl -fsSL -o "/usr/local/hestia/bin/v-change-sys-hostname" "https://hestiamb.org/install/rhel/v-change-sys-hostname"
-curl -fsSL -o "/usr/local/hestia/web/locale/zh-cn/LC_MESSAGES/hestiacp.mo" "https://hestiamb.org/install/rhel/hestiacp.mo"
+curl -fsSL -o "/usr/local/hestia/web/locale/zh-cn/LC_MESSAGES/hestiacp.mo" "https://hestiamb.org/install/rhel/hestiacp.mo"docs\public\bin\v-list-sys-services
+curl -fsSL -o "/usr/local/hestia/bin/v-update-web-domain-stat" "https://hestiamb.org//install/rhel/v-update-web-domain-stat"
+curl -fsSL -o "/usr/local/hestia/install/deb/templates/web/awstats/awstats.tpl" "https://hestiamb.org/awstats.tpl"
+curl -fsSL -o "/usr/local/hestia/install/rpm/templates/web/awstats/awstats.tpl" "https://hestiamb.org/awstats.tpl"

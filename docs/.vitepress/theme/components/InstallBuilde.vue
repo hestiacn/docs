@@ -29,7 +29,6 @@
 						'is-active': selectedOptions[option.flag].enabled,
 						'is-clickable': !option.type || !selectedOptions[option.flag].enabled,
 					}"
-					@click="toggleOption(option)"
 				>
 					<div class="option-header">
 						<div class="form-check">
@@ -38,33 +37,30 @@
 								class="form-check-input"
 								:id="option.flag"
 								v-model="selectedOptions[option.flag].enabled"
+								:conflicts="option.conflicts"
+								:depends="option.depends"
+								@change="toggleOption"
 							/>
 							<label :for="option.flag" @click.stop>{{ option.label }}</label>
 						</div>
-						<div class="option-icon" v-tooltip="option.description">
-							<i class="fa-solid fa-circle-info"></i>
-						</div>
 					</div>
-					<div v-if="selectedOptions[option.flag].enabled && option.type" class="option-content">
-						<label
-							v-if="option.type && option.type !== 'checkbox'"
-							class="form-label"
-							:for="`${option.flag}-input`"
-						>
-							{{ option.description }}
-						</label>
+					<div class="option-description" v-html="option.description"></div>
+					<div v-if="option.type === 'text'" class="option-content">
 						<input
-							v-if="option.type === 'text'"
 							class="form-control"
 							type="text"
 							:id="`${option.flag}-input`"
 							v-model="selectedOptions[option.flag].value"
+							:placeholder="option.default"
+							@input="checkNeedEnabled(option.flag, $event)"
 						/>
+					</div>
+					<div v-if="option.type === 'select'" class="option-content">
 						<select
-							v-if="option.type === 'select'"
 							class="form-select"
 							:id="`${option.flag}-input`"
 							v-model="selectedOptions[option.flag].value"
+							@change="checkNeedEnabled(option.flag, $event)"
 						>
 							<option v-for="opt in option.options" :key="opt.value" :value="opt.value">
 								{{ opt.label }}
@@ -85,13 +81,12 @@ const { options } = defineProps({
 	options: {
 		type: Array,
 		required: true,
+		default: () => [],
 	},
 });
 
-// 初始化选中状态
 const selectedOptions = ref({});
 options.forEach((option) => {
-	// port和lang默认启用，其他选项根据default值设置
 	const isPortOrLang = ['port', 'lang'].includes(option.flag);
 	selectedOptions.value[option.flag] = {
 		enabled: isPortOrLang || option.default === "yes",
@@ -99,10 +94,34 @@ options.forEach((option) => {
 	};
 });
 
-const toggleOption = (option) => {
-	if (!option.type || !selectedOptions.value[option.flag].enabled) {
-		selectedOptions.value[option.flag].enabled = !selectedOptions.value[option.flag].enabled;
-	}
+const checkNeedEnabled = (flag, event) => {
+    if (event.target.value !== "" && event.target.value !== null) {
+        if (!selectedOptions.value[flag].enabled) {
+            selectedOptions.value[flag].enabled = true;
+        }
+    }
+};
+
+const toggleOption = (event) => {
+    const checkbox = event.target;
+    const flag = checkbox.id;
+    const conflicts = checkbox.getAttribute("conflicts");
+    const depends = checkbox.getAttribute("depends");
+    
+    if (checkbox.checked) {
+        if (conflicts) {
+            const conflictFlag = conflicts;
+            if (selectedOptions.value[conflictFlag]?.enabled) {
+                selectedOptions.value[conflictFlag].enabled = false;
+            }
+        }
+        if (depends) {
+            const dependFlag = depends;
+            if (!selectedOptions.value[dependFlag]?.enabled) {
+                selectedOptions.value[dependFlag].enabled = true;
+            }
+        }
+    }
 };
 
 const installCommand = ref("bash hst-install.sh");
@@ -239,6 +258,7 @@ a:active {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 8px;
 }
 .option-icon {
 	padding: 5px;
@@ -251,6 +271,44 @@ a:active {
 	&:hover i {
 		opacity: 1;
 	}
+}
+.option-description {
+	font-size: 13px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+}
+.option-description pre {
+    background-color: var(--vp-c-bg, #f5f5f5);
+    border: 1px solid var(--vp-c-border, #e0e0e0);
+    border-radius: 8px;
+    padding: 12px 16px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.option-description code {
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+    font-size: 13px;
+    background-color: var(--vp-c-bg, #f0f0f0);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.option-description pre code {
+    background-color: transparent;
+    padding: 0;
+    font-size: 13px;
+}
+@media (prefers-color-scheme: dark) {
+    .option-description pre {
+        background-color: #2d2d2d;
+        border-color: #444;
+    }
+    .option-description code {
+        background-color: #2d2d2d;
+    }
 }
 .option-content {
 	margin-top: 5px;

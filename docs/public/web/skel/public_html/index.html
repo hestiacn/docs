@@ -67,10 +67,11 @@ html, body {
 }
 
 .main-text {
-	padding: 5vh 5px 0 5px;
 	text-align: center;
 	line-height: 2em;
 	font-size: 2vh;
+	position: relative;
+	z-index: 15;
 }
 
 .main-text h1 {
@@ -92,7 +93,9 @@ html, body {
 	text-decoration: none;
 	color: #0066CC;
 }
-
+a, a:link, a:visited {
+    color: var(--link-color);
+}
 .main-text-a a:hover {
 	color: #000;
 }

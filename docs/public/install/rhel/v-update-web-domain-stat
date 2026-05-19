@@ -1,16 +1,7 @@
 #!/bin/bash
 # info: update domain statistics
 # options: USER DOMAIN
-#
-# example: v-update-web-domain-stat alice acme.com
-#
-# This function runs log analyser for specific webdomain.
 
-#----------------------------------------------------------#
-#                Variables & Functions                     #
-#----------------------------------------------------------#
-
-# Argument definition
 user=$1
 domain=$2
 domain_idn=$2
@@ -129,8 +120,9 @@ fi
 #----------------------------------------------------------#
 
 build_awstats() {
-    awstats="/usr/lib/cgi-bin/awstats.pl"
+    awstats="/usr/share/awstats/wwwroot/cgi-bin/awstats.pl"
     wwwroot="/usr/share/awstats"
+    wwwroots="/usr/share/awstats/wwwroot/"
     local current_year=$(date "+%Y")
     local current_month=$(date "+%m")
     
@@ -148,7 +140,7 @@ build_awstats() {
 
     # Check and create the apache2.conf_cgi file
     conf_dir="$HOMEDIR/$user/conf/web/$domain"
-    conf_file="$conf_dir/apache2.conf_cgi"
+    conf_file="$conf_dir/httpd.conf_cgi"
     local file_created=0
 
     if [ ! -f "$conf_file" ]; then
@@ -262,19 +254,22 @@ EOF
 
     if [ $file_created -eq 1 ] || [ $index_created -eq 1 ] || [ $htaccess_created -eq 1 ]; then
         log_message "INFO" "检测到新文件创建，检查 CGI 模块..."
-        if ! apache2ctl -M 2>/dev/null | grep -q "cgid_module"; then
+        if ! httpd -M 2>/dev/null | grep -q "cgid_module"; then
             log_message "INFO" "正在启用 cgid 模块..."
-            a2enmod cgid
-            systemctl restart apache2
+            if ! grep -q "^LoadModule cgid_module" /etc/httpd/conf.modules.d/01-cgi.conf 2>/dev/null; then
+                echo "LoadModule cgid_module modules/mod_cgid.so" >> /etc/httpd/conf.modules.d/01-cgi.conf
+                log_message "INFO" "已添加 cgid 模块配置"
+            fi
+            systemctl restart httpd
             log_message "INFO" "cgid 模块已启用，Apache 已重启"
         else
             log_message "INFO" "cgid 模块已启用"
         fi
     fi
-
+    
     # Icon directory check
     if [ ! -e "$dir/icon" ]; then
-        ln -s "$wwwroot/icon" "$dir/icon" 2>/dev/null
+        ln -s "$wwwroots/icon" "$dir/icon" 2>/dev/null
         log_message "INFO" "已创建 icon 软链接"
     fi
     
@@ -287,7 +282,7 @@ EOF
     cgi_bin_dir="$HOMEDIR/$user/web/$domain/cgi-bin"
     if [ ! -e "$cgi_bin_dir/awstats.pl" ]; then
         mkdir -p "$cgi_bin_dir" 2>/dev/null
-        ln -s /usr/lib/cgi-bin/awstats.pl "$cgi_bin_dir/awstats.pl" 2>/dev/null
+        ln -s $awstats "$cgi_bin_dir/awstats.pl" 2>/dev/null
         chown -h $user:$(groups "$user" | cut -f 3 -d ' ') "$cgi_bin_dir/awstats.pl" 2>/dev/null
         log_message "INFO" "已创建 awstats.pl 软链接: $cgi_bin_dir/awstats.pl"
     fi
@@ -371,15 +366,26 @@ EOF
 
 # Switching on statistics type
 case $STATS in
-	awstats) build_awstats ;;
+    awstats) 
+        build_awstats
+        ;;
+    *) 
+        log_message "WARNING" "不支持的统计类型: $STATS"
+        echo "不支持的统计类型: $STATS"
+        ;;
 esac
 
 # Chown
-groups=$(groups "$user" | cut -f 3 -d ' ')
-chown -R $user:$groups "$dir"
+if [ -d "$dir" ]; then
+    groups=$(groups "$user" | cut -f 3 -d ' ')
+    chown -R $user:$groups "$dir" 2>/dev/null
+    log_message "INFO" "已设置目录权限: $dir"
+fi
 
 #----------------------------------------------------------#
 #                       Hestia                             #
 #----------------------------------------------------------#
 
+log_message "INFO" "域名 $domain 统计信息更新完成（仅当前月份）"
+echo "域名 $domain 统计信息更新完成"
 exit

@@ -44,7 +44,7 @@ mariadb_v="11.4"
 node_v="24"
 
 # Defining software pack for all distros
-software="acl apache2 apache2-suexec-custom apache2-suexec-pristine apache2-utils at awstats bc bind9 bsdmainutils bsdutils
+software="acl apache2 apache2-suexec-custom apache2-suexec-pristine apache2-utils at bc bind9 bsdmainutils bsdutils
   clamav-daemon cron curl dnsutils dovecot-imapd dovecot-managesieved dovecot-pop3d dovecot-sieve e2fslibs e2fsprogs
   exim4 exim4-daemon-heavy expect fail2ban flex ftp git hestia=${HESTIA_INSTALL_VER} hestia-nginx hestia-php hestia-web-terminal
   idn2 imagemagick ipset jq libapache2-mod-fcgid libapache2-mod-php$fpm_v libapache2-mpm-itk libmail-dkim-perl lsb-release
@@ -1196,9 +1196,9 @@ fi
 /usr/sbin/adduser hestiamail hestia-users
 
 # Enable SFTP subsystem for SSH
-sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp-server" /etc/ssh/sshd_config)
+sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp" /etc/ssh/sshd_config)
 if [ -n "$sftp_subsys_enabled" ]; then
-	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp-server/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
+	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
 fi
 
 # Reduce SSH login grace time
@@ -1216,6 +1216,32 @@ fi
 
 # Restart SSH daemon
 systemctl restart ssh
+
+#----------------------------------------------------------#
+#                     Install AWStats                      #
+#----------------------------------------------------------#
+
+# 直接安装 vstats
+echo "[ * ] 获取 AWStats 最新版本..."
+
+# 获取最新版本号
+latest_tag=$(curl -s https://api.github.com/repos/hestiacn/vstats/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
+
+if [ -n "$latest_tag" ]; then
+    echo "[ * ] 安装 AWStats ${latest_tag}..."
+    
+	# 下载并安装
+	wget --quiet "https://github.com/hestiacn/vstats/releases/download/${latest_tag}/awstats_8.1-1_all.deb" -O /tmp/awstats.deb
+	apt install -y /tmp/awstats.deb >> $LOG 2>&1
+	rm -f /tmp/awstats.deb
+    
+    # 验证安装
+    if command -v awstats.pl >/dev/null; then
+        echo "[ ✓ ] AWStats ${latest_tag} 安装成功"
+    fi
+else
+    echo "[ ! ] 获取版本失败，跳过安装"
+fi
 
 # Disable AWStats cron
 rm -f /etc/cron.d/awstats

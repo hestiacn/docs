@@ -270,7 +270,7 @@ a:active {
 	border: 1px solid var(--vp-c-border);
 	border-radius: 4px;
 	background-color: var(--vp-c-bg);
-	width: 100%;
+	width: 60%;
 	padding: 5px 10px;
 
 	&:hover {

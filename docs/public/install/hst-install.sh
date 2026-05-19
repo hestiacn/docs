@@ -151,5 +151,5 @@ if [[ "$release" =~ ^(11|12|22.04|24.04)$ ]]; then
 else
 	no_support_message
 fi
-
+ 
 exit

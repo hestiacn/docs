@@ -13,8 +13,8 @@ export const webDomains = [
 	{ text: 'Nginx 代理缓存支持 Nginx + Apache2' },
 	{ text: 'Web 域的每个域 TLS 证书' },
 	{ text: '对 Web/ 邮件 /DNS 的 MultiIP 支持' },
-	{ text: "debian系列 PHP 版本 5.6 至 8.4,默认为 PHP8.3,查看<a href='https://codeberg.org/hestiacn/docs/src/commit/2a6b31e8c8c205dccd5c2ff7307f4cd751564915/public/install/hst-install-debian.sh#L37-L41' target='_blank' rel='noopener noreferrer'>hestia</a>" },
-	{ text: "RHEL 系列发行版为PHP 7.4 (<a href='https://www.php.net/supported-versions.php' target='_blank' rel='noopener noreferrer'>EOL</a>)-8.3默认为 PHP8.2.查看<a href='https://dev.brepo.ru/bayrepo/hestiacp/src/commit/ec2e8ca836571c16b8f1da30837b286af809cc36/install/hst-install-rhel.sh#L45-L48' target='_blank' rel='noopener noreferrer'>RHEL分支</a>" },
+	{ text: "debian系列 PHP 版本 5.6 至 8.5,默认为 PHP8.3,查看<a href='https://cnb.cool/hestiamb/docs/-/blob/master/docs/public/install/hst-install-debian.sh#L36C1-L41C1' target='_blank' rel='noopener noreferrer'>hestia</a>" },
+	{ text: "RHEL 系列发行版为PHP 7.4 (<a href='https://www.php.net/supported-versions.php' target='_blank' rel='noopener noreferrer'>EOL</a>)-8.5默认为 PHP8.3.查看<a href='https://github.com/bayrepo/hestiacp-rpm/blob/rhel-version/install/hst-install.sh#L44-L48' target='_blank' rel='noopener noreferrer'>RHEL分支</a>" },
 	{ text: "支持一键快速安装以下应用程序, 支持用户自定义配置, 请查看<a href='/docs/contributing/quick-install-app' rel='noopener noreferrer'>快速安装应用程序配置</a>" },
 	{ text: "以下为hestia配置的默认一键快速安装程序！因发行版不同！RHEL 系列可能尚未完整配置！",
 	apps: [//https://github.com/hestiacp/hestiacp/tree/release/web/src/app/WebApp/Installers

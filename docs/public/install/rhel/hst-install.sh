@@ -38,11 +38,11 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.9.5.rpm-alpha'
+HESTIA_INSTALL_VER='1.9.6.rpm-alpha'
 
 # Dependencies
 mariadb_v="10.11"
-multiphp_v=("74" "80" "81" "82" "83")
+multiphp_v=("74" "80" "81" "82" "83" "84" "85")
 
 # default PHP version
 php_v="82"
@@ -60,8 +60,8 @@ software="nginx
   exim clamd clamav spamassassin dovecot dovecot-pigeonhole
   hestia hestia-nginx hestia-php
   rrdtool quota e2fsprogs fail2ban dnsutils util-linux cronie expect perl-Mail-DKIM unrar vim acl sysstat
-  rsyslog openssh-clients util-linux ipset zstd systemd-timesyncd jq awstats perl-Switch net-tools mc flex
-  whois git idn2 unzip zip sudo bc ftp lsof"
+  rsyslog openssh-clients util-linux ipset zstd systemd-timesyncd jq perl-Switch net-tools mc flex
+  whois git idn2 unzip zip sudo bc ftp lsof unzip"
 
 
 installer_dependencies="gnupg2 policycoreutils wget ca-certificates"
@@ -164,7 +164,9 @@ set_default_port() {
 write_config_value() {
 	local key="$1"
 	local value="$2"
-	echo "$key='$value'" >> $HESTIA/conf/hestia.conf
+	if [ -e $HESTIA/conf/hestia.conf ]; then
+		echo "$key='$value'" >> $HESTIA/conf/hestia.conf
+	fi
 }
 
 # Sort configuration file values
@@ -520,7 +522,7 @@ esac
 #----------------------------------------------------------#
 
 install_welcome_message() {
-	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|~alpha||g" | sed "s|~beta||g")
+	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|-alpha||g" | sed "s|-beta||g")
 	echo
 	echo '     _   _                _     _            ____   ____                '
 	echo '    | | | |  ___   ___  _| |_  (_)   __ _  /  ___| |  _ \    _  _ .  .  '
@@ -762,7 +764,7 @@ if [ "$uselocalphp" == "yes" ]; then
 	php_pkgs_lst="brepo-php${php_v} brepo-php${php_v}-mod-apache"
 else
 	write_config_value "LOCAL_PHP" "no"
-	php_pkgs_lst="php${php_v}-php.${arch} php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
+	php_pkgs_lst="php${php_v}-php php${php_v}-php-cgi php${php_v}-php-mysqlnd php${php_v}-php-pgsql
   php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
   php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
   php${php_v}-php-gd php${php_v}-php-intl php${php_v}-php-mbstring php${php_v}-php-pspell php${php_v}-php-readline"
@@ -920,7 +922,7 @@ if [ "$apache" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/mod_suphp//")
 	software=$(echo "$software" | sed -e "s/mod_fcgid//")
 	software=$(echo "$software" | sed -e "s/mod_ssl//")
-	software=$(echo "$software" | sed -e "s/php${php_v}-php.${arch}//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php//")
 	software=$(echo "$software" | sed -e "s/brepo-php${php_v}-mod-apache//")
 	mod_php="disable"
 fi
@@ -1003,13 +1005,17 @@ fi
 #----------------------------------------------------------#
 
 if [ "$iptables" = 'yes' ]; then
-	dnf install iptables-nft -y
-	systemctl stop firewalld
-	systemctl disable firewalld
-	systemctl enable nftables --now
+    dnf install iptables-nft -y
+    systemctl stop firewalld
+    systemctl disable firewalld
+    systemctl enable nftables --now
+    echo "[ * ] 防火墙已启用"
+    echo "[ ! ] 如需从外部访问面板，请执行以下命令开放 $port 端口："
+    echo "      nft add rule inet filter input tcp dport $port accept"
+    echo "      持久化请参考：nft list ruleset > /etc/nftables/hestia-port.nft"
 else
-	systemctl stop firewalld
-	systemctl disable firewalld
+    systemctl stop firewalld
+    systemctl disable firewalld
 fi
 
 # Installing rpm packages
@@ -1088,9 +1094,9 @@ fi
 echo "[ * ] 配置系统设置..."
 
 # Enable SFTP subsystem for SSH
-sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp-server" /etc/ssh/sshd_config)
+sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp" /etc/ssh/sshd_config)
 if [ -n "$sftp_subsys_enabled" ]; then
-	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp-server/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
+	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
 fi
 
 # Reduce SSH login grace time
@@ -1098,6 +1104,32 @@ sed -i "s/[#]LoginGraceTime [[:digit:]]m/LoginGraceTime 1m/g" /etc/ssh/sshd_conf
 
 # Restart SSH daemon
 systemctl restart sshd
+
+#----------------------------------------------------------#
+#                     Install AWStats                      #
+#----------------------------------------------------------#
+
+# 直接安装 vstats
+echo "[ * ] 获取 AWStats 最新版本..."
+
+# 获取最新版本号
+latest_tag=$(curl -s https://api.github.com/repos/hestiacn/vstats/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
+
+if [ -n "$latest_tag" ]; then
+    echo "[ * ] 安装 AWStats ${latest_tag}..."
+    
+	# 下载并安装
+	wget --quiet "https://github.com/hestiacn/vstats/releases/download/${latest_tag}/awstats-8.1-1.noarch.rpm" -O /tmp/awstats-8.1-1.noarch.rpm
+	dnf localinstall -y /tmp/awstats-8.1-1.noarch.rpm >> $LOG 2>&1
+	rm -f /tmp/awstats-8.1-1.noarch.rpm
+    
+    # 验证安装
+    if command -v awstats.pl >/dev/null; then
+        echo "[ ✓ ] AWStats ${latest_tag} 安装成功"
+    fi
+else
+    echo "[ ! ] 获取版本失败，跳过安装"
+fi
 
 # Disable AWStats cron
 rm -f /etc/cron.d/awstats
@@ -1468,11 +1500,32 @@ if [ "$apache" = 'yes' ]; then
 
 	# IDK why those modules still here, but ok. if they are disabled by default
 
-	if [ -e /etc/httpd/conf.modules.d/01-suexec.conf ]; then
-		sed 's/^LoadModule suexec_module/#LoadModule suexec_module/' -i /etc/httpd/conf.modules.d/01-suexec.conf
-	fi
-	if [ -e /etc/httpd/conf.modules.d/10-fcgid.conf ]; then
-		sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module/' -i /etc/httpd/conf.modules.d/10-fcgid.conf
+	if [ "$phpfpm" = 'yes' ]; then
+        if [ -e /etc/httpd/conf.modules.d/01-suexec.conf ]; then
+            sed 's/^LoadModule suexec_module/#LoadModule suexec_module/' -i /etc/httpd/conf.modules.d/01-suexec.conf
+        fi
+        if [ -e /etc/httpd/conf.modules.d/10-fcgid.conf ]; then
+            sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module/' -i /etc/httpd/conf.modules.d/10-fcgid.conf
+        fi
+    else
+        cp -f $HESTIA_INSTALL_DIR/httpd/01-mpm-itk.conf /etc/httpd/conf.modules.d/
+        if [ -e /etc/httpd/conf.modules.d/01-suexec.conf ]; then
+       		sed 's/#LoadModule suexec_module/LoadModule suexec_module/' -i /etc/httpd/conf.modules.d/01-suexec.conf
+       	fi
+        echo "LoadModule suphp_module modules/mod_suphp.so" > /etc/httpd/conf.modules.d/10-suphp.conf
+       	if [ -e /etc/httpd/conf.modules.d/10-fcgid.conf ]; then
+       		sed 's/#LoadModule fcgid_module/LoadModule fcgid_module/' -i /etc/httpd/conf.modules.d/10-fcgid.conf
+       	fi
+        if [ -e /etc/httpd/conf.d/fcgid.conf ]; then
+            cp /etc/httpd/conf.d/fcgid.conf /etc/httpd/conf.h.d/fcgid.conf
+        fi
+        if [ -e /etc/httpd/conf.dmod_suphp.conf ]; then
+            cp /etc/httpd/conf.d/mod_suphp.conf /etc/httpd/conf.h.d/mod_suphp.conf
+        fi
+        if [ -e "/etc/httpd/conf.d.prep/php${php_v}.conf" ]; then
+            ln -s "/etc/httpd/conf.d.prep/php${php_v}.conf" /etc/httpd/conf.modules.d/09-mod-php.conf
+        fi
+
 	fi
 
 	# Switch status loader to custom one
@@ -1486,6 +1539,10 @@ if [ "$apache" = 'yes' ]; then
 		sed 's/LoadModule mpm_prefork_module/#LoadModule mpm_prefork_module/' -i /etc/httpd/conf.modules.d/00-mpm.conf
 		sed 's/#LoadModule mpm_event_module/LoadModule mpm_event_module/' -i /etc/httpd/conf.modules.d/00-mpm.conf
 		cp -f $HESTIA_INSTALL_DIR/httpd/hestia-event.conf /etc/httpd/conf.h.d/
+	else
+        sed 's/LoadModule mpm_worker_module/#LoadModule mpm_worker_module/' -i /etc/httpd/conf.modules.d/00-mpm.conf
+        sed 's/LoadModule mpm_event_module/#LoadModule mpm_event_module/' -i /etc/httpd/conf.modules.d/00-mpm.conf
+        sed 's/#LoadModule mpm_prefork_module/LoadModule mpm_prefork_module/' -i /etc/httpd/conf.modules.d/00-mpm.conf
 	fi
 
 	if [ ! -d /etc/httpd/sites-available ]; then
@@ -1510,6 +1567,10 @@ fi
 #----------------------------------------------------------#
 #                     Configure PHP-FPM                    #
 #----------------------------------------------------------#
+
+if [ "$uselocalphp" == "no" ]; then
+	multiphp_v=("74" "80" "81" "82" "83" "84")
+fi
 
 if [ "$phpfpm" = "yes" ]; then
 	if [ "$multiphp" = 'yes' ]; then
@@ -1678,10 +1739,10 @@ if [ "$mysql" = 'yes' ] || [ "$mysql8" = 'yes' ]; then
 	echo "[ * ] 安装 phpMyAdmin 版本v$pma_v..."
 
 	# Download latest phpmyadmin release
-	wget --quiet --retry-connrefused https://files.phpmyadmin.net/phpMyAdmin/$pma_v/phpMyAdmin-$pma_v-all-languages.tar.gz
+	wget --quiet --retry-connrefused https://data.brepo.ru/hestiacp/phpMyAdmin/$pma_v/phpMyAdmin-$pma_v-all-languages.zip
 
 	# Unpack files
-	tar xzf phpMyAdmin-$pma_v-all-languages.tar.gz
+	unzip phpMyAdmin-$pma_v-all-languages.zip
 
 	# Create folders
 	mkdir -p /usr/share/phpmyadmin
@@ -2274,8 +2335,8 @@ DEBIAN Documentation:     https://hestiacp.com/docs
 请登录并导航到服务器>更新以将其关闭。
 
 --
-✨ 诚挚祝愿 Hestia 能够为您的全栈服务器提供完美的使用体验！
-💌 Hestia 开源服务器控制面板开发团队
+诚挚祝愿 Hestia 能够为您的全栈服务器提供完美的使用体验！
+Hestia 开源服务器控制面板开发团队
 
 凝聚全球开源社区成员的爱与自豪,匠心打造而成.
 " >> $tmpfile

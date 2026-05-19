@@ -81,9 +81,9 @@ export const options = [
 	},
     {
         flag: 'nopublicip',
-        label: '不使用公网 IP', 
-        description: '启用后，安装程序将不会检测到外部服务器 IP(用于 NAT 或内部网络).',
-        default: 'no',
+        label: '强制使用本地 IP',
+        description: '使用服务器的内网/本地 IP 地址作为绑定地址,不尝试获取公网 IP.适用于内网环境、NAT 网络、本地开发测试等无需公网访问的场景',
+        default: 'no'
     },
 	{
 		flag: 'apache',
@@ -100,7 +100,7 @@ export const options = [
     {
         flag: 'multiphp',
         label: 'MultiPHP',
-        description: '允许选择安装多个 PHP 版本.默认安装 PHP 8.2,不勾选安装后可通过 CLI 命令或 web 管理面板安装需要的版本.',
+        description: '启用后默认安装 PHP 8.2,并支持在面板中一键安装 PHP 7.4-8.5 多版本.禁用则仅安装默认 PHP 版本',
         default: 'yes'
     },
     {
@@ -154,7 +154,7 @@ export const options = [
 	{
 		flag: 'sieve',
 		label: 'Sieve 自定义规则',
-		description: 'Sieve 是一种电子邮件过滤语言,允许管理员使用脚本来创建复杂的邮件过滤规则.这些规则可以用于检测敏感数据,并阻止其发送到网络外部,也可以用于行业或业务特定的内容过滤.',
+		description: '启用邮件过滤规则支持(Sieve),允许用户自定义邮件自动分类、垃圾邮件处理、自动回复等规则.需配合 Dovecot 和 Exim 使用.',
 		default: 'no'
 	},
 	{
@@ -163,6 +163,12 @@ export const options = [
 		description: 'ClamAV 是一个开源的跨平台电子邮件安全软件,用于检测电子邮件和其他文件中的病毒.',
 		default: 'yes'
 	},
+    {
+        flag: 'usemirrorclamav',
+        label: 'ClamAV 俄罗斯镜像源',
+        description: '使用俄罗斯境内的 ClamAV 病毒数据库镜像源进行更新.适用于服务器位于俄罗斯或周边地区、默认官方源下载缓慢或不稳定的场景.启用后将从 repo.brepo.ru 获取病毒库更新,可能比官方源有数小时延迟.',
+        default: 'no'
+    },
 	{
 		flag: 'spamassassin',
 		label: 'SpamAssassin',
@@ -170,10 +176,16 @@ export const options = [
 		default: 'yes'
 	},
 	{
-        flag: 'firewall',
-        label: 'firewall',
-        description: '使用firewall进行防火墙规则管理,增强系统安全性.',
-        default: 'yes'
+		flag: 'firewall',
+		label: 'firewall 系统防火墙',
+		description: '使用 firewalld / nftables 作为系统防火墙。<br>\n<br>⚠️ 注意：安装完成后如果无法通过公网 IP 访问面板（例如只能 localhost 访问），通常是因为防火墙未开放 8083 端口。\n\n解决方案：\n\n<pre><code>firewall-cmd --permanent --add-port=8083/tcp\nfirewall-cmd --reload</code></pre>\n\n或使用 nftables 时：\n\n<pre><code>nft add rule inet filter input tcp dport 8083 accept</code></pre>\n\n建议保持防火墙开启以增强安全性，可与 Fail2Ban 联动防御暴力破解。',
+		default: 'yes'
+	},
+    {
+        flag: 'uselocalphp',
+        label: '使用官方Hestia 内置 PHP',
+        description: '使用 HestiaCP 官方仓库中的 PHP 版本,而非操作系统默认源.启用后可从 brepo 仓库获取统一构建的 PHP 包,保证版本一致性和兼容性',
+        default: 'no'
     },
     {
         flag: 'fail2ban',
