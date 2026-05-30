@@ -31,9 +31,9 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.9.4'
+HESTIA_INSTALL_VER='1.9.6'
 # Supported PHP versions
-multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4")
+multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4" "8.5")
 # One of the following PHP versions is required for Roundcube / phpmyadmin
 multiphp_required=("7.3" "7.4" "8.0" "8.1" "8.2" "8.3")
 # Default PHP version if none supplied
@@ -44,13 +44,13 @@ mariadb_v="11.4"
 node_v="24"
 
 # Defining software pack for all distros
-software="acl apache2 apache2-suexec-custom apache2-suexec-pristine apache2-utils at bc bind9 bsdmainutils bsdutils
+software="acl apache2 apache2-suexec-custom apache2-utils at bc bind9 bsdmainutils bsdutils
   clamav-daemon cron curl dnsutils dovecot-imapd dovecot-managesieved dovecot-pop3d dovecot-sieve e2fslibs e2fsprogs
   exim4 exim4-daemon-heavy expect fail2ban flex ftp git hestia=${HESTIA_INSTALL_VER} hestia-nginx hestia-php hestia-web-terminal
   idn2 imagemagick ipset jq libapache2-mod-fcgid libapache2-mod-php$fpm_v libapache2-mpm-itk libmail-dkim-perl lsb-release
   lsof mariadb-client mariadb-common mariadb-server mc mysql-client mysql-common mysql-server net-tools nginx nodejs openssh-server
   php$fpm_v php$fpm_v-apcu php$fpm_v-bz2 php$fpm_v-cgi php$fpm_v-cli php$fpm_v-common php$fpm_v-curl php$fpm_v-gd
-  php$fpm_v-imagick php$fpm_v-imap php$fpm_v-intl php$fpm_v-ldap php$fpm_v-mbstring php$fpm_v-mysql php$fpm_v-opcache
+  php$fpm_v-imagick php$fpm_v-imap php$fpm_v-intl php$fpm_v-ldap php$fpm_v-mbstring php$fpm_v-mysql
   php$fpm_v-pgsql php$fpm_v-pspell php$fpm_v-readline php$fpm_v-xml php$fpm_v-zip postgresql postgresql-contrib
   proftpd-basic quota rrdtool rsyslog spamd sysstat unrar-free unzip util-linux vim-common vsftpd xxd whois zip zstd bubblewrap restic"
 
@@ -579,7 +579,7 @@ esac
 install_welcome_message() {
 	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|~alpha||g" | sed "s|~beta||g")
 	echo
-	echo '          _   _                _     _            ____   ____           '
+	echo '           _   _                _     _           _____   ____           '
      echo '         | | | |  ___   ___  _| |_  (_)   __ _  /  ___| |  _ \          '
      echo '         | |_| | / _ \ / __||_  __| | |  / _  | | |     | |_) |         '
      echo '         |  _  ||  __/ \__ \  | |_  | | | (_| | | |___  |  __/          '
@@ -1484,6 +1484,7 @@ mkdir -p /var/www/document_errors
 # Install default success page
 cp -rf $HESTIA_COMMON_DIR/templates/web/unassigned/index.html /var/www/html/
 cp -rf $HESTIA_COMMON_DIR/templates/web/skel/document_errors/* /var/www/document_errors/
+
 # Installing firewall rules
 cp -rf $HESTIA_COMMON_DIR/firewall $HESTIA/data/
 rm -f $HESTIA/data/firewall/ipset/blacklist.sh $HESTIA/data/firewall/ipset/blacklist.ipv6.sh
@@ -1534,14 +1535,18 @@ echo "[ * ] 生成默认的自签名 SSL 证书..."
 $HESTIA/bin/v-generate-ssl-cert $(hostname) '' 'US' 'California' \
 	'San Francisco' 'Hestia Control Panel' 'IT' > /tmp/hst.pem
 
-crt_end=$(grep -n "END CERTIFICATE-" /tmp/hst.pem | cut -f 1 -d:)
-if [ "$release" = "12" ]; then
-	key_start=$(grep -n "BEGIN PRIVATE KEY" /tmp/hst.pem | cut -f 1 -d:)
-	key_end=$(grep -n "END PRIVATE KEY" /tmp/hst.pem | cut -f 1 -d:)
-else
-	key_start=$(grep -n "BEGIN RSA" /tmp/hst.pem | cut -f 1 -d:)
-	key_end=$(grep -n "END RSA" /tmp/hst.pem | cut -f 1 -d:)
+crt_end=$(grep -n "END CERTIFICATE-" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+# Newer OpenSSL may emit BEGIN PRIVATE KEY while older flows emit BEGIN RSA PRIVATE KEY.
+key_start=$(grep -nE "BEGIN (RSA |EC |ENCRYPTED )?PRIVATE KEY" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+key_end=$(grep -nE "END (RSA |EC |ENCRYPTED )?PRIVATE KEY" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+if [ -z "$key_start" ] || [ -z "$key_end" ]; then
+	key_start=$(grep -n "BEGIN RSA" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+	key_end=$(grep -n "END RSA" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
 fi
+check_result $(
+	[ -n "$crt_end" ] && [ -n "$key_start" ] && [ -n "$key_end" ]
+	echo $?
+) "failed to parse generated SSL certificate"
 
 # Adding SSL certificate
 echo "[ * ] 将 SSL 证书添加到 Hestia 控制面板..."
@@ -2299,11 +2304,9 @@ $HESTIA/bin/v-add-sys-filemanager quiet
 echo "[ * ] 配置 PHP 依赖项..."
 $HESTIA/bin/v-add-sys-dependencies quiet
 
-# 全局重定向：所有输出同时打印到屏幕和日志
-exec > >(tee -a "$LOG") 2>&1
 echo "[ * ] 安装Rclone并更新Restic ..."
-curl -s https://rclone.org/install.sh | bash
-restic self-update
+curl -s https://rclone.org/install.sh | bash > /dev/null 2>&1
+restic self-update > /dev/null 2>&1
 
 #----------------------------------------------------------#
 #                   Configure IP                           #
@@ -2450,15 +2453,20 @@ BIN="$HESTIA/bin"
 source $HESTIA/func/syshealth.sh
 syshealth_repair_system_config
 
-# Add /usr/local/hestia/bin/ to path variable
-echo 'if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
+# Add /usr/local/hestia/bin/ to PATH variable in .bashrc if it exists
+[[ -f /root/.bashrc ]] && echo 'if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
     . /etc/profile.d/hestia.sh
 fi' >> /root/.bashrc
+
+# Add /usr/local/hestia/bin/ to PATH variable in .zshrc if it exists
+[[ -f /root/.zshrc ]] && echo 'if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
+    . /etc/profile.d/hestia.sh
+fi' >> /root/.zshrc
 
 #----------------------------------------------------------#
 #                   Hestia Access Info                     #
 #----------------------------------------------------------#
-# 获取操作系统的友好名称
+# 获取操作系统名称
 if command -v lsb_release >/dev/null; then
     os_name=$(lsb_release -sd | tr -d '"')
 elif [ -f /etc/os-release ]; then
@@ -2511,7 +2519,7 @@ echo -e -n " 	用户名:        $username
 文档:           https://hestiacp.com
 论坛:           https://forum.hestiacp.com
 GitHub:         https://github.com/hestiacp/hestiacp
-RHEL开发:       https://dev.brepo.ru/bayrepo/hestiacp
+RHEL分支文档:       https://dev.brepo.ru/bayrepo/hestiacp
 
 注意：自动更新默认已启用。如果您想禁用它们,
 请登录并导航至 "服务器设置">"系统更新">"禁用自动更新"将其关闭.

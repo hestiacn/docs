@@ -84,8 +84,6 @@ no_support_message() {
 	echo "****************************************************"
 	echo "  Debian 11, 12"
 	echo "  Ubuntu 22.04, 24.04 LTS"
-	# Commenting this out for now
-	# echo "  AlmaLinux, EuroLinux, Red Hat EnterPrise Linux, Rocky Linux 8,9"
 	echo ""
 	exit 1
 }
@@ -93,6 +91,29 @@ no_support_message() {
 if [ "$type" = "NoSupport" ]; then
 	no_support_message
 fi
+
+ensure_utf8_locale() {
+	local locale_file="/etc/default/locale"
+
+	if locale | grep -qi 'utf-8'; then
+		return
+	fi
+
+	echo "[ * ] 正在启用 UTF-8 语言环境支持（使用 C.UTF-8）"
+	if ! locale-gen C.UTF-8; then
+		echo "[ ! ] 生成 C.UTF-8 语言环境失败，保持现有语言环境不变"
+		return
+	fi
+
+	if ! update-locale LANG=C.UTF-8; then
+		echo "[ ! ] 更新 $locale_file 文件中的 LANG 变量失败，保持现有语言环境不变"
+		return
+	fi
+
+	export LANG=C.UTF-8
+}
+
+ensure_utf8_locale
 
 check_wget_curl() {
 	# Check wget

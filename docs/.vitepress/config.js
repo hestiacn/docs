@@ -8,6 +8,20 @@ export default {
 	title: 'HestiaCP中文站 | 开源服务器控制面板',
 	description: 'HestiaCP 中文文档 - 开源 Linux 服务器控制面板，支持 Debian/Ubuntu/RHEL系列 系统，提供 Nginx+PHP+MySQL 全栈解决方案，包含 Web 服务配置、SSL 证书管理、邮件服务和域名管理等功能。',
 	cleanUrls: false,
+	vite: {
+		css: {
+			preprocessorOptions: {
+				sass: {
+					api: 'modern',
+					silenceDeprecations: ['legacy-js-api'],
+				},
+				scss: {
+					api: 'modern',
+					silenceDeprecations: ['legacy-js-api'],
+				},
+			},
+		},
+	},
 	head: [
 		['script', {}, `(function(){function updateYear(){var el=document.getElementById('dynamicYear');if(el){var year=new Date().getFullYear();el.textContent!==year.toString()&&(el.textContent=year);}}document.readyState==='loading'?document.addEventListener('DOMContentLoaded',updateYear):updateYear();setInterval(updateYear,3600000);})();`],
 		['meta', {name: 'viewport',content: 'width=device-width, initial-scale=1.0, viewport-fit=cover'}],

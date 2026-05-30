@@ -5,7 +5,7 @@
 # 更新说明：修复版本对比逻辑，优化日志输出方式
 
 HESTIA="/usr/local/hestia"  
-VERSION_FILE="/var/version.dat" 
+VERSION_FILE="/var/version.txt" 
 TARGET_SCRIPT="$HESTIA/bin/v-update-sys-ver"
 LOG_FILE="/var/log/hestia_version_check.log"
 

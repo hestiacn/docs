@@ -157,12 +157,38 @@ extra_operations() {
     fi
 }
 
+# 下载额外的二进制文件和模板
+download_extra_files() {
+    log_message "开始下载额外的二进制文件和模板..."
+    
+    # 下载 v-list-sys-services
+    if ! curl -fsSL -o "/usr/local/hestia/bin/v-list-sys-services" "https://hestiamb.org/bin/v-list-sys-services"; then
+        error_exit "错误：无法下载 v-list-sys-services"
+    fi
+    chmod +x /usr/local/hestia/bin/v-list-sys-services
+    log_message "成功下载 v-list-sys-services"
+    
+    # 下载 v-update-web-domain-stat
+    if ! curl -fsSL -o "/usr/local/hestia/bin/v-update-web-domain-stat" "https://hestiamb.org/bin/v-update-web-domain-stat"; then
+        error_exit "错误：无法下载 v-update-web-domain-stat"
+    fi
+    chmod +x /usr/local/hestia/bin/v-update-web-domain-stat
+    log_message "成功下载 v-update-web-domain-stat"
+    
+    # 下载 awstats.tpl
+    if ! curl -fsSL -o "/usr/local/hestia/data/templates/web/awstats/awstats.tpl" "https://hestiamb.org/awstats.tpl"; then
+        error_exit "错误：无法下载 awstats.tpl"
+    fi
+    log_message "成功下载 awstats.tpl"
+}
+
 main() {
     log_message "启动Hestia中文本地化更新流程"
     find_valid_user_dir
     update_domain_dirs
     process_global_dirs
     extra_operations
+    download_extra_files
 
 # 检测操作系统名称
 if command -v lsb_release >/dev/null; then
@@ -187,7 +213,7 @@ sed -i 's/format("d F Y, H:i:s")/format("Y年m月d日 H时i分s秒")/g' "$TARGET
 $HESTIA/bin/v-delete-user-notification $ADMIN_USER all
 
 # 添加新通知
-$HESTIA/bin/v-add-user-notification" "$ADMIN_USER" "欢迎使用 Hestia 控制面板" \ "<p>🎉 您已经成功在 $os_name 服务器更新升级到 Hestia 控制面板 $HESTIA_VERSION 版本。建议您按照以下顺序开始配置：</p><p>1. 创建管理网站域名的<a href='/add/user/'>用户账户</a><br>2. 添加<a href='/add/web/'>网站域名</a>进行域名部署<br>3. 根据系统版本选择文档参考：<br>📘 <a href='https://hestiamb.org/docs' target='_blank' rel='noopener noreferrer'>中文使用手册</a>（推荐）<br>📜 <a href='https://hestiadocs.brepo.ru/docs' target='_blank'>红帽（RHEL）俄语文档</a>中文正在添加<br>🌐 <a href='https://hestiacp.com/docs' target='_blank' rel='noopener noreferrer'>官方英文文档</a><br>4. 遇到问题可参与：<br>💬 <a href='https://forum.hestiacp.com/' target='_blank' rel='noopener noreferrer'>官方英文社区论坛</a><br>🐞 <a href='https://github.com/hestiacp/hestiacp/issues' target='_blank' rel='noopener noreferrer'>官方GitHub问题提交</a><br>🔍 <a href='https://github.com/bayrepo/hestiacp/issues' target='_blank'>RHEL分支问题报告</a></p><p class='u-text-bold'>温馨提示：</p><p>📚 中文用户建议优先查阅中文文档<br>💡 功能建议请提交至相关 GitHub 仓库<br>🚨 服务器或程序BUG问题请附上系统日志在官方论坛发帖咨询<br>✨ 诚挚祝愿 <a href='https://hestiacp.com' target='_blank' rel='noopener noreferrer'>Hestia</a> 能够为您的全栈服务器提供完美的使用体验！<br>💌 <a href='https://hestiacp.com' target='_blank' rel='noopener noreferrer'>Hestia</a> 开源服务器控制面板开发团队</p>
+$HESTIA/bin/v-add-user-notification "$ADMIN_USER" "欢迎使用 Hestia 控制面板" "<p>🎉 您已经成功在 $os_name 服务器更新升级到 Hestia 控制面板 $HESTIA_VERSION 版本。建议您按照以下顺序开始配置：</p><p>1. 创建管理网站域名的<a href='/add/user/'>用户账户</a><br>2. 添加<a href='/add/web/'>网站域名</a>进行域名部署<br>3. 根据系统版本选择文档参考：<br>📘 <a href='https://hestiamb.org/docs' target='_blank' rel='noopener noreferrer'>中文使用手册</a>（推荐）<br>📜 <a href='https://hestiadocs.brepo.ru/docs' target='_blank'>红帽（RHEL）俄语文档</a>中文正在添加<br>🌐 <a href='https://hestiacp.com/docs' target='_blank' rel='noopener noreferrer'>官方英文文档</a><br>4. 遇到问题可参与：<br>💬 <a href='https://forum.hestiacp.com/' target='_blank' rel='noopener noreferrer'>官方英文社区论坛</a><br>🐞 <a href='https://github.com/hestiacp/hestiacp/issues' target='_blank' rel='noopener noreferrer'>官方GitHub问题提交</a><br>🔍 <a href='https://github.com/bayrepo/hestiacp/issues' target='_blank'>RHEL分支问题报告</a></p><p class='u-text-bold'>温馨提示：</p><p>📚 中文用户建议优先查阅中文文档<br>💡 功能建议请提交至相关 GitHub 仓库<br>🚨 服务器或程序BUG问题请附上系统日志在官方论坛发帖咨询<br>✨ 诚挚祝愿 <a href='https://hestiacp.com' target='_blank' rel='noopener noreferrer'>Hestia</a> 能够为您的全栈服务器提供完美的使用体验！<br>💌 <a href='https://hestiacp.com' target='_blank' rel='noopener noreferrer'>Hestia</a> 开源服务器控制面板开发团队</p>"
 
 if [ $? -eq 0 ]; then
   log_message "成功添加新通知。"

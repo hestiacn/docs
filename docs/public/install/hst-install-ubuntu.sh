@@ -31,9 +31,9 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.9.4'
+HESTIA_INSTALL_VER='1.9.6'
 # Supported PHP versions
-multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4")
+multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4" "8.5")
 # One of the following PHP versions is required for Roundcube / phpmyadmin
 multiphp_required=("7.3" "7.4" "8.0" "8.1" "8.2" "8.3")
 # Default PHP version if none supplied
@@ -50,9 +50,9 @@ software="acl apache2 apache2.2-common apache2-suexec-custom apache2-utils appar
   idn2 imagemagick ipset jq libapache2-mod-fcgid libapache2-mod-php$fpm_v libapache2-mod-rpaf libonig5 libzip4 lsb-release
   lsof mariadb-client mariadb-common mariadb-server mc mysql-client mysql-common mysql-server nginx nodejs openssh-server
   php$fpm_v php$fpm_v-apcu php$fpm_v-bz2 php$fpm_v-cgi php$fpm_v-cli php$fpm_v-common php$fpm_v-curl php$fpm_v-gd
-  php$fpm_v-imagick php$fpm_v-imap php$fpm_v-intl php$fpm_v-ldap php$fpm_v-mbstring php$fpm_v-mysql php$fpm_v-opcache
+  php$fpm_v-imagick php$fpm_v-imap php$fpm_v-intl php$fpm_v-ldap php$fpm_v-mbstring php$fpm_v-mysql
   php$fpm_v-pgsql php$fpm_v-pspell php$fpm_v-readline php$fpm_v-xml php$fpm_v-zip postgresql postgresql-contrib
-  proftpd-basic quota rrdtool rsyslog util-linux spamassassin
+  proftpd-core proftpd-mod-crypto quota rrdtool rsyslog util-linux spamassassin
   sysstat unzip vim-common vsftpd whois zip zstd bubblewrap restic"
 
 installer_dependencies="apt-transport-https ca-certificates curl dirmngr gnupg openssl software-properties-common wget sudo"
@@ -188,7 +188,7 @@ sort_config_file() {
 validate_username() {
 	if [[ "$username" =~ ^[[:alnum:]][-|\.|_[:alnum:]]{0,28}[[:alnum:]]$ ]]; then
 		if [ -n "$(grep ^$username: /etc/passwd /etc/group)" ]; then
-			echo -e "\n用户名或组已存在.请选择一个新的用户名或删除该用户及/或组."
+			echo -e "\n用户名或组已存在.请选择一个新的用户名或删除该用户/或组."
 		else
 			return 1
 		fi
@@ -568,7 +568,7 @@ esac
 install_welcome_message() {
 	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|~alpha||g" | sed "s|~beta||g")
 	echo
-	echo '          _   _                _     _            ____   ____           '
+	echo '           _   _                _     _           _____   ____           '
      echo '         | | | |  ___   ___  _| |_  (_)   __ _  /  ___| |  _ \          '
      echo '         | |_| | / _ \ / __||_  __| | |  / _  | | |     | |_) |         '
      echo '         |  _  ||  __/ \__ \  | |_  | | | (_| | | |___  |  __/          '
@@ -996,8 +996,9 @@ if [ "$vsftpd" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/vsftpd//")
 fi
 if [ "$proftpd" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/proftpd-basic//")
+	software=$(echo "$software" | sed -e "s/proftpd-core//")
 	software=$(echo "$software" | sed -e "s/proftpd-mod-vroot//")
+	software=$(echo "$software" | sed -e "s/proftpd-mod-crypto//")
 fi
 if [ "$named" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/bind9//")
@@ -1422,7 +1423,12 @@ if [ "$exim" = 'yes' ]; then
 		write_config_value "ANTIVIRUS_SYSTEM" "clamav-daemon"
 	fi
 	if [ "$spamd" = 'yes' ]; then
-		write_config_value "ANTISPAM_SYSTEM" "spamassassin"
+		release_short="$(cut -d '.' -f1 <<< "$release")"
+		if [[ -n "$release_short" ]] && [[ $release_short -lt 24 ]]; then
+			write_config_value "ANTISPAM_SYSTEM" "spamassassin"
+		else
+			write_config_value "ANTISPAM_SYSTEM" "spamd"
+		fi
 	fi
 	if [ "$dovecot" = 'yes' ]; then
 		write_config_value "IMAP_SYSTEM" "dovecot"
@@ -1569,14 +1575,18 @@ $HESTIA/bin/v-generate-ssl-cert $(hostname) '' 'US' 'California' \
 	'San Francisco' 'Hestia Control Panel' 'IT' > /tmp/hst.pem
 
 # Parsing certificate file
-crt_end=$(grep -n "END CERTIFICATE-" /tmp/hst.pem | cut -f 1 -d:)
-if [ "$release" != "20.04" ]; then
-	key_start=$(grep -n "BEGIN PRIVATE KEY" /tmp/hst.pem | cut -f 1 -d:)
-	key_end=$(grep -n "END PRIVATE KEY" /tmp/hst.pem | cut -f 1 -d:)
-else
-	key_start=$(grep -n "BEGIN RSA" /tmp/hst.pem | cut -f 1 -d:)
-	key_end=$(grep -n "END RSA" /tmp/hst.pem | cut -f 1 -d:)
+crt_end=$(grep -n "END CERTIFICATE-" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+# Newer OpenSSL may emit BEGIN PRIVATE KEY while older flows emit BEGIN RSA PRIVATE KEY.
+key_start=$(grep -nE "BEGIN (RSA |EC |ENCRYPTED )?PRIVATE KEY" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+key_end=$(grep -nE "END (RSA |EC |ENCRYPTED )?PRIVATE KEY" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+if [ -z "$key_start" ] || [ -z "$key_end" ]; then
+	key_start=$(grep -n "BEGIN RSA" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
+	key_end=$(grep -n "END RSA" /tmp/hst.pem | head -n1 | cut -f 1 -d:)
 fi
+check_result $(
+	[ -n "$crt_end" ] && [ -n "$key_start" ] && [ -n "$key_end" ]
+	echo $?
+) "failed to parse generated SSL certificate"
 
 # Adding SSL certificate
 echo "[ * ] 将 SSL 证书添加到 Hestia 控制面板..."
@@ -2457,15 +2467,20 @@ BIN="$HESTIA/bin"
 source $HESTIA/func/syshealth.sh
 syshealth_repair_system_config
 
-# Add /usr/local/hestia/bin/ to path variable
-echo 'if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
+# Add /usr/local/hestia/bin/ to PATH variable in .bashrc if it exists
+[[ -f /root/.bashrc ]] && echo 'if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
     . /etc/profile.d/hestia.sh
 fi' >> /root/.bashrc
+
+# Add /usr/local/hestia/bin/ to PATH variable in .zshrc if it exists
+[[ -f /root/.zshrc ]] && echo 'if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
+    . /etc/profile.d/hestia.sh
+fi' >> /root/.zshrc
 
 #----------------------------------------------------------#
 #                   Hestia Access Info                     #
 #----------------------------------------------------------#
-# 获取操作系统的友好名称
+# 获取操作系统名称
 if command -v lsb_release >/dev/null; then
     os_name=$(lsb_release -sd | tr -d '"')
 elif [ -f /etc/os-release ]; then
@@ -2514,7 +2529,7 @@ echo -e -n "    用户名:     $username
 文档:           https://hestiacp.com
 论坛:           https://forum.hestiacp.com
 GitHub:         https://github.com/hestiacp/hestiacp
-RHEL文档:       https://hestiadocs.brepo.ru
+RHEL分支文档:       https://hestiadocs.brepo.ru
 
 注意：自动更新默认已启用。如果您想禁用它们,
 请登录并导航至 "服务器设置">"系统更新">"禁用自动更新"将其关闭.
