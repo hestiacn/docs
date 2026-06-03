@@ -182,6 +182,12 @@ export const options = [
 		default: 'yes'
 	},
     {
+        flag: 'bunkerweb',
+        label: 'Bunkerweb WAF 防火墙',
+        description: 'Bunkerweb 是一个开源的 Web 应用防火墙（WAF），可提供 OWASP 核心规则防护、IP 黑白名单、限流、HTTP 安全头等安全功能。',
+        default: 'no'
+    },
+    {
         flag: 'uselocalphp',
         label: '使用官方Hestia 内置 PHP',
         description: '使用 HestiaCP 官方仓库中的 PHP 版本,而非操作系统默认源.启用后可从 brepo 仓库获取统一构建的 PHP 包,保证版本一致性和兼容性',

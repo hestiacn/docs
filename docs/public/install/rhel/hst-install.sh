@@ -51,7 +51,7 @@ php_modules_install="mysqlnd mysqli pdo_mysql pgsql pdo sqlite pdo_sqlite pdo_pg
 php_modules_disable=""
 mod_php="enable"
 
-software="nginx
+software="nginx-system
   httpd.${arch} httpd-tools httpd-itk mod_fcgid mod_suphp mod_ssl
   MariaDB-client MariaDB-common MariaDB-server
   mysql.${arch} mysql-common mysql-server
@@ -93,6 +93,7 @@ help() {
   -I, --nopublicip        Use local ip               [yes|no]   default: yes
   -u, --uselocalphp       Use PHP from local repo    [yes|no]   default: no
   -C, --usemirrorclamav   Use mirrored clamav        [yes|no]   default: no
+  -B, --bunkerweb         Enable BunkerWeb mode      [yes|no]   default: no
   -s, --hostname          Set hostname
   -e, --email             Set admin email
   -p, --password          Set admin password
@@ -295,6 +296,7 @@ for arg; do
 		--password) args="${args}-p " ;;
 		--force) args="${args}-f " ;;
 		--with-debs) args="${args}-D " ;;
+		--bunkerweb) args="${args}-B " ;;
 		--help) args="${args}-h " ;;
 		--nopublicip) args="${args}-I " ;;
 		--uselocalphp) args="${args}-u" ;;
@@ -310,9 +312,10 @@ eval set -- "$args"
 use_devel=""
 
 # Parsing arguments
-while getopts "u:I:a:w:v:j:k:m:M:g:d:x:z:Z:c:C:t:i:b:r:o:q:l:y:s:e:p:R:f:Dh" Option; do
+while getopts "u:I:a:w:v:j:k:m:M:g:d:x:z:Z:c:C:t:i:b:r:o:q:l:y:s:e:p:R:f:D:B:" Option; do
 	case $Option in
 		a) apache=$OPTARG ;;       # Apache
+		B) bunkerweb=$OPTARG ;;    # BunkerWeb mode
 		w) phpfpm=$OPTARG ;;       # PHP-FPM
 		o) multiphp=$OPTARG ;;     # Multi-PHP
 		v) vsftpd=$OPTARG ;;       # Vsftpd
@@ -377,6 +380,7 @@ set_default_value 'quota' 'no'
 set_default_value 'interactive' 'yes'
 set_default_value 'api' 'yes'
 set_default_value 'nopublicip' 'no'
+set_default_value 'bunkerweb' 'no'
 set_default_port '8083'
 set_default_lang 'en'
 set_default_value 'uselocalphp' 'no'
@@ -535,8 +539,8 @@ install_welcome_message() {
 		echo "                              BETA RELEASE                          "
 	fi
 	if [[ "$HESTIA_INSTALL_VER" =~ "alpha" ]]; then
-	echo "                            开发快照                                     "
-	echo "                                                                         "
+    echo "                          开发快照版                                     "
+    echo "                          风险自负，谨慎使用                              "
 	fi
 	echo "                          ${DISPLAY_VER}                                 "
 	echo "                  RHEL系列：hestiadocs.brepo.ru                           "
@@ -554,7 +558,10 @@ clear
 install_welcome_message
 
 # Web stack
-echo '   - NGINX Web服务器/反向代理服务器'
+if [ "$bunkerweb" = 'yes' ]; then
+    echo '   - Bunkerweb 防火墙保护'
+fi
+echo '   - NGINX Web 服务器 / 反向代理'
 if [ "$apache" = 'yes' ]; then
 	echo '   - Apache Web 服务(作为后端)'
 fi
@@ -563,7 +570,7 @@ if [ "$phpfpm" = 'yes' ] && [ "$multiphp" = 'no' ]; then
 fi
 if [ "$multiphp" = 'yes' ]; then
 	phpfpm='yes'
-	echo '   - 多 PHP 环境：版本'
+	echo '   - 多 PHP 环境'
 fi
 
 # DNS stack
@@ -840,7 +847,7 @@ mkdir nginx httpd php vsftpd proftpd bind exim dovecot clamd
 mkdir spamassassin mysql postgresql hestia
 
 # Backup nginx configuration
-systemctl stop nginx > /dev/null 2>&1
+systemctl stop nginx-system > /dev/null 2>&1
 cp -r /etc/nginx/* $hst_backups/nginx > /dev/null 2>&1
 
 # Backup Apache configuration
@@ -967,11 +974,11 @@ if [ "$mysql8" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/mysql-common//")
 fi
 if [ "$mysql" = 'no' ] && [ "$mysql8" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/php${php_v}-php-mysql.${arch}//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php-mysql//")
 fi
 if [ "$postgresql" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/postgresql-server//")
-	software=$(echo "$software" | sed -e "s/php${php_v}-php-pgsql.${arch}//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php-pgsql//")
 	software=$(echo "$software" | sed -e "s/phppgadmin//")
 	php_modules_install=$(echo "$php_modules_install" | sed -e "s/pgsql//")
 	php_modules_install=$(echo "$php_modules_install" | sed -e "s/pdo_pgsql//")
@@ -985,12 +992,12 @@ if [ "$iptables" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/fail2ban//")
 fi
 if [ "$phpfpm" = 'yes' ]; then
-	software=$(echo "$software" | sed -e "s/php${php_v}-php-cgi.${arch}//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php-cgi//")
 	software=$(echo "$software" | sed -e "s/httpd-itk//")
 	software=$(echo "$software" | sed -e "s/mod_ruid2 //")
 	software=$(echo "$software" | sed -e "s/mod_suphp//")
 	software=$(echo "$software" | sed -e "s/mod_fcgid//")
-	software=$(echo "$software" | sed -e "s/php${php_v}-php.${arch}//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php//")
 	software=$(echo "$software" | sed -e "s/brepo-php${php_v}-mod-apache//")
 	mod_php="disable"
 fi
@@ -1236,14 +1243,24 @@ if [ "$apache" = 'yes' ]; then
 	write_config_value "WEB_SSL_PORT" "8443"
 	write_config_value "WEB_SSL" "mod_ssl"
 	write_config_value "PROXY_SYSTEM" "nginx"
-	write_config_value "PROXY_PORT" "80"
-	write_config_value "PROXY_SSL_PORT" "443"
+	if [ "$bunkerweb" = 'yes' ]; then
+		write_config_value "PROXY_PORT" "8078"
+		write_config_value "PROXY_SSL_PORT" "8079"
+	else
+		write_config_value "PROXY_PORT" "80"
+		write_config_value "PROXY_SSL_PORT" "443"
+	fi
 	write_config_value "STATS_SYSTEM" "awstats"
 fi
 if [ "$apache" = 'no' ]; then
 	write_config_value "WEB_SYSTEM" "nginx"
-	write_config_value "WEB_PORT" "80"
-	write_config_value "WEB_SSL_PORT" "443"
+	if [ "$bunkerweb" = 'yes' ]; then
+		write_config_value "WEB_PORT" "8078"
+		write_config_value "WEB_SSL_PORT" "8079"
+	else
+		write_config_value "WEB_PORT" "80"
+		write_config_value "WEB_SSL_PORT" "443"
+	fi
 	write_config_value "WEB_SSL" "openssl"
 	write_config_value "STATS_SYSTEM" "awstats"
 fi
@@ -1340,6 +1357,13 @@ write_config_value "RELEASE_BRANCH" "release"
 write_config_value "UPGRADE_SEND_EMAIL" "true"
 write_config_value "UPGRADE_SEND_EMAIL_LOG" "false"
 
+#bunkerweb
+if [ "$bunkerweb" = 'yes' ]; then
+	write_config_value "BUNKERWEB" "yes"
+else
+	write_config_value "BUNKERWEB" "no"
+fi
+
 # Installing hosting packages
 cp -rf $HESTIA_COMMON_DIR/packages $HESTIA/data/
 
@@ -1430,17 +1454,21 @@ locale-gen "en_US.utf8" > /dev/null 2>&1
 
 echo "[ * ] 配置 NGINX..."
 rm -f /etc/nginx/conf.d/*.conf
-cp -f $HESTIA_INSTALL_DIR/nginx/nginx.conf /etc/nginx/
-cp -f $HESTIA_INSTALL_DIR/nginx/status.conf /etc/nginx/conf.d/
-cp -f $HESTIA_INSTALL_DIR/nginx/0rtt-anti-replay.conf /etc/nginx/conf.d/
-cp -f $HESTIA_INSTALL_DIR/nginx/agents.conf /etc/nginx/conf.d/
-cp -f $HESTIA_INSTALL_DIR/nginx/phpmyadmin.inc /etc/nginx/conf.d/
-cp -f $HESTIA_INSTALL_DIR/nginx/phppgadmin.inc /etc/nginx/conf.d/
+cp -f $HESTIA_INSTALL_DIR/nginx/nginx.conf /usr/local/hestia/nginx-system/etc/nginx/
+cp -f $HESTIA_INSTALL_DIR/nginx/status.conf /usr/local/hestia/nginx-system/etc/nginx/conf.d/
+cp -f $HESTIA_INSTALL_DIR/nginx/0rtt-anti-replay.conf /usr/local/hestia/nginx-system/etc/nginx/conf.d/
+cp -f $HESTIA_INSTALL_DIR/nginx/agents.conf /usr/local/hestia/nginx-system/etc/nginx/conf.d/
+cp -f $HESTIA_INSTALL_DIR/nginx/phpmyadmin.inc /usr/local/hestia/nginx-system/etc/nginx/conf.d/
+cp -f $HESTIA_INSTALL_DIR/nginx/phppgadmin.inc /usr/local/hestia/nginx-system/etc/nginx/conf.d/
 cp -f $HESTIA_INSTALL_DIR/logrotate/nginx /etc/logrotate.d/
-mkdir -p /etc/nginx/conf.d/domains
-mkdir -p /etc/nginx/modules-enabled
+mkdir -p /usr/local/hestia/nginx-system/etc/nginx/conf.d/domains
+mkdir -p /usr/local/hestia/nginx-system/etc/nginx/modules-enabled
 mkdir -p /var/log/nginx/domains
-mkdir -p /etc/nginx/conf.d/main
+mkdir -p /usr/local/hestia/nginx-system/etc/nginx/conf.d/main
+
+PROXY_PORT=$(grep '^PROXY_PORT=' "$HESTIA/conf/hestia.conf" | cut -d'=' -f2 | tr -d "'"  || echo 80)
+NGINX_CONF="/usr/local/hestia/nginx-system/etc/nginx/conf.d/default.conf"
+sed -i "s/^\(\s*listen\s*\)['\"]*[0-9]\+['\"]*;/\1${PROXY_PORT};/" "$NGINX_CONF"
 
 # Update dns servers in nginx.conf
 for nameserver in $(grep -is '^nameserver' /etc/resolv.conf | cut -d' ' -f2 | tr '\r\n' ' ' | xargs); do
@@ -1453,11 +1481,11 @@ for nameserver in $(grep -is '^nameserver' /etc/resolv.conf | cut -d' ' -f2 | tr
 	fi
 done
 if [ -n "$resolver" ]; then
-	sed -i "s/1.1.1.1 8.8.8.8/$resolver/g" /etc/nginx/nginx.conf
+	sed -i "s/1.1.1.1 8.8.8.8/$resolver/g" /usr/local/hestia/nginx-system/etc/nginx/nginx.conf
 fi
 
 # https://github.com/ergin/nginx-cloudflare-real-ip/
-CLOUDFLARE_FILE_PATH='/etc/nginx/conf.d/cloudflare.inc'
+CLOUDFLARE_FILE_PATH='/usr/local/hestia/nginx-system/etc/nginx/conf.d/cloudflare.inc'
 echo "#Cloudflare" > $CLOUDFLARE_FILE_PATH
 echo "" >> $CLOUDFLARE_FILE_PATH
 
@@ -1474,7 +1502,7 @@ done
 echo "" >> $CLOUDFLARE_FILE_PATH
 echo "real_ip_header CF-Connecting-IP;" >> $CLOUDFLARE_FILE_PATH
 
-systemctl enable nginx --now >> $LOG
+systemctl enable nginx-system --now >> $LOG
 check_result $? "nginx start failed"
 
 #----------------------------------------------------------#
@@ -2277,6 +2305,20 @@ write_config_value "DNS_CLUSTER_SYSTEM" "hestia"
 echo 'if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
     . /etc/profile.d/hestia.sh
 fi' >> /root/.bashrc
+
+#----------------------------------------------------------#
+#                   Bunkerweb                              #
+# ---------------------------------------------------------#
+
+if [ "$bunkerweb" = 'yes' ]; then
+        echo "Bunkerweb installation"
+		$HESTIA/bin/v-ext-modules enable bunkerweb_module 2>&1
+		module_state=$($HESTIA/bin/v-ext-modules state bunkerweb_module json | jq -r '.[0].STATE')
+        if [ "$module_state" = "enabled" ]; then
+            echo "Bunkerweb configuration"
+            $HESTIA/bin/v-ext-modules-run bunkerweb_module configure
+        fi
+fi
 
 #----------------------------------------------------------#
 #                   Hestia Access Info                     #
