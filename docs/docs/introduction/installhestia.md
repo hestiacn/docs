@@ -36,7 +36,7 @@ bash hst-install.sh --exim no --dovecot no --clamav no --spamassassin no
 
 ## 特别提示
 
-- **中国大陆境内服务器**：不支持自建邮件服务（不支持` 25 `端口）。如需自建邮件系统，请考虑使用以下主机商：
+- **中国境内服务器**：不支持自建邮件服务（不支持` 25 `端口）。如需自建邮件系统，请考虑使用以下主机商：
 - [JustHost.ru](https://justhost.ru)
 - [JustHost.com](https://justhost.com)
 

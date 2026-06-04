@@ -1195,9 +1195,9 @@ fi
 /usr/sbin/adduser hestiamail hestia-users
 
 # Enable SFTP subsystem for SSH
-sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp" /etc/ssh/sshd_config)
+sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp-server" /etc/ssh/sshd_config)
 if [ -n "$sftp_subsys_enabled" ]; then
-	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
+	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp-server/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
 fi
 
 # Reduce SSH login grace time
@@ -2538,8 +2538,8 @@ RHEL分支文档:       https://hestiadocs.brepo.ru
 https://hestiacp.com/donate
 
 --
-✨ 诚挚祝愿 Hestia 能够为您的全栈服务器提供完美的使用体验！
-💌 Hestia 开源服务器控制面板开发团队
+诚挚祝愿 Hestia 能够为您的全栈服务器提供完美的使用体验！
+Hestia 开源服务器控制面板开发团队
 
 凝聚全球开源社区成员的爱与自豪,匠心打造而成.
 

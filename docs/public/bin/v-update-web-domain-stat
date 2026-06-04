@@ -110,10 +110,13 @@ if [ ! -e "$config" ]; then
     check_result $E_NOTEXISTS "$config doesn't exist"
 fi
 
+user_group="$user"
+
 # Checking statistics directory
 dir="$HOMEDIR/$user/web/$domain/stats"
 if [ ! -e "$dir" ]; then
     mkdir -p $dir
+    chown "$user:$user_group" "$dir" 2>/dev/null
     chmod 755 "$dir"
 else
     # Check directory permissions; if they are not 755, change them to 755.
@@ -122,10 +125,11 @@ else
         log_message "INFO" "stats 目录权限为 $current_perms，正在修改为 755"
         chmod 755 "$dir"
     fi
+    chown "$user:$user_group" "$dir" 2>/dev/null
 fi
 
 #----------------------------------------------------------#
-#                 AWStats 更新函数                          #
+#                 AWStats 核心自适应更新引擎                 #
 #----------------------------------------------------------#
 
 build_awstats() {
@@ -145,17 +149,66 @@ build_awstats() {
         log_message "ERROR" "AWStats 不存在或不可执行: $awstats"
         return 1
     fi
+    
 
-    # Check and create the apache2.conf_cgi file
-    conf_dir="$HOMEDIR/$user/conf/web/$domain"
-    conf_file="$conf_dir/apache2.conf_cgi"
-    local file_created=0
+    local index_file="$dir/index.cgi"
+    local index_created=0
 
-    if [ ! -f "$conf_file" ]; then
-        log_message "INFO" "配置文件不存在，正在创建: $conf_file"
-        mkdir -p "$conf_dir"
+    if [ ! -f "$index_file" ]; then
+        log_message "INFO" "index.cgi 不存在，正在创建: $index_file"
+    
+        cat > "$index_file" << 'EOF'
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# Ensure output is refreshed immediately
+$| = 1;
+
+# Get current year and month using efficient slice
+my ($mon, $year_num) = (localtime(time))[4, 5];
+my $year  = $year_num + 1900;
+my $month = sprintf("%02d", $mon + 1);
+
+# Get the domain name from the configuration file
+my $config = "DOMAIN_PLACEHOLDER";
+
+# Build the target URL
+my $target = "/cgi-bin/awstats.pl?config=$config&framename=mainright&year=$year&month=$month";
+
+# Send HTTP redirect (Strict RFC Standard)
+print "Status: 302 Found\r\n";
+print "Location: $target\r\n";
+print "Content-Type: text/html; charset=utf-8\r\n";
+print "\r\n";
+
+print "<!DOCTYPE html>\n<html>\n<head>\n<title>Redirecting...</title>\n";
+print "<meta http-equiv=\"refresh\" content=\"0;url=$target\"></head>\n";
+print "<body>Redirecting to <a href=\"$target\">AWStats</a>...</body>\n</html>\n";
+EOF
+
+        sed -i "s#DOMAIN_PLACEHOLDER#$domain#g" "$index_file"
         
-        cat > "$conf_file" << EOF
+        [ -n "$user_group" ] && chown "$user:$user_group" "$index_file" 2>/dev/null
+        chmod 755 "$index_file"
+        log_message "INFO" "index.cgi 已创建: $index_file"
+        index_created=1
+    else
+        log_message "INFO" "index.cgi 已存在: $index_file"
+    fi
+
+    if command -v apache2 >/dev/null 2>&1 || command -v httpd >/dev/null 2>&1; then
+        log_message "INFO" "检测到系统已安装 Apache，启动 Apache 专属配置流程..."
+        
+        local conf_dir="$HOMEDIR/$user/conf/web/$domain"
+        local conf_file="$conf_dir/apache2.conf_cgi"
+        local file_created=0
+
+        if [ ! -f "$conf_file" ]; then
+            log_message "INFO" "配置文件不存在，正在创建: $conf_file"
+            mkdir -p "$conf_dir"
+            
+            cat > "$conf_file" << EOF
 # CGI Configuration - Use the correct syntax for cgid_module
 <FilesMatch "\.(pl|cgi)$">
     SetHandler cgi-script
@@ -182,93 +235,145 @@ ScriptAlias /vstats/ $HOMEDIR/$user/web/$domain/stats/
     Require all granted
 </Directory>
 EOF
-    
-        chown $user:$(groups "$user" | cut -f 3 -d ' ') "$conf_file" 2>/dev/null
-        chmod 644 "$conf_file"
-        log_message "INFO" "配置文件已创建: $conf_file"
-        file_created=1
-    else
-        log_message "INFO" "配置文件已存在: $conf_file"
-    fi
-
-    # Check and create the index.cgi file
-    index_file="$dir/index.cgi"
-    local index_created=0
-
-    if [ ! -f "$index_file" ]; then
-        log_message "INFO" "index.cgi 不存在，正在创建: $index_file"
-    
-        cat > "$index_file" << 'EOF'
-#!/usr/bin/perl
-use strict;
-use warnings;
-
-# Get current year and month
-my ($sec, $min, $hour, $day, $mon, $year_num) = localtime(time);
-my $year = $year_num + 1900;
-my $month = sprintf("%02d", $mon + 1);
-
-# Get the domain name from the configuration file
-my $config = "DOMAIN_PLACEHOLDER";
-
-# Build the target URL
-my $target = "/cgi-bin/awstats.pl?config=$config&framename=mainright&year=$year&month=$month";
-
-# Ensure output is refreshed immediately
-$| = 1;
-
-# Send HTTP redirect
-print "Status: 302 Found\r\n";
-print "Location: $target\r\n";
-print "Content-Type: text/html\r\n";
-print "\r\n";
-print "<!DOCTYPE html>";
-print "<html><head><title>Redirecting to AWStats...</title>";
-print "<meta http-equiv=\"refresh\" content=\"0;url=$target\">";
-print "</head><body>";
-print "Redirecting to <a href=\"$target\">AWStats</a>...</body></html>";
-EOF
-
-        sed -i "s/DOMAIN_PLACEHOLDER/$domain/g" "$index_file"
         
-        chown $user:$(groups "$user" | cut -f 3 -d ' ') "$index_file" 2>/dev/null
-        chmod 755 "$index_file"
-        log_message "INFO" "index.cgi 已创建: $index_file"
-        index_created=1
-    else
-        log_message "INFO" "index.cgi 已存在: $index_file"
-    fi
+            [ -n "$user_group" ] && chown "$user:$user_group" "$conf_file" 2>/dev/null
+            chmod 644 "$conf_file"
+            log_message "INFO" "Apache 配置文件已创建: $conf_file"
+            file_created=1
+        else
+            log_message "INFO" "Apache 配置文件已存在: $conf_file"
+        fi
 
-    # 检查并创建 .htaccess 文件
-    htaccess_file="$dir/.htaccess"
-    local htaccess_created=0
+        # 检查并创建 .htaccess 文件（仅 Apache 环境需要）
+        local htaccess_file="$dir/.htaccess"
+        local htaccess_created=0
 
-    if [ ! -f "$htaccess_file" ]; then
-        log_message "INFO" ".htaccess 不存在，正在创建: $htaccess_file"
-        
-        cat > "$htaccess_file" << EOF
+        if [ ! -f "$htaccess_file" ]; then
+            log_message "INFO" ".htaccess 不存在，正在创建: $htaccess_file"
+            cat > "$htaccess_file" << EOF
 Options +ExecCGI
 AddHandler cgi-script .cgi
 DirectoryIndex index.cgi
 EOF
-    
-        chown $user:$(groups "$user" | cut -f 3 -d ' ') "$htaccess_file" 2>/dev/null
-        chmod 644 "$htaccess_file"
-        log_message "INFO" ".htaccess 已创建: $htaccess_file"
-        htaccess_created=1
-    else
-        log_message "INFO" ".htaccess 已存在: $htaccess_file"
-    fi
-
-    if [ $file_created -eq 1 ] || [ $index_created -eq 1 ] || [ $htaccess_created -eq 1 ]; then
-        log_message "INFO" "检测到新文件创建，检查 CGI 模块..."
-        if ! apache2ctl -M 2>/dev/null | grep -q "cgid_module"; then
-            log_message "INFO" "正在启用 cgid 模块..."
-            a2enmod cgid
-            systemctl restart apache2
-            log_message "INFO" "cgid 模块已启用，Apache 已重启"
+            [ -n "$user_group" ] && chown "$user:$user_group" "$htaccess_file" 2>/dev/null
+            chmod 644 "$htaccess_file"
+            log_message "INFO" ".htaccess 已创建: $htaccess_file"
+            htaccess_created=1
         else
-            log_message "INFO" "cgid 模块已启用"
+            log_message "INFO" ".htaccess 已存在: $htaccess_file"
+        fi
+
+        # 触发 Apache CGI 模块检查
+        if [ $file_created -eq 1 ] || [ $index_created -eq 1 ] || [ $htaccess_created -eq 1 ]; then
+            log_message "INFO" "检测到新文件创建，检查 Apache CGI 模块..."
+            if ! apache2ctl -M 2>/dev/null | grep -q "cgid_module"; then
+                log_message "INFO" "正在启用 cgid 模块..."
+                a2enmod cgid
+                systemctl restart apache2
+                log_message "INFO" "cgid 模块已启用，Apache 已重启"
+            else
+                log_message "INFO" "cgid 模块已启用"
+            fi
+        fi
+        
+    else
+        log_message "INFO" "未检测到 Apache，正在切换为纯 Nginx + fcgiwrap 环境配置..."
+        
+        # 1. 跨平台检查并安装 fcgiwrap 及其依赖
+        log_message "INFO" "正在检查并安装 fcgiwrap..."
+        local socket_path="unix:/var/run/fcgiwrap.socket" 
+
+        if ! command -v fcgiwrap >/dev/null 2>&1; then
+            if command -v dnf >/dev/null 2>&1; then
+                log_message "INFO" "检测到 RHEL 系列系统，正在启用 EPEL 并安装 fcgiwrap..."
+                dnf install -y epel-release >/dev/null 2>&1
+                dnf install -y fcgiwrap >/dev/null 2>&1
+                socket_path="127.0.0.1:9000" 
+            elif command -v apt-get >/dev/null 2>&1; then
+                log_message "INFO" "检测到 Debian 系列系统，正在安装 fcgiwrap..."
+                apt-get update >/dev/null 2>&1
+                apt-get install -y fcgiwrap >/dev/null 2>&1
+            fi
+        else
+            if command -v dnf >/dev/null 2>&1; then
+                socket_path="127.0.0.1:9000"
+            fi
+        fi
+        
+        # 2. 检查 fcgiwrap 服务状态并设置自启动
+        log_message "INFO" "正在配置 fcgiwrap 服务..."
+        systemctl daemon-reload
+        
+        if systemctl list-unit-files | grep -q "fcgiwrap"; then
+            systemctl enable fcgiwrap >/dev/null 2>&1
+            systemctl restart fcgiwrap >/dev/null 2>&1
+        fi
+
+        # 3. 声明目标文件路径
+        local ssl_conf="$HOMEDIR/$user/conf/web/$domain/nginx.ssl.conf"
+        local norm_conf="$HOMEDIR/$user/conf/web/$domain/nginx.conf"
+        local nginx_need_reload=0
+
+        local new_nginx_block="	location /cgi-bin/ {
+	    alias   $HOMEDIR/$user/web/$domain/cgi-bin/;
+	    location ~ \.(pl|cgi)$ {
+	        include fastcgi_params;
+	        fastcgi_param SCRIPT_FILENAME \$request_filename;
+	        fastcgi_pass $socket_path;
+	    }
+	}
+
+	location /vstats/ {
+	    alias   $HOMEDIR/$user/web/$domain/stats/;
+	    include $HOMEDIR/$user/web/$domain/stats/auth.conf*;
+	    index index.cgi;
+	    location ~ \.cgi$ {
+	        include $HOMEDIR/$user/web/$domain/stats/auth.conf*;
+	        include fastcgi_params;
+	        fastcgi_param SCRIPT_FILENAME \$request_filename;
+	        fastcgi_pass $socket_path;
+	    }
+	}"
+
+        for conf_file in "$ssl_conf" "$norm_conf"; do
+            if [ -f "$conf_file" ]; then
+
+                if grep -q "location /cgi-bin/" "$conf_file"; then
+                    log_message "INFO" "配置文件已是全新 CGI 架构，跳过升级: $conf_file"
+                    continue
+                fi
+
+                log_message "INFO" "正在将配置文件升级为全新 CGI 架构: $conf_file"
+
+                cp "$conf_file" "${conf_file}.bak"
+                sed -i '/location \/vstats\/ {/,/}/c\__AWSTATS_PLACEHOLDER__' "$conf_file"
+
+                local tmp_conf="${conf_file}.tmp"
+                rm -f "$tmp_conf"
+
+                while IFS= read -r line; do
+                    if [[ "$line" == *"__AWSTATS_PLACEHOLDER__"* ]]; then
+                        echo "$new_nginx_block" >> "$tmp_conf"
+                    else
+                        echo "$line" >> "$tmp_conf"
+                    fi
+                done < "$conf_file"
+
+                mv "$tmp_conf" "$conf_file"
+                rm -f "${conf_file}.bak"
+                log_message "INFO" "配置文件升级成功: $conf_file"
+                nginx_need_reload=1
+            fi
+        done
+
+        # 4. 安全重载 Nginx
+        if [ "$nginx_need_reload" = "1" ] && command -v nginx >/dev/null 2>&1; then
+            if nginx -t >/dev/null 2>&1; then
+                systemctl reload nginx
+                log_message "INFO" "Nginx 配置验证成功，已平滑重载！"
+            else
+                log_message "ERROR" "⚠️ 警告：Nginx 配置语法测试失败，请检查文件！"
+            fi
         fi
     fi
 
@@ -288,7 +393,7 @@ EOF
     if [ ! -e "$cgi_bin_dir/awstats.pl" ]; then
         mkdir -p "$cgi_bin_dir" 2>/dev/null
         ln -s /usr/lib/cgi-bin/awstats.pl "$cgi_bin_dir/awstats.pl" 2>/dev/null
-        chown -h $user:$(groups "$user" | cut -f 3 -d ' ') "$cgi_bin_dir/awstats.pl" 2>/dev/null
+        [ -n "$user_group" ] && chown -h "$user:$user_group" "$cgi_bin_dir/awstats.pl" 2>/dev/null
         log_message "INFO" "已创建 awstats.pl 软链接: $cgi_bin_dir/awstats.pl"
     fi
     
@@ -319,10 +424,10 @@ EOF
         # 检查数据文件是否成功生成
         if [ -f "$data_file" ] && [ -s "$data_file" ]; then
             log_message "INFO" "首次更新成功: ${current_year}-${current_month}"
-            chown $user:$(groups "$user" | cut -f 3 -d ' ') "$data_file" 2>/dev/null
+            [ -n "$user_group" ] && chown "$user:$user_group" "$data_file" 2>/dev/null
             log_message "INFO" "已设置数据文件权限: $data_file"
             if [ -f "${data_file}.bak" ]; then
-                chown $user:$(groups "$user" | cut -f 3 -d ' ') "${data_file}.bak" 2>/dev/null
+                [ -n "$user_group" ] && chown "$user:$user_group" "${data_file}.bak" 2>/dev/null
             fi
         else
             log_message "ERROR" "首次更新失败: ${current_year}-${current_month}"
@@ -344,9 +449,9 @@ EOF
         
         if [ "$new_mtime" -gt "$old_mtime" ]; then
             log_message "INFO" "增量更新成功: ${current_year}-${current_month}"
-            chown $user:$(groups "$user" | cut -f 3 -d ' ') "$data_file" 2>/dev/null
+            [ -n "$user_group" ] && chown "$user:$user_group" "$data_file" 2>/dev/null
             if [ -f "${data_file}.bak" ]; then
-                chown $user:$(groups "$user" | cut -f 3 -d ' ') "${data_file}.bak" 2>/dev/null
+                [ -n "$user_group" ] && chown "$user:$user_group" "${data_file}.bak" 2>/dev/null
             fi
         else
             # 文件未更新，可能没有新日志
@@ -354,7 +459,7 @@ EOF
         fi
     fi
     
-    # 验证数据文件是否存在
+    # 验证数据文件是否存在并最终打印
     if [ -f "$data_file" ] && [ -s "$data_file" ]; then
         local file_size=$(stat -c%s "$data_file")
         echo "✅ AWStats 更新完成！"
@@ -369,17 +474,20 @@ EOF
     fi
 }
 
-# Switching on statistics type
+# 根据统计类型安全触发更新
 case $STATS in
-	awstats) build_awstats ;;
+    awstats) 
+        build_awstats
+        exit_code=$? 
+        ;;
+    *)
+        exit_code=0
+        ;;
 esac
-
-# Chown
-groups=$(groups "$user" | cut -f 3 -d ' ')
-chown -R $user:$groups "$dir"
+chown -Rh "$user:$user" "$dir" 2>/dev/null
 
 #----------------------------------------------------------#
 #                       Hestia                             #
 #----------------------------------------------------------#
 
-exit
+exit $exit_code

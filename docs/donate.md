@@ -42,15 +42,17 @@ title: 赞助Hestia
         <td class="text-center" data-th="账号/操作"><CopyToClipboardInput value="0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51" class="crypto-address" /></td>
         <td class="text-center" data-th="支持说明">ERC20 网络</td>
       </tr>
-      <tr>
-        <td class="method-name" data-th="赞助名称">币安币/Binance</td>
-        <td class="text-center" data-th="账号/操作"><CopyToClipboardInput value="bnb1l4ywvw5ejfmsgjdcx8jn5lxj7zsun8ktfu7rh8" class="crypto-address" /></td>
-        <td class="text-center" data-th="支持说明">BEP2 网络</td>
+      <tr class="deprecated-row">
+        <td class="method-name deprecated-text" data-th="赞助名称">币安币/Binance</td>
+        <td class="text-center" data-th="账号/操作"><CopyToClipboardInput value="bnb1l4ywvw5ejfmsgjdcx8jn5lxj7zsun8ktfu7rh8" class="crypto-address deprecated-input" /></td>
+        <td class="text-center danger-alert" data-th="支持说明">
+          <strong>⚠️ 极其危险！</strong>BEP2 网络已于2024年底彻底停用！请勿转账，否则资产将永久丢失。
+        </td>
       </tr>
       <tr>
         <td class="method-name" data-th="赞助名称">智能链/Smart Chain</td>
         <td class="text-center" data-th="账号/操作"><CopyToClipboardInput value="0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51" class="crypto-address" /></td>
-        <td class="text-center warning" data-th="支持说明">请确保使用 BSC 网络</td>
+        <td class="text-center warning" data-th="支持说明">请确保使用 BSC (BEP20) 网络</td>
       </tr>
       <tr>
         <td class="method-name" data-th="赞助名称">门罗币/Monero/XMR</td>
@@ -520,5 +522,18 @@ td {
     font-size: 0.8rem;
   }
 }
+.deprecated-row {
+  background-color: #f8f9fa;
+  opacity: 0.7;
+}
 
+.deprecated-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+.danger-alert {
+  color: #dc3545;
+  font-weight: bold;
+  background-color: #f8d7da;
+}
 </style>

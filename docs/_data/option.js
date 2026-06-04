@@ -178,7 +178,7 @@ export const options = [
 	{
 		flag: 'firewall',
 		label: 'firewall 系统防火墙',
-		description: '使用 firewalld / nftables 作为系统防火墙。<br>\n<br>⚠️ 注意：安装完成后如果无法通过公网 IP 访问面板（例如只能 localhost 访问），通常是因为防火墙未开放 8083 端口。\n\n解决方案：\n\n<pre><code>firewall-cmd --permanent --add-port=8083/tcp\nfirewall-cmd --reload</code></pre>\n\n或使用 nftables 时：\n\n<pre><code>nft add rule inet filter input tcp dport 8083 accept</code></pre>\n\n建议保持防火墙开启以增强安全性，可与 Fail2Ban 联动防御暴力破解。',
+		description: '使用 firewalld / nftables 作为系统防火墙。<br>\n<br>⚠️ 注意：安装完成后如果无法通过公网 IP 访问面板（例如只能 localhost 访问），通常是因为防火墙未开放 8083 端口。\n\n解决方案：\n\n<pre><code>firewall-cmd --permanent --add-port={80,443,8080,8083,8443}/tcp\nfirewall-cmd --reload</code></pre>\n\n或使用 nftables 时：\n\n<pre><code>nft add rule inet filter input tcp dport 8083 accept</code></pre>\n\n建议保持防火墙开启以增强安全性，可与 Fail2Ban 联动防御暴力破解。',
 		default: 'yes'
 	},
     {

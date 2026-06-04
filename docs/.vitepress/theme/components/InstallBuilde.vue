@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="output-card">
 				<h1 class="u-text-center">RHEL安装说明</h1>
-				<h2 class="u-text-center">中国大陆境内服务器安装请执行<a href='/docs/introduction/github' target='_blank' rel='noopener noreferrer'>访问github配置</a>操作后进行以下操作！</h2>
+				<h2 class="u-text-center">中国境内服务器安装请执行<a href='/docs/introduction/github' target='_blank' rel='noopener noreferrer'>访问github配置</a>操作后进行以下操作！</h2>
 				<p class="u-mb10">登录到您的服务器,例如: <code>ssh root@1.1.1.1</code> 然后复制以下github官方安装脚本:[俄文原版安装请选择github官方脚本]</p>
 				<CopyToClipboardInput
 					class="u-mb10"
@@ -278,16 +278,20 @@ a:active {
 	margin-bottom: 10px;
 	padding-bottom: 8px;
 }
-.option-description pre {
-    background-color: var(--vp-c-bg, #f5f5f5);
-    border: 1px solid var(--vp-c-border, #e0e0e0);
+:deep(.option-description pre) {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 12px 16px;
     overflow-x: auto;
-    margin: 12px 0;
-    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+    white-space: pre;
+    font-family: monospace;
     font-size: 13px;
-    line-height: 1.5;
+    margin: 12px 0;
+    box-sizing: border-box;
 }
 .option-description code {
     font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
@@ -297,9 +301,9 @@ a:active {
     border-radius: 4px;
 }
 .option-description pre code {
-    background-color: transparent;
-    padding: 0;
-    font-size: 13px;
+    white-space: pre;
+    display: inline-block;
+    min-width: 100%;
 }
 @media (prefers-color-scheme: dark) {
     .option-description pre {

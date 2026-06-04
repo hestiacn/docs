@@ -539,7 +539,7 @@ install_welcome_message() {
 		echo "                              BETA RELEASE                          "
 	fi
 	if [[ "$HESTIA_INSTALL_VER" =~ "alpha" ]]; then
-    echo "                          开发快照版                                     "
+    echo "                             开发快照版                                  "
     echo "                          风险自负，谨慎使用                              "
 	fi
 	echo "                          ${DISPLAY_VER}                                 "
@@ -1101,9 +1101,9 @@ fi
 echo "[ * ] 配置系统设置..."
 
 # Enable SFTP subsystem for SSH
-sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp" /etc/ssh/sshd_config)
+sftp_subsys_enabled=$(grep -iE "^#?.*subsystem.+(sftp )?sftp-server" /etc/ssh/sshd_config)
 if [ -n "$sftp_subsys_enabled" ]; then
-	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
+	sed -i -E "s/^#?.*Subsystem.+(sftp )?sftp-server/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config
 fi
 
 # Reduce SSH login grace time
@@ -1501,6 +1501,11 @@ done
 
 echo "" >> $CLOUDFLARE_FILE_PATH
 echo "real_ip_header CF-Connecting-IP;" >> $CLOUDFLARE_FILE_PATH
+
+if ! grep -q "listen [0-9]\+;" /usr/local/hestia/nginx-system/etc/nginx/conf.d/default.conf; then
+    sed -i 's/listen.*;/listen 80;/g' /usr/local/hestia/nginx-system/etc/nginx/conf.d/default.conf
+    echo "[ * ] 已修复 Nginx listen 端口配置"
+fi
 
 systemctl enable nginx-system --now >> $LOG
 check_result $? "nginx start failed"

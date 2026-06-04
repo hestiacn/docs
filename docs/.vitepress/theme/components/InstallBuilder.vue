@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="output-card">
 				<h1 class="u-text-center">Debian系安装说明</h1>
-				<h2 class="u-text-center">中国大陆境内服务器安装请执行<a href='/docs/introduction/github' target='_blank' rel='noopener noreferrer'>访问github配置</a>操作后进行以下操作！</h2>
+				<h2 class="u-text-center">中国境内服务器安装请执行<a href='/docs/introduction/github' target='_blank' rel='noopener noreferrer'>访问github配置</a>操作后进行以下操作！</h2>
 				<p class="u-mb10">登录到您的服务器,例如: <code>ssh root@1.1.1.1</code> 然后复制以下github官方安装脚本:[英文原版安装请选择github官方脚本]</p>
 				<CopyToClipboardInput
 					class="u-mb10"

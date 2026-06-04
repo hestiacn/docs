@@ -1,0 +1,167 @@
+#!/bin/bash
+
+# 脚本名称: v-add-php-version
+# 描述: 为 HestiaCP 配置添加全新的 PHP 版本支持
+
+# ============================================
+# 如果需要安装最新版本的支持，只需在此处修改版本号
+PHP_VERSION="8.5"
+# ============================================
+
+# 彩色终端输出颜色定义
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+# 检查是否以 root 权限运行
+if [ "$(id -u)" != "0" ]; then
+    echo -e "${RED}错误：请使用 root 权限运行此脚本${NC}"
+    exit 1
+fi
+
+echo -e "${GREEN}[*] 开始为 HestiaCP 添加 PHP ${PHP_VERSION} 的支持...${NC}"
+echo ""
+
+PHP_VERSION_DOT="${PHP_VERSION}"
+
+# 获取上一个 PHP 版本的函数
+get_previous_version() {
+    local major="${PHP_VERSION%.*}"
+    local minor="${PHP_VERSION#*.}"
+    local prev_minor=$((minor - 1))
+    echo "${major}.${prev_minor}"
+}
+
+PREV_VERSION=$(get_previous_version)
+PREV_VERSION_DOT="${PREV_VERSION}"
+
+# 检查所有配置是否已经存在的函数
+check_all_exists() {
+    local missing=0
+    if ! grep -q "\"${PHP_VERSION}\"" $HESTIA/install/upgrade/upgrade.conf 2>/dev/null; then
+        missing=1
+    fi
+    if ! grep -q "\"php-${PHP_VERSION}\"" $HESTIA/web/edit/server/index.php 2>/dev/null; then
+        missing=1
+    fi
+    if ! grep -q "'php${PHP_VERSION_DOT}'" $HESTIA/bin/v-run-cli-cmd 2>/dev/null; then
+        missing=1
+    fi
+    if ! grep -q "\"php${PHP_VERSION_DOT}-fpm\"" $HESTIA/bin/v-restart-service 2>/dev/null; then
+        missing=1
+    fi
+    return $missing
+}
+
+# 如果所有配置均已存在，则打印提示并安全退出
+if check_all_exists; then
+    echo -e "${GREEN}[✓] PHP ${PHP_VERSION} 支持已存在，无需重复修改${NC}"
+    echo ""
+    echo -e "${YELLOW}当前现有配置特征码：${NC}"
+    echo "   grep \"${PHP_VERSION}\" $HESTIA/install/upgrade/upgrade.conf"
+    echo "   grep \"php-${PHP_VERSION}\" $HESTIA/web/edit/server/index.php"
+    echo "   grep 'php${PHP_VERSION_DOT}' $HESTIA/bin/v-run-cli-cmd"
+    echo "   grep \"php${PHP_VERSION_DOT}-fpm\" $HESTIA/bin/v-restart-service"
+    exit 0
+fi
+
+# 显示修改后上下文的辅助函数
+show_context() {
+    local file=$1
+    local pattern=$2
+    local lines=${3:-5}
+    echo -e "${YELLOW}--- $file 修改后的上下文内容 ---${NC}"
+    grep -B "$lines" -A "$lines" "$pattern" "$file" 2>/dev/null || echo "未找到匹配的相关内容"
+    echo ""
+}
+
+# 1. 修改 upgrade.conf (升级配置文件)
+UPGRADE_CONF="$HESTIA/install/upgrade/upgrade.conf"
+if [ -f "$UPGRADE_CONF" ]; then
+    if grep -q "\"${PHP_VERSION}\"" "$UPGRADE_CONF"; then
+        echo -e "${GREEN}[✓] PHP ${PHP_VERSION} 已存在于 $UPGRADE_CONF 中${NC}"
+        show_context "$UPGRADE_CONF" "multiphp_v" 3
+    else
+        echo -e "${YELLOW}[*] 正在修改 $UPGRADE_CONF${NC}"
+        sed -i "s/\"${PREV_VERSION}\"/\"${PREV_VERSION}\" \"${PHP_VERSION}\"/" "$UPGRADE_CONF"
+        echo -e "${GREEN}[✓] 成功将 PHP ${PHP_VERSION} 添加到 $UPGRADE_CONF${NC}"
+        show_context "$UPGRADE_CONF" "multiphp_v" 3
+    fi
+else
+    echo -e "${RED}[!] 找不到文件：$UPGRADE_CONF${NC}"
+fi
+
+# 2. 修改 index.php (Web 管理面板)
+INDEX_PHP="$HESTIA/web/edit/server/index.php"
+if [ -f "$INDEX_PHP" ]; then
+    if grep -q "\"php-${PHP_VERSION}\"" "$INDEX_PHP"; then
+        echo -e "${GREEN}[✓] PHP ${PHP_VERSION} 已存在于 $INDEX_PHP 中${NC}"
+        show_context "$INDEX_PHP" "php-${PHP_VERSION}" 5
+    else
+        echo -e "${YELLOW}[*] 正在修改 $INDEX_PHP${NC}"
+        sed -i "/\"php-${PREV_VERSION}\",/a\\\t\"php-${PHP_VERSION}\"," "$INDEX_PHP"
+        echo -e "${GREEN}[✓] 成功将 PHP ${PHP_VERSION} 添加到 $INDEX_PHP${NC}"
+        show_context "$INDEX_PHP" "php-${PHP_VERSION}" 6
+    fi
+else
+    echo -e "${RED}[!] 找不到文件：$INDEX_PHP${NC}"
+fi
+
+# 3. 修改 v-run-cli-cmd (命令行指令控制脚本)
+RUN_CLI_CMD="$HESTIA/bin/v-run-cli-cmd"
+if [ -f "$RUN_CLI_CMD" ]; then
+    if grep -q "'php${PHP_VERSION_DOT}'" "$RUN_CLI_CMD"; then
+        echo -e "${GREEN}[✓] PHP ${PHP_VERSION} 已存在于 $RUN_CLI_CMD 中${NC}"
+        show_context "$RUN_CLI_CMD" "php${PHP_VERSION_DOT}" 5
+    else
+        echo -e "${YELLOW}[*] 正在修改 $RUN_CLI_CMD${NC}"
+        line_num=$(grep -n "'php${PREV_VERSION_DOT}' -a \\\\" "$RUN_CLI_CMD" | cut -d: -f1)
+        if [ -n "$line_num" ]; then
+            sed -i "${line_num}a\\\t\"\$basecmd\" != 'php${PHP_VERSION_DOT}' -a \\\\" "$RUN_CLI_CMD"
+            echo -e "${GREEN}[✓] 成功将 PHP ${PHP_VERSION} 添加到 $RUN_CLI_CMD${NC}"
+        else
+            echo -e "${RED}[!] 未找到包含 php${PREV_VERSION_DOT} 的目标行，跳过修改${NC}"
+        fi
+        show_context "$RUN_CLI_CMD" "php${PHP_VERSION_DOT}" 8
+    fi
+else
+    echo -e "${RED}[!] 找不到文件：$RUN_CLI_CMD${NC}"
+fi
+
+# 4. 修改 v-restart-service (服务重启脚本)
+RESTART_SERVICE="$HESTIA/bin/v-restart-service"
+if [ -f "$RESTART_SERVICE" ]; then
+    if grep -q "\"php${PHP_VERSION_DOT}-fpm\"" "$RESTART_SERVICE"; then
+        echo -e "${GREEN}[✓] PHP ${PHP_VERSION} 已存在于 $RESTART_SERVICE 中${NC}"
+        show_context "$RESTART_SERVICE" "php${PHP_VERSION_DOT}-fpm" 5
+    else
+        echo -e "${YELLOW}[*] 正在修改 $RESTART_SERVICE${NC}"
+        line_num=$(grep -n "\"\$service\" = \"php${PREV_VERSION_DOT}-fpm\" -o \\\\" "$RESTART_SERVICE" | cut -d: -f1)
+        if [ -n "$line_num" ]; then
+            sed -i "${line_num}a\\\t\t\"\$service\" = \"php${PHP_VERSION_DOT}-fpm\" -o \\\\" "$RESTART_SERVICE"
+            echo -e "${GREEN}[✓] 成功将 PHP ${PHP_VERSION} 添加到 $RESTART_SERVICE${NC}"
+        else
+            echo -e "${RED}[!] 未找到包含 php${PREV_VERSION_DOT}-fpm 的目标行，跳过修改${NC}"
+        fi
+        show_context "$RESTART_SERVICE" "php${PHP_VERSION_DOT}-fpm" 10
+    fi
+else
+    echo -e "${RED}[!] 找不到文件：$RESTART_SERVICE${NC}"
+fi
+
+echo ""
+echo -e "${GREEN}═══════════════════════════════════════════════════════════════${NC}"
+echo -e "${GREEN}[✓] PHP ${PHP_VERSION} 环境支持已全自动适配成功！${NC}"
+echo -e "${GREEN}═══════════════════════════════════════════════════════════════${NC}"
+echo ""
+echo -e "${GREEN}大功告成！接下来只需两步即可完成最终安装：${NC}"
+echo " 1. 在终端运行此命令，开始安装新添加的 PHP ${PHP_VERSION} 版本："
+echo -e "${YELLOW}    v-add-web-php ${PHP_VERSION}${NC}"
+echo " 2. 安装完成后，登录 HestiaCP 网页后台，即可直接为你的网站勾选 PHP ${PHP_VERSION}"
+echo ""
+echo -e "${YELLOW}如需手动核对本次修改结果，可运行以下命令：${NC}"
+echo "   grep \"${PHP_VERSION}\" $HESTIA/install/upgrade/upgrade.conf"
+echo "   grep \"php-${PHP_VERSION}\" $HESTIA/web/edit/server/index.php"
+echo "   grep 'php${PHP_VERSION_DOT}' $HESTIA/bin/v-run-cli-cmd"
+echo "   grep \"php${PHP_VERSION_DOT}-fpm\" $HESTIA/bin/v-restart-service"
