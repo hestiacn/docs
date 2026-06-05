@@ -14,7 +14,7 @@
 这个程序将自动更新到hosts文件内！免去手动操作的繁琐。
 
 ```bash
-curl -fsSL https://hestiamb.org/hosts.sh | bash
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/hosts.sh | bash
 ```
 
 * 示例：11-55行内容为获取到的地址

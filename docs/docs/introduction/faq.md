@@ -2,7 +2,7 @@
 
 ## 文件管理器错误
 
-打开WEB文件管理器出现如下错误![Alt text](/error.png)
+打开WEB文件管理器出现如下错误![Alt text](/images/error.png)
 通常是SSH的默认端口不是22的错误或者是配置没有开启文件夹权限！可用如下命令进行查看！
 
 ::: code-group
@@ -132,7 +132,7 @@ systemctl restart apache2
 或者可以使用本站使用的一键命令替换所有域名的php错误配置
 
 ```bash
-curl -fsSL https://hestiamb.org/phpcwgx.sh | bash
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/phpcwgx.sh | bash
 ```
 
 ## 重置密码

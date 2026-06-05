@@ -72,7 +72,7 @@ export const teamMembers = [
 /** @type {import("vitepress").DefaultTheme.TeamMember[]} */
 export const teamRpm = [
 	{
-		avatar: 'https://www.github.com/bayrepo.png',
+		avatar: '/images/avatar/bayrepo.webp',
 		name: 'Alexey Berezhok 🇷🇺',
 		title: 'RPM 版维护者',
 		desc: '负责 RHEL / Rocky / AlmaLinux 生态系统的适配与支持。',

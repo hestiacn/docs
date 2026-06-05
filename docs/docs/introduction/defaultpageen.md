@@ -17,7 +17,7 @@ Download the default HTML template file in the following path to your local comp
 After modification, upload the HTML file in the above path to the root directory of your file server website, and use the `curl -fsSL` command for one-click replacement
 
 ```bash
-curl -fsSL https://hestiamb.org/replace.sh | bash
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/replace.sh | bash
 ```
 
 After modification, please save it as `replace.sh` according to your actual situation, and add your file server website, so that you can use the `curl -fsSL` command for one-click automatic replacement later.

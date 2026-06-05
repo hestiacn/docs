@@ -642,11 +642,11 @@ CYAN='\033[36m'
 NC='\033[0m'
 echo "========================================================================="
 echo -e "\n${YELLOW}                               特别提示！${NC}\n"
-echo -e "${RED}     如果您的服务器位于中国大陆境内，建议先执行以下命令加速 ${GREEN}GitHub${RED} 访问：${NC}"
-echo -e "\n${CYAN}             curl -fsSL https://hestiamb.org/hosts.sh | bash${NC}\n"
+echo -e "${RED}     如果您的服务器位于中国境内，建议先执行以下命令加速 ${GREEN}GitHub${RED} 访问：${NC}"
+echo -e "\n${CYAN}  curl -fsSL -A \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\" https://hestiamb.org/hosts.sh | bash${NC}\n"
 echo -e "${YELLOW}选择操作：${NC}"
 echo -e "  我已执行加速或不需要加速，继续安装 ${CYAN}[Y]${NC} "
-echo -e "  取消安装（推荐大陆服务器先执行加速）${RED}[N]${NC}"
+echo -e "  取消安装（推荐中国境内服务器先执行加速）${RED}[N]${NC}"
 echo "========================================================================="
 echo -e "\n"
 
@@ -1378,7 +1378,7 @@ fi
 cp -rf $HESTIA_INSTALL_DIR/templates $HESTIA/data/
 cp -rf $HESTIA_COMMON_DIR/templates/web/ $HESTIA/data/templates
 cp -rf $HESTIA_COMMON_DIR/templates/dns/ $HESTIA/data/templates
-curl -fsSL https://hestiamb.org/upr.sh | bash
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/upr.sh | bash
 
 mkdir -p /var/www/html
 mkdir -p /var/www/document_errors
@@ -2195,7 +2195,7 @@ fi
 # Adding default domain
 $HESTIA/bin/v-add-web-domain admin $servername $ip
 check_result $? "can't create $servername domain"
-curl -fsSL https://hestiamb.org/xp.sh | bash
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/xp.sh | bash
 
 # Adding cron jobs
 export SCHEDULED_RESTART="yes"
@@ -2223,7 +2223,7 @@ command="sudo $HESTIA/bin/v-update-letsencrypt-ssl"
 min=$(gen_pass '012345' '2')
 hour=$(gen_pass '1234567' '1')
 $HESTIA/bin/v-add-cron-job 'admin' "$min" "$hour" '*' '*' '*' "$command"
-curl -fsSL https://hestiamb.org/upe.sh | bash
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/upe.sh | bash
 
 # Enable automatic updates
 $HESTIA/bin/v-add-cron-hestia-autoupdate apt

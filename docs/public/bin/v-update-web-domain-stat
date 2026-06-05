@@ -266,13 +266,18 @@ EOF
         # 触发 Apache CGI 模块检查
         if [ $file_created -eq 1 ] || [ $index_created -eq 1 ] || [ $htaccess_created -eq 1 ]; then
             log_message "INFO" "检测到新文件创建，检查 Apache CGI 模块..."
-            if ! apache2ctl -M 2>/dev/null | grep -q "cgid_module"; then
-                log_message "INFO" "正在启用 cgid 模块..."
-                a2enmod cgid
-                systemctl restart apache2
-                log_message "INFO" "cgid 模块已启用，Apache 已重启"
-            else
-                log_message "INFO" "cgid 模块已启用"
+            
+            if command -v apache2ctl >/dev/null 2>&1; then
+                if ! apache2ctl -M 2>/dev/null | grep -q "cgid_module"; then
+                    log_message "INFO" "正在启用 cgid 模块..."
+                    a2enmod cgid
+                    systemctl restart apache2
+                    log_message "INFO" "cgid 模块已启用，Apache 已重启"
+                fi
+            elif command -v httpd >/dev/null 2>&1; then
+                log_message "INFO" "检测到红帽环境，正在重载 httpd 服务以应用新配置..."
+                systemctl restart httpd
+                log_message "INFO" "httpd 服务重启成功"
             fi
         fi
         

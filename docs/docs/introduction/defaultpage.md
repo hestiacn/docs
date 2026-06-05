@@ -7,7 +7,7 @@
 如果您不想修改可使用本站配置好的默认页面。使用以下一键命令进行替换即可！（ps：放心使用，不会破坏任何文件。）
 
 ```bash
-curl -fsSL https://hestiamb.org/cwgx.sh | bash
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/cwgx.sh | bash
 ```
 
 ::: details 查看修改`hestia`默认`HTML`模板的方法
