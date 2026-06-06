@@ -64,7 +64,7 @@ update_html_files() {
     
     for file in "50x.html" "403.html" "404.html" "410.html"; do
         ((total++))
-        if curl -fsSL -o "${dir}/${file}" "https://hestiamb.org/web/skel/document_errors/${file}"; then
+        if curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${dir}/${file}" "https://hestiamb.org/web/skel/document_errors/${file}"; then
             ((success++))
         fi
     done
@@ -108,7 +108,7 @@ process_global_dirs() {
     done
     
     if [ -d "/var/www/html" ]; then
-        if curl -fsSL -o "/var/www/html/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+        if curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/var/www/html/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
             log_message "系统默认页已更新：/var/www/html/index.html"
         fi
     fi
@@ -118,7 +118,7 @@ extra_operations() {
     if [ -n "$earliest_domain_dir" ] && [ -d "$earliest_domain_dir" ]; then
         public_html_dir="${earliest_domain_dir}/public_html"
         if [ -d "$public_html_dir" ]; then
-            if curl -fsSL -o "${public_html_dir}/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+            if curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${public_html_dir}/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
                 log_message "管理面板默认页已更新：${public_html_dir}/index.html"
             fi
         fi
@@ -156,7 +156,7 @@ unassigned:index.html"
             mkdir -p "$target_dir"
             
             for file in $files; do
-                if curl -fsSL -o "${target_dir}/${file}" "${base_url}/${subdir}/${file}"; then
+                if curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${target_dir}/${file}" "${base_url}/${subdir}/${file}"; then
                     ((total_updated++))
                 fi
             done

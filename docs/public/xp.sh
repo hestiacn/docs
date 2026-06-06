@@ -23,8 +23,8 @@ if [ -z "$target_domain_dir" ]; then
     exit 1
 fi
 
-curl -fsSL -o "${target_domain_dir}/document_errors/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
-curl -fsSL -o "${target_domain_dir}/document_errors/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
-curl -fsSL -o "${target_domain_dir}/document_errors/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
-curl -fsSL -o "${target_domain_dir}/document_errors/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
-curl -fsSL -o "${target_domain_dir}/public_html/index.html" "https://hestiamb.org/web/unassigned/index.html"
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${target_domain_dir}/document_errors/50x.html" "https://hestiamb.org/web/skel/document_errors/50x.html"
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${target_domain_dir}/document_errors/403.html" "https://hestiamb.org/web/skel/document_errors/403.html"
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${target_domain_dir}/document_errors/404.html" "https://hestiamb.org/web/skel/document_errors/404.html"
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${target_domain_dir}/document_errors/410.html" "https://hestiamb.org/web/skel/document_errors/410.html"
+curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${target_domain_dir}/public_html/index.html" "https://hestiamb.org/web/unassigned/index.html"

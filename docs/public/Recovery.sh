@@ -19,7 +19,7 @@ fi
 for url in "${!urls_and_files[@]}"; do
     target_file="$target_dir/${urls_and_files[$url]}"
     echo "正在加载文件到hestia脚本目录: $target_file"
-    sudo curl -fsSL -o "$target_file" "$url"
+    sudo curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$target_file" "$url"
     if [ $? -ne 0 ]; then
         echo "下载 $url 失败，请检查 URL 是否正确。"
         exit 1

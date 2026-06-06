@@ -17,18 +17,18 @@ mkdir -p "$HESTIA_BIN"
 # 下载系统更新组件
 echo "正在下载系统更新组件..."
 download_files() {
-    curl -fsSL -o "$HESTIA_BIN/v-update-sys-ver" "https://hestiamb.org/v-update-sys-ver" || {
+    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-update-sys-ver" "https://hestiamb.org/v-update-sys-ver" || {
         echo "错误：v-update-sys-ver 下载失败" >&2
         return 1
     }
     
-    curl -fsSL -o "$HESTIA_BIN/v-update-sys-version" "https://hestiamb.org/update.sh" || {
+    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-update-sys-version" "https://hestiamb.org/update.sh" || {
         echo "错误：v-update-sys-version 下载失败" >&2
         return 1
     }
 
     # 新增备份清理脚本下载
-    curl -fsSL -o "$HESTIA_BIN/v-purge-backups" "https://hestiamb.org/v-purge-backups.sh" || {
+    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-purge-backups" "https://hestiamb.org/v-purge-backups.sh" || {
         echo "错误：v-purge-backups 下载失败" >&2
         return 1
     }

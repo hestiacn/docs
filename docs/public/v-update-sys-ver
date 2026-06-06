@@ -56,7 +56,7 @@ update_html_files() {
     fi
 
     for file in "50x.html" "403.html" "404.html" "410.html"; do
-        if ! curl -fsSL -o "${dir}/${file}" "https://hestiamb.org/web/skel/document_errors/${file}"; then
+        if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${dir}/${file}" "https://hestiamb.org/web/skel/document_errors/${file}"; then
             error_exit "错误：无法下载 ${file} 到 ${dir}"
         fi
     done
@@ -108,7 +108,7 @@ process_global_dirs() {
     if ! mkdir -p "$hestia_skel_public_dir"; then
         error_exit "错误：无法创建目录 $hestia_skel_public_dir"
     fi
-    if ! curl -fsSL -o "$hestia_skel_public_dir/index.html" "https://hestiamb.org/web/skel/public_html/index.html"; then
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$hestia_skel_public_dir/index.html" "https://hestiamb.org/web/skel/public_html/index.html"; then
         error_exit "错误：无法下载 public_html/index.html"
     fi
     log_message "已更新到 $hestia_skel_public_dir/index.html"
@@ -117,7 +117,7 @@ process_global_dirs() {
     if ! mkdir -p "$hestia_suspend_dir"; then
         error_exit "错误：无法创建目录 $hestia_suspend_dir"
     fi
-    if ! curl -fsSL -o "$hestia_suspend_dir/index.html" "https://hestiamb.org/web/suspend/index.html"; then
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$hestia_suspend_dir/index.html" "https://hestiamb.org/web/suspend/index.html"; then
         error_exit "错误：无法下载 suspend/index.html"
     fi
     log_message "已更新到 $hestia_suspend_dir/index.html"
@@ -126,13 +126,13 @@ process_global_dirs() {
     if ! mkdir -p "$hestia_unassigned_dir"; then
         error_exit "错误：无法创建目录 $hestia_unassigned_dir"
     fi
-    if ! curl -fsSL -o "$hestia_unassigned_dir/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$hestia_unassigned_dir/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
         error_exit "错误：无法下载 unassigned/index.html"
     fi
     log_message "已更新到 $hestia_unassigned_dir/index.html"
 
     if [ -d "/var/www/html" ]; then
-        if ! curl -fsSL -o "/var/www/html/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+        if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/var/www/html/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
             error_exit "错误：无法更新首页到 /var/www/html/index.html"
         fi
         log_message "已更新首页到 /var/www/html/index.html"
@@ -148,7 +148,7 @@ extra_operations() {
         if ! mkdir -p "$public_html"; then
             error_exit "错误：无法创建目录 $public_html"
         fi
-        if ! curl -fsSL -o "${public_html}/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
+        if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${public_html}/index.html" "https://hestiamb.org/web/unassigned/index.html"; then
             error_exit "错误：无法更新面板管理域首页"
         fi
         log_message "已更新面板管理域首页：${public_html}/index.html"
@@ -162,21 +162,21 @@ download_extra_files() {
     log_message "开始下载额外的二进制文件和模板..."
     
     # 下载 v-list-sys-services
-    if ! curl -fsSL -o "/usr/local/hestia/bin/v-list-sys-services" "https://hestiamb.org/bin/v-list-sys-services"; then
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/bin/v-list-sys-services" "https://hestiamb.org/bin/v-list-sys-services"; then
         error_exit "错误：无法下载 v-list-sys-services"
     fi
     chmod +x /usr/local/hestia/bin/v-list-sys-services
     log_message "成功下载 v-list-sys-services"
     
     # 下载 v-update-web-domain-stat
-    if ! curl -fsSL -o "/usr/local/hestia/bin/v-update-web-domain-stat" "https://hestiamb.org/bin/v-update-web-domain-stat"; then
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/bin/v-update-web-domain-stat" "https://hestiamb.org/bin/v-update-web-domain-stat"; then
         error_exit "错误：无法下载 v-update-web-domain-stat"
     fi
     chmod +x /usr/local/hestia/bin/v-update-web-domain-stat
     log_message "成功下载 v-update-web-domain-stat"
     
     # 下载 awstats.tpl
-    if ! curl -fsSL -o "/usr/local/hestia/data/templates/web/awstats/awstats.tpl" "https://hestiamb.org/awstats.tpl"; then
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/data/templates/web/awstats/awstats.tpl" "https://hestiamb.org/awstats.tpl"; then
         error_exit "错误：无法下载 awstats.tpl"
     fi
     log_message "成功下载 awstats.tpl"
