@@ -1,7 +1,7 @@
 import { version } from '../../../package.json';
 export default [
   { text: '功能特点介绍', link: '/features' },
-  { text: '面板安装', link: '/install' },
+  { text: '面板安装', items: [{ text: 'Debian发行版', link: '/debian' },{ text: 'RHEL发行版', link: '/rhel' },{ text: 'FreeBSD发行版', link: '/freebsd' },]},
   { text: '部署文档指南', link: '/docs/introduction/getting-started', activeMatch: '/docs/' },
   { text: '开发团队介绍', link: '/team' },
   { text: '官方面板演示', link: 'https://demo.hestiacp.com:8083' },

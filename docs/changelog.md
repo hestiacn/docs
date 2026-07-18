@@ -6,6 +6,50 @@ title: 版本更新日志
 ### 本项目中所有重大更新都将记录在此更新文档中。
 :::
 
+## [1.9.7] - 2026-07-17 - 服务版本发布
+
+### 版本命名变更
+
+由于在 X86-64 硬件上构建 ARM64 软件包的实施，hestia-nginx / hestia-php 的版本格式已变更，适用于 1.10 及更高版本。
+
+- hestia-nginx-x.y.z-修订号-操作系统+发行版_架构.deb
+- hestia-php-x.y.z-修订号-操作系统+发行版_架构.deb
+
+此变更对功能没有影响。"hestia" 包和 "hestia-web-terminal" 将在未来遵循此格式。
+
+### 安全修复
+
+- Web Terminal 中通过会话反序列化不匹配导致的未认证远程代码执行 ([GHSA-gh6f-9gpr-x9m2](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-gh6f-9gpr-x9m2))
+- 通过 `CF-Connecting-IP` 请求头导致的 IP 地址伪造 ([GHSA-73p3-rqpv-59wx](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-73p3-rqpv-59wx))
+- Hestia 控制面板中的跨站脚本攻击 (XSS) ([GHSA-fg7j-gpvw-2m73](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-fg7j-gpvw-2m73))
+- 通过 v-add-cron-job 中的换行注入和 parse_object_kv_list 中的 Eval 标准输出投毒导致的客户端到 Root 远程代码执行 ([GHSA-5fpv-c8rg-x6r3](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-5fpv-c8rg-x6r3))
+- 队列系统中导致 Root 远程代码执行的系统性二阶命令注入 ([GHSA-47mf-74xr-f8x9](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-47mf-74xr-f8x9))
+- parse_object_kv_list() (func/main.sh) 中通过用户控制的配置数据执行双重 eval() 导致的 Root 远程代码执行 ([GHSA-w3mx-xq85-8qqc](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-w3mx-xq85-8qqc))
+- 通过 v-search-user-object 评估的未转义 web.conf 路径字段导致的低权限到 Root 命令执行 ([GHSA-cr7q-frhq-xw4v](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-cr7q-frhq-xw4v))
+- HestiaCP 1.9.6 — 数据库密码中的 SQL 注入 (CWE-89) ([GHSA-8w7m-g9c2-9q9p](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-8w7m-g9c2-9q9p))
+- HestiaCP <= 1.9.6 经过身份验证的管理员接管 ([GHSA-fcq6-p8cj-xx3c](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-fcq6-p8cj-xx3c))
+
+### 新增功能
+
+- 新增：现在可以直接在文件管理器中编辑 JSON 文件 (#5342)
+
+### 错误修复
+
+- 修复：在 v-schedule-user-restore 中添加备份字段验证 (#5510)
+- 通过移除搜索工具中的 eval 提升安全性 (#5509)
+- 将文件管理器更新至版本 7.14.4 (#5508)
+- 加固数据库用户创建/密码修改功能以防止 SQL 注入 (#5511)
+- 修复 v-backup-user-restic 中 $KEEP_MONTHLY 的拼写错误 (#5409)
+- 当 netplan 配置缺失时允许继续安装 (#5406)
+- 修复通过源 hestia.conf 时 HESTIA 变量缺失的问题 (#5433)
+- 在添加/删除用户监狱操作前检查 SFTP 监狱状态 (#5420)
+- 修复 web/add/mail/index.php 中的错误注释 (#5428)
+- 修复私钥检测未传递给 sftpc() 的问题 (#5426)
+- 使 v-extract-fs-archive 在解压期间完全非交互式 (#5436)
+- 修复安装程序中的 if 语句 (#5440)
+- 文档：添加邮件清理指南 (#5371)
+- 将 Roundcube 更新至版本 1.6.17 (#5492)
+
 ## [1.9.6] - 2026-05-30 - 服务更新版
 
 ### Bug 修复

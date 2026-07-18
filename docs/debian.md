@@ -5,8 +5,8 @@ title: 面板安装
 
 <script setup>
   import PageHeader from "./.vitepress/theme/components/PageHeader.vue";
-  import InstallBuilderRhel from "./.vitepress/theme/components/InstallBuilderRhel.vue";
-  import { options } from "./_data/options-rhel";
+  import InstallBuilderDebian from "./.vitepress/theme/components/InstallBuilderDebian.vue";
+  import { options } from "./_data/options-debian";
 </script>
 
 <InstallPage>
@@ -15,9 +15,9 @@ title: 面板安装
   </PageHeader>
   <PageHeader>
 <template #subtitle>
-    当前 Hestia 版本仅支持基于 RHEL 的红帽系列服务器(如 AlmaLinux、Rocky Linux等).<br>
-    该适配版本由<a href='https://github.com/bayrepo/hestiacp-rpm' target='_blank' rel='noopener noreferrer'>俄罗斯开发者</a>维护，相关文档请<a href='https://hestiadocs.brepo.ru' target='_blank' rel='noopener noreferrer'>点击此处</a>查看(目前已完美支持 RHEL ).<br>
-    若需在 Debian/Ubuntu 系安装 Hestia，请<a href='/install' target='_blank' rel='noopener noreferrer'>点击这里</a>进行安装配置。
+    Hestia 官方版本仅支持 Debian 系列服务器。
+    现有俄罗斯开发者提供了<br>适配红帽系统（RHEL/CentOS/AlmaLinux/Rocky Linux）的安装方案。<br>
+    如您使用的是红帽系列，请点击<a href='/Rhel' target='_blank' rel='noopener noreferrer'>此处</a>配置专属安装 Hestia 组件。
 </template>
   </PageHeader>
   <PageHeader>
@@ -26,7 +26,7 @@ title: 面板安装
   <PageHeader>
     <template #aside><a class="header-button" href="./docs/introduction/getting-started#要求">查看安装要求</a></template>  
   </PageHeader>
-  <InstallBuilderRhel :options="options"></InstallBuilderRhel>
+  <InstallBuilderDebian :options="options"></InstallBuilderDebian>
 </InstallPage>
 
 <style>

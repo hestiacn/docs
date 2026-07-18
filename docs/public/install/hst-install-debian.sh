@@ -31,7 +31,7 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.9.6'
+HESTIA_INSTALL_VER='1.9.7'
 # Supported PHP versions
 multiphp_v=("5.6" "7.0" "7.1" "7.2" "7.3" "7.4" "8.0" "8.1" "8.2" "8.3" "8.4" "8.5")
 # One of the following PHP versions is required for Roundcube / phpmyadmin
@@ -528,7 +528,15 @@ if [ -d /etc/netplan ] && [ -z "$force" ]; then
 		echo
 		echo '!!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!!'
 		echo
-		check_result 1 "Unable to detect netplan configuration."
+		#check_result 1 "Unable to detect netplan configuration."
+        echo "无法检测到 netplan 网络配置。"
+        echo
+
+        read -p '是否要在没有 netplan 的情况下继续安装？[Y/n]: ' answer
+
+        if [ "$answer" != 'y' ] && [ "$answer" != 'Y' ] && [ "$answer" != '' ]; then
+            exit 1
+        fi
 	fi
 fi
 
@@ -579,11 +587,11 @@ esac
 install_welcome_message() {
 	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|~alpha||g" | sed "s|~beta||g")
 	echo
-	echo '           _   _                _     _           _____   ____           '
-     echo '         | | | |  ___   ___  _| |_  (_)   __ _  /  ___| |  _ \          '
-     echo '         | |_| | / _ \ / __||_  __| | |  / _  | | |     | |_) |         '
-     echo '         |  _  ||  __/ \__ \  | |_  | | | (_| | | |___  |  __/          '
-     echo '         |_| |_| \___| |___/  \___| |_|  \____| \_____| |_|             '
+	echo '          _   _                _     _           _____   ____           '
+	echo '         | | | |  ___   ___  _| |_  (_)   __ _  /  ___| |  _ \          '
+	echo '         | |_| | / _ \ / __||_  __| | |  / _  | | |     | |_) |         '
+	echo '         |  _  ||  __/ \__ \  | |_  | | | (_| | | |___  |  __/          '
+	echo '         |_| |_| \___| |___/  \___| |_|  \____| \_____| |_|             '
 	echo "                                                                        "
 	echo "                          Hestia 控制面板                          "
 	if [[ "$HESTIA_INSTALL_VER" =~ "beta" ]]; then
@@ -2519,7 +2527,7 @@ echo -e -n " 	用户名:        $username
 文档:           https://hestiacp.com
 论坛:           https://forum.hestiacp.com
 GitHub:         https://github.com/hestiacp/hestiacp
-RHEL分支文档:       https://dev.brepo.ru/bayrepo/hestiacp
+RHEL分支文档:    https://dev.brepo.ru/bayrepo/hestiacp
 
 注意：自动更新默认已启用。如果您想禁用它们,
 请登录并导航至 "服务器设置">"系统更新">"禁用自动更新"将其关闭.
