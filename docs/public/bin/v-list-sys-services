@@ -311,7 +311,13 @@ if [ -n "$DB_SYSTEM" ] && [ "$DB_SYSTEM" != 'remote' ]; then
 			mysql="/usr/bin/mariadb"
 		fi
 		if [ "$service" = 'mysql' ]; then
+			if [ ! -e '/usr/sbin/mysqld' ] && [ ! -e '/usr/sbin/mariadbd' ]; then
+				continue
+			fi
 			mysql_version=$($mysql -V)
+			if [ -z "$mysql_version" ]; then
+				continue
+			fi
 			mariadb_string="MariaDB"
 			if [[ ! $mysql_version =~ $mariadb_string ]]; then
 				# MySQL
@@ -334,6 +340,9 @@ if [ -n "$DB_SYSTEM" ] && [ "$DB_SYSTEM" != 'remote' ]; then
 			fi
 		fi
 		if [ "$service" == 'pgsql' ]; then
+			if [ -z "$(ls -d /usr/lib/postgresql/*/bin/postgres 2> /dev/null)" ]; then
+				continue
+			fi
 			service='postgresql'
 			proc_name='postmaster'
 			if [ ! -d "/etc/sysconfig" ]; then

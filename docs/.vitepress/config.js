@@ -12,11 +12,11 @@ export default {
 		css: {
 			preprocessorOptions: {
 				sass: {
-					api: 'modern',
+					api: 'modern-compiler',
 					silenceDeprecations: ['legacy-js-api'],
 				},
 				scss: {
-					api: 'modern',
+					api: 'modern-compiler',
 					silenceDeprecations: ['legacy-js-api'],
 				},
 			},

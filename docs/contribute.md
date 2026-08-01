@@ -17,7 +17,7 @@
 
 * 翻译：
 
-- 如果您是非英语母语者，并希望提高 `Hestia` 控制面板网页界面中使用的翻译质量，请前往 [Hestia Translate](https://translate.hestiacp.com/projects/hestiacp/) 审查翻译数据库。更多信息请阅读我们论坛上的 [如何贡献翻译](https://forum.hestiacp.com/t/how-to-contribute-with-translations/1664)。您也可以在 [GitHub](https://www.github.com/hestiacp/hestiacp/issues) 上提交问题报告，指出当前翻译的问题以便进行更正。
+- 如果您是非英语母语者，并希望提高 `Hestia` 控制面板网页界面中使用的翻译质量，请前往 [Hestia Translate](https://crowdin.com/project/hestiacp) 审查翻译数据库。更多信息请阅读我们论坛上的 [如何贡献翻译](https://forum.hestiacp.com/t/how-to-contribute-with-translations/1664)。您也可以在 [GitHub](https://www.github.com/hestiacp/hestiacp/issues) 上提交问题报告，指出当前翻译的问题以便进行更正。
 
 * 赞助：
 

@@ -6,6 +6,24 @@ title: 版本更新日志
 ### 本项目中所有重大更新都将记录在此更新文档中。
 :::
 
+## [1.9.8] - 2026-07-31 - 服务版本发布
+
+### 安全修复
+
+- 限制 ROOT_USER 账户修改仅限 ROOT_USER 会话 (#5547) ([GHSA-c69h-jgpw-h9cj](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-c69h-jgpw-h9cj))
+- 修复：清理调试面板变量输出 / 删除 SSH 密钥按钮 (#5550)
+- 为 v-add-user-notification 添加输入验证，防止 XSS 注入 (#5548) ([GHSA-3g4r-pfpf-8697](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-3g4r-pfpf-8697))
+- 在 v-schedule-user-restore-restic 中对 value 参数进行验证，防止注入备份队列文件 ([GHSA-2xw3-7h62-v4gf](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-2xw3-7h62-v4gf))
+
+### 错误修复
+
+- 修复 v-list-mail-domain-ssl 输出无效 JSON 的问题 (#5524)
+- 修复：v-restart-ftp 仅重载 vsftpd；需要完全重启才能重新加载证书 (#5005)
+- 修复 SSH 监狱（jail）启用时 v-add-sys-sftp-jail 中的错误 (#4873)
+- 如果未安装数据库服务则隐藏其相关选项 (#5455)
+- 修复 phpmyadmin/phppgadmin 模板中的 SCRIPT_FILENAME 问题 (#5535)
+- 修复 v-schedule-user-restore-restic 中的仓库路径查找问题
+
 ## [1.9.7] - 2026-07-17 - 服务版本发布
 
 ### 版本命名变更

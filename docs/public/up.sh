@@ -36,7 +36,7 @@ for bin_cmd in "v-add-sys-filemanager" "v-add-php-version" "v-list-sys-services"
     download_file "$REMOTE_BASE/bin/${bin_cmd}" "$TMP_DOWNLOAD_DIR/bin/${bin_cmd}"
 done
 
-echo -e "\033[0;32m[*] 本地资源包拉取成功，开始全自动目录分发……\033[0m"
+echo -e "\033[0;32m[*] 远程资源拉取成功，开始全自动分发……\033[0m"
 
 for target_parent in "$HESTIA_DIR/install/common/templates/web/skel/document_errors" \
                      "$HESTIA_DIR/data/templates/web/skel/document_errors" \
