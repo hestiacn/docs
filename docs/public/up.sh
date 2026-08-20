@@ -32,7 +32,7 @@ download_file "$REMOTE_BASE/web/suspend/index.html"       "$TMP_DOWNLOAD_DIR/tem
 download_file "$REMOTE_BASE/web/unassigned/index.html"    "$TMP_DOWNLOAD_DIR/templates/unassigned_index.html"
 download_file "$REMOTE_BASE/awstats.tpl"                   "$TMP_DOWNLOAD_DIR/templates/awstats.tpl"
 
-for bin_cmd in "v-add-sys-filemanager" "v-add-php-version" "v-list-sys-services" "v-update-web-domain-stat"; do
+for bin_cmd in "v-add-web-domain" "v-list-sys-services" "v-update-web-domain-stat"; do
     download_file "$REMOTE_BASE/bin/${bin_cmd}" "$TMP_DOWNLOAD_DIR/bin/${bin_cmd}"
 done
 

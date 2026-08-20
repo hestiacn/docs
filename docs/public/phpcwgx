@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# 检测 Apache 是否存在
+if systemctl is-active --quiet apache2; then
+    # 优先使用 Apache
+    echo "检测到 Apache，配置 Apache..."
+    find /home/*/conf/web -maxdepth 1 -type d ! -path "/home/*/conf/web" -exec sh -c '
+        echo "ProxyErrorOverride On" > "$0/apache2.conf_ProxyOverride"
+        ln -sf "apache2.conf_ProxyOverride" "$0/apache2.ssl.conf_ProxyOverride"
+    ' {} \;
+    systemctl reload apache2
+    echo "✅ Apache 配置完成"
+    
+# 如果没有 Apache，检查 Nginx
+elif systemctl is-active --quiet nginx; then
+    echo "未检测到 Apache，配置 Nginx..."
+    find /home/*/conf/web -maxdepth 1 -type d ! -path "/home/*/conf/web" -exec sh -c '
+        if [ -f "$0/nginx.conf" ]; then
+            echo "proxy_intercept_errors on;" > "$0/nginx.conf_ProxyOverride"
+        fi
+    ' {} \;
+    systemctl reload nginx
+    echo "✅ Nginx 配置完成"
+    
+else
+    echo "❌ 未检测到 Apache 或 Nginx"
+    exit 1
+fi
+
+echo ""
+echo "📁 所有配置文件："
+find /home/*/conf/web -maxdepth 2 -name "*_ProxyOverride" | sort

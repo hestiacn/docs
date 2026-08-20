@@ -17,18 +17,17 @@ mkdir -p "$HESTIA_BIN"
 # 下载系统更新组件
 echo "正在下载系统更新组件..."
 download_files() {
-    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-update-sys-ver" "https://hestiamb.org/v-update-sys-ver" || {
-        echo "错误：v-update-sys-ver 下载失败" >&2
+    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-update-hestia-locale" "https://hestiamb.org/v-update-hestia-locale" || {
+        echo "错误：v-update-hestia-locale下载失败" >&2
         return 1
     }
     
-    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-update-sys-version" "https://hestiamb.org/update.sh" || {
-        echo "错误：v-update-sys-version 下载失败" >&2
+    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-check-version-update" "https://hestiamb.org/v-check-version-update" || {
+        echo "错误：v-check-version-update 下载失败" >&2
         return 1
     }
 
-    # 新增备份清理脚本下载
-    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-purge-backups" "https://hestiamb.org/v-purge-backups.sh" || {
+    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "$HESTIA_BIN/v-purge-backups" "https://hestiamb.org/v-purge-backups" || {
         echo "错误：v-purge-backups 下载失败" >&2
         return 1
     }
@@ -37,18 +36,16 @@ download_files || exit 1
 
 # 设置权限和所有权
 echo "配置文件权限..."
-chmod -v 755 "$HESTIA_BIN/v-update-sys-ver" \
-             "$HESTIA_BIN/v-update-sys-version" \
-             "$HESTIA_BIN/v-purge-backups" && \
-chmod -R 755 "$HESTIA_BIN" && \
-chown -R root:root "$HESTIA_BIN" || {
+chmod +x "$HESTIA_BIN/v-update-hestia-locale" \
+         "$HESTIA_BIN/v-check-version-update" \
+         "$HESTIA_BIN/v-purge-backups" || {
     echo "错误：权限设置失败" >&2
     exit 1
 }
 
 # 配置定时任务 (双任务配置)
 declare -A CRON_JOYS=(
-    ["系统更新"]="20 5 * * * sudo $HESTIA_BIN/v-update-sys-version"
+    ["系统更新"]="20 5 * * * sudo $HESTIA_BIN/v-check-version-update"
     ["备份清理"]="20 5 * * * sudo $HESTIA_BIN/v-purge-backups"
 )
 

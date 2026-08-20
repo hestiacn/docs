@@ -29,15 +29,15 @@
 
 ::: code-group
 
-```txt 1
+```bash [文件1]
 cp original.tpl new.tpl
 ```
 
-```txt 2
+```bash [文件2]
 cp original.stpl new.stpl
 ```
 
-```txt 3
+```bash [文件3]
 cp original.sh new.sh
 ```
 

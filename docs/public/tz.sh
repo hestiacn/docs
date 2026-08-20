@@ -17,7 +17,7 @@ RANDOM_FILE="${WEB_ROOT}/${RANDOM_NAME}.php"
 START_TIME=$(date '+%Y-%m-%d %H:%M:%S')
 echo "${START_TIME} - 开始下载探针文件" >> "$LOG_FILE"
 
-if curl -fsSL --max-time 30 -o "$RANDOM_FILE" "https://codeberg.org/hestiacp/tz/raw/branch/main/cn.php"; then
+if curl -fsSL --max-time 30 -o "$RANDOM_FILE" "https://hestiamb.org/tz.php"; then
     chmod 644 "$RANDOM_FILE"
 
     PUBLIC_IP=$(curl -s --max-time 5 icanhazip.com || \

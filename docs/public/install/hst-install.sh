@@ -8,8 +8,8 @@
 #
 # Currently Supported Operating Systems:
 #
-# Debian 11, 12
-# Ubuntu 22.04, 24.04 LTS
+# Debian 11, 12, 13
+# Ubuntu 22.04, 24.04 26.04 LTS
 #
 # ======================================================== #
 
@@ -58,21 +58,6 @@ if [ -e "/etc/os-release" ] && [ ! -e "/etc/redhat-release" ]; then
     else
 		type="NoSupport"
 	fi
-# elif [ -e "/etc/os-release" ] && [ -e "/etc/redhat-release" ]; then
-# 	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
-# 	if [ "$type" = "rhel" ]; then
-# 		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $3}')
-# 		VERSION='rhel'
-# 	elif [ "$type" = "almalinux" ]; then
-# 		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $3}')
-# 		VERSION='almalinux'
-# 	elif [ "$type" = "eurolinux" ]; then
-# 		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $3}')
-# 		VERSION='eurolinux'
-# 	elif [ "$type" = "rocky" ]; then
-# 		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $3}')
-# 		VERSION='rockylinux'
-# 	fi
 else
 	type="NoSupport"
 fi
@@ -82,8 +67,8 @@ no_support_message() {
 	echo "您的操作系统 (OS) 不受支持"
 	echo "Hestia 控制面板。官方支持的版本:"
 	echo "****************************************************"
-	echo "  Debian 11, 12"
-	echo "  Ubuntu 22.04, 24.04 LTS"
+	echo "  Debian 11, 12, 13"
+	echo "  Ubuntu 22.04, 24.04, 26.04 LTS"
 	echo ""
 	exit 1
 }
@@ -118,19 +103,9 @@ ensure_utf8_locale
 check_wget_curl() {
 	# Check wget
 	if [ -e '/usr/bin/wget' ]; then
-		# if [ -e '/etc/redhat-release' ]; then
-		# 	wget -q https://hestiamb.org/install/hst-install-rhel.sh -O hst-install-rhel.sh
-		# 	if [ "$?" -eq '0' ]; then
-		# 		bash hst-install-rhel.sh $*
-		# 		exit
-		# 	else
-		# 		echo "错误：hst-install-rhel.sh 下载失败."
-		# 		exit 1
-		# 	fi
-		# else
 		wget -q https://hestiamb.org/install/hst-install-$type.sh -O hst-install-$type.sh
 		if [ "$?" -eq '0' ]; then
-			bash hst-install-$type.sh $*
+			bash hst-install-$type.sh "$@"
 			exit
 		else
 			echo "错误：hst-install-$type.sh 下载失败."
@@ -141,19 +116,9 @@ check_wget_curl() {
 
 	# Check curl
 	if [ -e '/usr/bin/curl' ]; then
-		# if [ -e '/etc/redhat-release' ]; then
-		# 	curl -s -O https://hestiamb.org/install/hst-install-rhel.sh
-		# 	if [ "$?" -eq '0' ]; then
-		# 		bash hst-install-rhel.sh $*
-		# 		exit
-		# 	else
-		# 		echo "错误：hst-install-rhel.sh 下载失败."
-		# 		exit 1
-		# 	fi
-		# else
 		curl -s -O https://hestiamb.org/install/hst-install-$type.sh
 		if [ "$?" -eq '0' ]; then
-			bash hst-install-$type.sh $*
+			bash hst-install-$type.sh "$@"
 			exit
 		else
 			echo "错误：hst-install-$type.sh 下载失败."
@@ -165,10 +130,8 @@ check_wget_curl() {
 
 # 在继续下载之前，请检查支持的操作系统
 # 如果检测到不支持的操作系统，则抛出错误消息。
-if [[ "$release" =~ ^(11|12|22.04|24.04)$ ]]; then
-	check_wget_curl $*
-# elif [[ -e "/etc/redhat-release" ]] && [[ "$release" =~ ^(8|9)$ ]]; then
-# 	check_wget_curl $*
+if [[ "$release" =~ ^(11|12|13|22.04|24.04|26.04)$ ]]; then
+	check_wget_curl "$@"
 else
 	no_support_message
 fi

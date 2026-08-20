@@ -6,6 +6,269 @@ title: 版本更新日志
 ### 本项目中所有重大更新都将记录在此更新文档中。
 :::
 
+## [1.10.3] - 2026-08-17 - 服务版本发布
+
+### 变更
+
+- 更新语言文件。
+
+### 修复
+
+- 调整 `u-text-break` 工具类中的文本换行行为 #5621
+- 修复 FileManager 中缺失的 symfony/mime 依赖，并在升级时重新安装 #5616
+- 修复 1.10.3.sh 脚本以重新安装 FileManager #5622
+- 重新排序删除规则后的防火墙规则，修复因上移/下移导致重复行的问题 #5623
+
+## [1.10.2] - 2026-08-14 - 服务版本发布
+
+### 变更
+
+- 将文件管理器升级至 7.15.1 版本 #5608
+
+### 修复
+
+- 将 SOA EXPIRE 从 3600000 改为 1209600 #5606
+- 修复升级过程中意外覆盖 VERSION 的问题 #5610
+
+## [1.10.1] - 2026-08-13 - 服务版本发布
+
+### 修复
+
+- 设置 UPGRADE_REBUILD_USERS 为 true 以重建邮件模板
+
+## [1.10.0] - 2026-08-05 - bate 版本发布
+
+### 安全
+
+- 为 v-add-user-notification 添加验证，防止 XSS 注入 #5548
+- 添加缺失的检查，确认用户是否可以访问 DNS 模板或是否为管理员
+- 禁止在 Hestia 中使用本地用户名 (#5134)
+- 另一个 urlencode+htmlecode 修复 (#5261)
+- 阻止访问内部文件夹和敏感文件 (#5446)
+- 依赖更新：将 symfony/process 更新至 v8.0.5 [security] (#5217)
+- 清理参数处理并改进 kv 解析 (#5309)
+- 修复长文本可能绕过 2FA 检查的问题 (#5203)
+- 修复：不在 phpMyAdmin 的重定向中泄露面板端口
+- 修复：清理用户通知 HTML 并验证内容
+- 加强 DNS 记录列表的转义处理 (#5196)
+- 加强 DNS 记录验证 (#5197)
+- 加强模板和视图中的 HTML/URL 编码 (#5245–#5258)
+- 改进 Cron 命令验证和同步循环逻辑 (#5444)
+- 改进 Spamhaus DQS 查询日志记录，不暴露查询密钥 (#5011)
+- 通过移除 eval 提升安全性 (#5509)
+- 为 `is_common_format_valid` 中的变量加引号 (#5218)
+- 重构(snappymail)：将配置移至 /var/lib/snappymail 并支持加固的 PHP-FPM (#5344)
+- 限制对 ROOT_USER 账户的修改仅限于 ROOT_USER 会话 (#5547)
+- 安全 SSL 设置 (#5109)
+- 保护用户创建/密码更改以防止 SQL 注入 (#5511)
+- 停止信任未经身份验证的代理头 (#5273)
+- 在 restic 恢复脚本中使用 ROOT_USER 变量代替硬编码的 admin (#5201)
+- 分配前验证 IP (#5282)
+- 验证备份字段 (#5510)
+
+### 功能
+
+- 添加 Debian/Ubuntu 包版本管理，支持 PKG 修订版、发布标签和发行版后缀 #5423
+- 为 DKIM 复选框添加默认选中状态 (#5220)
+- 为 v-add-firewall-ipset 添加动态 maxelem 和 hashsize (#5198)
+- 在 Exim 配置模板的 SMTP 横幅中添加 ESMTP (#5140)
+- 添加 ext4 原生配额支持并改进文件系统配额处理 (#5200)
+- 在防火墙禁止移除脚本中添加 Fail2Ban 解禁支持 (#5139)
+- 添加 HTTP_HOST 参数，清理头部，并添加 WordPress HTTP/3 模板 (#5185)
+- 在 Debian 13 安装期间添加 KexAlgorithms (#5457)
+- 添加操作系统感知的 Hestia 安装版本构建
+- 为 Laravel 快速安装添加 PHP 8.5 支持 (#5463)
+- 添加无需任何 chroot 即可构建 Hestia 包的可能性 (#5531)
+- 在 Debian 13 安装期间添加 root-hints (#5460)
+- 添加 Roundcube 日志轮转配置并调整文件权限 (#5142)
+- 为 v-generate-ssl-cert 添加 SAN 支持 (#4937)
+- 添加脚本 migrate_conf_to_debian_13.sh (#5419)
+- 根据[官方支持文档](https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/)添加对更多 PHP 版本的支持 (#5287)
+- 添加对 Ubuntu 26.04 LTS 的支持 (#5458)
+- 添加对 Roundcube 1.7 的支持 (#5129)
+- 为 Hestia PATH 配置添加 zsh 支持 (#5191)
+- 添加：在仪表盘中显示用户和带宽配额 (#5031)
+- 添加 Contao 配置 (#5105)
+- 添加跨架构和多操作系统包构建 #5499
+- 允许在 hst_autocompile.sh 中通过环境覆盖 BUILD_DIR
+- 将 hestia-php 升级至 8.5.9 版本 (#5564)
+- 配置 Nginx 处理 Livewire v3 资源请求 (#5260)
+- 在 PHP 版本使用情况界面中计数自定义后端模板（例如 *-PHP-x_y）(#5228)
+- 功能(防火墙)：添加排序防火墙规则的能力，改变其在 iptables 中的优先级 (#5080)
+- 功能(安装器)：在快速安装应用中添加 osticket (#5471)
+- 功能(安装器)：在快速安装应用中添加 shopware (#5529)
+- 功能(安装器)：更新应用版本 #5518
+- 功能(邮件)：为 Exim 实现 DNSBL 管理 CLI (#5464)
+- 功能(Web 应用)：在快速安装应用中添加 castopod (#5439)
+- 功能(Web 应用)：在快速安装应用中添加 classicpress (#5355)
+- 功能(Web 应用)：在快速安装应用中添加 concrete cms (#5459)
+- 功能(Web 应用)：在快速安装应用中添加 qloapps (#5417)
+- 功能(Web 应用)：更新安装程序以安装最新版本的应用 (#5431)
+- 功能：添加将 phpMyAdmin 限制为仅 Hestia SSO 的选项 #5504
+- 功能：如果 public-suffix-list 超过 7 天则更新 (#5266)
+- 实现 LE 前置和后置钩子 (#4925)
+- 改进 Roundcube 安装/升级过程并升级至 1.7.3 (#5581, #5586, #5596)
+- 使 JSON 在文件管理器中可编辑 (#5342)
+- PHP-8.5 支持 (#5157)
+- 准备合并 Debian 13 支持 (#5388)
+- 运行 UTF-8 语言环境 (#4704)
+- 更新 Debian 安装的默认和必需 PHP 版本 (#5461)
+- 更新文档和 CLI 参考 (#5597)
+- 更新 Dovecot 2.4 的 Exim 配置 (#5579)
+- 更新西班牙语、爱沙尼亚语、老挝语和乌克兰语的语言文件 (#5598)
+- 在 Hestia 升级期间更新用户 Composer 安装 (#5553)
+
+### Bug 修复
+
+- 接受 CNAME 记录的无效主机名 (#5291)
+- 在 v-add-mail-domain-smtp-relay 中为 rm 命令添加 -f 标志，以避免 IP 文件不存在时出错 (#5086)
+- 添加错误信息而不是回退到 chmod
+- 当 netplan 配置缺失时允许继续安装 (#5406)
+- 在添加用户名到 SMTP 中继时允许使用斜杠 (修复 #4973) (#4974)
+- 避免重新创建现有的 webmail DNS 记录 (#5567)
+- 将 NGINX 模板更改为 'dokuwiki' (#5445)
+- 在添加/删除用户监狱操作前检查 SFTP 监狱状态 (#5420)
+- 针对最新版本文件管理器的类更改 (#4871)
+- 由于 Let's Encrypt 在 2025 年结束 OCSP 支持，注释掉 ssl_stapling 指令 (#5002)
+- 确保 composer 别名使用用户定义的 PHP CLI (#5155)
+- 确保 hestiaweb 用户 crontab 末尾有换行符 (#4992)
+- 修复 "不存在" (#4938)
+- 修复 1.9.5：重建邮件域会删除 webmail SSL 配置 (#5354)
+- 修复用户名和点号的备份列表冲突 #4918
+- 修复 HestiaZipArchiver.php 中的 bug #5411
+- 修复 PR #4937 中的 bug (#4995)
+- 修复 v-add-sys-sftp-jail 在 SSH 监狱激活时的 bug (#4873)
+- 修复用户名和点号的冲突
+- 修复更改 Web 域时的域名别名替换逻辑 (修复 #5015) (#5041)
+- 修复安装程序中的 dovecot 配置路径并修复一些次要问题 (#5391)
+- 修复 hestiaweb 的 Cron 作业编辑问题 (#4891)
+- 修复会话用户为空时文件管理器 HTTP 500 错误 (#5318) (#5441)
+- 修复文件管理器忽略用户语言的问题 (#5374)
+- 修复 FileGator 7.13.4 在 Hestia 中的会话迁移不兼容问题 (#5241)
+- 修复仅数字用户名在创建监狱挂载时获取正确 home 目录的问题 (#5126)
+- 修复当总限制为无限制时 get_percentage() 返回 0 的问题 (#5395)
+- 修复 hestia 日志轮转 (#5148)
+- 修复 Debian 13 的 hestia-php deb 依赖 (libzip5)
+- 修复 if 语句 (#5440)
+- 修复 web/add/mail/index.php 中的错误注释 (#5428)
+- 修复 UPGRADE_UPDATE_* 和 UPGRADE_REBUILD_USERS 的错误默认值 (#5578)
+- 修复 v-list-mail-domain-ssl 中的无效 JSON 输出 (#5524)
+- 修复 ipv4_cidr 验证 (#5044)
+- 修复通过 Web 无法访问设置的问题 (#5565)
+- 修复 webterminal 的问题 (#5591)
+- 修复 NodeJS 24 上 Web 终端的问题 (#5560)
+- 修复 Json 格式 (#5059)
+- 修复 Let's Encrypt YR1 链验证 (#5397)
+- 修复 letsencrypt 用户密钥不匹配 #5294
+- 修复 IP 列表大小检查中的逻辑错误 (#4941)
+- 修复缺少阿拉伯语的问题 (#5375)
+- 修复 Ubuntu 上缺失的依赖 proftpd-mod-crypto (#4895)
+- 修复通过 sourcing hestia.conf 缺失 HESTIA 变量的问题 (#5433)
+- 修复 netplan 权限 (#5159)
+- 修复 nginx 403 错误页面 (#5495)
+- 修复 Jailbash (chroot) 中的 PHP 环境 #5434
+- 修复 Jailbash (chroot) 中 Laravel 和 Composer 的 PHP 环境
+- 修复 php-fpm 模板以允许动态生成的跟踪代码 (#5212)
+- 修复 phpMyAdmin SSO 主机名检测
+- 修复 v-add-firewall-rule 中的端口日志记录 (#5176)
+- 修复 PR #5162 (#5343)
+- 修复 PR #5254 (#5259)
+- 修复 postinst 中的正则表达式
+- 修复 upgrade_phppgadmin 函数的回归问题 (#5592)
+- 修复 phpmyadmin/phppgadmin 模板中的 SCRIPT_FILENAME (#5535)
+- 修复 Ubuntu 24.04 的 SpamAssassin 服务名称 (#5162)
+- 修复证书主题/颁发者 DN 中包含逗号时 SSL 面板损坏的问题 (#5585)
+- 修复 syshealth 错误地重新添加已删除的配置键 (#5584)
+- 修复 Hestia 验证证书链的方式 (#4887)
+- 修复 upgrade_phppgadmin 函数 (#5562)
+- 修复 v-add-user-composer 更新 (#5552)
+- 修复包含空格的用户目录容器名称 #4917
+- 修复 v-list-database-host：更正配置文件的路径 (#5114)
+- 修复在启用 SSL 时 vstats 链接使用 HTTPS (#5183)
+- 修复(#4979)：修复域名重定向在挂起时无法工作的问题 (#4991)
+- 修复(biome)：为装饰性 SVG 添加 aria-hidden 和 focusable="false" (#5407)
+- 修复(文件管理器)：避免阻止的 sudo chmod，并为 hestiaweb 授予 .ssh 遍历权限 (#5242)
+- 修复(HestiaApp.php)：增加超时时间以处理长进程 (#5432)
+- 修复(i18n)：当 en_US.UTF-8 不可用时添加语言环境回退 (#5386)
+- 修复(安装器)：使用单引号防止密码扩展 (#5404)
+- 修复(letsencrypt)：在 v-add-letsencrypt-user 中检测 user.key/KID 不匹配
+- 修复(nginx)：在 cloudflare.inc 后备中命名可信标头 (#5589)
+- 修复(服务)：如果未安装，隐藏数据库服务 #5455
+- 修复：Apache 2.4.64 更新后所有 Web 和邮件域出现 421 错误 (#5058)
+- 修复：避免 Hestia 安装过程中崩溃 (#5223)
+- 修复：当 reject_spam 关闭时，避免在 Exim 中执行 spamd (#5076)
+- 修复：在 restic 脚本中将 restic 仓库路径构建为 $REPO/$user (#5100)
+- 修复：将 SRV 记录目标转换为 IDN #5505
+- 修复：将 SRV 记录目标转换为 IDN 以便变音 DNS 区域加载 (#4951)
+- 修复：增强域名和别名格式验证规则 (#5128)
+- 修复：使用默认选项添加自签名证书时出错 (#5483)
+- 修复：在 SessionStorage 中优雅处理缺失会话 (#5254)
+- 修复：在 restic Web 恢复中保持 IFS 本地，以便 nginx 配置有效 (#4986)
+- 修复：优先使用默认路由系统 IP 作为 DNS 集群主节点
+- 修复：在证书续订失败时保留 SSL 和重定向 (#5149)
+- 修复：防止 deb 包被移动到文件系统根目录
+- 修复：防止空用户变量影响多个脚本 (修复 #4926) (#4928)
+- 修复：防止文件管理器配置中的会话冲突 (#5286)
+- 修复：防止 RRD 图表中带下划线的数据库主机名被截断 #5488
+- 修复：将私钥检测传播到 sftpc() (#5426)
+- 修复：XFS 文件系统上的配额 fstab 挂载错误 (#5048)
+- 修复：深色主题下文件管理器上传弹窗可读性 (#5095)
+- 修复：从 Moodle Nginx 模板中移除 /public 文档根目录 (#5363)
+- 修复：解决 main.php 中未定义数组键 "look" 的警告 (#5285)
+- 修复：解决未定义的防火墙移动变量和按钮可见性问题 (#5466)
+- 修复：v-add-user 中的资源限制和磁盘配额检测 (#5172)
+- 修复：在 restic 邮件、DNS 和数据库恢复中恢复所有域/数据库 (#4987)
+- 修复：四舍五入人类可读的时间值 (#5468)
+- 修复：清理调试面板变量输出 (#5550)
+- 修复：将默认 SOA 重试值设置为 1800 以符合 DENIC 要求 (#5030)
+- 修复：设置可写的 phpMyAdmin 临时目录以避免模板缓存错误 (#5398)
+- 修复：数据库创建选项卡不显示前缀
+- 修复：在升级期间更新 Hestia 日志轮转配置 (#5512)
+- 修复：使用配置的系统 IP 作为 DNS 集群主节点 (#5469)
+- 修复：在 CLI Web 应用安装中使用第一个选项作为默认值 (#5482)
+- 修复：在 edit_server.php 中使用 ROOT_USER 会话变量进行管理员检查 (#5043)
+- 修复：v-restart-ftp 仅重载 vsftpd；需要完全重启以重新加载证书 (#5005)
+- 修复：Webmail DNS 记录与别名不一致的问题 (#5074)
+- 修复从 UI 下载数据库时出现的错误 (#4876)
+- 修复类型转换错误 (#4981)
+- 修复对象验证的路径 (#5167)
+- 修复 4997 (#4998)
+- Func/db.sh：修复 psql 和 pg_dump 缺失端口参数的问题 (#5278)
+- 在安装前收集统一的安装目标信息 (#4694)
+- 防止针对无效 sed 执行的 add_object_key 攻击 (#5566)
+- hestia-nginx：允许访问 src/app/WebApp/Installers 下的安装程序图片 (#5480)
+- 当本地服务器未安装时，从系统列表中隐藏 MySQL/MariaDB 和 PostgreSQL 服务
+- 在启用配额时隐藏 quotaon 警告 (#5465)
+- 将 conf grep 结果限制为 U_DISK_DIRS 的一个
+- 使 v-extract-fs-archive 在提取过程中完全非交互 (#5436)
+- 小修复：移除无用的 cat (#5060)
+- 规范化黑名单 IP 解析并改进排序 (#5219)
+- 放宽 ACME 挑战正则表达式 (#5165)
+- 从 DKIM DNS 脚本中移除 _domainkey 条目 (#5161)
+- 从 Debian 安装程序中移除 apache2-suexec-pristine 包 (#4988)
+- 重新组织防火墙规则处理以提高效率 (#5442)
+- 跳过 useradd（除非需要）以避免升级时 syslog 泛滥 (#5557)
+- SOA 符合检查和 RIPE 要求 (#5305)
+- 在保留检查前对备份文件列表进行排序 (修复 #5017) (#5018)
+- 数据库创建选项卡不显示将添加的前缀
+- v-backup-user-restic 中 $KEEP_MONTHLY 的拼写错误 (#5409)
+- 更新 v-restore-user
+- 更新请求的更改
+- 使用符合 RFC 1982 的单调递增 DNS SOA 序列号 #5545
+- 使用 v-update-letsencrypt-ssl 代替 v-update-letsencrypt (#5583)
+- v-restart-service：当没有初始化系统报告状态时发出警告并继续 #5475
+- Web 终端：使用 PHP 辅助函数进行会话认证查找 (#5244)
+
+## [1.9.9] - 2026-08-05 - 服务版本发布
+
+### 安全
+
+- 修复了通过 `v-update-user-backup-exclusions` 从低权限非管理员用户权限提升至 uid=0 root 远程代码执行的关键漏洞 ([GHSA-xffx-jj33-p2px](https://github.com/hestiacp/hestiacp/security/advisories/GHSA-xffx-jj33-p2px))
+
+---
+
+该漏洞允许任何低权限的非管理员用户（角色为 user，无 admin 标志）通过向备份排除页面发送单个 POST 请求，获得 uid=0 root 远程代码执行能力。
+
 ## [1.9.8] - 2026-07-31 - 服务版本发布
 
 ### 安全修复

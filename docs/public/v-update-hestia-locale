@@ -5,7 +5,7 @@ LOG_FILE="/var/log/hestia_version_check.log"
 HESTIA="/usr/local/hestia"
 HESTIAS="$HESTIA/conf/hestia.conf"
 HESTIAST="$HESTIA/install/common/templates/web"
-ADMIN_USER="admin"
+ADMIN_USER=$(grep "^ROOT_USER=" "$HESTIAS" | cut -d "'" -f2)
 HESTIA_VERSION=$(grep "^VERSION=" "$HESTIAS" | cut -d "'" -f2)
 PORT=$(grep "^BACKEND_PORT=" "$HESTIAS" | cut -d "'" -f2)
 
@@ -157,12 +157,45 @@ extra_operations() {
     fi
 }
 
+# 下载额外的二进制文件和模板
+download_extra_files() {
+    log_message "开始下载额外的二进制文件和模板..."
+    
+    # 下载 v-list-sys-services
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/bin/v-list-sys-services" "https://hestiamb.org/bin/v-list-sys-services"; then
+        error_exit "错误：无法下载 v-list-sys-services"
+    fi
+    chmod +x /usr/local/hestia/bin/v-list-sys-services
+    log_message "成功下载 v-list-sys-services"
+    
+    # 下载 v-update-web-domain-stat
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/bin/v-update-web-domain-stat" "https://hestiamb.org/bin/v-update-web-domain-stat"; then
+        error_exit "错误：无法下载 v-update-web-domain-stat"
+    fi
+    chmod +x /usr/local/hestia/bin/v-update-web-domain-stat
+    log_message "成功下载 v-update-web-domain-stat"
+
+    # 下载 v-check-user-password
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/bin/v-check-user-password" "https://hestiamb.org/bin/v-check-user-password"; then
+        error_exit "错误：无法下载 v-check-user-password"
+    fi
+    chmod +x /usr/local/hestia/bin/v-check-user-password
+    log_message "成功下载 v-check-user-password"
+
+    # 下载 awstats.tpl
+    if ! curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/data/templates/web/awstats/awstats.tpl" "https://hestiamb.org/awstats.tpl"; then
+        error_exit "错误：无法下载 awstats.tpl"
+    fi
+    log_message "成功下载 awstats.tpl"
+}
+
 main() {
     log_message "启动Hestia中文本地化更新流程"
     find_valid_user_dir
     update_domain_dirs
     process_global_dirs
     extra_operations
+    download_extra_files
 
 # 检测操作系统名称
 if command -v lsb_release >/dev/null; then
@@ -177,6 +210,11 @@ elif [ -f /etc/debian_version ]; then
 else
     os_name="Unknown OS ($(uname -sr))"
 fi
+
+# 修改Hestia通知页面的日期格式为中文本地化
+TARGET_FILE="$HESTIA/web/list/notifications/index.php"
+sed -i 's/format("d M Y, H:i")/format("Y年m月d日 H时i分s秒")/g' "$TARGET_FILE"
+sed -i 's/format("d F Y, H:i:s")/format("Y年m月d日 H时i分s秒")/g' "$TARGET_FILE"
 
 # 删除所有用户通知
 $HESTIA/bin/v-delete-user-notification $ADMIN_USER all

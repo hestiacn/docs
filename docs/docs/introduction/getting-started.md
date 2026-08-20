@@ -17,7 +17,7 @@
 | **CPU** | 1 核 64 位处理器 | 4 核 64 位处理器 |
 | **内存** | 1 GB (不安装 SpamAssassin 和 ClamAV) | 4 GB  |
 | **存储** | 10 GB HDD | 40 GB SSD |
-| **操作系统** | Debian 11/12/Ubuntu 22.04/24.04 LTS/RHEL 9    | Debian 最新稳定版/Ubuntu 最新 LTS/RHEL 9.x 系列 |
+| **操作系统** | Debian 11/12/13<br>Ubuntu 22.04/24.04 /26.04 LTS<br>RHEL 9    | Debian 最新稳定版<br>Ubuntu 最新 LTS<br>RHEL 9.x 系列 |
 
 ::: danger 警告
 `Hestia` 仅运行在 `AMD64` / `x86_64` 和 `ARM64` / `aarch64` 处理器上。 它还需要`64`位操作系统！我们目前不支持基于 `i386` 或 `ARM7` 的处理器。
@@ -26,7 +26,7 @@
 ### 支持的操作系统
 
 * Debian 11 or 12 or 13
-* Ubuntu 22.04 or 24.04
+* Ubuntu 22.04 or 24.04 or 26.04
 
 ::: tip 信息
 以下版本由俄罗斯 [开发者](https://dev.brepo.ru/bayrepo/hestiacp) 维护，它目前没有和官方版本同步！具体可查看 [RHEL安装配置](/rhel)

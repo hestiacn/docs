@@ -115,16 +115,12 @@ systemctl restart sshd
 
 ::: code-group
 
-```bash 1
-echo 'ProxyErrorOverride On' > /home/test/conf/web/example.com/apache2.conf_ProxyOverride
+```bash [步骤1]
+find /home/*/conf/web -maxdepth 1 -type d ! -path "/home/*/conf/web" -exec sh -c 'echo "ProxyErrorOverride On" > "$0/apache2.conf_ProxyOverride"; ln -sf "apache2.conf_ProxyOverride" "$0/apache2.ssl.conf_ProxyOverride"' {} \;
 ```
 
-```bash 2
-ln -rs /home/test/conf/web/example.com/apache2.conf_ProxyOverride /home/test/conf/web/example.com/apache2.ssl.conf_ProxyOverride
-```
-
-```bash 3
-systemctl restart apache2
+```bash [步骤2]
+systemctl reload apache2
 ```
 
 :::
