@@ -31,7 +31,7 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.10.3'
+HESTIA_INSTALL_VER='1.10.4'
 
 # Build the full Hestia version
 # Split base version (1.10.0) from channel suffix (~alpha / ~beta), if present
@@ -610,7 +610,7 @@ esac
 #----------------------------------------------------------#
 
 install_welcome_message() {
-	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|~alpha||g" | sed "s|~beta||g")
+	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|~alpha||g" | sed "s|~beta||g" | sed "s|~rc[0-9]*||g")
 	echo
 	echo '          _   _                _     _           _____   ____           '
 	echo '         | | | |  ___   ___  _| |_  (_)   __ _  /  ___| |  _ \          '
@@ -619,6 +619,9 @@ install_welcome_message() {
 	echo '         |_| |_| \___| |___/  \___| |_|  \____| \_____| |_|             '
 	echo "                                                                        "
 	echo "                          Hestia 控制面板                          "
+	if [[ "$HESTIA_INSTALL_VER" =~ "rc" ]]; then
+		echo "                             RELEASE CANDIDATE                      "
+	fi
 	if [[ "$HESTIA_INSTALL_VER" =~ "beta" ]]; then
 		echo "                              BETA RELEASE                          "
 	fi
