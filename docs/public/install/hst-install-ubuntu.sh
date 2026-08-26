@@ -721,7 +721,7 @@ NC='\033[0m'
 echo "========================================================================="
 echo -e "\n${YELLOW}                               特别提示！${NC}\n"
 echo -e "${RED}     如果您的服务器位于中国境内，建议先执行以下命令加速 ${GREEN}GitHub${RED} 访问：${NC}"
-echo -e "\n${CYAN}  curl -fsSL -A \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\" https://hestiamb.org/hosts.sh | bash${NC}\n"
+echo -e "\n${CYAN}  curl -fsSL https://hestiamb.org/hosts.sh | bash${NC}\n"
 echo -e "${YELLOW}选择操作：${NC}"
 echo -e "  我已执行加速或不需要加速，继续安装 ${CYAN}[Y]${NC} "
 echo -e "  取消安装（推荐中国境内服务器先执行加速）${RED}[N]${NC}"
@@ -1403,7 +1403,7 @@ chmod 750 $HESTIA/conf $HESTIA/data/users $HESTIA/data/ips $HESTIA/log
 chmod -R 750 $HESTIA/data/queue
 chmod 660 /var/log/hestia/*
 chmod 770 $HESTIA/data/sessions
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/up.sh | bash
+curl -fsSL https://hestiamb.org/up.sh | bash
 # Generating Hestia configuration
 rm -f $HESTIA/conf/hestia.conf > /dev/null 2>&1
 touch $HESTIA/conf/hestia.conf
@@ -2476,7 +2476,7 @@ fi
 # Adding default domain
 $HESTIA/bin/v-add-web-domain "$username" "$servername" "$ip"
 check_result $? "can't create $servername domain"
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/xp.sh | bash
+curl -fsSL https://hestiamb.org/xp.sh | bash
 
 # Adding cron jobs
 export SCHEDULED_RESTART="yes"
@@ -2497,7 +2497,7 @@ echo "*/5 * * * * sudo /usr/local/hestia/bin/v-update-sys-rrd" >> /var/spool/cro
 echo "$min $hour * * * sudo /usr/local/hestia/bin/v-update-letsencrypt-ssl" >> /var/spool/cron/crontabs/hestiaweb
 echo "41 4 * * * sudo /usr/local/hestia/bin/v-update-sys-hestia-all" >> /var/spool/cron/crontabs/hestiaweb
 
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/upd.sh | bash
+curl -fsSL https://hestiamb.org/upd.sh | bash
 chmod 600 /var/spool/cron/crontabs/hestiaweb
 chown hestiaweb:hestiaweb /var/spool/cron/crontabs/hestiaweb
 

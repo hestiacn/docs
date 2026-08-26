@@ -35,7 +35,7 @@ update_html_files() {
     local dir="$1"
     if [ -d "$dir" ]; then  
         for file in "50x.html" "403.html" "404.html" "410.html"; do
-            curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${dir}/${file}" "https://hestiamb.org/web/en/skel/document_errors/${file}"
+            curl -fsSL -o "${dir}/${file}" "https://hestiamb.org/web/en/skel/document_errors/${file}"
         done
         log_message "Successfully updated error pages in $dir"  
     else
@@ -72,7 +72,7 @@ process_global_dirs() {
         fi
     done
     if [ -d "/var/www/html" ]; then
-        curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/var/www/html/index.html" "https://hestiamb.org/web/en/unassigned/index.html"
+        curl -fsSL -o "/var/www/html/index.html" "https://hestiamb.org/web/en/unassigned/index.html"
         log_message "Updated index.html in /var/www/html/"
     else
         log_message "Error: Directory /var/www/html does not exist, cannot update index.html."
@@ -83,7 +83,7 @@ extra_operations() {
     if [ -d "$earliest_domain_dir" ]; then
         public_html_dir="${earliest_domain_dir}/public_html"
         if [ -d "$public_html_dir" ]; then
-            curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "${public_html_dir}/index.html" "https://hestiamb.org/web/en/unassigned/index.html"
+            curl -fsSL -o "${public_html_dir}/index.html" "https://hestiamb.org/web/en/unassigned/index.html"
             log_message "Updated index.html in control panel domain: ${earliest_domain_dir}/public_html/"
         else
             log_message "Error: Directory ${earliest_domain_dir}/public_html does not exist, cannot update index.html."

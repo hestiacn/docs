@@ -5,11 +5,11 @@
 安装完成后使用以下脚本对相关默认英文页面进行替换为中文即可！
 
 ```bash
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/v-update-sys-ver | bash 
+curl -fsSL https://hestiamb.org/v-update-sys-ver | bash 
 ```
 
 以下脚本添加定时任务到 `Hestia` 建议使用官方安装程序进行以下操作！可以在自动更新版本后第一时间进行英文页面替换为中文
 
 ```bash
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/upd.sh | bash 
+curl -fsSL https://hestiamb.org/upd.sh | bash 
 ```

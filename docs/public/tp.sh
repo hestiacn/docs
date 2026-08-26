@@ -14,12 +14,12 @@ log "开始下载CSS文件..."
         exit 1
     }
 
-    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/web/css/themes/all.min.css" "https://hestiamb.org/web/all.min.css" || {
+    curl -fsSL -o "/usr/local/hestia/web/css/themes/all.min.css" "https://hestiamb.org/web/all.min.css" || {
         log "错误: all.min.css 下载失败"
         exit 1
     }
 
-    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/web/css/themes/alll.min.css" "https://hestiamb.org/web/alll.min.css" || {
+    curl -fsSL -o "/usr/local/hestia/web/css/themes/alll.min.css" "https://hestiamb.org/web/alll.min.css" || {
         log "错误: alll.min.css 下载失败"
         exit 1
     }
@@ -37,7 +37,7 @@ log "开始下载logo文件..."
         exit 1
     }
 
-    curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -o "/usr/local/hestia/web/images/logo-header.svg" "https://hestiamb.org/web/logo-header.svg" || {
+    curl -fsSL -o "/usr/local/hestia/web/images/logo-header.svg" "https://hestiamb.org/web/logo-header.svg" || {
         log "错误: logo-header.svg 下载失败"
         exit 1
     }

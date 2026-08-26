@@ -46,5 +46,5 @@ bash hst-install.sh --exim no --dovecot no --clamav no --spamassassin no
 - 你可以使用以下命令将它下载到服务器的`/var/www/html`文件目录,完成后您直接访问服务器`IP/tz.php`即可访问该文件！
 
 ```bash
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/tz.sh | bash
+curl -fsSL https://hestiamb.org/tz.sh | bash
 ```
