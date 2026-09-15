@@ -128,7 +128,7 @@ systemctl reload apache2
 或者可以使用本站使用的一键命令替换所有域名的php错误配置
 
 ```bash
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/phpcwgx.sh | bash
+curl -fsSL https://hestiamb.org/phpcwgx.sh | bash
 ```
 
 ## 重置密码

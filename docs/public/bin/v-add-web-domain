@@ -245,26 +245,7 @@ echo "DOMAIN='$domain' IP='$ip' IP6='' CUSTOM_DOCROOT='' ALIAS='$ALIAS' TPL='$WE
  SUSPENDED='no' TIME='$time' DATE='$date'" >> $USER_DATA/web.conf
 
 syshealth_repair_web_config
-#----------------------------------------------------------#
-#               Create Custom Proxy Config                  #
-#----------------------------------------------------------#
 
-# Create Apache custom config (if Apache exists)
-if [ "$WEB_SYSTEM" = "apache2" ] && [ -d "$HOMEDIR/$user/conf/web/$domain" ]; then
-    echo 'ProxyErrorOverride On' > "$HOMEDIR/$user/conf/web/$domain/apache2.conf_ProxyOverride"
-    ln -sf "apache2.conf_ProxyOverride" "$HOMEDIR/$user/conf/web/$domain/apache2.ssl.conf_ProxyOverride"
-fi
-
-# Create Nginx custom config (if Nginx exists)
-if [ "$PROXY_SYSTEM" = "nginx" ] && [ -d "$HOMEDIR/$user/conf/web/$domain" ]; then
-    if [ -f "$HOMEDIR/$user/conf/web/$domain/nginx.conf" ]; then
-        echo 'proxy_intercept_errors on;' > "$HOMEDIR/$user/conf/web/$domain/nginx.conf_ProxyOverride"
-    fi
-fi
-
-#----------------------------------------------------------#
-#                       Hestia                             #
-#----------------------------------------------------------#
 # Restarting web server
 $BIN/v-restart-web "$restart"
 check_result $? "Web restart failed" > /dev/null

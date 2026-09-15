@@ -6,7 +6,7 @@
 
 HESTIA="/usr/local/hestia"  
 VERSION_FILE="/var/version.txt" 
-TARGET_SCRIPT="$HESTIA/bin/v-update-sys-ver"
+TARGET_SCRIPT="$HESTIA/bin/v-update-hestia-locale"
 LOG_FILE="/var/log/hestia_version_check.log"
 
 # 初始化日志文件

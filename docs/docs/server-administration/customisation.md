@@ -45,7 +45,7 @@ background: radial-gradient(circle, rgba(231, 102, 197, 1), rgba(174, 43, 177, 1
 :::
 
 ```bash
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/cwgx.sh | bash
+curl -fsSL https://hestiamb.org/cwgx.sh | bash
 ```
 
 将替换以下位置的文件

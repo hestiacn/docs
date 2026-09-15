@@ -13,5 +13,5 @@ Sao chép và chạy lệnh sau và thực thi nó trên thiết bị đầu cu�
 다음 명령어를 복사해서 실행한 뒤 서버 터미널에서 실행하면 완료됩니다!
 
 ```bash
-curl -fsSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" https://hestiamb.org/switch.sh | bash
+curl -fsSL https://hestiamb.org/switch.sh | bash
 ```
