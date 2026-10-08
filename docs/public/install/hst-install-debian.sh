@@ -1973,25 +1973,23 @@ if [ "$postgresql" = 'yes' ]; then
 	echo "[ * ] 配置 PostgreSQL 数据库 服务..."
 	ppass=$(gen_pass)
 	cp -f $HESTIA_INSTALL_DIR/postgresql/pg_hba.conf /etc/postgresql/*/main/
+	sed -i 's/\bmd5\b/scram-sha-256/g' /etc/postgresql/*/main/pg_hba.conf
 	systemctl restart postgresql
 	sudo -iu postgres psql -c "ALTER USER postgres WITH PASSWORD '$ppass'" > /dev/null 2>&1
 
 	mkdir -p /etc/phppgadmin/
 	mkdir -p /usr/share/phppgadmin/
 
-	wget --retry-connrefused --quiet https://hestiamb.org/v$pga_v/phppgadmin-v$pga_v.tar.gz
-	tar xzf phppgadmin-v$pga_v.tar.gz -C /usr/share/phppgadmin/
-
-	cp -f $HESTIA_INSTALL_DIR/pga/config.inc.php /etc/phppgadmin/
-
-	ln -s /etc/phppgadmin/config.inc.php /usr/share/phppgadmin/conf/
+	wget --retry-connrefused --quiet https://github.com/pgadminpanel/phppgadmin/releases/download/v8.0.4/phppgadmin-v8.0.4.tar.gz
+	tar xzf phppgadmin-v8.0.4.tar.gz -C /usr/share/phppgadmin --strip-components=1
+	ln -s /usr/share/phppgadmin/conf/config.inc.php /etc/phppgadmin/
 
 	# Configuring phpPgAdmin
 	if [ "$apache" = 'yes' ]; then
 		cp -f $HESTIA_INSTALL_DIR/pga/phppgadmin.conf /etc/apache2/conf.d/phppgadmin.inc
 	fi
 
-	rm phppgadmin-v$pga_v.tar.gz
+	rm phppgadmin-v8.0.4.tar.gz
 	write_config_value "DB_PGA_ALIAS" "phppgadmin"
 	$HESTIA/bin/v-change-sys-db-alias 'pga' "phppgadmin"
 
