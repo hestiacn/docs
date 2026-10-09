@@ -1,0 +1,444 @@
+#!/bin/bash
+
+# BookStack HestiaCP add script
+# Creates four files in their corresponding locations
+
+set -e
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+# Check root
+if [ "$EUID" -ne 0 ]; then
+    echo -e "${RED}Error: Please run as root${NC}"
+    exit 1
+fi
+
+# Paths
+INSTALLER_DIR="/usr/local/hestia/web/src/app/WebApp/Installers/BookStack"
+TEMPLATE_DIR="/usr/local/hestia/data/templates/web/nginx/php-fpm"
+
+echo -e "${GREEN}=== BookStack HestiaCP Add Script ===${NC}"
+echo ""
+
+# 1. Create Installers directory
+echo -e "${YELLOW}[1/4] Creating Installers directory...${NC}"
+mkdir -p "$INSTALLER_DIR"
+echo "  $INSTALLER_DIR"
+
+# 2. Create BookStackSetup.php
+echo -e "${YELLOW}[2/4] Creating BookStackSetup.php...${NC}"
+cat > "$INSTALLER_DIR/BookStackSetup.php" << 'PHPEOF'
+<?php
+
+declare(strict_types=1);
+
+namespace Hestia\WebApp\Installers\BookStack;
+
+use Hestia\System\Util;
+use Hestia\WebApp\BaseSetup;
+use Hestia\WebApp\InstallationTarget\InstallationTarget;
+
+class BookStackSetup extends BaseSetup {
+    protected array $info = [
+        "name" => "BookStack",
+        "group" => "cms",
+        "version" => "latest",
+        "thumbnail" => "bookstack-logo.svg",
+    ];
+
+    protected array $config = [
+        "form" => [
+            "site_name" => ["type" => "text", "value" => "BookStack"],
+            "username" => ["value" => "admin"],
+            "email" => "text",
+            "password" => "password",
+        ],
+        "database" => true,
+        "resources" => [
+            'archive' => [
+                'src' => 'https://codeberg.org/bookstack/bookstack/archive/v26.05.5.tar.gz',
+                'dst' => '/'
+            ],
+        ],
+        "server" => [
+            "nginx" => [
+                "template" => "bookstack",
+            ],
+            "php" => [
+                "supported" => ["8.1", "8.2", "8.3", "8.4", "8.5"],
+            ],
+        ],
+    ];
+
+    protected function setupApplication(InstallationTarget $target, array $options = null): void {
+        $docroot = $target->getDocRoot();
+        $phpVersion = $options['php_version'];
+
+        $this->moveNestedDirectory($docroot);
+        $this->setupEnvFile($target, $options);
+
+        $this->appcontext->runPHP($phpVersion, $docroot . '/bookstack-system-cli', [
+            'download-vendor'
+        ]);
+
+        $this->appcontext->runPHP($phpVersion, $docroot . '/artisan', [
+            'key:generate',
+            '--no-interaction',
+            '--force'
+        ]);
+
+        $this->appcontext->runPHP($phpVersion, $docroot . '/artisan', [
+            'migrate',
+            '--no-interaction',
+            '--force'
+        ]);
+
+        $this->updateAdmin($docroot, $phpVersion, $options);
+    }
+
+    private function updateAdmin(string $docroot, string $phpVersion, array $options): void {
+        $email    = trim($options['email'] ?? '');
+        $username = trim($options['username'] ?? '');
+        $password = trim($options['password'] ?? '');
+
+        if (empty($email))    { $email    = 'admin@admin.com'; }
+        if (empty($username)) { $username = 'Admin'; }
+        if (empty($password)) { $password = 'password'; }
+
+        $script = $docroot . '/update_admin.php';
+        $emailEsc    = addslashes($email);
+        $usernameEsc = addslashes($username);
+        $passwordEsc = addslashes($password);
+
+        $content = '<?php
+require "' . $docroot . '/vendor/autoload.php";
+$app = require "' . $docroot . '/bootstrap/app.php";
+$app->make(\Illuminate\Contracts\Console\Kernel::class)->bootstrap();
+$user = \BookStack\Users\Models\User::where("email", "admin@admin.com")->first();
+
+if (!$user) {
+    $user = \BookStack\Users\Models\User::where("email", "' . $emailEsc . '")->first();
+}
+
+if ($user) {
+    if ("' . $emailEsc . '" !== "admin@admin.com" && "' . $emailEsc . '" !== $user->email) {
+        $exists = \BookStack\Users\Models\User::where("email", "' . $emailEsc . '")->first();
+        if ($exists) {
+            echo "Email already used: ' . $emailEsc . '\n";
+        } else {
+            $user->email = "' . $emailEsc . '";
+        }
+    }
+
+    $user->name = "' . $usernameEsc . '";
+    $user->password = bcrypt("' . $passwordEsc . '");
+    $user->email_confirmed = 1;
+    $user->save();
+
+    $adminRole = \BookStack\Users\Models\Role::getSystemRole("admin");
+    if ($adminRole) {
+        $user->attachRole($adminRole);
+        $user->save();
+    }
+
+    echo "Admin updated\n";
+    echo "Email: " . $user->email . "\n";
+    echo "Password: ' . $passwordEsc . '\n";
+} else {
+    echo "Admin not found\n";
+}
+';
+
+        $this->appcontext->createFile($script, $content);
+        $this->appcontext->runPHP($phpVersion, $script, []);
+        $this->appcontext->deleteFile($script);
+    }
+
+    private function moveNestedDirectory(string $docroot): void {
+        $dirs = glob($docroot . '/bookstack-*');
+        foreach ($dirs as $dir) {
+            if (is_dir($dir)) {
+                $this->moveFiles($dir, $docroot);
+                $this->removeDir($dir);
+                break;
+            }
+        }
+    }
+
+    private function setupEnvFile(InstallationTarget $target, array $options): void {
+        $docroot = $target->getDocRoot();
+        $env_file = $docroot . '/.env.example';
+
+        if (!file_exists($env_file)) {
+            return;
+        }
+
+        $env_content = file_get_contents($env_file);
+        $env_content = preg_replace('/^APP_URL=.*$/m', 'APP_URL=' . $target->getUrl(), $env_content);
+        $env_content = preg_replace('/^DB_DATABASE=.*$/m', 'DB_DATABASE=' . $target->database->name, $env_content);
+        $env_content = preg_replace('/^DB_USERNAME=.*$/m', 'DB_USERNAME=' . $target->database->user, $env_content);
+        $env_content = preg_replace('/^DB_PASSWORD=.*$/m', 'DB_PASSWORD=' . $target->database->password, $env_content);
+
+        $this->appcontext->createFile($docroot . '/.env', $env_content);
+    }
+
+    private function moveFiles(string $src, string $dst): void {
+        $files = $this->appcontext->listFiles($src);
+        foreach ($files as $file) {
+            if ($file == '.' || $file == '..') {
+                continue;
+            }
+            $src_path = $src . '/' . $file;
+            $dst_path = $dst . '/' . $file;
+
+            if (is_dir($src_path)) {
+                if (!is_dir($dst_path)) {
+                    mkdir($dst_path, 0755, true);
+                }
+                $this->moveFiles($src_path, $dst_path);
+            } else {
+                rename($src_path, $dst_path);
+            }
+        }
+    }
+
+    private function removeDir(string $dir): void {
+        if (!is_dir($dir)) {
+            return;
+        }
+        $files = scandir($dir);
+        foreach ($files as $file) {
+            if ($file == '.' || $file == '..') {
+                continue;
+            }
+            $path = $dir . '/' . $file;
+            if (is_dir($path)) {
+                $this->removeDir($path);
+            } else {
+                unlink($path);
+            }
+        }
+        rmdir($dir);
+    }
+}
+PHPEOF
+echo "  $INSTALLER_DIR/BookStackSetup.php"
+
+# 3. Create bookstack-logo.svg
+echo -e "${YELLOW}[3/4] Creating bookstack-logo.svg...${NC}"
+cat > "$INSTALLER_DIR/bookstack-logo.svg" << 'SVGEOF'
+<svg xmlns="http://www.w3.org/2000/svg" height="61.699mm" width="65.023mm" version="1.1" viewBox="0 0 230.39711 218.6199" aria-label="BookStack Logo">
+ <g stroke-linejoin="round" fill-rule="evenodd" transform="translate(-245.27 -58.434)" stroke="#0288d1" stroke-width="6" fill="#fff">
+  <g stroke-linecap="round">
+   <path d="m343.79 238.6 128.88-74.409-92.058-53.15-128.88 74.409z"/>
+   <path d="m251.73 185.45v21.26l92.058 53.15 128.88-74.409v-21.26"/>
+   <path d="m343.79 274.03-92.058-53.15s-7.5-16.918 0-28.346l92.058 53.15 128.88-74.409v28.346l-128.88 74.409"/>
+   <path d="m343.79 188.99 128.88-74.41-92.06-53.146-128.88 74.406z"/>
+   <path d="m343.79 188.99 128.88-74.409 0.00001 28.346-128.88 74.409-92.058-53.15s-6.0714-17.632 0-28.346z"/>
+   <path d="m343.79 245.69-92.058-53.15s-7.5-16.918 0-28.346l92.058 53.15 128.88-74.409-0.00001 28.346-128.88 74.409"/>
+  </g>
+  <path d="m402.09 73.836-55.234 31.89 21.48 1.7716 3.0686 12.402 55.235-31.89z"/>
+ </g>
+</svg>
+SVGEOF
+echo "  $INSTALLER_DIR/bookstack-logo.svg"
+
+# 4. Create nginx templates
+echo -e "${YELLOW}[4/4] Creating nginx templates...${NC}"
+mkdir -p "$TEMPLATE_DIR"
+
+# bookstack.tpl
+cat > "$TEMPLATE_DIR/bookstack.tpl" << 'TPLEOF'
+#=========================================================================#
+# Default Web Domain Template                                             #
+# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS   #
+# https://hestiacp.com/docs/server-administration/web-templates.html      #
+#=========================================================================#
+
+server {
+        listen      %ip%:%web_port%;
+        server_name %domain_idn% %alias_idn%;
+        root        %docroot%/public;
+        index       index.php index.html index.htm;
+        access_log  /var/log/nginx/domains/%domain%.log combined;
+        access_log  /var/log/nginx/domains/%domain%.bytes bytes;
+        error_log   /var/log/nginx/domains/%domain%.error.log error;
+
+        include %home%/%user%/conf/web/%domain%/nginx.forcessl.conf*;
+
+        location = /favicon.ico {
+                log_not_found off;
+                access_log off;
+        }
+
+        location = /robots.txt {
+                allow all;
+                log_not_found off;
+                access_log off;
+        }
+
+        location ~ /\.(?!well-known\/) {
+                deny all;
+                return 404;
+        }
+
+        location / {
+                try_files $uri $uri/ /index.php?$args;
+
+                location ~* ^.+\.(ogg|ogv|svg|svgz|swf|eot|otf|woff|woff2|mov|mp3|mp4|webm|flv|ttf|rss|atom|jpg|jpeg|gif|png|webp|ico|bmp|mid|midi|wav|rtf|css|js|jar)$ {
+                        expires 30d;
+                        fastcgi_hide_header "Set-Cookie";
+                }
+
+                location ~ [^/]\.php(/|$) {
+                        try_files $uri =404;
+
+                        include /etc/nginx/fastcgi_params;
+
+                        fastcgi_index index.php;
+                        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+
+                        fastcgi_pass %backend_lsnr%;
+
+                        include %home%/%user%/conf/web/%domain%/nginx.fastcgi_cache.conf*;
+                }
+        }
+
+        location /error/ {
+                alias %home%/%user%/web/%domain%/document_errors/;
+        }
+
+        location /vstats/ {
+                alias   %home%/%user%/web/%domain%/stats/;
+                include %home%/%user%/web/%domain%/stats/auth.conf*;
+        }
+
+        include /etc/nginx/conf.d/phpmyadmin.inc*;
+        include /etc/nginx/conf.d/phppgadmin.inc*;
+        include %home%/%user%/conf/web/%domain%/nginx.conf_*;
+}
+TPLEOF
+echo "  $TEMPLATE_DIR/bookstack.tpl"
+
+# bookstack.stpl
+cat > "$TEMPLATE_DIR/bookstack.stpl" << 'STPLEOF'
+#=========================================================================#
+# Default Web Domain Template                                             #
+# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS   #
+# https://hestiacp.com/docs/server-administration/web-templates.html      #
+#=========================================================================#
+
+server {
+        listen      %ip%:%web_ssl_port% ssl;
+        server_name %domain_idn% %alias_idn%;
+        root        %sdocroot%/public;
+        index       index.php index.html index.htm;
+        access_log  /var/log/nginx/domains/%domain%.log combined;
+        access_log  /var/log/nginx/domains/%domain%.bytes bytes;
+        error_log   /var/log/nginx/domains/%domain%.error.log error;
+
+        ssl_certificate     %ssl_pem%;
+        ssl_certificate_key %ssl_key%;
+
+        if ($anti_replay = 307) { return 307 https://$host$request_uri; }
+        if ($anti_replay = 425) { return 425; }
+
+        include %home%/%user%/conf/web/%domain%/nginx.hsts.conf*;
+
+        location = /favicon.ico {
+                log_not_found off;
+                access_log off;
+        }
+
+        location = /robots.txt {
+                allow all;
+                log_not_found off;
+                access_log off;
+        }
+
+        location ~ /\.(?!well-known\/) {
+                deny all;
+                return 404;
+        }
+
+        location / {
+                try_files $uri $uri/ /index.php?$args;
+
+                location ~* ^.+\.(ogg|ogv|svg|svgz|swf|eot|otf|woff|woff2|mov|mp3|mp4|webm|flv|ttf|rss|atom|jpg|jpeg|gif|png|webp|ico|bmp|mid|midi|wav|rtf|css|js|jar)$ {
+                        expires 30d;
+                        fastcgi_hide_header "Set-Cookie";
+                }
+
+                location ~ [^/]\.php(/|$) {
+                        try_files $uri =404;
+
+                        include /etc/nginx/fastcgi_params;
+
+                        fastcgi_index index.php;
+                        fastcgi_param HTTP_EARLY_DATA $rfc_early_data if_not_empty;
+                        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+
+                        fastcgi_pass %backend_lsnr%;
+
+                        include %home%/%user%/conf/web/%domain%/nginx.fastcgi_cache.conf*;
+                }
+        }
+
+        location /error/ {
+                alias %home%/%user%/web/%domain%/document_errors/;
+        }
+
+        location /vstats/ {
+                alias   %home%/%user%/web/%domain%/stats/;
+                include %home%/%user%/web/%domain%/stats/auth.conf*;
+        }
+
+        proxy_hide_header Upgrade;
+
+        include /etc/nginx/conf.d/phpmyadmin.inc*;
+        include /etc/nginx/conf.d/phppgadmin.inc*;
+        include %home%/%user%/conf/web/%domain%/nginx.ssl.conf_*;
+}
+STPLEOF
+echo "  $TEMPLATE_DIR/bookstack.stpl"
+
+# 5. Set permissions
+echo -e "${YELLOW}[5/5] Setting permissions...${NC}"
+chown -R root:root "$INSTALLER_DIR"
+chmod -R 755 "$INSTALLER_DIR"
+chmod 644 "$INSTALLER_DIR/BookStackSetup.php"
+chmod 644 "$INSTALLER_DIR/bookstack-logo.svg"
+chmod 644 "$TEMPLATE_DIR/bookstack.tpl"
+chmod 644 "$TEMPLATE_DIR/bookstack.stpl"
+
+# 6. Verify
+echo ""
+echo -e "${YELLOW}=== Verification ===${NC}"
+echo ""
+echo "File listing:"
+ls -la "$INSTALLER_DIR/"
+echo ""
+ls -la "$TEMPLATE_DIR/"
+echo ""
+
+# 7. Restart HestiaCP
+echo -e "${YELLOW}Restarting HestiaCP...${NC}"
+systemctl restart hestia 2>/dev/null || true
+
+echo -e "${GREEN}=== Installation Complete ===${NC}"
+echo ""
+echo "Next steps:"
+echo "  1. Log in to HestiaCP (https://your-server:8083)"
+echo "  2. Web → Add Web Domain → Quick Install App → BookStack"
+echo "  3. After installation, go to the website settings and set 'Custom Document Root' to 'public', then save."
+echo ""
+echo "  4. To keep the page in your preferred language after logging out, add these lines to the end of BookStack's .env file:"
+echo "       APP_LANG=<your-language>      # e.g. fr, zh_CN, de, ja"
+echo "       APP_AUTO_LANG_PUBLIC=false"
+echo "     Then run: php artisan config:clear && php artisan cache:clear"
+echo "     Docs: https://www.bookstackapp.com/docs/admin/language/"
+echo ""
