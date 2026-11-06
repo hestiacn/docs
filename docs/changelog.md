@@ -6,6 +6,86 @@ title: 版本更新日志
 ### 本项目中所有重大更新都将记录在此更新文档中。
 :::
 
+## [1.10.6] - 2026-11-07 - 服务版本发布
+
+### 安全
+
+- 加固恢复脚本**：拒绝符号链接的用户目录，将恢复暂存在 root 拥有的目录中，对变量加引号并使用 `chown --no-dereference` #5796
+- 修复文件管理器 `escapeDots` 过滤器中的路径遍历漏洞**（文件管理器 7.16.4）#5732
+- 修复文件管理器中的 Hestia root 用户认证检查 #5739
+- 为 POST 请求处理添加只读/演示模式检查 #5756
+- 改进自定义文档根目录中的特殊字符检查，并在模板替换前对其进行转义 #5759
+- 修复 `mkpasswd` 参数解析，确保以 `-` 开头的密码或盐不会被当作选项处理 #5764
+- 转义调试面板中的数组键 #5750
+- 修复 `Header Location` 重定向 #5737
+- 修复并加固 Exim HELO 检查：要求所有客户端提供 HELO，拒绝裸 HELO/IP 类 HELO 以及我们自己的 IP，记录 FCrDNS 和 HELO/PTR 不匹配 #5862
+- 在 `is_dns_domain_new` 和 `is_mail_domain_new` 中对域名配置路径加引号 #5853
+- 修复添加 Web 域名时 `public_html` 目录权限，并在 `find` 中使用空字符分隔路径 #5730
+- 在 `rebuild_user_conf` 期间确保用户 tmp 目录的所有权和权限 #5849
+
+### 变更
+
+- 为 Let's Encrypt 证书添加 ECDSA 密钥算法支持 #5629
+- 添加对自定义 DKIM 选择器的支持 #5760
+- 添加 `v-delete-user-wp-cli`，并让 `v-add-user-wp-cli` 管理 `.bash_aliases` 而不产生重复条目 #5786 #5787 #5788
+- 为备份操作添加 `E_BACKUP` 错误代码 #5785
+- 在所有 Ubuntu 版本上使用 Sury 仓库替代 PPA 安装 PHP，现有安装会自动迁移 #5825
+- 允许无人值守升级（unattended-upgrades）修补托管的 PHP、nginx、Node.js、MariaDB、PostgreSQL 和 Apache（Ondřej Surý PPA）软件包 #5876 #5877 #5878 #5879 #5880 #5881 #5882
+- 使用 `crontab` 命令安装用户 cron 任务 #5805
+- 通过批量验证对象解析优化 JSON 列表 #5726 #5890
+- 支持 hestia-nginx 端口检测中的 bond 接口 #5752
+- 页面加载时自动聚焦 Web 终端 #5893
+- 从添加 Web、邮件、数据库和 DNS 页面移除管理员账户警告，因为 admin 账户不再具有 sudo 权限 #5896
+- 将 Web 终端会话的默认 `LANG` 设置为 `C.UTF-8` #5770
+- 增加 DNS 记录列表中 Record 列的长度 #5771
+- 从默认 `PROXY_EXT` 中移除 `txt`，以避免 `robots.txt` 上的 `expires max` #5850
+- 安装 alpha/beta 包时跳过 release 分支版本检查 #5851
+- 添加 `rsync` 依赖和 Roundcube 升级前的预检查 #5824
+- 改进构建速度并在 `hst_autocompile` 中传递 `--pkgrev` #5891
+- 将 hestia-php 升级至 8.5.12 #5738 #5816
+- 将 hestia-nginx 升级至 1.30.6 #5723 #5797
+- 将 OpenSSL 升级至 3.5.9，PCRE 升级至 10.49 #5751
+- 将文件管理器升级至 7.16.9 #5717 #5732 #5741 #5827 #5898
+- 升级快速安装应用版本：Castopod、Grav、Joomla、MediaWiki、PrestaShop #5899
+- 将 Roundcube 更新至 1.7.5 #5810
+- 将 SnappyMail 更新至 3.0.0 #5901
+- 在仅安装 nginx 的环境中运行 BATS 测试套件，并添加升级迁移测试 #5865 #5861
+- 更新依赖项 #5734 #5735 #5765 #5766 #5789 #5790 #5791 #5807 #5832 #5838 #5840 #5847 #5884 #5894 #5895
+
+### 修复
+
+- 修复 Let's Encrypt SSL 证书生成中的 IDN（国际化域名）处理 #5814
+- 修复邮件证书续期检查，使过期的 SMTP/IMAP 证书能够续期 #5829
+- 修复 OpenSSL 配置中 SAN 部分前缺少换行的问题 #5831
+- 在 Hestia 主机证书上设置 `root:mail` 所有权，以避免与 ProFTPD 的 AppArmor 冲突 #5778
+- 修复 ProFTPD 无法从 `conf.d` 加载配置文件的问题 #5859
+- 修复 Dovecot SSL 证书配置中的拼写错误 #5844
+- 修复增量恢复时混淆数据库/邮件/文件恢复类型的问题 #5740
+- 修复 B2 CLI 工具的 Bug #5728
+- 修复 tar 路径处理 #5754
+- 修复备份脚本中的语法和错误代码拼写错误 #5782 #5783 #5784
+- 修复远程 DNS 主机上 DNS 记录的暂停/恢复问题 #5821 #5845 #5846
+- 修复 Debian 13 / Ubuntu 26.04 迁移脚本中 Bind `default-zones` include 的移除问题 #5836
+- 修复 `v-add-web-php` 中 PHP 版本安装失败的处理 #5823
+- 当 `v-add-sys-dependencies` 失败时保持 PHP 依赖正常工作 #5871
+- 修复 Ubuntu 22.04 上使用 libcurl 导致的 Composer 2.11 下载失败 #5888
+- 修复 `v-add-sys-roundcube` 对 rsync 3.5.x 的兼容性 #5811
+- 修复 `v-add-sys-web-terminal` 安装操作系统 Node.js 包而非 v24 的问题 #5763
+- 修复 `v-change-web-domain-ftp-path` 路径处理 #5777
+- 修复 SSH 密钥删除和列表显示 #5743
+- 修复代理扩展验证 #5768
+- 修复 web.conf 中域名 IP 的尾部空格和 `is_ip_valid`，升级时会自动修剪 #5858 #5861
+- 修复 phpMyAdmin/phpPgAdmin include 中 nginx 500 错误，改用命名捕获 #5863
+- 修复 phpMyAdmin 配置循环为非服务器 `conf.d` 文件添加幽灵服务器的问题 #5795
+- 加速 `cleanup_key_permissions` 处理具有长权限列表的密钥 #5792
+- 修复快速安装数据库名称中重复的用户前缀，并在失败时显示 CLI 输出 #5875
+- 修复 WordPress 快速安装在无本地化发行包的语言环境下失败的问题，回退到 `en_US` 并安装语言包，同时修复 `zh_CN` 区域标识符 #5900
+- 修复编辑 cron 命令时尾部单引号被剥离的问题 #5892
+- 修复 `policies.php` 中未定义的 `$panel` #5835
+- 修复文件管理器将会话超时重定向显示为文件内容的问题 #5636
+- 修复安装程序与 `apt-get upgrade` 的竞争条件，并防止 `--with-debs` 覆盖本地包**
+- 修复深色模式下的移动端导航栏颜色和下拉菜单 #5775
+
 ## [1.10.5] - 2026-09-14 - 服务版本发布
 
 ### 安全性

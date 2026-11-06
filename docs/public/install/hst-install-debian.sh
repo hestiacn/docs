@@ -6,7 +6,7 @@
 # https://www.hestiacp.com/
 #
 # Currently Supported Versions:
-# Debian 11 12 13
+# Debian 12 13
 #
 # ======================================================== #
 
@@ -31,7 +31,7 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.10.5'
+HESTIA_INSTALL_VER='1.10.6'
 
 # Build the full Hestia version
 # Split base version (1.10.0) from channel suffix (~alpha / ~beta), if present
@@ -77,7 +77,7 @@ software="acl apache2 apache2-suexec-custom apache2-utils at bc bind9 bsdmainuti
   php$fpm_v php$fpm_v-apcu php$fpm_v-bz2 php$fpm_v-cgi php$fpm_v-cli php$fpm_v-common php$fpm_v-curl php$fpm_v-gd
   php$fpm_v-imagick php$fpm_v-imap php$fpm_v-intl php$fpm_v-ldap php$fpm_v-mbstring php$fpm_v-mysql
   php$fpm_v-pgsql php$fpm_v-pspell php$fpm_v-readline php$fpm_v-xml php$fpm_v-zip postgresql postgresql-contrib
-  proftpd-basic quota rrdtool rsyslog spamd sysstat unrar-free unzip util-linux vim-common vsftpd xxd whois zip zstd bubblewrap restic"
+  proftpd-core proftpd-mod-crypto quota rrdtool rsyslog rsync spamd sysstat unrar-free unzip util-linux vim-common vsftpd xxd whois zip zstd bubblewrap restic"
 
 installer_dependencies="apt-transport-https ca-certificates curl dirmngr gnupg openssl wget sudo"
 
@@ -566,7 +566,7 @@ if [ -d /etc/netplan ] && [ -z "$force" ]; then
 fi
 
 # Validate whether installation script matches release version before continuing with install
-if [ -z "$withdebs" ] || [ ! -d "$withdebs" ]; then 
+if [ -z "$HESTIA_CHANNEL" ] && [ ! -d "$withdebs" ]; then
 	release_branch_ver=$(curl -s https://hestiamb.org/install/release/conrtol | grep "Version:" | awk '{print $2}')
 	if [ "$HESTIA_INSTALL_VER" != "$release_branch_ver" ]; then
 		echo
@@ -876,10 +876,28 @@ echo "[ * ] NGINX"
 echo "deb [arch=$ARCH signed-by=/usr/share/keyrings/nginx-keyring.gpg] https://nginx.org/packages/mainline/$VERSION/ $codename nginx" > $apt/nginx.list
 curl -s https://nginx.org/keys/nginx_signing.key | gpg --dearmor | tee /usr/share/keyrings/nginx-keyring.gpg > /dev/null 2>&1
 
+# Let unattended-upgrades install nginx updates from the repository
+# above; the stock configuration only allows distribution repositories
+cat > /etc/apt/apt.conf.d/60unattended-upgrades-hestia-nginx << 'EOF'
+Unattended-Upgrade::Origins-Pattern {
+	"origin=nginx";
+};
+EOF
+
 # Installing sury PHP repo
 echo "[ * ] PHP"
 echo "deb [arch=$ARCH signed-by=/usr/share/keyrings/sury-keyring.gpg] https://packages.sury.org/php/ $codename main" > $apt/php.list
 curl -s https://packages.sury.org/php/apt.gpg | gpg --dearmor | tee /usr/share/keyrings/sury-keyring.gpg > /dev/null 2>&1
+
+# Let unattended-upgrades install PHP updates from the repository above. The
+# stock configuration only allows distribution repositories, so hosted PHP
+# would otherwise never be patched automatically.
+cat > /etc/apt/apt.conf.d/60unattended-upgrades-hestia-php << 'EOF'
+Unattended-Upgrade::Origins-Pattern {
+	"origin=deb.sury.org";
+	"origin=LP-PPA-ondrej-php";
+};
+EOF
 
 # Installing sury Apache2 repo
 if [ "$apache" = 'yes' ]; then
@@ -893,6 +911,14 @@ if [ "$mysql" = 'yes' ]; then
 	echo "[ * ] MariaDB $mariadb_v"
 	echo "deb [arch=$ARCH signed-by=/usr/share/keyrings/mariadb-keyring.gpg] https://dlm.mariadb.com/repo/mariadb-server/$mariadb_v/repo/$VERSION $codename main" > $apt/mariadb.list
 	curl -s https://mariadb.org/mariadb_release_signing_key.asc | gpg --dearmor | tee /usr/share/keyrings/mariadb-keyring.gpg > /dev/null 2>&1
+
+	# Let unattended-upgrades install MariaDB updates from the repository
+	# above; the stock configuration only allows distribution repositories
+	cat > /etc/apt/apt.conf.d/60unattended-upgrades-hestia-mariadb << 'EOF'
+Unattended-Upgrade::Origins-Pattern {
+	"origin=MariaDB";
+};
+EOF
 fi
 
 # Installing Mysql8 repo
@@ -921,6 +947,14 @@ if [ "$webterminal" = 'yes' ]; then
 	echo "[ * ] Node.js v $node_v"
 	echo "deb [arch=$ARCH signed-by=/usr/share/keyrings/nodejs.gpg] https://deb.nodesource.com/node_$node_v.x nodistro main" > $apt/nodejs.list
 	curl -s https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodejs.gpg > /dev/null 2>&1
+
+	# Let unattended-upgrades install Node.js updates from the repository
+	# above; the stock configuration only allows distribution repositories
+	cat > /etc/apt/apt.conf.d/60unattended-upgrades-hestia-nodejs << 'EOF'
+Unattended-Upgrade::Origins-Pattern {
+	"site=deb.nodesource.com";
+};
+EOF
 	apt-get -y install nodejs >> $LOG
 fi
 
@@ -929,6 +963,14 @@ if [ "$postgresql" = 'yes' ]; then
 	echo "[ * ] PostgreSQL"
 	echo "deb [arch=$ARCH signed-by=/usr/share/keyrings/postgresql-keyring.gpg] https://apt.postgresql.org/pub/repos/apt/ $codename-pgdg main" > $apt/postgresql.list
 	curl -s https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | tee /usr/share/keyrings/postgresql-keyring.gpg > /dev/null 2>&1
+
+	# Let unattended-upgrades install PostgreSQL updates from the repository
+	# above; the stock configuration only allows distribution repositories
+	cat > /etc/apt/apt.conf.d/60unattended-upgrades-hestia-postgresql << 'EOF'
+Unattended-Upgrade::Origins-Pattern {
+	"origin=apt.postgresql.org";
+};
+EOF
 fi
 
 # Echo for a new line
@@ -1060,8 +1102,8 @@ if [ "$vsftpd" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/vsftpd//")
 fi
 if [ "$proftpd" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/proftpd-basic//")
-	software=$(echo "$software" | sed -e "s/proftpd-mod-vroot//")
+	software=$(echo "$software" | sed -e "s/proftpd-core//")
+	software=$(echo "$software" | sed -e "s/proftpd-mod-crypto//")
 fi
 if [ "$named" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/bind9//")
@@ -1430,11 +1472,7 @@ if [ "$exim" = 'yes' ]; then
 		write_config_value "ANTIVIRUS_SYSTEM" "clamav-daemon"
 	fi
 	if [ "$spamd" = 'yes' ]; then
-		if [ "$release" = '11' ]; then
-			write_config_value "ANTISPAM_SYSTEM" "spamassassin"
-		else
-			write_config_value "ANTISPAM_SYSTEM" "spamd"
-		fi
+		write_config_value "ANTISPAM_SYSTEM" "spamd"
 	fi
 	if [ "$dovecot" = 'yes' ]; then
 		write_config_value "IMAP_SYSTEM" "dovecot"
@@ -1553,17 +1591,13 @@ $HESTIA/bin/v-change-sys-hostname $servername > /dev/null 2>&1
 # Configuring global OpenSSL options
 echo "[ * ] 配置 OpenSSL 以提高 TLS 性能..."
 tls13_ciphers="TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384"
-if [ "$release" = "11" ]; then
-	sed -i '/^system_default = system_default_sect$/a system_default = hestia_openssl_sect\n\n[hestia_openssl_sect]\nCiphersuites = '"$tls13_ciphers"'\nOptions = PrioritizeChaCha' /etc/ssl/openssl.cnf
-else
-	if ! grep -qw "^ssl_conf = ssl_sect$" /etc/ssl/openssl.cnf 2> /dev/null; then
-		sed -i '/providers = provider_sect$/a ssl_conf = ssl_sect' /etc/ssl/openssl.cnf
-	fi
-	if ! grep -qw "^[ssl_sect]$" /etc/ssl/openssl.cnf 2> /dev/null; then
-		sed -i '$a \\n[ssl_sect]\nsystem_default = hestia_openssl_sect\n\n[hestia_openssl_sect]\nCiphersuites = '"$tls13_ciphers"'\nOptions = PrioritizeChaCha' /etc/ssl/openssl.cnf
-	elif grep -qw "^system_default = system_default_sect$" /etc/ssl/openssl.cnf 2> /dev/null; then
-		sed -i '/^system_default = system_default_sect$/a system_default = hestia_openssl_sect\n\n[hestia_openssl_sect]\nCiphersuites = '"$tls13_ciphers"'\nOptions = PrioritizeChaCha' /etc/ssl/openssl.cnf
-	fi
+if ! grep -qw "^ssl_conf = ssl_sect$" /etc/ssl/openssl.cnf 2> /dev/null; then
+    sed -i '/providers = provider_sect$/a ssl_conf = ssl_sect' /etc/ssl/openssl.cnf
+fi
+if ! grep -qw "^[ssl_sect]$" /etc/ssl/openssl.cnf 2> /dev/null; then
+    sed -i '$a \\n[ssl_sect]\nsystem_default = hestia_openssl_sect\n\n[hestia_openssl_sect]\nCiphersuites = '"$tls13_ciphers"'\nOptions = PrioritizeChaCha' /etc/ssl/openssl.cnf
+elif grep -qw "^system_default = system_default_sect$" /etc/ssl/openssl.cnf 2> /dev/null; then
+    sed -i '/^system_default = system_default_sect$/a system_default = hestia_openssl_sect\n\n[hestia_openssl_sect]\nCiphersuites = '"$tls13_ciphers"'\nOptions = PrioritizeChaCha' /etc/ssl/openssl.cnf
 fi
 
 # Generating SSL certificate
@@ -1807,22 +1841,20 @@ if [ "$proftpd" = 'yes' ]; then
 	echo "127.0.0.1 $servername" >> /etc/hosts
 	cp -f $HESTIA_INSTALL_DIR/proftpd/proftpd.conf /etc/proftpd/
 	cp -f $HESTIA_INSTALL_DIR/proftpd/tls.conf /etc/proftpd/
-
+	# In Debian 13 we need to add modules.conf to proftpd.conf so tls mod is loaded
+	if [[ $release -ge 13 ]]; then
+		if [[ -f /etc/proftpd/modules.conf ]] && grep -qF "Include /etc/proftpd/tls.conf" /etc/proftpd/proftpd.conf; then
+			if ! grep -qF "Include /etc/proftpd/modules.conf" /etc/proftpd/proftpd.conf; then
+				sed -i '\|Include /etc/proftpd/tls.conf|i Include /etc/proftpd/modules.conf' /etc/proftpd/proftpd.conf
+			fi
+		fi
+	fi
 	update-rc.d proftpd defaults > /dev/null 2>&1
 	systemctl start proftpd >> $LOG
 	check_result $? "proftpd start failed"
 
-	if [ "$release" -eq 11 ]; then
-		unit_files="$(systemctl list-unit-files | grep proftpd)"
-		if [[ "$unit_files" =~ "disabled" ]]; then
-			systemctl enable proftpd
-		fi
-	fi
-
-	if [ "$release" -eq 12 ] || [ "$release" -eq 13 ]; then
-		systemctl disable --now proftpd.socket
-		systemctl enable --now proftpd.service
-	fi
+	systemctl disable --now proftpd.socket
+	systemctl enable --now proftpd.service
 fi
 
 #----------------------------------------------------------#
@@ -1973,7 +2005,6 @@ if [ "$postgresql" = 'yes' ]; then
 	echo "[ * ] 配置 PostgreSQL 数据库 服务..."
 	ppass=$(gen_pass)
 	cp -f $HESTIA_INSTALL_DIR/postgresql/pg_hba.conf /etc/postgresql/*/main/
-	sed -i 's/\bmd5\b/scram-sha-256/g' /etc/postgresql/*/main/pg_hba.conf
 	systemctl restart postgresql
 	sudo -iu postgres psql -c "ALTER USER postgres WITH PASSWORD '$ppass'" > /dev/null 2>&1
 
@@ -2182,24 +2213,12 @@ fi
 if [ "$spamd" = 'yes' ]; then
 	echo "[ * ] 配置 SpamAssassin垃圾邮件防护..."
 	update-rc.d spamassassin defaults > /dev/null 2>&1
-	if [ "$release" = "11" ]; then
-		update-rc.d spamassassin enable > /dev/null 2>&1
-		systemctl start spamassassin >> $LOG
-		check_result $? "spamassassin start failed"
-		unit_files="$(systemctl list-unit-files | grep spamassassin)"
-		if [[ "$unit_files" =~ "disabled" ]]; then
-			systemctl enable spamassassin > /dev/null 2>&1
-		fi
-		sed -i "s/#CRON=1/CRON=1/" /etc/default/spamassassin
-	else
-		# Deb 12+ renamed to spamd
-		update-rc.d spamd enable > /dev/null 2>&1
-		systemctl start spamd >> $LOG
-		unit_files="$(systemctl list-unit-files | grep spamd)"
-		if [[ "$unit_files" =~ "disabled" ]]; then
-			systemctl enable spamd > /dev/null 2>&1
-		fi
-
+	# Deb 12+ renamed to spamd
+	update-rc.d spamd enable > /dev/null 2>&1
+	systemctl start spamd >> $LOG
+	unit_files="$(systemctl list-unit-files | grep spamd)"
+	if [[ "$unit_files" =~ "disabled" ]]; then
+		systemctl enable spamd > /dev/null 2>&1
 	fi
 fi
 
@@ -2509,11 +2528,28 @@ $HESTIA/bin/v-change-sys-port $port > /dev/null 2>&1
 $HESTIA/bin/v-update-sys-defaults
 
 # Update remaining packages since repositories have changed
-echo -ne "[ * ] 安装剩余的软件更新..."
-apt-get -qq update
-apt-get -y upgrade >> $LOG &
-BACK_PID=$!
-echo
+# Skip the final upgrade with --with-debs, otherwise apt would replace the
+# locally installed .deb packages with the ones from apt.hestiacp.com
+if [ -z "$withdebs" ]; then
+	echo -ne "[ * ] 安装剩余的软件更新..."
+	apt-get -qq update
+	apt-get -y upgrade >> $LOG &
+	BACK_PID=$!
+
+	# Check if package installation is done, print a spinner
+	spin_i=1
+	while kill -0 $BACK_PID > /dev/null 2>&1; do
+		printf "\b${spinner:spin_i++%${#spinner}:1}"
+		sleep 0.5
+	done
+
+	# Do a blank echo to get the \n back
+	echo
+
+	# Check Installation result
+	wait $BACK_PID
+	check_result $? 'apt-get upgrade failed'
+fi
 
 # Starting Hestia service
 update-rc.d hestia defaults
@@ -2584,7 +2620,7 @@ echo -e "祝贺您!\n\n您已成功在 $os_name 服务器上安装 Hestia  $HEST
 
 请在浏览器输入您配置好的服务器主机地址，(例如. demo.hestiacp.com) 
 
-里面有详细的常见错误处理方案！让您在使用 Hestia 时不至于手足无措！
+访问您服务器的 IP 地址里面有详细的常见错误处理方案！让您在使用 Hestia 时不至于手足无措！
 
 准备好开始了吗？使用以下凭据登录:
 
