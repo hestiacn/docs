@@ -31,7 +31,7 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.10.6'
+HESTIA_INSTALL_VER='1.10.7'
 
 # Build the full Hestia version
 # Split base version (1.10.0) from channel suffix (~alpha / ~beta), if present
@@ -64,7 +64,7 @@ multiphp_required=("8.1" "8.2" "8.3" "8.4" "8.5")
 # Default PHP version if none supplied
 fpm_v="8.5"
 # MariaDB version
-mariadb_v="11.8"
+mariadb_v="12.3"
 # Node.js version
 node_v="26"
 
@@ -720,11 +720,11 @@ CYAN='\033[36m'
 NC='\033[0m'
 echo "========================================================================="
 echo -e "\n${YELLOW}                               特别提示！${NC}\n"
-echo -e "${RED}     如果您的服务器位于中国境内，建议先执行以下命令加速 ${GREEN}GitHub${RED} 访问：${NC}"
+echo -e "${RED}     如果您的服务器位于防火墙内，建议先执行以下命令加速 ${GREEN}GitHub${RED} 访问：${NC}"
 echo -e "\n${CYAN}  curl -fsSL https://hestiamb.org/hosts.sh | bash${NC}\n"
 echo -e "${YELLOW}选择操作：${NC}"
 echo -e "  我已执行加速或不需要加速，继续安装 ${CYAN}[Y]${NC} "
-echo -e "  取消安装（推荐中国境内服务器先执行加速）${RED}[N]${NC}"
+echo -e "  取消安装（推荐防火墙内服务器先执行加速）${RED}[N]${NC}"
 echo "========================================================================="
 echo -e "\n"
 
@@ -1189,12 +1189,13 @@ fi
 # Disabling daemon autostart on apt-get install
 echo -e '#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d
 chmod a+x /usr/sbin/policy-rc.d
+trap 'rm -f /usr/sbin/policy-rc.d' EXIT
 
 # Installing apt packages
 echo "安装程序现在正在下载并安装所有必需的软件包."
 echo -ne "注意:此过程可能需要 10 到 15 分钟才能完成,请稍候..."
 echo
-echo "如果您的服务器位于中国大陆境内预计时间在10 到 30 分钟左右安装完成！感谢您的耐心等待！"
+echo "如果您的服务器位于防火墙内预计时间在10 到 30 分钟左右安装完成！感谢您的耐心等待！"
 echo
 apt-get -y install $software > $LOG
 BACK_PID=$!
@@ -1221,31 +1222,38 @@ echo
 if [ -n "$withdebs" ] && [ -d "$withdebs" ]; then
 	echo "[ * ] 正在安装本地软件包文件..."
 	echo "    - Hestia 程序软件包"
-	dpkg -i $withdebs/hestia_*.deb > /dev/null 2>&1
+	dpkg -i $withdebs/hestia_*.deb >> $LOG 2>&1
+	check_result $? "Failed to install hestia package from $withdebs. See $LOG for details."
 
 	if [ -z $(ls $withdebs/hestia-php_*.deb 2> /dev/null) ]; then
 		echo "    - hestia-php 后端包（来自 apt）"
-		apt-get -y install hestia-php > /dev/null 2>&1
+		apt-get -y install hestia-php >> $LOG 2>&1
+		check_result $? "Failed to install hestia-php package from apt. See $LOG for details."
 	else
 		echo "    - hestia-php 后端包"
-		dpkg -i $withdebs/hestia-php_*.deb > /dev/null 2>&1
+		dpkg -i $withdebs/hestia-php_*.deb >> $LOG 2>&1
+		check_result $? "Failed to install hestia-php package from $withdebs. See $LOG for details."
 	fi
 
 	if [ -z $(ls $withdebs/hestia-nginx_*.deb 2> /dev/null) ]; then
 		echo "    - hestia-nginx 后端包（来自 apt）"
-		apt-get -y install hestia-nginx > /dev/null 2>&1
+		apt-get -y install hestia-nginx >> $LOG 2>&1
+		check_result $? "Failed to install hestia-nginx package from apt. See $LOG for details."
 	else
 		echo "    - hestia-nginx 后端包"
-		dpkg -i $withdebs/hestia-nginx_*.deb > /dev/null 2>&1
+		dpkg -i $withdebs/hestia-nginx_*.deb >> $LOG 2>&1
+		check_result $? "Failed to install hestia-nginx package from $withdebs. See $LOG for details."
 	fi
 
 	if [ "$webterminal" = "yes" ]; then
 		if [ -z $(ls $withdebs/hestia-web-terminal_*.deb 2> /dev/null) ]; then
 			echo "    - hestia-网络-终端-软件包（来自 apt）"
-			apt-get -y install hestia-web-terminal > /dev/null 2>&1
+			apt-get -y install hestia-web-terminal >> $LOG 2>&1
+			check_result $? "Failed to install hestia-web-terminal package from apt. See $LOG for details."
 		else
 			echo "    - hestia-网络-终端"
-			dpkg -i $withdebs/hestia-web-terminal_*.deb > /dev/null 2>&1
+			dpkg -i $withdebs/hestia-web-terminal_*.deb >> $LOG 2>&1
+			check_result $? "Failed to install hestia-web-terminal package from $withdebs. See $LOG for details."
 		fi
 	fi
 fi
@@ -1302,23 +1310,28 @@ systemctl restart ssh
 #                     Install AWStats                      #
 #----------------------------------------------------------#
 
-# 直接安装 vstats
+# 安装 vstats
 echo "[ * ] 获取 AWStats 最新版本..."
-
-# 获取最新版本号
 latest_tag=$(curl -s https://api.github.com/repos/hestiacn/vstats/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
 
 if [ -n "$latest_tag" ]; then
-    echo "[ * ] 安装 AWStats ${latest_tag}..."
+    real_version=$(echo "${latest_tag#v}" | grep -oP '^\d+\.\d+')
     
-	# 下载并安装
-	wget --quiet "https://github.com/hestiacn/vstats/releases/download/${latest_tag}/awstats_8.1-1_all.deb" -O /tmp/awstats.deb
-	apt install -y /tmp/awstats.deb >> $LOG 2>&1
-	rm -f /tmp/awstats.deb
+    echo "[ * ] 准备安装 AWStats ${deb_name}..."
     
-    # 验证安装
-    if command -v awstats.pl >/dev/null; then
-        echo "[ ✓ ] AWStats ${latest_tag} 安装成功"
+    DOWNLOAD_URL="https://github.com/hestiacn/vstats/releases/download/${latest_tag}/awstats-${real_version}-1.deb"
+    if wget --quiet "${DOWNLOAD_URL}" -O /tmp/awstats.deb; then
+        apt install -y /tmp/awstats.deb >> $LOG 2>&1
+        rm -f /tmp/awstats.deb
+        
+        # 验证安装
+        if command -v awstats.pl >/dev/null; then
+            echo "[ ✓ ] AWStats ${latest_tag} 安装成功"
+        else
+            echo "[ ! ] 安装命令执行了，但找不到 awstats 相关文件"
+        fi
+    else
+        echo "[ ! ] 下载失败，请确认 ${DOWNLOAD_URL} 是否存在"
     fi
 else
     echo "[ ! ] 获取版本失败，跳过安装"
@@ -2080,12 +2093,15 @@ if [ "$postgresql" = 'yes' ]; then
 	cp -f $HESTIA_INSTALL_DIR/postgresql/pg_hba.conf /etc/postgresql/*/main/
 	systemctl restart postgresql
 	sudo -iu postgres psql -c "ALTER USER postgres WITH PASSWORD '$ppass'" > /dev/null 2>&1
+	echo "[ * ] 获取 phpPgAdmin 最新版本..."
+	PGA_VERSION=$(curl -s https://api.github.com/repos/pgadminpanel/phppgadmin/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
+	echo "[ * ] 目标版本: ${PGA_VERSION}"
 
 	mkdir -p /etc/phppgadmin/
 	mkdir -p /usr/share/phppgadmin/
 
-	wget --retry-connrefused --quiet https://github.com/pgadminpanel/phppgadmin/releases/download/v8.0.4/phppgadmin-v8.0.4.tar.gz
-	tar xzf phppgadmin-v8.0.4.tar.gz -C /usr/share/phppgadmin --strip-components=1
+	wget --retry-connrefused --quiet "https://github.com/pgadminpanel/phppgadmin/releases/download/${PGA_VERSION}/phppgadmin-${PGA_VERSION}.tar.gz"
+	tar xzf "phppgadmin-${PGA_VERSION}.tar.gz" -C /usr/share/phppgadmin --strip-components=1
 	ln -s /usr/share/phppgadmin/conf/config.inc.php /etc/phppgadmin/
 
 	# Configuring phpPgAdmin
@@ -2093,7 +2109,7 @@ if [ "$postgresql" = 'yes' ]; then
 		cp -f $HESTIA_INSTALL_DIR/pga/phppgadmin.conf /etc/apache2/conf.d/phppgadmin.inc
 	fi
 
-	rm phppgadmin-v8.0.4.tar.gz
+	rm "phppgadmin-${PGA_VERSION}.tar.gz"
 	write_config_value "DB_PGA_ALIAS" "phppgadmin"
 	$HESTIA/bin/v-change-sys-db-alias 'pga' "phppgadmin"
 

@@ -6,6 +6,62 @@ title: 版本更新日志
 ### 本项目中所有重大更新都将记录在此更新文档中。
 :::
 
+## [1.10.7] - 2026-11-14 - 服务版本发布
+
+### 安全修复
+
+- 加固 `v-quick-install`，修复 `v-quick-install-app` 的选项解析和 PHP 版本检查问题 #5946 #5747 #5748, (GHSA-chw8-phjg-wmq7)
+- 在 `v-extract-fs-archive` 中锚定压缩包扩展名检查 #5819
+- 删除用户时同步删除其访问密钥 #5941
+- 将 NetAPI 蜜罐攻击者添加到恶意 IP 黑名单 #5974
+- 修复 root 在用户主目录中跟随符号链接的问题：在邮件/网站域名脚本、重建与域名迁移、SSH 密钥脚本、用户备份/恢复和 restic 恢复（restic 现在会先恢复到仅 root 可访问的暂存目录）中，逐级校验目录，并以用户权限执行属于用户的文件操作 (GHSA-hc82-cqjf-hcpg, GHSA-wp7p-qfxc-cg88 和 GHSA-pfj7-fhx8-q4qx)
+- 当邮箱无法创建时，让 `v-add-mail-account` 报错失败
+- 加固 API 认证：在 `v-check-api-key` 中校验 API 密钥名称，拒绝符号链接或存储之外的密钥文件；空客户端 IP 直接拒绝（fail closed）；严格去除空格并比对允许的 IP 列表；拒绝非字符串的请求字段
+- 加固密码和哈希文件的处理：检查所有权，拒绝符号链接和路径穿越，无效文件直接拒绝，读取后立即删除，使用 `tmpfile()` 创建 API 临时文件，清理 SMTP 中继密码文件，并通过文件而非 argv 传递备份密码 (GHSA-vxpc-8vm2-8rv3)
+- 拦截只读会话中的修改型 GET 请求，并在已登录用户从密码重置页面重定向后退出
+- 像保护访问密钥一样保护 `ROOT_USER` 的 SSH 密钥，并在 Web 终端中强制执行受保护管理员策略 (GHSA-p4vq-6v6h-cc74)
+
+### 变更
+
+- 为 `v-extract-fs-archive` 增加 `.xz`/`.txz` 压缩包支持，并修复带 URL 查询字符串的单文件压缩包解压问题 #5852
+- 密码输入框新增可见性切换按钮 #5742 #5959
+- 支持 sha-512 shadow 哈希中的 `rounds=` 参数 #5955 #5956
+- 更新 Roundcube 至 1.7.6，并在升级前安装 `symfony/polyfill-php84` #5972
+- 更新 SnappyMail 至 3.0.1 #5960
+- 升级过程中更新 SnappyMail 插件 #5961
+- 将 MariaDB 目标版本更新至 12.3 #5536
+- 更新 Zlib 至 1.4
+- 更新 `cloudflare-ip-validator` 至 1.0.1 #5947
+- 将面板 PHP-FPM 池的 `pm.max_children` 从 4 提升至 8
+- 防止 CNAME DNS 记录与同名其他记录共存
+- 将已安装的 `hestia-web-terminal` 包纳入系统更新检查和自动更新
+- 在 Fail2Ban action 中添加 `actionflush`；1.10.7 升级会更新现有安装的 action #5022
+- 更新所有非主版本依赖及 Biome 至 2.6.6 #5945 #5944
+- 新增手动 apt 发布工作流，为 BATS 在本地构建所有 Hestia deb 包，并从发布矩阵中移除 bullseye #5902 #5907
+
+### Bug 修复
+
+- 修复 Let's Encrypt dns-01 挑战状态轮询问题 #5842 #5854
+- 修复从搜索结果模拟登录用户时跳转 URL 失效的问题 #5957
+- 修复模拟登录用户时搜索返回空结果的问题 #5958
+- 当 `v-add-mail-domain` 失败时跳过 `v-add-mail-domain-reject` #5037 #5950
+- 将所有 ClassicPress 和 Dolibarr 安装请求的域名解析 URL 传递过去 #5656 #5951
+- 修复 `v-quick-install-app` 中的应用和选项问题 #5943
+- 重建 DNSSEC 域名时保留已签名的 zone 文件 #5939
+- 修复 `v-delete-user-backup-exclusion` #5928
+- 格式化 `v-change-web-domain-name` 中的目标域名 #4958
+- 将目标域名的私有目录包含到跨域名 docroot 的 `open_basedir` 中
+- 修复网站域名解除挂起的目标，并允许挂起已挂起用户的邮件/数据库对象
+- 修复通过 Web UI 和 CLI 进行增量备份文件恢复的问题
+- 在数据库导出中包含 MySQL events，并追加通配符用户授权
+- 后端模板变更时刷新 PHP-FPM 池路径和上一版本
+- 规范化 `v-change-dns-record` 中的 `record` 和 `rtype` 参数
+- 修复 arm64 架构上 Backblaze B2 CLI 的下载问题 #5905
+- 修复 fail2ban 多端口链删除问题 #5022
+- 通过提前导出 `COMPOSER_ALLOW_SUPERUSER`，修复 Roundcube 升级卡死的问题
+- 安装程序退出时移除 `policy-rc.d`
+- 安装程序后端包安装失败时明确报错
+
 ## [1.10.6] - 2026-11-07 - 服务版本发布
 
 ### 安全
