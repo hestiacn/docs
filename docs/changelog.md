@@ -6,6 +6,54 @@ title: 版本更新日志
 ### 本项目中所有重大更新都将记录在此更新文档中。
 :::
 
+[1.10.10] - 2026-11-25 服务版本发布
+
+安全
+
+· 防止 phpMyAdmin 单点登录（SSO）令牌伪造：用更强的签名对令牌签名，并校验 host 字段；1.10.10 升级会用新密钥重装 SSO 端点，因此现有 SSO 链接将失效
+· MySQL 数据库用户只被授予确切数据库名的访问权限；此前 _ 和 % 被当作通配符，一个授权可能覆盖其他数据库，包括 mysql 系统库。1.10.10 升级会替换现有的通配符授权
+· 防止用户在网站统计目录中创建的目录名被 root 当作 sed 命令执行
+· 以用户身份运行 v-dump-site 归档器，这样通过符号链接的 public_html 或 web 目录无法再把服务器上的其他文件加入归档
+· 校验 v-change-web-domain-docroot 中解析后的文档根路径，并拒绝空格，使该路径无法突破 Web 服务器配置
+· 以用户身份而不是 root 创建 Let's Encrypt ACME 质询文件
+· 校验 v-add-web-domain-ftp 中的 FTP 路径和 cron 时间字段
+· 将 hestia-nginx 更新到 1.30.8（CVE-2026-132779：ssl_early_data 导致 CPU 过度占用）#6036
+· 创建 smtp_relay.conf 时不赋予全局读权限，因为它保存中继密码；1.10.10 升级会修复现有文件的权限 #6027
+· 在 v-log-user-login 中拒绝符号链接，并以 660 权限创建缺失的 auth.log 文件，同时校验登录状态参数 #5991
+· 可选地在 v-delete-user 时删除用户的备份，使前用户的备份不再被永久保留（新增 BACKUPS 参数，默认 no）#6045
+
+功能
+
+· 新增对 PHP 8.6 的支持 #6017
+
+变更
+
+· 在 Ubuntu 上使用 Sury 仓库替代已弃用的 Launchpad PPA 来提供 Apache2 和 PHP；1.10.10 升级会迁移现有 Apache2 源 #6048
+· 对密码仍使用 DES 或 MD5 哈希的用户发出警告，这些哈希将不再支持登录 #6039
+· 将 SnappyMail 更新到 3.1.4 #6056
+· 将 Roundcube 更新到 1.7.7 #6033
+· 更新所有非主版本依赖，并将 jsdom 更新到 v31 #6028 #6029
+
+问题修复
+
+· 在重启 php-fpm 前先测试其配置，这样一个损坏的 pool 不会再拖垮使用该 PHP 版本的所有网站，且某个 PHP 版本失败也不再阻止其他版本重启 #6040
+· 删除已删除用户遗留的 php-fpm pools #6040
+· 当仍有网站域名使用某个 PHP 版本，或该版本为默认版本时，v-delete-web-php 会拒绝删除该版本 #6043
+· 在 v-change-sys-php 中于重建域名前更新系统 PHP alternative，使使用默认后端的域名不再停留在旧 PHP 版本 #6038
+· 暂停网站域名时保留“强制 SSL”、HSTS 和 FastCGI 缓存 #6041 #6046
+· v-log-user-login 接受 IPv6 地址，使 IPv6 登录和失败登录也能被记录 #5991
+· 以 755 权限创建用户的 conf 目录，使在启用了严格 umask 的系统上 DNS 区域和邮件也能加载 #6044
+· 将缺失备份的恢复任务从队列中移除，而不是无限重试 #6042
+· 修复已认证的空发件人邮件（已读回执、外出自动回复）按域名查询 Exim SMTP 中继的问题；1.10.10 升级会更新现有安装 #5913
+· 将 mail_compress 添加到 Dovecot 2.4 全局 mail_plugins，使 doveadm 能处理压缩邮件；1.10.10 升级会更新现有安装 #6032
+· 将仍使用旧 ppa.launchpad.net 主机名的 PHP 源迁移到 Sury；1.10.6 的迁移只匹配了 ppa.launchpadcontent.net，因此漏掉了在 Ubuntu 20.04 或更旧系统上安装的服务器 #6052
+· 修复当服务器位于 NAT 后时 Web 应用快速安装器失败的问题，改为将请求发送到内部 IP 而不是公网 IP #5994
+· 修复 v-list-sys-info 将带有 /etc/sysconfig 目录的 Debian 和 Ubuntu 系统误判为 Amazon Linux，以及 Hestia 版本号混入操作系统版本的问题 #6050
+· 修复 v-schedule-letsencrypt-domain #6031
+· 修复 Flarum 2.x 的 Flarum 快速安装 #6025
+· 当已存在更高包修订版本时不再构建软件包
+
+## 
 ## [1.10.8] - 2026-11-18 - 服务版本发布
 
 ### 安全
